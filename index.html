@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Values Compass</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- Intro -->
+    <section id="screen-intro" class="screen">
+      <h1>Values Compass</h1>
+      <p class="lead">A short self-assessment that maps what you value in public life. The result is a profile you can use to compare political parties and candidates against your own values, rather than against slogans.</p>
+      <ul class="facts">
+        <li><strong>50 statements</strong>, about 10 minutes.</li>
+        <li>Answer on a five-point scale from <em>strongly disagree</em> to <em>strongly agree</em>. Go with your first reaction.</li>
+        <li>There are no right answers. The statements are about principles, not any particular country or party.</li>
+        <li>Everything stays in your browser. Nothing is sent anywhere.</li>
+      </ul>
+      <div class="actions">
+        <button id="btn-start" class="primary">Start</button>
+        <button id="btn-resume" class="secondary" hidden>Resume where I left off</button>
+        <button id="btn-view-results" class="secondary" hidden>View my last results</button>
+      </div>
+      <details class="dims">
+        <summary>What it measures</summary>
+        <ol id="dim-list"></ol>
+      </details>
+    </section>
+
+    <!-- Questionnaire -->
+    <section id="screen-quiz" class="screen" hidden>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p class="counter"><span id="q-index">1</span> of <span id="q-total">50</span></p>
+      <p class="statement" id="statement"></p>
+      <div class="likert" id="likert" role="radiogroup" aria-label="Your answer"></div>
+      <p class="hint">Keys 1 to 5 also work. <span id="hint-back"></span></p>
+      <div class="actions row">
+        <button id="btn-back" class="secondary">Back</button>
+        <button id="btn-quit" class="link">Save and exit</button>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="screen-results" class="screen" hidden>
+      <h1>Your values profile</h1>
+      <p class="lead">Each bar shows where you sit between two poles. Longer bars are stronger leanings and count more when matching. Dimensions where your answers pulled both ways are marked as mixed.</p>
+
+      <div class="viz-root">
+        <div class="chart" id="chart"></div>
+        <details class="table-view">
+          <summary>Show as table</summary>
+          <table id="score-table">
+            <thead><tr><th>Dimension</th><th>Leaning</th><th>Score</th><th>Strength</th><th>Consistency</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </details>
+      </div>
+
+      <h2>In your own words</h2>
+      <p class="help">This summary was generated from your scores. Edit anything that does not sound like you. The edited text is what goes into the profile.</p>
+      <textarea id="summary" rows="10" spellcheck="true"></textarea>
+
+      <h2>Use the profile</h2>
+      <div class="actions row wrap">
+        <button id="btn-copy-prompt" class="primary">Copy matching prompt</button>
+        <button id="btn-copy-json" class="secondary">Copy JSON</button>
+        <button id="btn-download" class="secondary">Download JSON</button>
+        <button id="btn-retake" class="link">Retake</button>
+      </div>
+      <p class="toast" id="toast" aria-live="polite"></p>
+      <details class="json-view">
+        <summary>Show JSON</summary>
+        <pre id="json"></pre>
+      </details>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
