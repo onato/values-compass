@@ -61,6 +61,65 @@
       "date": "2026-07",
       "fetchedAt": "2026-09-05",
       "notes": "Second emissions budget at increasing risk; recent government actions to reduce emissions likely outweighed by actions that increase them; 2030 methane target not projected to be met."
+    },
+    {
+      "filename": "hansard-regulatory-standards-third-reading-scoop.html",
+      "title": "Hansard: Regulatory Standards Bill, third reading, 13 November 2025 (Community Scoop republication)",
+      "sourceUrl": "https://community.scoop.co.nz/2025/11/regulatory-standards-bill-third-reading/",
+      "fetchedAt": "2026-09-05",
+      "notes": "Party vote 68-55: Ayes National 49, ACT 11, NZ First 8; Noes Labour 34, Green 15, Te Pāti Māori 4, Ferris, Kapa-Kingi."
+    },
+    {
+      "filename": "rnz-luxon-hipkins-offshore-gas-2025.html",
+      "title": "RNZ: Prime Minister asks Labour leader to support offshore gas exploration",
+      "sourceUrl": "https://www.rnz.co.nz/news/political/574530/prime-minister-christopher-luxon-asks-labour-leader-chris-hipkins-to-support-offshore-gas-exploration",
+      "fetchedAt": "2026-09-05",
+      "notes": "Media report of party leaders' stated positions; lead, not primary record."
+    },
+    {
+      "filename": "rnz-defence-plan-questions-2025.html",
+      "title": "RNZ: Defence Force spend-up, who is it meant to protect us against",
+      "sourceUrl": "https://www.rnz.co.nz/news/politics/557485/defence-force-spend-up-who-is-it-meant-to-protect-us-against-and-other-questions",
+      "fetchedAt": "2026-09-05",
+      "notes": "Reports Labour leader 'broadly' supportive of the Defence Capability Plan. Media report; lead, not primary record."
+    },
+    {
+      "filename": "teao-labour-treaty-clause-review-2026.html",
+      "title": "Te Ao Māori News: Labour labels Treaty review 'disgusting'",
+      "sourceUrl": "https://www.teaonews.co.nz/2026/04/21/labour-labels-treaty-review-disgusting-as-government-moves-to-standardise-clauses/",
+      "fetchedAt": "2026-09-05",
+      "notes": "Reports Labour's stated position on the Treaty clause review. Media report; lead, not primary record."
+    },
+    {
+      "filename": "newstalkzb-labour-crime-policies-2026.html",
+      "title": "Newstalk ZB: Labour criticises Govt crime policies as 'bumper stickers' but won't commit to repealing them",
+      "sourceUrl": "https://www.newstalkzb.co.nz/news/politics/election-2026-labour-criticises-govt-crime-policies-as-bumper-stickers-but-won-t-commit-to-repealing-them/",
+      "fetchedAt": "2026-09-05",
+      "notes": "Media report of Labour's stated position; lead, not primary record."
+    },
+    {
+      "filename": "hansard-electoral-amendment-third-reading-scoop.html",
+      "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025 (Scoop republication)",
+      "sourceUrl": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm",
+      "date": "2025-12-16",
+      "fetchedAt": "2026-09-05",
+      "notes": "Party vote: Ayes National 49, ACT 11, NZ First 8; Noes Labour 34, Green 14 (Te Pāti Māori also opposed)."
+    },
+    {
+      "filename": "rnz-conversion-practices-third-reading-2022.html",
+      "title": "RNZ: Bill to ban conversion practices passes third reading",
+      "sourceUrl": "https://www.rnz.co.nz/news/political/461597/bill-to-ban-conversion-practices-passes-third-reading",
+      "date": "2022-02-15",
+      "fetchedAt": "2026-09-05",
+      "notes": "Reports the 112-8 vote; the eight against were National MPs on a conscience vote. Media report of an official vote; lead."
+    },
+    {
+      "filename": "conversion-practices-prohibition-legislation-act-2022.html",
+      "title": "Conversion Practices Prohibition Legislation Act 2022 (as enacted)",
+      "sourceUrl": "https://www.legislation.govt.nz/act/public/2022/0001/latest/whole.html",
+      "date": "2022-02-18",
+      "fetchedAt": "2026-09-05",
+      "notes": "Government bill of the Labour government. No copyright (Copyright Act 1994 s 27)."
     }
   ]
 }

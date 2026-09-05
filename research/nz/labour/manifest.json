@@ -1,0 +1,192 @@
+{
+  "party": "labour",
+  "entries": [
+    {
+      "filename": "apprenticeshipboost.html",
+      "textFile": "apprenticeshipboost.txt",
+      "title": "Labour Party: apprenticeshipboost",
+      "sourceUrl": "https://www.labour.org.nz/apprenticeshipboost",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "capitalgainstax.html",
+      "textFile": "capitalgainstax.txt",
+      "title": "Labour Party: capitalgainstax",
+      "sourceUrl": "https://www.labour.org.nz/capitalgainstax",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "cervicalscreening.html",
+      "textFile": "cervicalscreening.txt",
+      "title": "Labour Party: cervicalscreening",
+      "sourceUrl": "https://www.labour.org.nz/cervicalscreening",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "familydoctorloanscheme.html",
+      "textFile": "familydoctorloanscheme.txt",
+      "title": "Labour Party: familydoctorloanscheme",
+      "sourceUrl": "https://www.labour.org.nz/familydoctorloanscheme",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "farecap.html",
+      "textFile": "farecap.txt",
+      "title": "Labour Party: farecap",
+      "sourceUrl": "https://www.labour.org.nz/farecap",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "fiscal-strategy.html",
+      "textFile": "fiscal-strategy.txt",
+      "title": "Labour Party: fiscal-strategy",
+      "sourceUrl": "https://www.labour.org.nz/fiscal-strategy",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "futurefund.html",
+      "textFile": "futurefund.txt",
+      "title": "Labour Party: futurefund",
+      "sourceUrl": "https://www.labour.org.nz/futurefund",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "graduate-nurse-job-guarantee.html",
+      "textFile": "graduate-nurse-job-guarantee.txt",
+      "title": "Labour Party: graduate-nurse-job-guarantee",
+      "sourceUrl": "https://www.labour.org.nz/graduate-nurse-job-guarantee",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "maori-trades-training.html",
+      "textFile": "maori-trades-training.txt",
+      "title": "Labour Party: maori-trades-training",
+      "sourceUrl": "https://www.labour.org.nz/maori-trades-training",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "maternityscans.html",
+      "textFile": "maternityscans.txt",
+      "title": "Labour Party: maternityscans",
+      "sourceUrl": "https://www.labour.org.nz/maternityscans",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "medicard.html",
+      "textFile": "medicard.txt",
+      "title": "Labour Party: medicard",
+      "sourceUrl": "https://www.labour.org.nz/medicard",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "our-policies.html",
+      "textFile": "our-policies.txt",
+      "title": "Labour Party: our-policies",
+      "sourceUrl": "https://www.labour.org.nz/our-policies",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "policy.html",
+      "textFile": "policy.txt",
+      "title": "Labour Party: policy",
+      "sourceUrl": "https://www.labour.org.nz/policy",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "prescriptions.html",
+      "textFile": "prescriptions.txt",
+      "title": "Labour Party: prescriptions",
+      "sourceUrl": "https://www.labour.org.nz/prescriptions",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "small-business-action-plan.html",
+      "textFile": "small-business-action-plan.txt",
+      "title": "Labour Party: small-business-action-plan",
+      "sourceUrl": "https://www.labour.org.nz/small-business-action-plan",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "small-business-first.html",
+      "textFile": "small-business-first.txt",
+      "title": "Labour Party: small-business-first",
+      "sourceUrl": "https://www.labour.org.nz/small-business-first",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "solarsaver.html",
+      "textFile": "solarsaver.txt",
+      "title": "Labour Party: solarsaver",
+      "sourceUrl": "https://www.labour.org.nz/solarsaver",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy."
+    },
+    {
+      "filename": "labour-cgt.pdf",
+      "title": "Labour: Capital Gains Tax policy document",
+      "sourceUrl": "https://www.labour.org.nz/media/pfvguai5/labour-cgt.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "labour-free-doctors-visits.pdf",
+      "title": "Labour: Free Doctor's Visits (Medicard) policy document",
+      "sourceUrl": "https://www.labour.org.nz/media/vtbneplb/labour-free-doctors-visits.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "the-new-zealand-future-fund.pdf",
+      "title": "Labour: The New Zealand Future Fund policy document",
+      "sourceUrl": "https://www.labour.org.nz/media/vbyf0pxe/the-new-zealand-future-fund.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "backinglocaldoctors.pdf",
+      "title": "Labour: Backing Local Doctors (Family Doctor Loan Scheme)",
+      "sourceUrl": "https://www.labour.org.nz/media/dbskvb1y/backinglocaldoctors.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "cervical-screening-factsheet.pdf",
+      "title": "Labour: Cervical screening factsheet",
+      "sourceUrl": "https://www.labour.org.nz/media/prhel1zq/cervical-screening-factsheet.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "speech-electrify-queenstown.html",
+      "textFile": "speech-electrify-queenstown.txt",
+      "title": "Labour: Speech, Electrify Queenstown (Chris Hipkins)",
+      "sourceUrl": "https://www.labour.org.nz/news/speech-electrify-queenstown/",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "speech-congress-2026-hipkins.html",
+      "textFile": "speech-congress-2026-hipkins.txt",
+      "title": "Labour: Speech, Labour Party Congress 2026 (Chris Hipkins)",
+      "sourceUrl": "https://www.labour.org.nz/news/speech-labour-party-congress-2026-chris-hipkins/",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "release-lng-facility.html",
+      "textFile": "release-lng-facility.txt",
+      "title": "Labour: Release, LNG facility won't solve anything",
+      "sourceUrl": "https://www.labour.org.nz/news/release-lng-facility-won-t-solve-anything/",
+      "fetchedAt": "2026-09-05"
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "id": "labour",
+  "name": "New Zealand Labour Party",
+  "short": "Labour",
+  "colour": "#D82A20",
+  "website": "https://www.labour.org.nz/",
+  "assessedAt": "2026-09-05",
+  "rubricVersion": "1.0",
+  "status": "draft",
+  "inParliament": true,
+  "notes": "Main opposition party 2023-2026; governed 2017-2023. Scored from its 2026 policy pages and fiscal strategy, leader's speeches, recorded party votes on marker bills in the 54th Parliament, and its record in government where its 2026 programme is silent. Several 2026 policy areas (law and order, immigration, defence, local government) had no published policy at the assessment date, which lowers confidence on those dimensions.",
+  "dimensions": {
+    "solidarity": {
+      "score": 55,
+      "confidence": "high",
+      "rationale": "Labour's programme is organised around collective provision funded by a new tax on wealth: a 28 per cent capital gains tax on investment and commercial property, every dollar ring-fenced for health, paying for three free GP visits a year for everyone through a Medicard, free prescriptions, free maternity scans and free cervical screening; a $20 weekly public transport fare cap; and a graduate nurse job guarantee. Its fiscal strategy holds core Crown spending and revenue at around 33 per cent of GDP against National's 30, restores the Reserve Bank's employment mandate and wellbeing reporting, and its leader calls 'neoliberal, trickle down economics' a hoax. It stops short of the +100 anchor: the tax is deliberately narrow, exempting the family home, farms, shares, KiwiSaver and inheritances, and the party frames itself around 'hard work should get you somewhere'.",
+      "sources": [
+        {
+          "title": "Labour: Capital Gains Tax",
+          "url": "https://www.labour.org.nz/capitalgainstax",
+          "date": "2026-08",
+          "archived": "research/nz/labour/capitalgainstax.html",
+          "quote": "Every dollar raised will be used to fix New Zealand's health system, including three free doctor's visits each year for every New Zealander."
+        },
+        {
+          "title": "Labour: Free Doctor's Visits with the Medicard",
+          "url": "https://www.labour.org.nz/medicard",
+          "date": "2026-08",
+          "archived": "research/nz/labour/medicard.html"
+        },
+        {
+          "title": "Labour's Fiscal Strategy",
+          "url": "https://www.labour.org.nz/fiscal-strategy",
+          "date": "2026-08",
+          "archived": "research/nz/labour/fiscal-strategy.html",
+          "quote": "core Crown expenditure and revenue will be maintained at around 33% of GDP when the capital gains tax is fully implemented"
+        },
+        {
+          "title": "Speech: Labour Party Congress 2026, Chris Hipkins",
+          "url": "https://www.labour.org.nz/news/speech-labour-party-congress-2026-chris-hipkins/",
+          "date": "2026-07",
+          "archived": "research/nz/labour/speech-congress-2026-hipkins.html",
+          "quote": "Neoliberal, trickle down economics is a hoax."
+        }
+      ]
+    },
+    "regulation": {
+      "score": 45,
+      "confidence": "high",
+      "rationale": "Labour proposes a state investment vehicle, the New Zealand Future Fund, seeded with Crown assets protected in law from sale, and would legislate to force large firms to pay small suppliers within 15 days with penalties, restore payment-practice disclosure, restore the Reserve Bank's dual mandate and set up a Parliamentary Budget Office. It voted against the Regulatory Standards Act in November 2025 and its energy speeches call for government-backed finance and fair export tariffs because 'the market is not delivering'. It pairs this with small-business deregulation, lifting the GST threshold, a $10,000 instant asset write-off and a 'small business test' for new rules, and gives the Future Fund independent governance. Clear willingness to steer markets, tempered by a pro-small-business streak.",
+      "sources": [
+        {
+          "title": "Labour: The New Zealand Future Fund",
+          "url": "https://www.labour.org.nz/futurefund",
+          "date": "2026-08",
+          "archived": "research/nz/labour/futurefund.html",
+          "quote": "Seeded assets are protected in law from sale"
+        },
+        {
+          "title": "Labour: Small Business Action Plan",
+          "url": "https://www.labour.org.nz/small-business-action-plan",
+          "date": "2026-08",
+          "archived": "research/nz/labour/small-business-action-plan.html",
+          "quote": "Big companies will have to pay small businesses within 15 days"
+        },
+        {
+          "title": "Labour's Fiscal Strategy",
+          "url": "https://www.labour.org.nz/fiscal-strategy",
+          "date": "2026-08",
+          "archived": "research/nz/labour/fiscal-strategy.html"
+        },
+        {
+          "title": "Hansard: Regulatory Standards Bill, third reading, 13 November 2025",
+          "url": "https://community.scoop.co.nz/2025/11/regulatory-standards-bill-third-reading/",
+          "date": "2025-11-13",
+          "archived": "research/nz/shared/hansard-regulatory-standards-third-reading-scoop.html"
+        },
+        {
+          "title": "Speech: Electrify Queenstown",
+          "url": "https://www.labour.org.nz/news/speech-electrify-queenstown/",
+          "archived": "research/nz/labour/speech-electrify-queenstown.html"
+        }
+      ]
+    },
+    "liberty": {
+      "score": 25,
+      "confidence": "medium",
+      "rationale": "Labour voted against the Electoral Amendment Act 2025, which the Attorney-General had reported inconsistent with the right to vote, and in government it repealed Three Strikes in 2022. It has published no 2026 law-and-order policy; a party spokesperson said it would be 'very surprised' to keep Three Strikes but it has not committed to repealing the coalition's crime measures, and it dropped its own hate speech proposals in 2023. A lean to rights over order that its current programme does not spell out.",
+      "sources": [
+        {
+          "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025",
+          "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm",
+          "date": "2025-12-16",
+          "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html"
+        },
+        {
+          "title": "Attorney-General: Section 7 report on the Electoral Amendment Bill",
+          "url": "https://www.justice.govt.nz/assets/Documents/Publications/25072025-Electoral-Amendment-Bill.pdf",
+          "date": "2025-07-25",
+          "archived": "research/nz/shared/bora-s7-report-electoral-amendment-bill-2025.pdf"
+        },
+        {
+          "title": "Newstalk ZB: Labour criticises Govt crime policies as 'bumper stickers' but won't commit to repealing them",
+          "url": "https://www.newstalkzb.co.nz/news/politics/election-2026-labour-criticises-govt-crime-policies-as-bumper-stickers-but-won-t-commit-to-repealing-them/",
+          "archived": "research/nz/shared/newstalkzb-labour-crime-policies-2026.html"
+        }
+      ]
+    },
+    "tradition": {
+      "score": -35,
+      "confidence": "medium",
+      "rationale": "In government Labour introduced and passed the Conversion Practices Prohibition Legislation Act 2022 as a government bill, 112 votes to 8, and its MPs backed the liberalising side of the End of Life Choice and abortion conscience votes. Its 2026 programme does not campaign on social or moral questions at all; the emphasis is jobs, health and household bills. A consistent progressive record on conscience issues without a current programme to match, so a clear but not defining lean.",
+      "sources": [
+        {
+          "title": "Conversion Practices Prohibition Legislation Act 2022 (as enacted)",
+          "url": "https://www.legislation.govt.nz/act/public/2022/0001/latest/whole.html",
+          "date": "2022-02-18",
+          "archived": "research/nz/shared/conversion-practices-prohibition-legislation-act-2022.html"
+        },
+        {
+          "title": "RNZ: Bill to ban conversion practices passes third reading",
+          "url": "https://www.rnz.co.nz/news/political/461597/bill-to-ban-conversion-practices-passes-third-reading",
+          "date": "2022-02-15",
+          "archived": "research/nz/shared/rnz-conversion-practices-third-reading-2022.html"
+        },
+        {
+          "title": "Labour: Our Policies",
+          "url": "https://www.labour.org.nz/our-policies/",
+          "date": "2026-08",
+          "archived": "research/nz/labour/our-policies.html"
+        }
+      ]
+    },
+    "institutions": {
+      "score": 35,
+      "confidence": "medium",
+      "rationale": "Labour would create a Parliamentary Budget Office to independently cost every party's promises, restore wellbeing reporting to the Public Finance Act, and give the Future Fund independent governance under the Guardians of the Super Fund with no ministerial power to direct investments. It voted down the Treaty Principles Bill and its referendum, opposed the Regulatory Standards Act and the Electoral Amendment Act, and its leader has spoken of further 'checks and balances' to ensure legislation honours the Treaty. Consistently works through and adds to independent institutions rather than appealing over them; short of the +60 anchor because it also resists ACT's rule-based constraints on regulation.",
+      "sources": [
+        {
+          "title": "Labour's Fiscal Strategy",
+          "url": "https://www.labour.org.nz/fiscal-strategy",
+          "date": "2026-08",
+          "archived": "research/nz/labour/fiscal-strategy.html",
+          "quote": "A new Parliamentary Budget Office to independently analyse the books and every party's spending commitments"
+        },
+        {
+          "title": "Labour: The New Zealand Future Fund",
+          "url": "https://www.labour.org.nz/futurefund",
+          "date": "2026-08",
+          "archived": "research/nz/labour/futurefund.html",
+          "quote": "the Minister of Finance is sole shareholder with no power to direct individual investments"
+        },
+        {
+          "title": "Principles of the Treaty of Waitangi Bill, second reading (Hansard, 10 April 2025)",
+          "url": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/",
+          "date": "2025-04-10",
+          "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html"
+        },
+        {
+          "title": "Te Ao Māori News: Labour labels Treaty review 'disgusting'",
+          "url": "https://www.teaonews.co.nz/2026/04/21/labour-labels-treaty-review-disgusting-as-government-moves-to-standardise-clauses/",
+          "date": "2026-04-21",
+          "archived": "research/nz/shared/teao-labour-treaty-clause-review-2026.html"
+        }
+      ]
+    },
+    "cosmopolitan": {
+      "score": 30,
+      "confidence": "medium",
+      "rationale": "Labour opposed the Treaty Principles Bill and has said it would repeal the government's standardisation of Treaty clauses, calling the review an attack on kaupapa Māori; it funds Māori-led trades training and criticises the coalition's 'anti-migrant rhetoric', emphasising migrant-worker protection. Its 2026 economic pitch has a nationalist edge, however: the Future Fund exists partly because Kiwi businesses are 'bought out by foreign investors', and the theme is 'build our future here, not overseas'. Inclusive on Treaty and migrants, protective on capital; a moderate cosmopolitan lean with no published immigration policy yet.",
+      "sources": [
+        {
+          "title": "Te Ao Māori News: Labour labels Treaty review 'disgusting'",
+          "url": "https://www.teaonews.co.nz/2026/04/21/labour-labels-treaty-review-disgusting-as-government-moves-to-standardise-clauses/",
+          "date": "2026-04-21",
+          "archived": "research/nz/shared/teao-labour-treaty-clause-review-2026.html"
+        },
+        {
+          "title": "Labour: Backing Māori into Skilled Work",
+          "url": "https://www.labour.org.nz/maori-trades-training",
+          "date": "2026-08",
+          "archived": "research/nz/labour/maori-trades-training.html"
+        },
+        {
+          "title": "Labour: The New Zealand Future Fund",
+          "url": "https://www.labour.org.nz/futurefund",
+          "date": "2026-08",
+          "archived": "research/nz/labour/futurefund.html",
+          "quote": "Too often, Kiwi businesses are forced overseas or bought out by foreign investors"
+        },
+        {
+          "title": "Principles of the Treaty of Waitangi Bill, second reading (Hansard, 10 April 2025)",
+          "url": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/",
+          "date": "2025-04-10",
+          "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html"
+        }
+      ]
+    },
+    "environment": {
+      "score": 60,
+      "confidence": "high",
+      "rationale": "Labour commits to reinstating the offshore oil and gas exploration ban it introduced in 2018, opposes the LNG import terminal and public subsidies for exploration, and its leader says 'there is no prosperous future for New Zealand that relies on fossil fuels'. SolarSaver offers government-backed finance and subsidies for household solar and batteries, funded by repurposing the Gas Security fund, and the party criticises the weakening of the ETS and the loss of the Climate Emergency Response Fund. The case is made mostly in terms of energy security, prices and jobs rather than ecological limits, which keeps it below the top anchor.",
+      "sources": [
+        {
+          "title": "Speech: Electrify Queenstown",
+          "url": "https://www.labour.org.nz/news/speech-electrify-queenstown/",
+          "archived": "research/nz/labour/speech-electrify-queenstown.html",
+          "quote": "there is no prosperous future for New Zealand that relies on fossil fuels"
+        },
+        {
+          "title": "Labour: SolarSaver",
+          "url": "https://www.labour.org.nz/solarsaver",
+          "date": "2026-08",
+          "archived": "research/nz/labour/solarsaver.html",
+          "quote": "$160 million fully-funded over four years by repurposing the Government's Gas Security fund"
+        },
+        {
+          "title": "Release: LNG facility won't solve anything",
+          "url": "https://www.labour.org.nz/news/release-lng-facility-won-t-solve-anything/",
+          "date": "2026-06-04",
+          "archived": "research/nz/labour/release-lng-facility.html"
+        },
+        {
+          "title": "RNZ: Prime Minister asks Labour leader to support offshore gas exploration",
+          "url": "https://www.rnz.co.nz/news/political/574530/prime-minister-christopher-luxon-asks-labour-leader-chris-hipkins-to-support-offshore-gas-exploration",
+          "date": "2025-08",
+          "archived": "research/nz/shared/rnz-luxon-hipkins-offshore-gas-2025.html"
+        }
+      ]
+    },
+    "diplomacy": {
+      "score": -10,
+      "confidence": "low",
+      "rationale": "Labour has published no 2026 defence or foreign policy. Its leader was reported as 'broadly' supportive of the government's 2025 Defence Capability Plan and the path to 2 per cent of GDP, while the party's identity leans on the nuclear-free tradition. Broadly aligned with the bipartisan increase in defence spending, without making strength a theme; scored near the centre on thin evidence.",
+      "sources": [
+        {
+          "title": "RNZ: Defence Force spend-up, who is it meant to protect us against, and other questions",
+          "url": "https://www.rnz.co.nz/news/politics/557485/defence-force-spend-up-who-is-it-meant-to-protect-us-against-and-other-questions",
+          "date": "2025-04",
+          "archived": "research/nz/shared/rnz-defence-plan-questions-2025.html"
+        },
+        {
+          "title": "Speech: Labour Party Congress 2026, Chris Hipkins",
+          "url": "https://www.labour.org.nz/news/speech-labour-party-congress-2026-chris-hipkins/",
+          "date": "2026-07",
+          "archived": "research/nz/labour/speech-congress-2026-hipkins.html",
+          "quote": "We went nuclear-free when the world said we couldn't."
+        }
+      ]
+    },
+    "local": {
+      "score": -15,
+      "confidence": "low",
+      "rationale": "Labour's 2026 programme sets national schemes with uniform rules, such as the fare cap applied to every region and a national Medicard, and in government it centralised water services through Three Waters. SolarSaver works through local lines companies and a council-run Ratepayer Assistance Scheme designed with Local Government New Zealand, and the party has published no 2026 local-government policy. A slight central lean, on thin evidence.",
+      "sources": [
+        {
+          "title": "Labour's $20 Public Transport Fare Cap",
+          "url": "https://www.labour.org.nz/farecap",
+          "date": "2026-08",
+          "archived": "research/nz/labour/farecap.html"
+        },
+        {
+          "title": "Labour: SolarSaver",
+          "url": "https://www.labour.org.nz/solarsaver",
+          "date": "2026-08",
+          "archived": "research/nz/labour/solarsaver.html",
+          "quote": "Designed by councils, Local Government New Zealand and Rewiring Aotearoa"
+        }
+      ]
+    },
+    "change": {
+      "score": 15,
+      "confidence": "medium",
+      "rationale": "Labour proposes structural additions, a capital gains tax that New Zealand has never had, a sovereign Future Fund and a new model of GP funding through an Independent Pricing Authority, and its leader frames the election as a break with 'neoliberal, trickle down economics'. But every measure is presented as 'simple, targeted', fully costed and phased in over 2027 to 2029, the fiscal strategy keeps the government's own surplus timing, and the tax is narrow by design. Reformist in substance, cautious in pace.",
+      "sources": [
+        {
+          "title": "Labour: Capital Gains Tax",
+          "url": "https://www.labour.org.nz/capitalgainstax",
+          "date": "2026-08",
+          "archived": "research/nz/labour/capitalgainstax.html",
+          "quote": "A simple, targeted capital gains tax"
+        },
+        {
+          "title": "Labour's Fiscal Strategy",
+          "url": "https://www.labour.org.nz/fiscal-strategy",
+          "date": "2026-08",
+          "archived": "research/nz/labour/fiscal-strategy.html",
+          "quote": "uses the same timing forecast in Budget 2026"
+        },
+        {
+          "title": "Speech: Labour Party Congress 2026, Chris Hipkins",
+          "url": "https://www.labour.org.nz/news/speech-labour-party-congress-2026-chris-hipkins/",
+          "date": "2026-07",
+          "archived": "research/nz/labour/speech-congress-2026-hipkins.html"
+        }
+      ]
+    }
+  }
+}
