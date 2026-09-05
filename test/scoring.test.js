@@ -114,11 +114,22 @@ test("shuffle is deterministic for a seed and varies across seeds", () => {
   assert.notEqual(a, c);
 });
 
-test("prompt embeds the profile JSON and placeholders", () => {
+test("prompt embeds the profile JSON, dimensions and placeholders", () => {
   const p = S.buildProfile(DIMENSIONS, ITEMS, answerAll(() => 4), new Date("2026-09-05T10:00:00Z"));
-  const txt = S.buildPrompt(p);
-  assert.match(txt, /\[COUNTRY\]/);
+  const txt = S.buildPrompt(p, DIMENSIONS);
+  assert.match(txt, /Country: \[COUNTRY\]/);
+  assert.match(txt, /Election: \[ELECTION/);
   assert.match(txt, /"completedAt": "2026-09-05T10:00:00.000Z"/);
+  for (const d of DIMENSIONS) assert.ok(txt.includes(d.id + " — " + d.poles[0]), d.id);
+  assert.ok(txt.includes(p.summary));
   const json = txt.split("```json\n")[1].split("\n```")[0];
   assert.deepEqual(JSON.parse(json), p);
+});
+
+test("prompt uses supplied country and election", () => {
+  const p = S.buildProfile(DIMENSIONS, ITEMS, answerAll(() => 3));
+  const txt = S.buildPrompt(p, DIMENSIONS, { country: "Germany", election: "Bundestag 2029" });
+  assert.match(txt, /Country: Germany/);
+  assert.match(txt, /Election: Bundestag 2029/);
+  assert.doesNotMatch(txt, /\[COUNTRY\]/);
 });

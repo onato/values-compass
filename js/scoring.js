@@ -160,20 +160,121 @@ var Scoring = (function () {
     return out;
   }
 
-  // Ready-to-paste prompt for the matching step.
-  function buildPrompt(profile) {
+  // Self-contained research prompt for the matching step. It carries everything an
+  // agent needs: the dimension definitions, the person's profile, how to score
+  // parties on the same scale, how to match, and what to report.
+  function buildPrompt(profile, dimensions, opts) {
+    opts = opts || {};
+    var country = (opts.country || "").trim() || "[COUNTRY]";
+    var election = (opts.election || "").trim() || "[ELECTION, e.g. national parliament 2026]";
+    var byId = {};
+    dimensions.forEach(function (d) { byId[d.id] = d; });
+
+    var dimLines = dimensions.map(function (d, i) {
+      return (i + 1) + ". " + d.id + " — " + d.poles[0] + " (+100) vs. " + d.poles[1] + " (−100). " +
+        "+: " + d.describe[0] + ". −: " + d.describe[1] + ".";
+    });
+
+    var profileLines = profile.priorities.map(function (id) {
+      var s = profile.dimensions.filter(function (x) { return x.id === id; })[0];
+      var d = byId[id];
+      var lean = s.leaning ? s.leaning : "balanced";
+      return "- " + d.poles[0] + " vs. " + d.poles[1] + ": " + (s.score > 0 ? "+" : "") + s.score +
+        " (" + s.strength + (s.consistency === "mixed" ? ", mixed answers" : "") + ")" +
+        (s.leaning ? " → " + lean : "");
+    });
+
     return [
-      "I completed a values self-assessment. Below is my profile as JSON: ten bipolar dimensions",
-      "scored from -100 (fully the second pole) to +100 (fully the first pole), listed in priority",
-      "order by how strongly I lean. Dimensions marked \"mixed\" are less certain.",
+      "# Task: match political parties and candidates to my values",
       "",
-      "Country: [COUNTRY]",
-      "Election: [ELECTION, e.g. national parliament 2026]",
+      "I completed a values self-assessment. Your job is to research the parties and candidates on my ballot,",
+      "place each of them on the same ten value dimensions I was scored on, and then rank them by how well they",
+      "match me. Work independently and show your evidence. I want to be able to check every claim.",
       "",
-      "Using this profile, rank the parties and, where relevant, the candidates on the ballot by how",
-      "well their stated positions and record match my values. For each, explain the strongest",
-      "agreements and the most important conflicts, and say which of my priority dimensions drove",
-      "the ranking. Be explicit about uncertainty and do not assume positions you cannot support.",
+      "Country: " + country,
+      "Election: " + election,
+      "",
+      "## My values profile",
+      "",
+      "In my own words: " + profile.summary,
+      "",
+      "Scores from −100 to +100, listed in priority order (strongest leaning first):",
+      profileLines.join("\n"),
+      "",
+      "## The ten dimensions",
+      "",
+      "Each dimension is a scale between two poles. Positive scores lean to the first pole, negative to the second.",
+      "These are values, not policies. Score by what a party's positions reveal about its priorities when values conflict.",
+      "",
+      dimLines.join("\n"),
+      "",
+      "## Step 1: research and score the parties and candidates",
+      "",
+      "1. List every party and, where they are directly elected, every candidate on the ballot for this election in",
+      "   my constituency if I gave one, otherwise nationally. Ask me if the ballot is unclear.",
+      "2. For each party, assign a score from −100 to +100 on each of the ten dimensions, plus a confidence of",
+      "   high, medium or low, plus a one-line justification citing your sources.",
+      "3. Use sources in this order of preference, and triangulate across at least two types where possible:",
+      "   a. The party's current manifesto or programme for this election (what it is accountable for).",
+      "   b. Academic expert placements such as the Chapel Hill Expert Survey and the Manifesto Project.",
+      "   c. Party self-placements in voting-advice applications where parties answered the questions themselves.",
+      "   d. Voting records and governing record from the last term.",
+      "   e. Recent public statements by party leadership.",
+      "   Avoid opinion pieces, campaign material from rivals, and social media as primary evidence.",
+      "4. For candidates, score only where you have direct evidence (voting record, own statements, candidate",
+      "   surveys). Otherwise inherit the party score and mark confidence low.",
+      "5. Where a party is vague or contradictory on a dimension, say so and give low confidence rather than",
+      "   forcing a number. Where manifesto and governing record diverge, report both and say which you scored.",
+      "6. Do not infer a position from a party's family, name or reputation. Every score needs a source.",
+      "",
+      "## Step 2: match",
+      "",
+      "For each party, compute a weighted distance from my profile:",
+      "- weight each dimension by the absolute value of my score (my strongest leanings matter most);",
+      "- halve the weight of any dimension where my answers were marked mixed;",
+      "- distance = sqrt( Σ weight × (my score − party score)² / Σ weight ).",
+      "Rank parties by distance, lowest first. Where a candidate has their own scores, rank them separately.",
+      "",
+      "## Step 3: the electoral context",
+      "",
+      "Explain briefly how this election works and what each vote I cast can and cannot change: for example,",
+      "whether there are separate party and candidate votes, thresholds, run-offs, or safe seats. Then, kept",
+      "separate from the values match, note the strategic picture: current polling, likely coalitions, which",
+      "parties have ruled each other out, and where a vote risks being wasted. Date every figure.",
+      "",
+      "## Step 4: report",
+      "",
+      "Write the report in this order:",
+      "1. Summary: three or four sentences on which parties fit my values best, the main trade-off, and the",
+      "   single most important strategic fact.",
+      "2. Key findings: the handful of points where the parties genuinely diverge on my highest-priority",
+      "   dimensions, each backed by dated evidence.",
+      "3. Values scorecard: the full table of parties × ten dimensions with scores and confidence, then the",
+      "   ranking by distance. Say which dimensions actually separated the parties and which did not.",
+      "4. Party by party: for each party, its strongest agreements with me, its most important conflicts, and",
+      "   what its governing record says where that differs from its programme. Give smaller parties less",
+      "   weight where their published policy is too thin to judge, and say so.",
+      "5. Candidates: where I have a candidate vote, assess the candidates separately on the same dimensions,",
+      "   using direct evidence only, and say how much that vote can change.",
+      "6. Strategic considerations, clearly separated from the values match.",
+      "7. Staged reasoning rather than a single recommendation: \"if X is your top priority, then ...\" for my",
+      "   two or three highest-priority dimensions, so I can see how the answer depends on what I weigh most.",
+      "8. Caveats: where evidence is weak, contested or missing, and what you could not verify.",
+      "9. What would change this analysis before election day, and any practical deadlines such as registration",
+      "   or advance voting.",
+      "10. Sources consulted, with dates and links.",
+      "",
+      "## Rules",
+      "",
+      "- Do not tell me how to vote. Map the evidence to my values and let me decide.",
+      "- Be neutral. Do not editorialise about which values are better.",
+      "- Distinguish clearly between what a source says and your own inference.",
+      "- Apply confidence ratings equally to all parties; do not hold parties you favour to a lower standard.",
+      "- Keep values, strategy and competence separate. Competence, leadership stability and coalition",
+      "  prospects matter, but they are not part of the values match and should be reported on their own.",
+      "- If you are uncertain, say so. An honest \"unknown\" is more useful than a confident guess.",
+      "",
+      "## My profile as JSON",
       "",
       "```json",
       JSON.stringify(profile, null, 2),

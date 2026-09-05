@@ -2,7 +2,7 @@
 
 A self-assessment questionnaire, in the style of a psychological inventory, that maps a person's political values onto ten bipolar dimensions. The output is a profile (JSON plus an editable plain-language summary) intended as the input to a later step that matches political parties and candidates for voting.
 
-This repository covers step one only: establishing the values. The matching prompt is generated as a ready-to-paste template, but the matching itself is not done here.
+This repository covers step one: establishing the values. The matching itself is not done here. Instead the results page generates a self-contained research prompt that the person hands to an AI agent of their choice. The prompt carries the dimension definitions, the person's profile, a sourcing and scoring rubric for parties and candidates, the matching formula, and a required report structure, so people get their own analysis without having to trust ours.
 
 ## Run it
 

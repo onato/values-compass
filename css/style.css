@@ -179,6 +179,15 @@ textarea {
   background: var(--surface); color: var(--text); resize: vertical;
 }
 textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
+.context { display: grid; gap: 10px; margin: 8px 0 4px; }
+.context label { display: grid; gap: 4px; font-size: 0.85rem; color: var(--text-2); }
+.context input {
+  font: inherit; font-size: 0.98rem; padding: 9px 12px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+}
+.context input:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
+@media (min-width: 560px) { .context { grid-template-columns: 1fr 2fr; } }
+.action-note { margin: 10px 0 0; max-width: 62ch; }
 .toast { min-height: 1.5em; color: var(--text-2); font-size: 0.9rem; margin-top: 8px; }
 .json-view { margin-top: 12px; color: var(--text-2); font-size: 0.9rem; }
 .json-view summary { cursor: pointer; }

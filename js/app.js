@@ -222,8 +222,12 @@
     p.dimensions.forEach(function (d) { delete d.sd; });
     return p;
   }
+  function promptOpts() {
+    return { country: $("ctx-country").value, election: $("ctx-election").value };
+  }
   function refreshJson() {
     $("json").textContent = JSON.stringify(exportProfile(), null, 2);
+    $("prompt").textContent = Scoring.buildPrompt(exportProfile(), DIMENSIONS, promptOpts());
   }
 
   function toast(msg) {
@@ -271,12 +275,22 @@
   $("btn-back").addEventListener("click", back);
   $("btn-quit").addEventListener("click", function () { save(); renderIntro(); show("screen-intro"); });
   $("btn-copy-json").addEventListener("click", function () { copy(JSON.stringify(exportProfile(), null, 2), "JSON"); });
-  $("btn-copy-prompt").addEventListener("click", function () { copy(Scoring.buildPrompt(exportProfile()), "Prompt"); });
+  $("btn-copy-prompt").addEventListener("click", function () { copy(Scoring.buildPrompt(exportProfile(), DIMENSIONS, promptOpts()), "Prompt"); });
   $("btn-download").addEventListener("click", download);
   $("btn-retake").addEventListener("click", function () {
     if (!confirm("Discard these results and start again?")) return;
     clearAll(); state = freshState(); order = Scoring.shuffleItems(ITEMS, state.seed); save();
     show("screen-quiz"); renderQuestion();
+  });
+  var CTX_DEFAULTS = { "ctx-country": "New Zealand", "ctx-election": "General election, 7 November 2026" };
+  ["ctx-country", "ctx-election"].forEach(function (id) {
+    $(id).addEventListener("input", function () {
+      refreshJson();
+      try { localStorage.setItem("values-compass.ctx." + id, $(id).value); } catch (e) {}
+    });
+    var saved = null;
+    try { saved = localStorage.getItem("values-compass.ctx." + id); } catch (e) {}
+    $(id).value = saved === null ? CTX_DEFAULTS[id] : saved;
   });
   $("summary").addEventListener("input", function () {
     refreshJson();

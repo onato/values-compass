@@ -69,14 +69,24 @@
       <p class="help">This summary was generated from your scores, written as you might say it yourself. Edit anything that does not sound like you. The edited text is what goes into the profile.</p>
       <textarea id="summary" rows="10" spellcheck="true"></textarea>
 
-      <h2>Use the profile</h2>
+      <h2>Get your own analysis</h2>
+      <p class="help">The research prompt below asks an AI agent of your choice to research the parties and candidates on your ballot, score them on the same ten dimensions, and rank them against your profile with sources. You run it yourself, so you do not have to trust our analysis. Check the country and election, and add your electorate if you know it.</p>
+      <div class="context">
+        <label>Country <input id="ctx-country" type="text" placeholder="Country" autocomplete="country-name"></label>
+        <label>Election <input id="ctx-election" type="text" placeholder="Election, and your electorate if you know it"></label>
+      </div>
       <div class="actions row wrap">
-        <button id="btn-copy-prompt" class="primary">Copy matching prompt</button>
+        <button id="btn-copy-prompt" class="primary">Copy research prompt</button>
         <button id="btn-copy-json" class="secondary">Copy JSON</button>
         <button id="btn-download" class="secondary">Download JSON</button>
         <button id="btn-retake" class="link">Retake</button>
       </div>
+      <p class="help action-note"><strong>Copy research prompt</strong> puts the whole thing on your clipboard: the instructions, your ten scores and the summary above in your own words. Nothing is sent anywhere by this page. Paste it into an AI agent of your choice &mdash; Claude, ChatGPT, Gemini or any other assistant that can search the web &mdash; and it will do the research and report back to you there. Use one that can browse, or it will have nothing current to work from.</p>
       <p class="toast" id="toast" aria-live="polite"></p>
+      <details class="json-view">
+        <summary>Show research prompt</summary>
+        <pre id="prompt"></pre>
+      </details>
       <details class="json-view">
         <summary>Show JSON</summary>
         <pre id="json"></pre>
