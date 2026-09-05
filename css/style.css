@@ -8,10 +8,8 @@
   --line: #e6e5e1;
   --accent: #2a78d6;
   --accent-ink: #ffffff;
-  /* The person's own bar. One colour for both directions: the bar's side already says
-     which pole they lean to, and every hue in the palette belongs to some party. */
-  --pole-a: #4a3aa7;
-  --pole-b: #4a3aa7;
+  --pole-a: #2a78d6;   /* left pole */
+  --pole-b: #eb6834;   /* right pole; orange rather than red so neither side reads as negative */
   --mid: #f0efec;      /* neutral midpoint */
   --focus: #eda100;
 }
@@ -26,8 +24,8 @@
     --line: #343431;
     --accent: #3987e5;
     --accent-ink: #ffffff;
-    --pole-a: #9085e9;
-    --pole-b: #9085e9;
+    --pole-a: #3987e5;
+    --pole-b: #d95926;
     --mid: #383835;
   }
 }
@@ -41,8 +39,8 @@
   --line: #343431;
   --accent: #3987e5;
   --accent-ink: #ffffff;
-  --pole-a: #9085e9;
-  --pole-b: #9085e9;
+  --pole-a: #3987e5;
+  --pole-b: #d95926;
   --mid: #383835;
 }
 
