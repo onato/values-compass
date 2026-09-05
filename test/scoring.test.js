@@ -92,7 +92,7 @@ test("priorities are ordered by absolute score", () => {
   const p = S.buildProfile(DIMENSIONS, ITEMS, a);
   assert.equal(p.priorities[0], "environment");
   assert.equal(p.priorities[1], "local");
-  assert.match(p.summary, /^You strongly favour environment over growth/);
+  assert.match(p.summary, /^I strongly favour environment over growth/);
 });
 
 test("shuffle contains every item once with no adjacent same-dimension items", () => {

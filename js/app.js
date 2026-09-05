@@ -43,8 +43,12 @@
     (children || []).forEach(function (c) { n.appendChild(c); });
     return n;
   }
+  var lastAssessScreen = "screen-intro";
   function show(id) {
-    ["screen-intro", "screen-quiz", "screen-results"].forEach(function (s) { $(s).hidden = s !== id; });
+    ["screen-intro", "screen-quiz", "screen-results", "screen-method"].forEach(function (s) { $(s).hidden = s !== id; });
+    if (id !== "screen-method") lastAssessScreen = id;
+    $("tab-assess").setAttribute("aria-selected", id !== "screen-method");
+    $("tab-method").setAttribute("aria-selected", id === "screen-method");
     window.scrollTo(0, 0);
   }
   function answeredCount() { return Object.keys(state.answers).length; }
@@ -61,6 +65,32 @@
     $("btn-start").textContent = inProgress ? "Start over" : "Start";
     $("btn-view-results").hidden = !loadResult();
   }
+
+  // ---------- methodology ----------
+  function renderMethod() {
+    var dims = $("method-dims");
+    dims.innerHTML = "";
+    DIMENSIONS.forEach(function (d) {
+      dims.appendChild(el("li", { html:
+        "<b>" + d.poles[0] + " vs. " + d.poles[1] + ".</b> " +
+        cap(d.describe[0]) + ", against " + d.describe[1] + "." }));
+    });
+    var groups = $("method-items");
+    groups.innerHTML = "";
+    DIMENSIONS.forEach(function (d) {
+      var ul = el("ul");
+      ITEMS.filter(function (it) { return it.dim === d.id; }).forEach(function (it) {
+        ul.appendChild(el("li", null, [
+          el("span", { class: "k", text: it.key > 0 ? "+" : "−" }),
+          el("span", { text: it.text })
+        ]));
+      });
+      groups.appendChild(el("div", { class: "item-group" }, [
+        el("h3", { text: d.poles[0] + " vs. " + d.poles[1] }), ul
+      ]));
+    });
+  }
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
   // ---------- questionnaire ----------
   function renderQuestion() {
@@ -259,6 +289,13 @@
     else if (e.key === "Backspace" || e.key === "ArrowLeft") { back(); e.preventDefault(); }
   });
 
+  $("tab-assess").addEventListener("click", function () {
+    if (lastAssessScreen === "screen-intro") renderIntro();
+    show(lastAssessScreen);
+  });
+  $("tab-method").addEventListener("click", function () { show("screen-method"); });
+
   renderIntro();
+  renderMethod();
   show("screen-intro");
 })();

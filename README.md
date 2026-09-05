@@ -40,7 +40,7 @@ Tests cover reverse keying, the score range, strength thresholds, the mixed-view
 ## Files
 
 ```
-index.html          screens: intro, questionnaire, results
+index.html          screens: intro, questionnaire, results, methodology
 css/style.css       layout and result bars, light and dark
 js/data.js          dimensions and items
 js/scoring.js       pure scoring, summary, shuffle and prompt functions

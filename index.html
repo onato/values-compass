@@ -8,6 +8,10 @@
 </head>
 <body>
   <main class="app">
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button id="tab-assess" class="tab" role="tab" aria-selected="true">Assessment</button>
+      <button id="tab-method" class="tab" role="tab" aria-selected="false">Methodology</button>
+    </nav>
 
     <!-- Intro -->
     <section id="screen-intro" class="screen">
@@ -62,7 +66,7 @@
       </div>
 
       <h2>In your own words</h2>
-      <p class="help">This summary was generated from your scores. Edit anything that does not sound like you. The edited text is what goes into the profile.</p>
+      <p class="help">This summary was generated from your scores, written as you might say it yourself. Edit anything that does not sound like you. The edited text is what goes into the profile.</p>
       <textarea id="summary" rows="10" spellcheck="true"></textarea>
 
       <h2>Use the profile</h2>
@@ -77,6 +81,68 @@
         <summary>Show JSON</summary>
         <pre id="json"></pre>
       </details>
+    </section>
+
+    <!-- Methodology -->
+    <section id="screen-method" class="screen prose" hidden>
+      <h1>Methodology</h1>
+      <p class="lead">How the questionnaire is built, how answers become scores, and what the result can and cannot tell you.</p>
+
+      <h2>Purpose</h2>
+      <p>Most voting-advice tools ask about policies: should tax X go up, should law Y be repealed. Answers to those questions shift with the news cycle and depend on knowing the local debate. This questionnaire instead asks about <em>values</em>: the principles a person falls back on when policies conflict. Values are more stable, apply in any country, and are what a party programme ultimately expresses. The profile it produces is meant to be handed to a separate matching step, together with the local parties and candidates, rather than to name a party itself.</p>
+
+      <h2>The value model</h2>
+      <p>The instrument measures ten bipolar dimensions. Each has two poles and a score between them; neither pole is treated as better. The set draws on two established frameworks in psychology, Schwartz's theory of basic human values (for example openness to change versus conservation, and self-transcendence versus self-enhancement) and Moral Foundations Theory (care, fairness, loyalty, authority, sanctity, liberty), and on the axes political science uses to place parties: the economic left-right axis and the cultural axis often labelled GAL-TAN (green, alternative, libertarian versus traditional, authoritarian, nationalist).</p>
+      <p>Dimensions were chosen for three properties: they separate parties in practice, they can be phrased as principles rather than policies, and together they capture more than a single left-right line. Combinations matter more than any one axis. Someone who favours markets <em>and</em> solidarity sits in a different place from someone who favours markets <em>and</em> self-reliance, and multi-party systems have parties for both.</p>
+      <ol id="method-dims" class="dim-defs"></ol>
+
+      <h2>Item design</h2>
+      <ul>
+        <li><strong>Five statements per dimension, fifty in total.</strong> Several statements per dimension mean one odd answer moves the score by at most 20 points, and the spread of answers can be used as a consistency check.</li>
+        <li><strong>Five-point agreement scale</strong> from <em>strongly disagree</em> to <em>strongly agree</em>, with a genuine neutral midpoint. This is the standard format for self-report inventories and is quick to answer on first reaction.</li>
+        <li><strong>Reverse-keyed statements.</strong> In every dimension at least two statements are phrased from the opposite pole. Someone who tends to agree with everything, or to disagree with everything, therefore lands near the middle rather than at one end, and the pattern is flagged as mixed.</li>
+        <li><strong>Principles, not policies.</strong> Statements avoid naming countries, institutions, parties or current events, so the same instrument works anywhere and does not age with the news.</li>
+        <li><strong>Shuffled order.</strong> Statements are presented in a random order fixed for the session, with no two consecutive statements from the same dimension, so the person cannot see which dimension is being probed and answer for consistency rather than honestly.</li>
+      </ul>
+
+      <h2>Scoring</h2>
+      <ol>
+        <li>Each answer is a number from 1 (strongly disagree) to 5 (strongly agree).</li>
+        <li>Reverse-keyed statements are flipped (6 minus the answer), so that 5 always means "fully the first pole".</li>
+        <li>The five keyed values in a dimension are averaged, giving a mean between 1 and 5.</li>
+        <li>The mean is rescaled to a score from −100 to +100: <code>(mean − 3) ÷ 2 × 100</code>. Positive scores lean to the first pole, negative to the second, and 0 is the exact midpoint.</li>
+      </ol>
+      <p>Strength labels are attached by the size of the score, ignoring its sign:</p>
+      <table class="thresholds">
+        <thead><tr><th>Absolute score</th><th>Label</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>0 to 14</td><td>balanced</td><td>No clear leaning; roughly neutral, or agreement split across the poles.</td></tr>
+          <tr><td>15 to 44</td><td>leans</td><td>A mild but real preference.</td></tr>
+          <tr><td>45 to 74</td><td>clearly</td><td>A firm preference on most statements.</td></tr>
+          <tr><td>75 to 100</td><td>strongly</td><td>Consistent strong agreement with one pole.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Consistency.</strong> The standard deviation of the five keyed values shows whether the person answered the dimension coherently. A deviation above 1.2 means they agreed with statements from both poles, and the dimension is marked <em>mixed</em>. A mixed score is still reported but should carry less weight in matching.</p>
+      <p><strong>Priorities.</strong> Dimensions are ordered by absolute score. A stronger leaning counts for more, so the order doubles as an implicit weighting. No separate "how important is this to you" question is asked; extremity stands in for importance.</p>
+
+      <h2>Reading the profile</h2>
+      <p>The JSON profile contains, for each dimension, the score, the strength label, the pole leaned towards, and the consistency flag, plus the priority order and a summary paragraph. The summary is generated from the scores in the first person and can be edited, because a person is the final authority on their own values; the edited text is what goes into the export.</p>
+
+      <h2>Limitations</h2>
+      <ul>
+        <li><strong>It is self-report.</strong> It measures what people say they value, which can differ from how they vote or behave.</li>
+        <li><strong>It has not been psychometrically validated.</strong> The dimensions and thresholds are grounded in established theory, but the specific statements have not been tested on a large sample for reliability or factor structure. Treat scores as indicative, not precise.</li>
+        <li><strong>Dimensions are correlated.</strong> Solidarity, Regulation and Environment tend to move together, as do Tradition, National and Security. They are kept separate because parties split them in different ways, but the profile is not ten independent measurements.</li>
+        <li><strong>Country-neutral wording cuts both ways.</strong> It travels well, but a local issue that dominates an election may not map neatly onto any dimension.</li>
+        <li><strong>Values are not the whole vote.</strong> Competence, trust, coalition arithmetic and single issues also matter. The profile is one input to a decision, not the decision.</li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <p>The page has no server. Answers, scores and the summary are stored only in this browser's local storage and leave it only when you copy or download them.</p>
+
+      <h2>All statements</h2>
+      <p class="help">Every statement, grouped by dimension. A minus sign marks a reverse-keyed statement, phrased from the second pole.</p>
+      <div id="method-items"></div>
     </section>
 
   </main>

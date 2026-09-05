@@ -89,18 +89,18 @@ var Scoring = (function () {
       if (s.strength === "balanced") { balanced.push(d); return; }
       var side = s.score > 0 ? 0 : 1;
       var verb = { strongly: "strongly favour", clearly: "clearly favour", leans: "lean towards" }[s.strength];
-      lines.push("You " + verb + " " + d.poles[side].toLowerCase() + " over " +
+      lines.push("I " + verb + " " + d.poles[side].toLowerCase() + " over " +
         d.poles[1 - side].toLowerCase() + ": " + d.describe[side] + ".");
     });
     if (balanced.length) {
       var names = balanced.map(function (d) { return d.poles[0] + " vs. " + d.poles[1]; });
-      lines.push("You are fairly balanced on " + joinNatural(names) + ".");
+      lines.push("I am fairly balanced on " + joinNatural(names) + ".");
     }
     if (mixed.length) {
       var mnames = mixed.map(function (d) { return d.poles[0] + " vs. " + d.poles[1]; });
-      lines.push("Your answers on " + joinNatural(mnames) +
-        " pointed in different directions, so treat " + (mixed.length === 1 ? "that score" : "those scores") +
-        " as less certain.");
+      lines.push("My answers on " + joinNatural(mnames) +
+        " pointed in different directions, so " + (mixed.length === 1 ? "that score is" : "those scores are") +
+        " less certain.");
     }
     return lines.join(" ");
   }
