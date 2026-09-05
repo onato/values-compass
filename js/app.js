@@ -230,8 +230,7 @@
       if (s.consistency === "mixed") {
         poles.firstChild.appendChild(el("span", { class: "badge", text: "mixed" }));
       }
-      if (s.importance === "high") poles.firstChild.appendChild(el("span", { class: "badge importance-high", text: "matters a lot" }));
-      if (s.importance === "low") poles.firstChild.appendChild(el("span", { class: "badge importance-low", text: "matters less" }));
+      poles.firstChild.appendChild(importancePill(d, s));
       var track = el("div", { class: "track", tabindex: "0",
         title: d.poles[0] + " vs. " + d.poles[1] + ": " + fmtLean(s.score, d) + " (" + s.strength + (s.consistency === "mixed" ? ", mixed" : "") + ")",
         "aria-label": d.poles[0] + " versus " + d.poles[1] + ", " + fmtLean(s.score, d) + ", " + s.strength });
@@ -476,6 +475,25 @@
   function joinNatural(xs) {
     if (xs.length <= 1) return xs.join("");
     return xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1];
+  }
+
+  // A clickable pill showing how much the dimension matters; clicking steps to the next level and re-scores.
+  var IMPORTANCE_LABEL = { low: "matters less", normal: "matters", high: "matters a lot" };
+  function importancePill(d, s) {
+    var level = s.importance || "normal";
+    var pill = el("button", { type: "button", class: "badge importance-" + level,
+      title: "How much this dimension counts in matching. Click to change.", text: IMPORTANCE_LABEL[level] });
+    pill.addEventListener("click", function (e) {
+      e.preventDefault(); e.stopPropagation();
+      var order = ["low", "normal", "high"];
+      state.importance[d.id] = order[(order.indexOf(level) + 1) % order.length];
+      state.importanceAsked = true;
+      save();
+      var open = [].map.call(document.querySelectorAll("#chart .row-dim[open]"), function (r) { return r.dataset.dim; });
+      finish();
+      open.forEach(function (id) { var r = document.querySelector('#chart .row-dim[data-dim="' + id + '"]'); if (r) r.open = true; });
+    });
+    return pill;
   }
 
   // Explains one dimension's score from the five answers behind it.
