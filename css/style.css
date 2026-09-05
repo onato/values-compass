@@ -262,9 +262,8 @@ button.link.inline { padding: 0; font: inherit; font-size: inherit; color: var(-
 .importance-list { display: grid; gap: 10px; margin-bottom: 8px; }
 .importance-row { display: grid; grid-template-columns: 1fr auto; gap: 8px 14px; align-items: center; padding: 10px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
 .importance-row .dim-name { font-weight: 600; }
-.importance-row .dim-under { grid-column: 1; display: grid; gap: 2px; }
-.importance-row .dim-blurb { color: var(--text-3); font-size: 0.82rem; }
-.importance-row .dim-more { font-size: 0.8rem; color: var(--text-3); }
+.importance-row .dim-more { grid-column: 1; font-size: 0.82rem; color: var(--text-3); }
+.importance-row .dim-more > summary:hover { color: var(--text-2); }
 .importance-row .dim-more > summary { cursor: pointer; list-style: none; }
 .importance-row .dim-more > summary::-webkit-details-marker { display: none; }
 .importance-row .dim-more > summary::after { content: " ▸"; }
