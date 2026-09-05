@@ -27,6 +27,7 @@
     try { var r = localStorage.getItem(RESULT_KEY); return r ? JSON.parse(r) : null; } catch (e) { return null; }
   }
   function saveResult(p) {
+    if (sampleMode) return;
     try { localStorage.setItem(RESULT_KEY, JSON.stringify(p)); } catch (e) {}
   }
   function clearAll() {
@@ -47,13 +48,49 @@
   }
   var lastAssessScreen = "screen-intro";
   function show(id) {
-    ["screen-intro", "screen-quiz", "screen-importance", "screen-results", "screen-method"].forEach(function (s) { $(s).hidden = s !== id; });
-    if (id !== "screen-method") lastAssessScreen = id;
-    $("tab-assess").setAttribute("aria-selected", id !== "screen-method");
-    $("tab-method").setAttribute("aria-selected", id === "screen-method");
+    ["screen-intro", "screen-quiz", "screen-importance", "screen-results"].forEach(function (s) { $(s).hidden = s !== id; });
+    lastAssessScreen = id;
     window.scrollTo(0, 0);
   }
   function answeredCount() { return Object.keys(state.answers).length; }
+
+  // ---------- sample result ----------
+  var sampleMode = false;
+  // Answers for an imaginary person, built from target scores so the sample looks like a real profile.
+  function sampleAnswers() {
+    var targets = { solidarity: 40, regulation: 20, liberty: 50, tradition: -40, institutions: 30, cosmopolitan: 40,
+                    environment: 80, diplomacy: 30, local: 40, change: 20, animals: 60, drugs: 40 };
+    var patterns = { 80: [5, 5, 5, 4, 4], 60: [5, 4, 4, 4, 3], 50: [5, 4, 4, 3, 4], 40: [4, 4, 4, 4, 3], 30: [4, 4, 3, 3, 4], 20: [4, 3, 3, 4, 3], "-40": [2, 2, 2, 2, 3] };
+    var answers = {};
+    DIMENSIONS.forEach(function (d) {
+      var keyedValues = patterns[String(targets[d.id])] || [3, 3, 3, 3, 3];
+      ITEMS.filter(function (it) { return it.dim === d.id; }).forEach(function (it, i) {
+        var v = keyedValues[i];
+        answers[it.id] = it.key > 0 ? v : 6 - v;
+      });
+    });
+    return answers;
+  }
+  function showSample() {
+    var profile = Scoring.buildProfile(DIMENSIONS, ITEMS, sampleAnswers(), new Date(),
+      { importance: { environment: "high", change: "low" }, otherConcerns: "housing affordability and how well the health system actually works" });
+    sampleMode = true;
+    document.body.classList.add("sample");
+    $("sample-banner").hidden = false;
+    $("results-title").textContent = "A sample values profile";
+    $("summary").readOnly = true;
+    $("btn-retake").textContent = "Start the questionnaire";
+    renderResults(profile);
+    show("screen-results");
+  }
+  function leaveSample() {
+    sampleMode = false;
+    document.body.classList.remove("sample");
+    $("sample-banner").hidden = true;
+    $("results-title").textContent = "Your values profile";
+    $("summary").readOnly = false;
+    $("btn-retake").textContent = "Retake";
+  }
 
   // ---------- intro ----------
   function renderIntro() {
@@ -64,7 +101,7 @@
     });
     var inProgress = answeredCount() > 0 && answeredCount() < ITEMS.length;
     $("btn-resume").hidden = !inProgress;
-    $("btn-start").textContent = inProgress ? "Start over" : "Start";
+    $("btn-start").textContent = inProgress ? "Start over" : "Start the questionnaire";
     $("btn-view-results").hidden = !loadResult();
   }
 
@@ -490,6 +527,7 @@
       title: "How much this dimension counts in matching. Click to change it.", text: IMPORTANCE_LABEL[level] });
     pill.addEventListener("click", function (e) {
       e.preventDefault(); e.stopPropagation();
+      if (sampleMode) return;
       showImportance();
       var row = document.querySelector('.importance-row[data-dim="' + d.id + '"]');
       if (row) { row.scrollIntoView({ block: "center" }); row.classList.add("highlight"); var b = row.querySelector('button[aria-checked="true"]'); if (b) b.focus(); }
@@ -515,7 +553,7 @@
       var ans = el("span", { class: "answer", html: "You answered <b>" + labels[r.response] + "</b>" +
         (r.key < 0 ? " (reverse-keyed, counts as " + r.keyed + " of 5)" : " (" + r.keyed + " of 5)") +
         ", towards " + toward + ". " });
-      if (typeof state.answers[r.id] === "number") {
+      if (!sampleMode && typeof state.answers[r.id] === "number") {
         var change = el("button", { class: "link inline", type: "button", text: "Change answer" });
         change.addEventListener("click", function () { jumpToItem(r.id); });
         ans.appendChild(change);
@@ -596,15 +634,23 @@
   }
 
   // ---------- wiring ----------
+  function startQuestionnaire() {
+    leaveSample();
+    if (answeredCount() > 0 && !confirm("Start over and discard your current answers?")) return;
+    state = freshState(); order = Scoring.shuffleItems(ITEMS, state.seed); save();
+    show("screen-quiz"); renderQuestion();
+  }
+  $("btn-sample").addEventListener("click", showSample);
+  $("btn-sample-start").addEventListener("click", startQuestionnaire);
   $("btn-start").addEventListener("click", function () {
     if (answeredCount() > 0 && !confirm("Start over and discard your current answers?")) return;
     state = freshState(); order = Scoring.shuffleItems(ITEMS, state.seed); save();
     show("screen-quiz"); renderQuestion();
   });
-  $("btn-resume").addEventListener("click", function () { show("screen-quiz"); renderQuestion(); });
+  $("btn-resume").addEventListener("click", function () { leaveSample(); show("screen-quiz"); renderQuestion(); });
   $("btn-view-results").addEventListener("click", function () {
     var r = loadResult(); if (!r) return;
-    renderResults(r); show("screen-results");
+    leaveSample(); renderResults(r); show("screen-results");
   });
   $("btn-back").addEventListener("click", back);
   $("btn-quit").addEventListener("click", function () {
@@ -616,6 +662,7 @@
   $("btn-copy-prompt").addEventListener("click", function () { copy(Scoring.buildPrompt(exportProfile(), DIMENSIONS, promptOpts()), "Prompt"); });
   $("btn-download").addEventListener("click", download);
   $("btn-retake").addEventListener("click", function () {
+    if (sampleMode) { startQuestionnaire(); return; }
     if (!confirm("Discard these results and start again?")) return;
     clearAll(); state = freshState(); order = Scoring.shuffleItems(ITEMS, state.seed); save();
     show("screen-quiz"); renderQuestion();
@@ -647,12 +694,11 @@
     else if (e.key === "Backspace" || e.key === "ArrowLeft") { back(); e.preventDefault(); }
   });
 
-  $("tab-assess").addEventListener("click", function () {
-    if (lastAssessScreen === "screen-intro") renderIntro();
-    show(lastAssessScreen);
+  $("link-method").addEventListener("click", function () {
+    if (sampleMode) leaveSample();
+    renderIntro(); show("screen-intro");
+    var m = $("methodology"); if (m) m.scrollIntoView({ block: "start" });
   });
-  $("tab-method").addEventListener("click", function () { show("screen-method"); });
-  $("link-method").addEventListener("click", function () { show("screen-method"); });
 
   renderIntro();
   renderMethod();
