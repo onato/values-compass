@@ -287,7 +287,9 @@
       ELECTORATES_NZ.electorates.forEach(function (e) { sel.appendChild(el("option", { value: e.id, text: e.name })); });
       var saved = null;
       try { saved = localStorage.getItem(ELECTORATE_KEY); } catch (e) {}
+      // With a single researched electorate, show it by default rather than an empty choice.
       if (saved) sel.value = saved;
+      else if (ELECTORATES_NZ.electorates.length === 1) sel.value = ELECTORATES_NZ.electorates[0].id;
       sel.addEventListener("change", function () {
         try { localStorage.setItem(ELECTORATE_KEY, sel.value); } catch (e) {}
         if (current) { renderCandidates(current, sel.value); refreshJson(); }
