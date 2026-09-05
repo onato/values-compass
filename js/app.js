@@ -80,13 +80,79 @@
     (children || []).forEach(function (c) { n.appendChild(c); });
     return n;
   }
+  // ---------- screens and history ----------
+  // Every screen change is reflected in the browser history, so the back
+  // button (or a phone's back gesture) returns to the previous screen instead
+  // of leaving the site. The screen the page opened on is the root. Leaving
+  // the root pushes one entry, and moving between the other screens replaces
+  // that entry, so a single back press from anywhere lands on the root. A
+  // detour from the results to change one answer pushes again, so back
+  // returns to the results. Returning to the screen an entry was pushed from
+  // pops it instead of stacking a copy.
   var lastAssessScreen = "screen-intro";
-  function show(id) {
+  var currentScreen = null;
+  var restoring = false; // set while a popstate is being replayed, so show() leaves history alone
+  function screenUrl(id) {
+    var url = location.pathname + location.search;
+    if (id === "screen-results" && !sampleMode && current) url += "#r=" + resultCode();
+    return url;
+  }
+  function show(id, opts) {
     ["screen-intro", "screen-quiz", "screen-importance", "screen-results"].forEach(function (s) { $(s).hidden = s !== id; });
     lastAssessScreen = id;
-    if (id !== "screen-results" && location.hash) { try { history.replaceState(null, "", location.pathname); } catch (e) {} }
+    if (!restoring) {
+      var entry = { screen: id, sample: sampleMode, depth: 0, below: null };
+      var here = history.state || {};
+      try {
+        if (currentScreen === null) {
+          history.replaceState(entry, "", screenUrl(id));
+        } else if (id === here.below) {
+          currentScreen = id;
+          history.back();
+        } else if (!here.depth || (opts && opts.push)) {
+          entry.depth = (here.depth || 0) + 1; entry.below = currentScreen;
+          history.pushState(entry, "", screenUrl(id));
+        } else {
+          entry.depth = here.depth; entry.below = here.below;
+          history.replaceState(entry, "", screenUrl(id));
+        }
+      } catch (e) {}
+    }
+    currentScreen = id;
     window.scrollTo(0, 0);
   }
+  function hashCode() {
+    return location.hash.indexOf("#r=") === 0 ? decodeURIComponent(location.hash.slice(3)) : null;
+  }
+  // Rebuild the screen a history entry stands for from stored state. Anything
+  // that can no longer be rebuilt falls back to the intro.
+  function restoreScreen(entry) {
+    var id = entry && entry.screen || "screen-intro";
+    if (id === "screen-results") {
+      if (entry.sample) { showSample(); return; }
+      var r = linkedMode ? null : loadResult();
+      if (r) { leaveSample(); renderResults(r); show(id); return; }
+      var code = hashCode();
+      if (code && openCode(code, linkedMode ? "link" : "history")) return;
+      id = "screen-intro";
+    }
+    if (id === "screen-importance") { leaveSample(); showImportance(); return; }
+    if (id === "screen-quiz") { leaveSample(); show(id); renderQuestion(); return; }
+    if (sampleMode) leaveSample();
+    renderIntro(); show("screen-intro");
+  }
+  window.addEventListener("popstate", function (e) {
+    var entry = e.state;
+    var id = entry && entry.screen || "screen-intro";
+    if (id === currentScreen && !!(entry && entry.sample) === sampleMode) {
+      // Landed back on the screen already showing (a detour was popped): the
+      // result may have changed on the way, so bring the entry's link up to date.
+      try { history.replaceState(entry, "", screenUrl(id)); } catch (err) {}
+      return;
+    }
+    restoring = true;
+    try { restoreScreen(entry); } finally { restoring = false; }
+  });
   function answeredCount() { return Object.keys(state.answers).length; }
 
   // ---------- sample result ----------
@@ -424,7 +490,7 @@
   }
 
   // ---------- importance and other concerns ----------
-  function showImportance() {
+  function showImportance(opts) {
     var list = $("importance-list");
     list.innerHTML = "";
     DIMENSIONS.forEach(function (d) {
@@ -449,7 +515,7 @@
       ]));
     });
     $("other-concerns").value = state.otherConcerns || "";
-    show("screen-importance");
+    show("screen-importance", opts);
   }
   $("btn-importance-done").addEventListener("click", function () {
     state.otherConcerns = $("other-concerns").value.trim(); state.importanceAsked = true; save(); finish();
@@ -457,7 +523,7 @@
   $("btn-importance-skip").addEventListener("click", function () {
     state.importanceAsked = true; save(); finish();
   });
-  $("link-importance").addEventListener("click", function () { showImportance(); });
+  $("link-importance").addEventListener("click", function () { showImportance({ push: true }); });
 
   // From the results: go to one question, answer it, come straight back.
   function jumpToItem(itemId) {
@@ -466,7 +532,7 @@
     jumpTarget = itemId;
     state.index = idx;
     save();
-    show("screen-quiz");
+    show("screen-quiz", { push: true });
     renderQuestion();
   }
 
@@ -537,7 +603,9 @@
     $("summary").value = profile.summary;
     $("link-banner").hidden = !linkedMode;
     if (!sampleMode) {
-      try { history.replaceState(null, "", location.pathname + "#r=" + resultCode()); } catch (e) {}
+      // Re-rendering on the results screen keeps the entry's link current;
+      // arriving at the screen sets it in show().
+      if (currentScreen === "screen-results") { try { history.replaceState(history.state, "", screenUrl("screen-results")); } catch (e) {} }
       var mine = loadProfiles().filter(function (p) { return p.code === resultCode(); })[0];
       $("save-status").textContent = mine ? "Saved as \"" + mine.name + "\"." : "";
       if (mine) $("save-name").value = mine.name;
@@ -935,6 +1003,6 @@
 
   renderIntro();
   loadMethod();
-  var linkCode = location.hash.indexOf("#r=") === 0 ? decodeURIComponent(location.hash.slice(3)) : null;
+  var linkCode = hashCode();
   if (!(linkCode && openCode(linkCode, "link"))) show("screen-intro");
 })();
