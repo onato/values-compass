@@ -210,7 +210,124 @@
     });
 
     $("summary").value = profile.summary;
+    renderParties(profile);
     refreshJson();
+  }
+
+  // ---------- party alignment ----------
+  function partiesAvailable() {
+    return typeof PARTIES_NZ !== "undefined" && PARTIES_NZ.parties && PARTIES_NZ.parties.length > 0;
+  }
+
+  function renderParties(profile) {
+    var section = $("party-section");
+    if (!partiesAvailable()) { section.hidden = true; return; }
+    section.hidden = false;
+    var byId = {};
+    DIMENSIONS.forEach(function (d) { byId[d.id] = d; });
+    var parties = PARTIES_NZ.parties;
+    var meta = PARTIES_NZ.meta;
+    var ranking = Matching.matchParties(profile, parties);
+    var partyById = {};
+    parties.forEach(function (p) { partyById[p.id] = p; });
+
+    $("party-intro").textContent = "New Zealand, " + meta.election + ". " + parties.length +
+      (parties.length === 1 ? " party" : " parties") + " scored so far, assessed " + meta.assessedAt +
+      " under rubric v" + meta.rubricVersion + ". Ranked by how closely each sits to your profile.";
+
+    var list = $("party-ranking");
+    list.innerHTML = "";
+    ranking.forEach(function (r) {
+      var party = partyById[r.id];
+      var agree = r.agreements.map(function (id) { return byId[id].poles.join(" vs. "); });
+      var conflict = r.conflicts.map(function (id) { return byId[id].poles.join(" vs. "); });
+      var drivers = el("div", { class: "drivers" });
+      drivers.appendChild(el("span", { html: "<b>Closest on</b> " + (agree.length ? agree.join(", ") : "nothing in particular") + ". " }));
+      drivers.appendChild(el("span", { html: "<b>Furthest on</b> " + (conflict.length ? conflict.join(", ") : "no dimension by 30 points or more") + "." }));
+      var sw = el("i", { class: "sw", "aria-hidden": "true" }); sw.style.background = party.colour;
+      var summary = el("summary", null, [
+        el("span", { class: "rank", text: r.rank + "." }),
+        el("span", { class: "party-name" }, [sw, el("span", { text: party.name })]),
+        el("span", { class: "align", html: r.alignment + "% aligned<small>confidence " + r.confidence + (r.scoredDimensions < 10 ? ", " + r.scoredDimensions + " of 10 scored" : "") + "</small>" }),
+        drivers
+      ]);
+      var cells = el("div", { class: "cells" });
+      cells.appendChild(el("p", { class: "intro", text: "Your position is the bar; " + party.short + "'s is the dot. Dimensions in the order they matter to you." }));
+      profile.priorities.forEach(function (id) {
+        cells.appendChild(renderCell(byId[id], profile.dimensions.filter(function (x) { return x.id === id; })[0], party));
+      });
+      list.appendChild(el("details", { class: "party-card" }, [summary, cells]));
+    });
+
+    var disc = Matching.discriminatingDimensions(DIMENSIONS.map(function (d) { return d.id; }), parties);
+    if (parties.length >= 2) {
+      var top = disc.slice(0, 3).map(function (d) { return byId[d.id].poles.join(" vs. "); });
+      var flat = disc.filter(function (d) { return d.spread < 30 && d.scored > 0; }).map(function (d) { return byId[d.id].poles.join(" vs. "); });
+      $("party-discriminators").textContent = "The parties differ most on " + joinNatural(top) + "." +
+        (flat.length ? " They barely differ on " + joinNatural(flat) + ", so those dimensions do little to separate them." : "");
+    } else {
+      $("party-discriminators").textContent = "Once more parties are scored, this line will say which dimensions actually separate them.";
+    }
+    $("method-parties").textContent = "Currently scored: " + parties.map(function (p) { return p.short; }).join(", ") +
+      ". Latest assessment " + meta.assessedAt + ", rubric v" + meta.rubricVersion + ".";
+  }
+
+  function renderCell(d, pd, party) {
+    var cell = party.dimensions[d.id];
+    var wrap = el("div", { class: "cell" });
+    var half = Math.abs(pd.score) / 2;
+    wrap.appendChild(el("div", { class: "poles" }, [
+      el("span", { html: pd.score > 0 && pd.strength !== "balanced" ? "<b>" + d.poles[0] + "</b>" : d.poles[0] }),
+      el("span", { html: pd.score < 0 && pd.strength !== "balanced" ? "<b>" + d.poles[1] + "</b>" : d.poles[1] })
+    ]));
+    var track = el("div", { class: "track", "aria-label": d.poles[0] + " versus " + d.poles[1] + ": you " + fmt(pd.score) + (cell && typeof cell.score === "number" ? ", " + party.short + " " + fmt(cell.score) : "") });
+    track.appendChild(el("div", { class: "axis" }));
+    if (pd.score !== 0) {
+      var bar = el("div", { class: "bar " + (pd.score > 0 ? "a" : "b") + (pd.consistency === "mixed" ? " mixed" : "") });
+      bar.style.width = half + "%";
+      track.appendChild(bar);
+    }
+    if (cell && typeof cell.score === "number") {
+      var m = el("div", { class: "marker", title: party.short + " " + fmt(cell.score) });
+      // Pole A is the left end, so +100 sits at 0% and -100 at 100%.
+      m.style.left = (50 - cell.score / 2) + "%";
+      m.style.background = party.colour;
+      track.appendChild(m);
+    }
+    wrap.appendChild(track);
+    var meta = el("div", { class: "cell-meta" });
+    meta.appendChild(el("span", { class: "you", text: "You " + fmt(pd.score) + (pd.consistency === "mixed" ? " (mixed)" : "") }));
+    if (cell && typeof cell.score === "number") {
+      var ps = el("span", { class: "party", text: party.short + " " + fmt(cell.score) });
+      ps.style.setProperty("--marker", party.colour);
+      meta.appendChild(ps);
+      meta.appendChild(el("span", { class: "badge" + (cell.confidence === "low" ? " low" : ""), text: "confidence " + cell.confidence }));
+    } else {
+      meta.appendChild(el("span", { class: "nodata", text: party.short + ": no discernible position" }));
+    }
+    wrap.appendChild(meta);
+    if (cell) {
+      wrap.appendChild(el("p", { class: "rationale", text: cell.rationale }));
+      if (cell.sources && cell.sources.length) {
+        var ul = el("ul", { class: "sources" });
+        cell.sources.forEach(function (s) {
+          var li = el("li");
+          if (s.url) li.appendChild(el("a", { href: s.url, target: "_blank", rel: "noopener", text: s.title }));
+          else li.appendChild(el("span", { text: s.title }));
+          if (s.date) li.appendChild(document.createTextNode(" (" + s.date + ")"));
+          if (s.archived) { li.appendChild(document.createTextNode(" · ")); li.appendChild(el("a", { href: s.archived, target: "_blank", rel: "noopener", text: "archived copy" })); }
+          if (s.quote) li.appendChild(el("span", { text: " — \u201c" + s.quote + "\u201d" }));
+          ul.appendChild(li);
+        });
+        wrap.appendChild(ul);
+      }
+    }
+    return wrap;
+  }
+
+  function joinNatural(xs) {
+    if (xs.length <= 1) return xs.join("");
+    return xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1];
   }
 
   function fmt(n) { return (n > 0 ? "+" : "") + n; }
@@ -220,6 +337,9 @@
     p.summary = $("summary").value.trim();
     // Drop the raw sd; it's an internal detail.
     p.dimensions.forEach(function (d) { delete d.sd; });
+    if (partiesAvailable()) {
+      p.partyMatch = Matching.exportBlock(Matching.matchParties(current, PARTIES_NZ.parties), PARTIES_NZ.meta);
+    }
     return p;
   }
   function promptOpts() {
@@ -308,6 +428,7 @@
     show(lastAssessScreen);
   });
   $("tab-method").addEventListener("click", function () { show("screen-method"); });
+  $("link-method").addEventListener("click", function () { show("screen-method"); });
 
   renderIntro();
   renderMethod();

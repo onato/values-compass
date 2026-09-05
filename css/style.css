@@ -195,3 +195,40 @@ pre {
   background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
   padding: 12px; overflow-x: auto; font-size: 0.8rem; line-height: 1.4; color: var(--text);
 }
+
+/* Party alignment */
+.party-section { margin-top: 36px; }
+.party-ranking { display: grid; gap: 10px; margin: 12px 0; }
+.party-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.party-card > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: grid; grid-template-columns: 2em 1fr auto; gap: 6px 12px; align-items: center; }
+.party-card > summary::-webkit-details-marker { display: none; }
+.party-card .rank { font-variant-numeric: tabular-nums; color: var(--text-3); font-size: 0.95rem; }
+.party-card .party-name { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.party-card .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.party-card .align { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+.party-card .align small { display: block; font-weight: 400; color: var(--text-3); font-size: 0.75rem; }
+.party-card .drivers { grid-column: 2 / 4; color: var(--text-2); font-size: 0.85rem; }
+.party-card .drivers b { color: var(--text); font-weight: 600; }
+.party-card .cells { border-top: 1px solid var(--line); padding: 8px 16px 16px; display: grid; gap: 18px; }
+.party-card .cells .intro { color: var(--text-3); font-size: 0.85rem; margin: 8px 0 0; }
+.cell .poles { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-2); margin-bottom: 4px; }
+.cell .poles b { color: var(--text); }
+.cell .track { margin-bottom: 6px; }
+.track .marker {
+  position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%;
+  transform: translate(-50%, -50%); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--text-3);
+}
+.cell .cell-meta { font-size: 0.85rem; color: var(--text-2); display: flex; gap: 14px; flex-wrap: wrap; }
+.cell .cell-meta .you::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; background: var(--pole-a); margin-right: 5px; vertical-align: -1px; }
+.cell .cell-meta .party::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--marker, var(--text-3)); margin-right: 5px; vertical-align: -1px; }
+.cell .rationale { font-size: 0.92rem; color: var(--text-2); margin: 6px 0; }
+.cell .sources { margin: 0; padding-left: 18px; font-size: 0.82rem; color: var(--text-3); }
+.cell .sources li { margin: 2px 0; }
+.cell .sources a { color: var(--text-2); }
+.cell .nodata { color: var(--text-3); font-size: 0.9rem; }
+.badge.low { border-color: var(--pole-b); color: var(--text-2); }
+button.link.inline { padding: 0; font: inherit; font-size: inherit; color: var(--text-2); vertical-align: baseline; }
+@media (max-width: 480px) { .party-card > summary { grid-template-columns: 1.6em 1fr auto; padding: 12px; } }
+/* In party cells the person's bar is neutral so the party marker carries the only colour. */
+.cell .track .bar.a, .cell .track .bar.b { background-color: var(--text-3); opacity: 0.55; }
+.cell .cell-meta .you::before { background: var(--text-3); }
