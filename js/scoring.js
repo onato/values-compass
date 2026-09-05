@@ -200,18 +200,20 @@ var Scoring = (function () {
     dimensions.forEach(function (d) { byId[d.id] = d; });
 
     var dimLines = dimensions.map(function (d, i) {
-      return (i + 1) + ". " + d.id + " — " + d.poles[0] + " (+100) vs. " + d.poles[1] + " (−100). " +
-        "+: " + d.describe[0] + ". −: " + d.describe[1] + ".";
+      return (i + 1) + ". " + d.poles[0] + " vs. " + d.poles[1] + ". " +
+        d.poles[0] + ": " + d.describe[0] + ". " + d.poles[1] + ": " + d.describe[1] + ".";
     });
 
     var profileLines = profile.priorities.map(function (id) {
       var s = profile.dimensions.filter(function (x) { return x.id === id; })[0];
       var d = byId[id];
-      var lean = s.leaning ? s.leaning : "balanced";
-      var impNote = s.importance === "high" ? ", matters a lot to my vote" : s.importance === "low" ? ", matters less to my vote" : "";
-      return "- " + d.poles[0] + " vs. " + d.poles[1] + ": " + (s.score > 0 ? "+" : "") + s.score +
-        " (" + s.strength + (s.consistency === "mixed" ? ", mixed answers" : "") + impNote + ")" +
-        (s.leaning ? " → " + lean : "");
+      var where = s.score > 0 ? s.score + " towards " + d.poles[0] : s.score < 0 ? (-s.score) + " towards " + d.poles[1] : "balanced";
+      var notes = [];
+      if (s.score !== 0) notes.push(s.strength);
+      if (s.consistency === "mixed") notes.push("my answers were mixed, so treat this as less certain");
+      if (s.importance === "high") notes.push("matters a lot to my vote");
+      if (s.importance === "low") notes.push("matters less to my vote");
+      return "- " + d.poles[0] + " vs. " + d.poles[1] + ": " + where + (notes.length ? " (" + notes.join("; ") + ")" : "");
     });
     var otherSection = profile.otherConcerns ? [
       "",
@@ -227,7 +229,8 @@ var Scoring = (function () {
       "",
       "I completed a values self-assessment. Your job is to research the parties and candidates on my ballot,",
       "place each of them on the same twelve value dimensions I was scored on, and then rank them by how well they",
-      "match me. Work independently and show your evidence. I want to be able to check every claim.",
+      "match me. Work independently from your own research and show your evidence; I want a second opinion I can",
+      "check, so do not rely on any other ranking of these parties you may have seen.",
       "",
       "Country: " + country,
       "Election: " + election,
@@ -236,14 +239,14 @@ var Scoring = (function () {
       "",
       "In my own words: " + profile.summary,
       "",
-      "Scores from −100 to +100, listed in priority order (how strongly I lean, weighted by how much I said each",
-      "dimension matters to my vote):",
+      "Where I stand on each dimension, as a strength from 0 to 100 towards one of its two poles, listed in priority",
+      "order (how strongly I lean, weighted by how much I said each dimension matters to my vote):",
       profileLines.join("\n")].concat(otherSection).concat([
       "",
       "## The twelve dimensions",
       "",
-      "Each dimension is a scale between two poles. Positive scores lean to the first pole, negative to the second.",
-      "These are values, not policies. Score by what a party's positions reveal about its priorities when values conflict.",
+      "Each dimension is a scale between two poles. These are values, not policies. Score by what a party's positions",
+      "reveal about its priorities when values conflict.",
       "",
       dimLines.join("\n"),
       "",
@@ -251,8 +254,9 @@ var Scoring = (function () {
       "",
       "1. List every party and, where they are directly elected, every candidate on the ballot for this election in",
       "   my constituency if I gave one, otherwise nationally. Ask me if the ballot is unclear.",
-      "2. For each party, assign a score from −100 to +100 on each of the twelve dimensions, plus a confidence of",
-      "   high, medium or low, plus a one-line justification citing your sources.",
+      "2. For each party, place it on each of the twelve dimensions as a strength from 0 to 100 towards one pole, the",
+      "   same way my profile is written, with a confidence of high, medium or low and a one-line justification",
+      "   citing your sources.",
       "3. Use sources in this order of preference, and triangulate across at least two types where possible:",
       "   a. The party's current manifesto or programme for this election (what it is accountable for).",
       "   b. Academic expert placements and coded manifestos (for example the Manifesto Project, the Global",
@@ -277,8 +281,9 @@ var Scoring = (function () {
       "",
       "## Step 2: match",
       "",
-      "For each party, compute a weighted distance from my profile:",
-      "- weight each dimension by the absolute value of my score (my strongest leanings matter most),",
+      "For each party, compute a weighted distance from my profile. Treat each position as a number from −100 to",
+      "+100, positive towards the first-named pole, negative towards the second:",
+      "- weight each dimension by the size of my number (my strongest leanings matter most),",
       "  multiplied by 1.5 where I said it matters a lot and by 0.5 where I said it matters less;",
       "- halve the weight of any dimension where my answers were marked mixed;",
       "- distance = sqrt( Σ weight × (my score − party score)² / Σ weight ).",
@@ -322,12 +327,7 @@ var Scoring = (function () {
       "- Keep values, strategy and competence separate. Competence, leadership stability and coalition",
       "  prospects matter, but they are not part of the values match and should be reported on their own.",
       "- If you are uncertain, say so. An honest \"unknown\" is more useful than a confident guess.",
-      "",
-      "## My profile as JSON",
-      "",
-      "```json",
-      JSON.stringify(profile, null, 2),
-      "```"
+      ""
     ]).join("\n");
   }
 

@@ -124,16 +124,16 @@ test("shuffle is deterministic for a seed and varies across seeds", () => {
   assert.notEqual(a, c);
 });
 
-test("prompt embeds the profile JSON, dimensions and placeholders", () => {
+test("prompt carries the readable profile, dimensions and placeholders, and no JSON", () => {
   const p = S.buildProfile(DIMENSIONS, ITEMS, answerAll(() => 4), new Date("2026-09-05T10:00:00Z"));
   const txt = S.buildPrompt(p, DIMENSIONS);
   assert.match(txt, /Country: \[COUNTRY\]/);
   assert.match(txt, /Election: \[ELECTION/);
-  assert.match(txt, /"completedAt": "2026-09-05T10:00:00.000Z"/);
-  for (const d of DIMENSIONS) assert.ok(txt.includes(d.id + " — " + d.poles[0]), d.id);
+  for (const d of DIMENSIONS) assert.ok(txt.includes(d.poles[0] + " vs. " + d.poles[1] + ". " + d.poles[0] + ": "), d.id);
   assert.ok(txt.includes(p.summary));
-  const json = txt.split("```json\n")[1].split("\n```")[0];
-  assert.deepEqual(JSON.parse(json), p);
+  assert.ok(!txt.includes("```"), "no JSON block in the prompt");
+  assert.ok(!/[+−-]\d{1,3}\b/.test(txt.split("## The twelve dimensions")[0].split("## My values profile")[1]), "profile lines carry no signed numbers");
+  assert.match(txt, /50 towards Solidarity/);
 });
 
 test("prompt uses supplied country and election", () => {
@@ -161,8 +161,7 @@ test("importance reorders priorities and reaches the summary and prompt; other c
   assert.match(txt, /## Other things I care about/);
   assert.match(txt, /matters a lot to my vote/);
   assert.match(txt, /multiplied by 1.5 where I said it matters a lot/);
-  const json = txt.split("```json\n")[1].split("\n```")[0];
-  assert.deepEqual(JSON.parse(json), p);
+  assert.match(txt, /100 towards Environment \(strongly; matters less to my vote\)/);
 });
 
 test("result code round-trips answers, importance, other concerns and an edited summary", () => {
