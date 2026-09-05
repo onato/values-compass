@@ -10,8 +10,7 @@ var DIMENSIONS = [
     describe: [
       "collective responsibility for the vulnerable and narrowing the gap between rich and poor",
       "personal responsibility for one's own circumstances and accepting unequal outcomes"
-    ],
-    blurb: "Collective responsibility vs. individual responsibility"
+    ]
   },
   {
     id: "regulation",
@@ -19,8 +18,7 @@ var DIMENSIONS = [
     describe: [
       "government steering the economy and keeping essential services out of the profit motive",
       "free competition and minimal government involvement in the economy"
-    ],
-    blurb: "Government steering vs. free markets"
+    ]
   },
   {
     id: "liberty",
@@ -28,8 +26,7 @@ var DIMENSIONS = [
     describe: [
       "personal freedom and privacy, even at some cost to safety and order",
       "public safety and order, even at some cost to personal freedom"
-    ],
-    blurb: "Personal freedom vs. public order"
+    ]
   },
   {
     id: "tradition",
@@ -37,8 +34,7 @@ var DIMENSIONS = [
     describe: [
       "preserving established customs, family structures and moral norms",
       "updating social values and changing traditions that exclude people"
-    ],
-    blurb: "Preserving customs vs. embracing social change"
+    ]
   },
   {
     id: "institutions",
@@ -46,8 +42,7 @@ var DIMENSIONS = [
     describe: [
       "trusting experts, courts and established political process",
       "trusting ordinary people's judgement over experts and established elites"
-    ],
-    blurb: "Trust in institutions vs. the voice of the people"
+    ]
   },
   {
     id: "cosmopolitan",
@@ -55,8 +50,7 @@ var DIMENSIONS = [
     describe: [
       "obligations to people everywhere, openness to immigration and international cooperation",
       "putting one's own country and citizens first and expecting newcomers to adapt"
-    ],
-    blurb: "Global obligations vs. national priority"
+    ]
   },
   {
     id: "environment",
@@ -64,8 +58,7 @@ var DIMENSIONS = [
     describe: [
       "protecting the environment and future generations even at economic cost",
       "prioritising jobs and economic growth over environmental rules"
-    ],
-    blurb: "Ecological protection vs. prosperity first"
+    ]
   },
   {
     id: "diplomacy",
@@ -73,8 +66,7 @@ var DIMENSIONS = [
     describe: [
       "negotiation, restraint and low military spending",
       "military strength and a willingness to use force when needed"
-    ],
-    blurb: "Negotiation and restraint vs. military strength"
+    ]
   },
   {
     id: "local",
@@ -82,8 +74,7 @@ var DIMENSIONS = [
     describe: [
       "decisions made close to the people affected, with room for regional differences",
       "strong central government to guarantee equal treatment everywhere"
-    ],
-    blurb: "Local decision-making vs. central government"
+    ]
   },
   {
     id: "change",
@@ -91,8 +82,7 @@ var DIMENSIONS = [
     describe: [
       "bold, fundamental change even at the risk of disruption",
       "gradual, step-by-step reform that avoids upheaval"
-    ],
-    blurb: "Fundamental change vs. gradual reform"
+    ]
   },
   {
     id: "animals",
@@ -100,8 +90,7 @@ var DIMENSIONS = [
     describe: [
       "giving animals' own interests real weight, so that how we farm, hunt, test and use them is limited even when that costs money",
       "treating animals as resources for human benefit, with welfare rules kept practical for farmers and businesses"
-    ],
-    blurb: "Animals' interests vs. animals as resources"
+    ]
   },
   {
     id: "drugs",
@@ -109,8 +98,7 @@ var DIMENSIONS = [
     describe: [
       "treating drug use as a health matter, with regulated access, treatment, and medical use approved as the evidence arrives",
       "keeping drugs illegal and enforcing the law to deter use"
-    ],
-    blurb: "Drugs as a health issue vs. drugs as a crime"
+    ]
   }
 ];
 

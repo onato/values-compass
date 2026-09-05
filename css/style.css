@@ -106,12 +106,6 @@ button[hidden] { display: none; }
 .actions.row { flex-direction: row; align-items: center; justify-content: space-between; }
 .actions.row.wrap { justify-content: flex-start; flex-wrap: wrap; }
 
-.dims { margin-top: 32px; color: var(--text-2); }
-.dims summary { cursor: pointer; }
-.dims ol { padding-left: 20px; }
-.dims li { margin: 4px 0; }
-.dims b { color: var(--text); font-weight: 600; }
-
 /* Questionnaire */
 .progress { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
 .progress-fill { height: 100%; width: 0; background: var(--accent); transition: width 160ms ease; }

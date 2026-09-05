@@ -129,11 +129,6 @@
 
   // ---------- intro ----------
   function renderIntro() {
-    var list = $("dim-list");
-    list.innerHTML = "";
-    DIMENSIONS.forEach(function (d) {
-      list.appendChild(el("li", { html: "<b>" + d.poles[0] + " vs. " + d.poles[1] + "</b> — " + d.blurb }));
-    });
     var inProgress = answeredCount() > 0 && answeredCount() < ITEMS.length;
     $("btn-resume").hidden = !inProgress;
     $("btn-start").textContent = inProgress ? "Start over" : "Start the questionnaire";
