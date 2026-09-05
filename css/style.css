@@ -9,7 +9,7 @@
   --accent: #2a78d6;
   --accent-ink: #ffffff;
   --pole-a: #2a78d6;   /* diverging cool pole */
-  --pole-b: #e34948;   /* diverging warm pole */
+  --pole-b: #eb6834;   /* warm pole; orange rather than red so neither side reads as negative */
   --mid: #f0efec;      /* neutral midpoint */
   --focus: #eda100;
 }
@@ -25,7 +25,7 @@
     --accent: #3987e5;
     --accent-ink: #ffffff;
     --pole-a: #3987e5;
-    --pole-b: #e66767;
+    --pole-b: #d95926;
     --mid: #383835;
   }
 }
@@ -40,7 +40,7 @@
   --accent: #3987e5;
   --accent-ink: #ffffff;
   --pole-a: #3987e5;
-  --pole-b: #e66767;
+  --pole-b: #d95926;
   --mid: #383835;
 }
 
