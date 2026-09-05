@@ -382,7 +382,7 @@
       meta.appendChild(ps);
       meta.appendChild(el("span", { class: "badge" + (cell.confidence === "low" ? " low" : ""), text: "confidence " + cell.confidence }));
       if (cell.basis === "candidate") meta.appendChild(el("span", { class: "badge basis-candidate", text: "own statements" }));
-      if (cell.basis === "party") meta.appendChild(el("span", { class: "badge basis-party", text: "inherited from " + (party.partyName || "party") }));
+      if (cell.basis === "party") meta.appendChild(el("span", { class: "badge basis-party", text: "inherited from the party" }));
     } else {
       meta.appendChild(el("span", { class: "nodata", text: party.short + ": " + (cell && cell.basis === "none" ? "not scored" : "no discernible position") }));
     }
