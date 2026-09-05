@@ -2,6 +2,12 @@
   "party": "nzfirst",
   "entries": [
     {
+      "filename": "home.html",
+      "title": "NZ First: home",
+      "sourceUrl": "https://www.nzfirst.nz/",
+      "fetchedAt": "2026-09-05"
+    },
+    {
       "filename": "our_achievements.html",
       "textFile": "our_achievements.txt",
       "title": "NZ First: our_achievements",
