@@ -249,7 +249,7 @@
       var summary = el("summary", null, [
         el("span", { class: "rank", text: r.rank + "." }),
         el("span", { class: "party-name" }, [sw, el("span", { text: party.name })]),
-        el("span", { class: "align", html: r.alignment + "% aligned<small>confidence " + r.confidence + (r.scoredDimensions < 10 ? ", " + r.scoredDimensions + " of 10 scored" : "") + "</small>" }),
+        el("span", { class: "align", html: r.adjusted + "% aligned<small>confidence " + r.confidence + (r.scoredDimensions < 10 ? ", " + r.scoredDimensions + " of 10 scored (" + r.alignment + "% on those)" : "") + "</small>" }),
         drivers
       ]);
       var cells = el("div", { class: "cells" });
@@ -334,8 +334,9 @@
       var summary = el("summary", null, [
         el("span", { class: "rank", text: r.rank + "." }),
         el("span", { class: "party-name" }, [sw, el("span", { html: cand.name + " <small>" + cand.partyName + "</small>" })]),
-        el("span", { class: "align", html: (r.scoredDimensions ? r.alignment + "% aligned" : "not scored") + "<small>" +
-          (r.scoredDimensions ? "confidence " + r.confidence + ", " : "") + r.scoredDimensions + " of 10 scored, " + own + " from own statements</small>" }),
+        el("span", { class: "align", html: (r.scoredDimensions ? r.adjusted + "% aligned" : "not scored") + "<small>" +
+          (r.scoredDimensions ? "confidence " + r.confidence + ", " : "") + r.scoredDimensions + " of 10 scored" +
+          (r.scoredDimensions && r.scoredDimensions < 10 ? " (" + r.alignment + "% on those)" : "") + ", " + own + " from own statements</small>" }),
         drivers,
         el("div", { class: "bio", text: cand.bio })
       ]);
@@ -422,7 +423,7 @@
         var cr = Matching.matchParties(current, e.candidates);
         p.partyMatch.electorate = { id: e.id, name: e.name, assessedAt: e.assessedAt,
           ranking: cr.map(function (r) { var c = e.candidates.filter(function (x) { return x.id === r.id; })[0];
-            return { rank: r.rank, candidate: c.name, party: c.partyName, alignment: r.scoredDimensions ? r.alignment : null, confidence: r.confidence, scoredDimensions: r.scoredDimensions }; }) };
+            return { rank: r.rank, candidate: c.name, party: c.partyName, alignment: r.adjusted, alignmentOnScored: r.scoredDimensions ? r.alignment : null, coverage: r.coverage, confidence: r.confidence, scoredDimensions: r.scoredDimensions }; }) };
       }
     }
     return p;

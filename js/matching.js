@@ -21,11 +21,12 @@ var Matching = (function () {
   // profile: the person's profile from Scoring.buildProfile.
   // party: one entry from PARTIES_NZ (dimensions keyed by id).
   function matchParty(profile, party) {
-    var sumW = 0, sumWd2 = 0, sumWc = 0, scored = 0;
+    var sumW = 0, sumWd2 = 0, sumWc = 0, scored = 0, totalW = 0;
     var cells = [];
     profile.dimensions.forEach(function (pd) {
       var cell = party.dimensions[pd.id];
       var w = weightFor(pd);
+      totalW += w;
       if (!cell || typeof cell.score !== "number") {
         cells.push({ id: pd.id, person: pd.score, party: null, weight: w, delta: null, contribution: 0, confidence: cell ? cell.confidence : "low" });
         return;
@@ -38,6 +39,10 @@ var Matching = (function () {
     });
     var distance = scored ? Math.sqrt(sumWd2 / sumW) : 200;
     var alignment = Math.round(100 * (1 - distance / 200));
+    // Coverage: share of the person's weight that falls on scored dimensions. Unscored
+    // dimensions are treated as unknown, which pulls the headline figure toward 50.
+    var coverage = totalW ? sumW / totalW : 0;
+    var adjusted = scored ? Math.round(50 + (alignment - 50) * coverage) : null;
     var conf = scored ? sumWc / sumW : 0;
     var comparable = cells.filter(function (c) { return c.party !== null; });
     var byAgreement = comparable.slice().sort(function (a, b) { return a.contribution - b.contribution || b.weight - a.weight; });
@@ -47,6 +52,8 @@ var Matching = (function () {
       short: party.short,
       name: party.name,
       alignment: alignment,
+      adjusted: adjusted,
+      coverage: Math.round(coverage * 100) / 100,
       distance: Math.round(distance * 10) / 10,
       confidence: confidenceLabel(conf),
       confidenceValue: Math.round(conf * 100) / 100,
@@ -60,7 +67,10 @@ var Matching = (function () {
   // parties: array of party objects. Returns ranking, best first.
   function matchParties(profile, parties) {
     var ranking = parties.map(function (p) { return matchParty(profile, p); });
-    ranking.sort(function (a, b) { return b.alignment - a.alignment || a.distance - b.distance || a.short.localeCompare(b.short); });
+    ranking.sort(function (a, b) {
+      var aa = a.adjusted === null ? -1 : a.adjusted, bb = b.adjusted === null ? -1 : b.adjusted;
+      return bb - aa || b.alignment - a.alignment || a.distance - b.distance || a.short.localeCompare(b.short);
+    });
     ranking.forEach(function (r, i) { r.rank = i + 1; });
     return ranking;
   }
@@ -84,9 +94,9 @@ var Matching = (function () {
       jurisdiction: meta.jurisdiction,
       assessedAt: meta.assessedAt,
       rubricVersion: meta.rubricVersion,
-      method: "alignment = 100 x (1 - weighted RMS distance / 200); weight = max(|my score|, 10), halved where my answers were mixed",
+      method: "alignment = 100 x (1 - weighted RMS distance / 200) over scored dimensions; weight = max(|my score|, 10), halved where my answers were mixed; adjusted = 50 + (alignment - 50) x coverage, where coverage is the share of my weight on scored dimensions",
       ranking: ranking.map(function (r) {
-        return { rank: r.rank, party: r.short, alignment: r.alignment, confidence: r.confidence, agreements: r.agreements, conflicts: r.conflicts };
+        return { rank: r.rank, party: r.short, alignment: r.adjusted, alignmentOnScored: r.alignment, coverage: r.coverage, confidence: r.confidence, agreements: r.agreements, conflicts: r.conflicts };
       })
     };
   }

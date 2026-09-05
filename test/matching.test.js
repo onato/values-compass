@@ -43,6 +43,18 @@ test("null party cells are skipped, not counted as disagreement", () => {
   assert.equal(r.alignment, 100);
   assert.equal(r.scoredDimensions, 9);
   assert.equal(r.cells.find((c) => c.id === "diplomacy").party, null);
+  assert.equal(r.coverage, 0.9);
+  assert.equal(r.adjusted, 95, "unknown dimensions pull the headline toward 50");
+});
+
+test("sparse evidence cannot outrank full coverage on the adjusted figure", () => {
+  const p = person(() => 60);
+  const sparse = party("sparse", (id) => (["liberty", "local"].includes(id) ? 60 : null));
+  const full = party("full", () => 40);
+  const ranking = M.matchParties(p, [sparse, full]);
+  assert.equal(ranking[0].id, "full");
+  assert.equal(ranking[1].alignment, 100, "raw alignment over scored cells stays 100");
+  assert.equal(ranking[1].adjusted, 60);
 });
 
 test("all-balanced person still ranks without NaN", () => {
