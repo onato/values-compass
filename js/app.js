@@ -220,8 +220,7 @@
     });
 
     chart.appendChild(el("div", { class: "legend", html:
-      '<span><i class="sw a"></i>Towards the left pole</span>' +
-      '<span><i class="sw b"></i>Towards the right pole</span>' +
+      '<span><i class="sw a"></i>Your position: the bar extends towards the pole you lean to</span>' +
       '<span><i class="sw m"></i>Mixed answers, less certain</span>' }));
 
     var tbody = $("score-table").querySelector("tbody");

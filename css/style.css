@@ -8,8 +8,10 @@
   --line: #e6e5e1;
   --accent: #2a78d6;
   --accent-ink: #ffffff;
-  --pole-a: #2a78d6;   /* diverging cool pole */
-  --pole-b: #eb6834;   /* warm pole; orange rather than red so neither side reads as negative */
+  /* The person's own bar. One colour for both directions: the bar's side already says
+     which pole they lean to, and every hue in the palette belongs to some party. */
+  --pole-a: #4a3aa7;
+  --pole-b: #4a3aa7;
   --mid: #f0efec;      /* neutral midpoint */
   --focus: #eda100;
 }
@@ -24,8 +26,8 @@
     --line: #343431;
     --accent: #3987e5;
     --accent-ink: #ffffff;
-    --pole-a: #3987e5;
-    --pole-b: #d95926;
+    --pole-a: #9085e9;
+    --pole-b: #9085e9;
     --mid: #383835;
   }
 }
@@ -39,8 +41,8 @@
   --line: #343431;
   --accent: #3987e5;
   --accent-ink: #ffffff;
-  --pole-a: #3987e5;
-  --pole-b: #d95926;
+  --pole-a: #9085e9;
+  --pole-b: #9085e9;
   --mid: #383835;
 }
 
@@ -238,7 +240,7 @@ pre {
 .cell .sources li { margin: 2px 0; }
 .cell .sources a { color: var(--text-2); }
 .cell .nodata { color: var(--text-3); font-size: 0.9rem; }
-.badge.low { border-color: var(--pole-b); color: var(--text-2); }
+.badge.low { border-color: var(--text-3); color: var(--text-2); }
 button.link.inline { padding: 0; font: inherit; font-size: inherit; color: var(--text-2); vertical-align: baseline; }
 @media (max-width: 480px) { .party-card > summary { grid-template-columns: 1.6em 1fr auto; padding: 12px; } }
 /* In party cells the person's bar is neutral so the party marker carries the only colour. */
