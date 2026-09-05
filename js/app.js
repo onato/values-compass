@@ -103,8 +103,9 @@
     var pct = (answeredCount() / order.length) * 100;
     $("progress-fill").style.width = pct + "%";
     $("progress-fill").parentNode.setAttribute("aria-valuenow", answeredCount());
-    $("btn-back").disabled = i === 0;
-    $("hint-back").textContent = i === 0 ? "" : "Use Back to change an earlier answer.";
+    $("btn-back").disabled = i === 0 || !!jumpTarget;
+    $("hint-back").textContent = jumpTarget ? "Your new answer will update your results." : (i === 0 ? "" : "Use Back to change an earlier answer.");
+    $("btn-quit").textContent = jumpTarget ? "Back to results without changing" : "Save and exit";
 
     var likert = $("likert");
     likert.innerHTML = "";
@@ -121,6 +122,7 @@
 
   function answer(item, value) {
     state.answers[item.id] = value;
+    if (jumpTarget) { save(); finish(); return; }
     state.index = Math.min(state.index + 1, order.length);
     save();
     renderQuestion();
@@ -133,8 +135,16 @@
     renderQuestion();
   }
 
+  var jumpTarget = null; // item id when the person came from the results to change one answer
+
   function finish() {
     var profile = Scoring.buildProfile(DIMENSIONS, ITEMS, state.answers);
+    var previous = loadResult();
+    if (profile && previous && previous.summaryEdited) {
+      profile.summary = previous.summary;
+      profile.summaryEdited = true;
+      profile.summaryGenerated = Scoring.buildSummary(DIMENSIONS, profile.dimensions);
+    }
     if (!profile) {
       // Shouldn't happen, but jump to the first unanswered item rather than dead-end.
       for (var i = 0; i < order.length; i++) {
@@ -145,6 +155,23 @@
     saveResult(profile);
     renderResults(profile);
     show("screen-results");
+    if (jumpTarget) {
+      var item = ITEMS.filter(function (i) { return i.id === jumpTarget; })[0];
+      jumpTarget = null;
+      var row = item && document.querySelector('.row-dim[data-dim="' + item.dim + '"]');
+      if (row) { row.open = true; row.scrollIntoView({ block: "start" }); }
+    }
+  }
+
+  // From the results: go to one question, answer it, come straight back.
+  function jumpToItem(itemId) {
+    var idx = order.map(function (i) { return i.id; }).indexOf(itemId);
+    if (idx < 0) return;
+    jumpTarget = itemId;
+    state.index = idx;
+    save();
+    show("screen-quiz");
+    renderQuestion();
   }
 
   // ---------- results ----------
@@ -188,7 +215,7 @@
         if (inside) val.style.right = (50 - half) + "%"; else val.style.left = (50 + half) + "%";
       }
       track.appendChild(val);
-      var row = el("details", { class: "row-dim" }, [el("summary", null, [poles, track]), renderWhy(d, s)]);
+      var row = el("details", { class: "row-dim", "data-dim": d.id }, [el("summary", null, [poles, track]), renderWhy(d, s)]);
       chart.appendChild(row);
     });
 
@@ -211,6 +238,8 @@
     });
 
     $("summary").value = profile.summary;
+    var stale = $("summary-stale");
+    stale.hidden = !(profile.summaryEdited && profile.summaryGenerated && profile.summaryGenerated !== profile.summary);
     renderParties(profile);
     renderElectorates(profile);
     refreshJson();
@@ -427,9 +456,15 @@
       var toward = r.keyed >= 4 ? d.poles[0] : r.keyed <= 2 ? d.poles[1] : "neither pole";
       var li = el("li");
       li.appendChild(el("span", { class: "statement-text", text: r.text }));
-      li.appendChild(el("span", { class: "answer", html: "You answered <b>" + labels[r.response] + "</b>" +
+      var ans = el("span", { class: "answer", html: "You answered <b>" + labels[r.response] + "</b>" +
         (r.key < 0 ? " (reverse-keyed, counts as " + r.keyed + " of 5)" : " (" + r.keyed + " of 5)") +
-        ", towards " + toward + "." }));
+        ", towards " + toward + ". " });
+      if (typeof state.answers[r.id] === "number") {
+        var change = el("button", { class: "link inline", type: "button", text: "Change answer" });
+        change.addEventListener("click", function () { jumpToItem(r.id); });
+        ans.appendChild(change);
+      }
+      li.appendChild(ans);
       ul.appendChild(li);
     });
     box.appendChild(ul);
@@ -446,6 +481,7 @@
     p.summary = $("summary").value.trim();
     // Drop the raw sd; it's an internal detail.
     p.dimensions.forEach(function (d) { delete d.sd; delete d.mean; delete d.responses; });
+    delete p.summaryEdited; delete p.summaryGenerated;
     if (partiesAvailable()) {
       p.partyMatch = Matching.exportBlock(Matching.matchParties(current, PARTIES_NZ.parties), PARTIES_NZ.meta);
       var e = selectedElectorate();
@@ -509,7 +545,11 @@
     renderResults(r); show("screen-results");
   });
   $("btn-back").addEventListener("click", back);
-  $("btn-quit").addEventListener("click", function () { save(); renderIntro(); show("screen-intro"); });
+  $("btn-quit").addEventListener("click", function () {
+    save();
+    if (jumpTarget) { jumpTarget = null; var r = loadResult(); if (r) { renderResults(r); show("screen-results"); return; } }
+    renderIntro(); show("screen-intro");
+  });
   $("btn-copy-json").addEventListener("click", function () { copy(JSON.stringify(exportProfile(), null, 2), "JSON"); });
   $("btn-copy-prompt").addEventListener("click", function () { copy(Scoring.buildPrompt(exportProfile(), DIMENSIONS, promptOpts()), "Prompt"); });
   $("btn-download").addEventListener("click", download);
@@ -530,7 +570,13 @@
   });
   $("summary").addEventListener("input", function () {
     refreshJson();
-    if (current) { current.summary = $("summary").value; saveResult(current); }
+    if (current) { current.summary = $("summary").value; current.summaryEdited = true; saveResult(current); }
+  });
+  $("btn-regenerate-summary").addEventListener("click", function () {
+    if (!current) return;
+    current.summary = Scoring.buildSummary(DIMENSIONS, current.dimensions);
+    delete current.summaryEdited; delete current.summaryGenerated;
+    saveResult(current); $("summary").value = current.summary; $("summary-stale").hidden = true; refreshJson();
   });
   document.addEventListener("keydown", function (e) {
     if ($("screen-quiz").hidden) return;
