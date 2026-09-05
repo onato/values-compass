@@ -188,7 +188,8 @@
         if (inside) val.style.right = (50 - half) + "%"; else val.style.left = (50 + half) + "%";
       }
       track.appendChild(val);
-      chart.appendChild(el("div", { class: "row-dim" }, [poles, track]));
+      var row = el("details", { class: "row-dim" }, [el("summary", null, [poles, track]), renderWhy(d, s)]);
+      chart.appendChild(row);
     });
 
     chart.appendChild(el("div", { class: "legend", html:
@@ -411,13 +412,40 @@
     return xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1];
   }
 
+  // Explains one dimension's score from the five answers behind it.
+  function renderWhy(d, s) {
+    var box = el("div", { class: "why" });
+    if (!s.responses || !s.responses.length) {
+      box.appendChild(el("p", { class: "help", text: "The individual answers behind this score were not saved with this result. Retake the questionnaire to see them." }));
+      return box;
+    }
+    var labels = {};
+    SCALE.forEach(function (o) { labels[o.value] = o.label; });
+    box.appendChild(el("p", { class: "help", html: "Each statement is answered from 1 (strongly disagree) to 5 (strongly agree). Statements phrased from the <b>" + d.poles[1] + "</b> side are reverse-keyed, so agreeing with them counts towards " + d.poles[1] + ". After keying, 5 always means fully " + d.poles[0] + "." }));
+    var ul = el("ul", { class: "answers" });
+    s.responses.forEach(function (r) {
+      var toward = r.keyed >= 4 ? d.poles[0] : r.keyed <= 2 ? d.poles[1] : "neither pole";
+      var li = el("li");
+      li.appendChild(el("span", { class: "statement-text", text: r.text }));
+      li.appendChild(el("span", { class: "answer", html: "You answered <b>" + labels[r.response] + "</b>" +
+        (r.key < 0 ? " (reverse-keyed, counts as " + r.keyed + " of 5)" : " (" + r.keyed + " of 5)") +
+        ", towards " + toward + "." }));
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+    var mean = typeof s.mean === "number" ? s.mean : null;
+    box.appendChild(el("p", { class: "help", html: "Average of the keyed answers: <b>" + (mean === null ? "?" : mean) + "</b> of 5. Score = (average − 3) ÷ 2 × 100 = <b>" + fmt(s.score) + "</b>, which reads as \"" + s.strength + (s.leaning ? " " + s.leaning : "") + "\"." +
+      (s.consistency === "mixed" ? " Your answers pointed in different directions (spread " + s.sd + "), so this score is marked mixed and counts for less in matching." : "") }));
+    return box;
+  }
+
   function fmt(n) { return (n > 0 ? "+" : "") + n; }
 
   function exportProfile() {
     var p = JSON.parse(JSON.stringify(current));
     p.summary = $("summary").value.trim();
     // Drop the raw sd; it's an internal detail.
-    p.dimensions.forEach(function (d) { delete d.sd; });
+    p.dimensions.forEach(function (d) { delete d.sd; delete d.mean; delete d.responses; });
     if (partiesAvailable()) {
       p.partyMatch = Matching.exportBlock(Matching.matchParties(current, PARTIES_NZ.parties), PARTIES_NZ.meta);
       var e = selectedElectorate();

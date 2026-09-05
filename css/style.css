@@ -141,7 +141,18 @@ button[hidden] { display: none; }
 /* Results chart: bipolar bars */
 .viz-root { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 16px 8px; }
 .chart { display: grid; gap: 14px; }
-.row-dim { display: grid; grid-template-columns: 1fr; gap: 4px; }
+.row-dim { display: block; }
+.row-dim > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr; gap: 4px; border-radius: 6px; }
+.row-dim > summary::-webkit-details-marker { display: none; }
+.row-dim > summary:hover .track { box-shadow: 0 0 0 1px var(--text-3); }
+.row-dim > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.row-dim .why { margin: 10px 0 6px 4px; padding-left: 10px; border-left: 2px solid var(--line); }
+.row-dim .why .help { margin: 0 0 8px; }
+.row-dim .why b { color: var(--text); font-weight: 600; }
+.answers { list-style: none; padding: 0; margin: 0 0 8px; display: grid; gap: 8px; }
+.answers li { display: grid; gap: 2px; font-size: 0.9rem; }
+.answers .statement-text { color: var(--text); }
+.answers .answer { color: var(--text-2); font-size: 0.85rem; }
 .row-dim .poles { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-2); }
 .row-dim .poles .active { color: var(--text); font-weight: 600; }
 .badge {

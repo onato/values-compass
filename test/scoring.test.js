@@ -47,6 +47,16 @@ test("all pole-B answers score -100 on every dimension", () => {
   }
 });
 
+test("profile keeps the five keyed responses behind each dimension", () => {
+  const p = S.buildProfile(DIMENSIONS, ITEMS, answerAll((it) => (it.key > 0 ? 4 : 2)));
+  for (const d of p.dimensions) {
+    assert.equal(d.responses.length, 5);
+    d.responses.forEach((r) => assert.equal(r.keyed, 4, "reverse-keyed answers are flipped"));
+    assert.equal(d.mean, 4);
+    assert.equal(d.score, 50);
+  }
+});
+
 test("all neutral scores 0 and balanced", () => {
   const p = S.buildProfile(DIMENSIONS, ITEMS, answerAll(() => 3));
   for (const d of p.dimensions) {

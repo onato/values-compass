@@ -35,12 +35,15 @@ var Scoring = (function () {
   // answers: { itemId: response }. Returns null if any item for the dimension is unanswered.
   function scoreDimension(dim, items, answers) {
     var keyed = [];
+    var responses = [];
     for (var i = 0; i < items.length; i++) {
       var it = items[i];
       if (it.dim !== dim.id) continue;
       var r = answers[it.id];
       if (typeof r !== "number") return null;
-      keyed.push(keyValue(it, r));
+      var v = keyValue(it, r);
+      keyed.push(v);
+      responses.push({ id: it.id, text: it.text, response: r, key: it.key, keyed: v });
     }
     if (keyed.length === 0) return null;
     var m = mean(keyed);
@@ -54,7 +57,9 @@ var Scoring = (function () {
       strength: strength,
       leaning: strength === "balanced" ? null : (score > 0 ? dim.poles[0] : dim.poles[1]),
       consistency: sd > MIXED_SD ? "mixed" : "consistent",
-      sd: Math.round(sd * 100) / 100
+      sd: Math.round(sd * 100) / 100,
+      mean: Math.round(m * 100) / 100,
+      responses: responses
     };
   }
 
