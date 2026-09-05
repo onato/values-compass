@@ -112,6 +112,61 @@
       "fetchedAt": "2026-09-05",
       "kind": "reference",
       "textFile": "wikipedia-west-coast-tasman.txt"
+    },
+    {
+      "filename": "act-expands-candidate-team-release.html",
+      "textFile": "act-expands-candidate-team-release.txt",
+      "title": "ACT: ACT expands 2026 candidate team (release; Janelle Hocking, West Coast-Tasman)",
+      "sourceUrl": "https://www.act.org.nz/news/act-expands-2026-candidate-team",
+      "fetchedAt": "2026-09-05",
+      "kind": "party"
+    },
+    {
+      "filename": "alliance-dyatlova-murphy-release.html",
+      "textFile": "alliance-dyatlova-murphy-release.txt",
+      "title": "Alliance Party: Sara Dyatlova-Murphy announced as candidate (release via Scoop)",
+      "sourceUrl": "https://www.scoop.co.nz/stories/PO2607/S00195/alliance-party-announces-sara-dyatlova-murphy-as-candidate-for-west-coast-tasman.htm",
+      "fetchedAt": "2026-09-05",
+      "kind": "party"
+    },
+    {
+      "filename": "alliance-coal-mines-state-ownership-release.html",
+      "textFile": "alliance-coal-mines-state-ownership-release.txt",
+      "title": "Alliance Party: Coal mines to return to state ownership (release via Scoop)",
+      "sourceUrl": "https://www.scoop.co.nz/stories/PO2608/S00210/alliance-calls-for-coal-mines-to-return-to-state-ownership.htm",
+      "fetchedAt": "2026-09-05",
+      "kind": "party"
+    },
+    {
+      "filename": "wikipedia-2026-candidates-by-electorate.html",
+      "title": "Wikipedia: Candidates in the 2026 New Zealand general election by electorate",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
+      "fetchedAt": "2026-09-05",
+      "kind": "reference",
+      "notes": "CC BY-SA 4.0. Party-announced candidates; nominations close 8 October 2026."
+    },
+    {
+      "filename": "wikipedia-west-coast-tasman.txt",
+      "title": "(text copy)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/West_Coast-Tasman",
+      "fetchedAt": "2026-09-05",
+      "kind": "reference"
+    },
+    {
+      "filename": "nzofp-2026-candidates.html",
+      "textFile": "nzofp-2026-candidates.txt",
+      "title": "NZ Outdoors & Freedom Party: 2026 candidates (Sue Grey, West Coast-Tasman)",
+      "sourceUrl": "https://nzofp.co.nz/2026-candidates",
+      "fetchedAt": "2026-09-05",
+      "kind": "party"
+    },
+    {
+      "filename": "alliance-candidates-2026.html",
+      "textFile": "alliance-candidates-2026.txt",
+      "title": "Alliance Party: 2026 candidates",
+      "sourceUrl": "https://allianceparty.nz/candidates/",
+      "fetchedAt": "2026-09-05",
+      "kind": "party"
     }
   ],
   "notes": "Candidate-level research for the West Coast-Tasman electorate. 'party' = the candidate's or party's own page; 'media' = report of a candidate's statements (lead, not record); nominations do not close until 8 October 2026 so the field is provisional."
