@@ -209,8 +209,8 @@
   function wireNarration(box, audio, spans, timing) {
     var starts = timing.sentences.map(function (s) { return s.t; });
     var btn = $("btn-narrate"), label = $("narrate-label");
-    var follow = $("btn-narrate-follow"), clock = $("narrate-time");
-    var current = -1, following = true;
+    var follow = $("narrate-follow"), clock = $("narrate-time");
+    var current = -1, following = follow.checked;
 
     box.hidden = false;
     clock.textContent = clockText(0, timing.duration);
@@ -289,11 +289,7 @@
       if (audio.paused) { audio.play().catch(function () {}); } else { audio.pause(); }
     });
 
-    follow.addEventListener("click", function () {
-      following = !following;
-      follow.setAttribute("aria-pressed", following ? "true" : "false");
-      follow.textContent = following ? "Follow along" : "Don't follow";
-    });
+    follow.addEventListener("change", function () { following = follow.checked; });
 
     // Click any sentence to hear it — the same mapping used in reverse.
     spans.forEach(function (span, i) {

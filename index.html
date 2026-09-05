@@ -62,8 +62,9 @@
           <span id="narrate-label">Listen to the methodology</span>
         </button>
         <span class="narrate-time" id="narrate-time"></span>
-        <button type="button" id="btn-narrate-follow" class="link" aria-pressed="true"
-                title="Scroll the page to keep the sentence being read in view">Follow along</button>
+        <label class="narrate-follow" title="Scroll the page to keep the sentence being read in view">
+          <input type="checkbox" id="narrate-follow" checked> Follow along
+        </label>
         <audio id="narrate-audio" preload="none" src="audio/methodology.mp3"></audio>
       </div>
       <div class="method prose" id="method-prose" data-src="methodology.html">
