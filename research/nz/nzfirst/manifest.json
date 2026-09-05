@@ -1,0 +1,26 @@
+{
+  "party": "nzfirst",
+  "entries": [
+    {
+      "filename": "our_achievements.html",
+      "textFile": "our_achievements.txt",
+      "title": "NZ First: our_achievements",
+      "sourceUrl": "https://www.nzfirst.nz/our_achievements",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policy.html",
+      "textFile": "policy.txt",
+      "title": "NZ First: policy",
+      "sourceUrl": "https://www.nzfirst.nz/policy",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "principle.html",
+      "textFile": "principle.txt",
+      "title": "NZ First: principle",
+      "sourceUrl": "https://www.nzfirst.nz/principle",
+      "fetchedAt": "2026-09-05"
+    }
+  ]
+}

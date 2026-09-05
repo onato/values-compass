@@ -7,11 +7,351 @@ var PARTIES_NZ = {
     "assessedAt": "2026-09-05",
     "generatedAt": "2026-09-05",
     "parties": [
+      "green",
       "labour",
       "national"
     ]
   },
   "parties": [
+    {
+      "id": "green",
+      "name": "Green Party of Aotearoa New Zealand",
+      "short": "Green",
+      "colour": "#098137",
+      "website": "https://www.greens.org.nz/",
+      "assessedAt": "2026-09-05",
+      "rubricVersion": "1.0",
+      "status": "draft",
+      "inParliament": true,
+      "notes": "Opposition party 2023-2026; in government with Labour 2017-2023 under cooperation and confidence-and-supply agreements. Scored almost entirely from its full 2026 manifesto, which addresses every dimension explicitly, cross-checked against its recorded party votes on the marker bills. Page numbers refer to the manifesto PDF.",
+      "dimensions": {
+        "solidarity": {
+          "score": 90,
+          "confidence": "high",
+          "rationale": "Redistribution is the organising purpose of the manifesto: a 2.5 per cent 'super-rich tax' on net wealth over $10 million, a higher top income tax rate with a tax-free threshold and cuts for 96 per cent of earners, a guaranteed 'liveable income for everyone' with benefits raised to liveable rates and sanctions abolished, a universal child benefit for under-threes, a universal student income, free dental and primary care, tens of thousands of public homes, rent increases capped at 2 per cent and minimum wage rises indexed to inflation. The manifesto states 'Aotearoa has enough for all of us' and that inequality is a political choice. Just short of the top anchor only because the wealth tax is narrowly targeted and the party pairs it with tax cuts for most earners.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Incomes (p. 25)",
+              "url": "https://www.greens.org.nz/manifesto_2026_income",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Introduce a super-rich tax of 2.5% on net wealth over $10 million"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Incomes (p. 25)",
+              "url": "https://www.greens.org.nz/manifesto_2026_income",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Increase benefits to liveable rates, individualise benefit entitlements and abolish benefit sanctions"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Housing (p. 23)",
+              "url": "https://www.greens.org.nz/manifesto_2026_housing",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "limiting annual rent increases to no more than 2%"
+            },
+            {
+              "title": "Green Party Manifesto 2026: introduction (p. 5)",
+              "url": "https://www.greens.org.nz/manifesto_2026",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto_2026.html",
+              "quote": "tax the super-rich and mega-corporations, help fund critical social services, and cut income tax for 96 percent of people"
+            }
+          ]
+        },
+        "regulation": {
+          "score": 80,
+          "confidence": "high",
+          "rationale": "The manifesto treats markets as something government must direct: rent caps, a renewable energy infrastructure agency and single energy regulator with 'public wellbeing outcomes first in legislation', public services and state-owned enterprises kept in public hands, default union membership and an expanded right to strike, workers' representatives on listed company boards, a Digital Duty of Care with a national regulator for platforms and AI, reformed competition law with stronger regulator powers, a ban on new fossil fuel extraction and repeal of the Fast-track Approvals Act with revocation of mining consents. It voted against the Regulatory Standards Act. The exceptions are procedural rather than market-oriented, such as 'Buy Kiwi Made' and small-business grants.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Energy (p. 16)",
+              "url": "https://www.greens.org.nz/manifesto_2026_energy",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Put public wellbeing outcomes first in legislation to guarantee the power system works for people, not profits"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Workforce rights (p. 42)",
+              "url": "https://www.greens.org.nz/manifesto_2026_workforce_rights",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "changing employment law to default union membership"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Environmental protection (p. 17)",
+              "url": "https://www.greens.org.nz/manifesto_2026_environmental_protection",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Repeal the Fast-track Approvals Act and revoke consents for fast-track approvals for new coal, gold and seabed mining projects"
+            },
+            {
+              "title": "Hansard: Regulatory Standards Bill, third reading, 13 November 2025",
+              "url": "https://community.scoop.co.nz/2025/11/regulatory-standards-bill-third-reading/",
+              "date": "2025-11-13",
+              "archived": "research/nz/shared/hansard-regulatory-standards-third-reading-scoop.html"
+            }
+          ]
+        },
+        "liberty": {
+          "score": 35,
+          "confidence": "medium",
+          "rationale": "On criminal justice and personal autonomy the Greens side firmly with liberty: abolish mandatory minimums, Three Strikes, preventive detention and limits on sentence discounts; raise the age of criminal responsibility; legalise cannabis and treat drug use as a health issue; body cameras and stronger Independent Police Conduct Authority powers; stronger privacy protection; and expanded voting rights, having voted against the Electoral Amendment Act. But they would extend hate speech laws to religion, gender, disability and rainbow communities, regulate platforms and AI through a Digital Duty of Care, phase out all alcohol advertising and continue to oppose military-style semi-automatics, each of which limits individual freedom in the name of protection. A clear lean to liberty on the state's coercive powers, offset by a willingness to regulate speech and commerce for safety.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Justice and community safety (p. 26)",
+              "url": "https://www.greens.org.nz/manifesto_2026_justice_and_community_safety",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "abolishing mandatory minimum sentences, life sentences, preventive detention, limits on sentence discounts, three strikes"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Justice and community safety (p. 26)",
+              "url": "https://www.greens.org.nz/manifesto_2026_justice_and_community_safety",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Extend hate speech laws to cover religion, gender, disability and rainbow communities"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Drug law reform (p. 14)",
+              "url": "https://www.greens.org.nz/manifesto_2026_drug_law_reform",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "provides for regulated access to cannabis for personal use"
+            },
+            {
+              "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025",
+              "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm",
+              "date": "2025-12-16",
+              "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html"
+            }
+          ]
+        },
+        "tradition": {
+          "score": -85,
+          "confidence": "high",
+          "rationale": "Social change and inclusion are a defining purpose. The manifesto commits to free gender-affirming health care on self-determination including reversing the ban on puberty blockers, amending the Human Rights Act to prohibit discrimination on gender identity and sex characteristics, prohibiting non-consensual surgeries on intersex people, legal gender recognition for rainbow refugees, restoring relationship and sexuality education guidelines in all schools, and a 'national conversation for constitutional transformation' around Te Tiriti. The Greens voted for the Conversion Practices Prohibition Act and their MPs consistently back liberalising conscience measures. There is no preservationist strand at all.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Rainbow communities (p. 34)",
+              "url": "https://www.greens.org.nz/manifesto_2026_rainbow_communities",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "free, non-discriminatory access to all forms of gender-affirming health care based on informed consent and self-determination, including reversal of the ban on puberty blockers"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Violence prevention (p. 40)",
+              "url": "https://www.greens.org.nz/manifesto_2026_violence_prevention",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Restore relationship and sexuality teaching guidelines"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Democracy (p. 11)",
+              "url": "https://www.greens.org.nz/manifesto_2026_democracy",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Resource a national conversation for constitutional transformation"
+            },
+            {
+              "title": "RNZ: Bill to ban conversion practices passes third reading",
+              "url": "https://www.rnz.co.nz/news/political/461597/bill-to-ban-conversion-practices-passes-third-reading",
+              "date": "2022-02-15",
+              "archived": "research/nz/shared/rnz-conversion-practices-third-reading-2022.html"
+            }
+          ]
+        },
+        "institutions": {
+          "score": 30,
+          "confidence": "medium",
+          "rationale": "The Greens would strengthen independent bodies: empower the Climate Change Commission to set ETS unit supply directly, give the Waitangi Tribunal binding powers over land, restore the Children's Commissioner's monitoring role, create a lobbyist register and code of conduct, move local elections to the Electoral Commission, and 'affirm the importance of advocacy and monitoring done by independent commissions'. They voted against the Treaty Principles Bill, the Regulatory Standards Act and the Electoral Amendment Act. At the same time the manifesto is anti-elite in tone towards 'corporate power', 'lobbyists and donors' and 'the wealthy few', and favours participatory mechanisms such as citizens' assemblies, a voting age of 16 and constitutional transformation through community discussion. Trust in expert institutions combined with a populist critique of economic elites nets to a moderate lean to institutions.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Climate action, emissions reduction (p. 7)",
+              "url": "https://www.greens.org.nz/manifesto_2020_climate_action_emissions_reduction",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Empower the Climate Change Commission to directly set unit supply in the Emissions Trading Scheme"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Democracy (p. 11)",
+              "url": "https://www.greens.org.nz/manifesto_2026_democracy",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Strengthen the rules and transparency over political lobbying, including creating a lobbyist register and a code of conduct"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Public services (p. 33)",
+              "url": "https://www.greens.org.nz/manifesto_2026_public_services",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Affirm the importance of advocacy and monitoring done by independent commissions"
+            },
+            {
+              "title": "Principles of the Treaty of Waitangi Bill, second reading (Hansard, 10 April 2025)",
+              "url": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/",
+              "date": "2025-04-10",
+              "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html"
+            }
+          ]
+        },
+        "cosmopolitan": {
+          "score": 90,
+          "confidence": "high",
+          "rationale": "Obligations to people everywhere run through the manifesto: raise the refugee quota to 5,000 by 2029, create residence pathways for long-settled migrants including those whose visas have expired, abolish health-based immigration exclusions, restore birthright citizenship, visa-free travel for Pacific Islanders, restore and increase climate aid, recognise Palestine, support West Papuan and Polynesian independence, and stand with decolonisation movements. Domestically it treats Te Tiriti and He Whakaputanga as founding constitutional documents with iwi and hapū as partners, not advisors. The 'Buy Kiwi Made' and anti-multinational-profit strands are economic rather than a citizens-first stance on people.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Immigration and refugees (p. 24)",
+              "url": "https://www.greens.org.nz/manifesto_2026_immigration_and_refugees",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Progressively increase the refugee quota to 5,000 by 2029"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Immigration and refugees (p. 24)",
+              "url": "https://www.greens.org.nz/manifesto_2026_immigration_and_refugees",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Create residence pathways for migrants who have settled long-term, including for people living in Aotearoa whose visas have expired"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Te Tiriti o Waitangi (p. 37)",
+              "url": "https://www.greens.org.nz/manifesto_2026_te_tiriti_o_waitangi",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "resource iwi and hapū to participate as partners rather than as advisors"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Global affairs and trade (p. 21)",
+              "url": "https://www.greens.org.nz/manifesto_2026_global_affairs_and_trade",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Recognise Palestine as a state and sanction Israel"
+            }
+          ]
+        },
+        "environment": {
+          "score": 95,
+          "confidence": "high",
+          "rationale": "Ecological limits frame the whole programme, from the vision statement 'where people and the rest of nature thrive together' to a Budget process legally bound to 1.5 degrees. Commitments include banning new fossil fuel extraction and ending subsidies, cancelling the LNG terminal, a price on agricultural emissions, ETS reform removing free allocation and forestry offsets, repeal of the Fast-track Approvals Act with consents revoked, banning new mining on conservation land and seabed mining, protecting 30 per cent of land and ocean, phasing out synthetic nitrogen fertiliser and reducing stocking rates, a phase-out date for fossil-fuel vehicle imports and a moratorium on waste-to-energy plants. The party accepts direct costs to farming, mining and energy users to achieve this.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Climate action, emissions reduction (p. 7)",
+              "url": "https://www.greens.org.nz/manifesto_2020_climate_action_emissions_reduction",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "requiring the government Budget process to be consistent with limiting global warming to 1.5 degrees"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Energy (p. 16)",
+              "url": "https://www.greens.org.nz/manifesto_2026_energy",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Ban new fossil fuel extraction, end subsidies for fossil fuels and cancel the LNG terminal"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Freshwater (p. 19)",
+              "url": "https://www.greens.org.nz/manifesto_2026_freshwater",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Phase out synthetic nitrogen fertiliser and take action to reduce stocking rates"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Conservation and biodiversity (p. 9)",
+              "url": "https://www.greens.org.nz/manifesto_2026_conservation_and_biodiversity",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Ban new mining on conservation land, including stewardship land"
+            }
+          ]
+        },
+        "diplomacy": {
+          "score": 85,
+          "confidence": "high",
+          "rationale": "The manifesto commits to 'decouple military and security frameworks from the United States, including declining to participate in AUKUS and withdrawing from Five Eyes', to focus defence policy on climate, humanitarian and environmental monitoring roles, to oppose militarisation of the Pacific and to pursue climate action through international institutions. It invokes the nuclear-free tradition against 'American militarism' and would sanction Israel. Defence spending as such is not addressed, but the direction is unambiguous: diplomacy, disarmament and multilateralism over alliances and force.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Global affairs and trade (p. 21)",
+              "url": "https://www.greens.org.nz/manifesto_2026_global_affairs_and_trade",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Decouple military and security frameworks from the United States, including declining to participate in AUKUS and withdrawing from Five Eyes"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Global affairs and trade (p. 21)",
+              "url": "https://www.greens.org.nz/manifesto_2026_global_affairs_and_trade",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Focus defence policy on climate change responses, humanitarian responses and environmental monitoring"
+            }
+          ]
+        },
+        "local": {
+          "score": 45,
+          "confidence": "medium",
+          "rationale": "The vision statement wants 'power and wealth' to 'sit with our communities'. The Local government chapter would devolve further responsibilities from central government with resourcing, reject the rates cap and give councils new funding tools, restore the 'four wellbeings' and Māori wards, make councils explicit Treaty partners and enable citizens' assemblies; the Māori centred chapter devolves power and resources to hapū and iwi; energy policy backs community- and Māori-led generation. Against that the Greens would set strong national bottom lines for freshwater and ecosystems, create national agencies for renewable infrastructure and energy regulation and transfer local elections to the Electoral Commission. Devolution of power with centralised environmental standards gives a clear but not defining local lean.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Local government (p. 27)",
+              "url": "https://www.greens.org.nz/manifesto_2026_local_government",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "empower councils by devolving further responsibilities from central government, with appropriate resourcing"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Local government (p. 27)",
+              "url": "https://www.greens.org.nz/manifesto_2026_local_government",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Reject the proposed rates cap and enable a range of new funding and financing tools"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Māori centred (p. 28)",
+              "url": "https://www.greens.org.nz/manifesto_2026_maori_centred",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Devolve power and redistribute resources back to tangata whenua"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Freshwater (p. 19)",
+              "url": "https://www.greens.org.nz/manifesto_2026_freshwater",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Implement strong, evidence-based national bottom lines for freshwater"
+            }
+          ]
+        },
+        "change": {
+          "score": 85,
+          "confidence": "high",
+          "rationale": "The programme is system-level: a wealth tax New Zealand has never had, a guaranteed liveable income with sanctions abolished, repeal and replacement of the Misuse of Drugs Act, default union membership, constitutional transformation around Te Tiriti and He Whakaputanga, rapid phase-out of fossil fuels, ETS redesign, repeal of the Fast-track Act with consents revoked, and nationwide rapid rail. The manifesto frames incremental politics as failure, saying 'the market will not respond to the climate crisis at the scale or pace we need' and that 'a hands-off government will fail'. Bold, fundamental change is the stated method.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Climate action, emissions reduction (p. 7)",
+              "url": "https://www.greens.org.nz/manifesto_2020_climate_action_emissions_reduction",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "The market will not respond to the climate crisis at the scale or pace we need"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Drug law reform (p. 14)",
+              "url": "https://www.greens.org.nz/manifesto_2026_drug_law_reform",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Repeal and replace the Misuse of Drugs Act"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Democracy (p. 11)",
+              "url": "https://www.greens.org.nz/manifesto_2026_democracy",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "constitutional transformation that upholds He Whakaputanga and Te Tiriti o Waitangi as our founding constitutional documents"
+            }
+          ]
+        }
+      }
+    },
     {
       "id": "labour",
       "name": "New Zealand Labour Party",

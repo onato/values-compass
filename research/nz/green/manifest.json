@@ -1,0 +1,20 @@
+{
+  "party": "green",
+  "entries": [
+    {
+      "filename": "manifesto-2026-full.pdf",
+      "textFile": "manifesto-2026-full.squeezed.txt",
+      "title": "Green Party of Aotearoa New Zealand: 2026 Manifesto, 'A Green government. For all of us.'",
+      "sourceUrl": "https://www.greens.org.nz/manifesto_2026_full",
+      "resolvedUrl": "https://assets.nationbuilder.com/beachheroes/pages/78863/attachments/original/1786330483/2026_GREEN_PARTY_MANIFESTO.pdf",
+      "fetchedAt": "2026-09-05",
+      "notes": "Full manifesto PDF; text extracted with pdftotext -layout and whitespace-squeezed."
+    },
+    {
+      "filename": "manifesto_2026.html",
+      "title": "Green Party: Manifesto 2026 index page",
+      "sourceUrl": "https://www.greens.org.nz/manifesto_2026",
+      "fetchedAt": "2026-09-05"
+    }
+  ]
+}

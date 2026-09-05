@@ -1,0 +1,68 @@
+{
+  "party": "act",
+  "entries": [
+    {
+      "filename": "policies.html",
+      "textFile": "policies.txt",
+      "title": "ACT: policies",
+      "sourceUrl": "https://www.act.org.nz/policies",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policies_democracy.html",
+      "textFile": "policies_democracy.txt",
+      "title": "ACT: policies/democracy",
+      "sourceUrl": "https://www.act.org.nz/policies/democracy",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policies_economy.html",
+      "textFile": "policies_economy.txt",
+      "title": "ACT: policies/economy",
+      "sourceUrl": "https://www.act.org.nz/policies/economy",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policies_education.html",
+      "textFile": "policies_education.txt",
+      "title": "ACT: policies/education",
+      "sourceUrl": "https://www.act.org.nz/policies/education",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policies_health.html",
+      "textFile": "policies_health.txt",
+      "title": "ACT: policies/health",
+      "sourceUrl": "https://www.act.org.nz/policies/health",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policies_hunting.html",
+      "textFile": "policies_hunting.txt",
+      "title": "ACT: policies/hunting",
+      "sourceUrl": "https://www.act.org.nz/policies/hunting",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policies_infrastructure.html",
+      "textFile": "policies_infrastructure.txt",
+      "title": "ACT: policies/infrastructure",
+      "sourceUrl": "https://www.act.org.nz/policies/infrastructure",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policies_law-and-order.html",
+      "textFile": "policies_law-and-order.txt",
+      "title": "ACT: policies/law-and-order",
+      "sourceUrl": "https://www.act.org.nz/policies/law-and-order",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policies_rural.html",
+      "textFile": "policies_rural.txt",
+      "title": "ACT: policies/rural",
+      "sourceUrl": "https://www.act.org.nz/policies/rural",
+      "fetchedAt": "2026-09-05"
+    }
+  ]
+}
