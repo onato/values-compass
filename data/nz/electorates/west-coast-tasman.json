@@ -1,0 +1,566 @@
+{
+  "id": "west-coast-tasman",
+  "name": "West Coast-Tasman",
+  "election": "General election, 7 November 2026",
+  "assessedAt": "2026-09-05",
+  "status": "draft",
+  "notes": "First candidate-level pass. Candidates are party-announced; official nominations do not close until 8 October 2026, so the field may change. Each cell is scored from the candidate's own statements only where such statements exist; otherwise it inherits the party's score with confidence lowered one step, and is unscored where the party is not scored either.",
+  "context": {
+    "incumbent": "None. Maureen Pugh (National), who won the seat in 2023, is retiring. Damien O'Connor (Labour), who held it from 1996 to 2023 with one break, is not standing here.",
+    "result2023": {
+      "candidateVote": [
+        {
+          "candidate": "Maureen Pugh",
+          "party": "National",
+          "votes": 13317,
+          "percent": 32.01
+        },
+        {
+          "candidate": "Damien O'Connor",
+          "party": "Labour",
+          "votes": 12300,
+          "percent": 29.57
+        }
+      ],
+      "partyVote": [
+        {
+          "party": "National",
+          "percent": 33.45
+        },
+        {
+          "party": "Labour",
+          "percent": 23.75
+        }
+      ],
+      "majority": 1017,
+      "source": {
+        "title": "Wikipedia: West Coast-Tasman, 2023 election (citing the Electoral Commission official result)",
+        "url": "https://en.wikipedia.org/wiki/West_Coast-Tasman",
+        "archived": "research/nz/electorates/west-coast-tasman/wikipedia-west-coast-tasman.html"
+      }
+    },
+    "geography": "The largest general electorate in New Zealand, covering the whole West Coast region and Tasman District apart from Richmond and Hope. Around two thirds of voters live in Tasman.",
+    "whatTheVoteChanges": "Under MMP the electorate vote chooses the local MP. It changes the balance of Parliament only if it wins a seat for a party that would otherwise fall below the 5 per cent threshold. None of the candidates from parties polling above the threshold, nor any minor-party candidate, is in that position here, so this vote is a choice of local representative. The party vote is what shapes the government.",
+    "localIssues": "Mining is the dividing line: the Stockton mine's fast-track application to extend into the Denniston Plateau, the Snowy River gold mine, and NZ First's proposal to return half of mining royalties to the region. Flood resilience at Westport and insurance retreat are the other live questions.",
+    "sources": [
+      {
+        "title": "Wikipedia: West Coast-Tasman electorate",
+        "url": "https://en.wikipedia.org/wiki/West_Coast-Tasman",
+        "archived": "research/nz/electorates/west-coast-tasman/wikipedia-west-coast-tasman.html"
+      },
+      {
+        "title": "Scoop: The mining political divide, Greens vs NZ First (Local Democracy Reporting, 19 August 2026)",
+        "url": "https://www.scoop.co.nz/stories/AK2608/S00605/the-mining-political-divide-greens-vs-nz-first.htm",
+        "date": "2026-08-19",
+        "archived": "research/nz/electorates/west-coast-tasman/scoop-mining-divide-greens-nzfirst.html"
+      },
+      {
+        "title": "Newsroom: NZ First's West Coast contender wants banks to pay for climate resilience",
+        "url": "https://newsroom.co.nz/2026/05/15/nz-firsts-west-coast-contender-wants-banks-to-pay-for-climate-resilience/",
+        "date": "2026-05-15",
+        "archived": "research/nz/electorates/west-coast-tasman/newsroom-cleine-banks-climate-resilience.html"
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "id": "milne",
+      "name": "Katie Milne",
+      "short": "Milne",
+      "party": "national",
+      "partyName": "National",
+      "bio": "Fifth-generation West Coast dairy farmer near Lake Brunner. Federated Farmers' first female president (2017-2020), former vice-president of the World Farmers Organisation, director of Predator Free 2050 and Westland Milk Products, 26-year volunteer firefighter. Ranked 25 on National's list.",
+      "sources": [
+        {
+          "title": "National: Katie Milne, candidate for West Coast-Tasman",
+          "url": "https://www.national.org.nz/team/katiemilne",
+          "date": "2026",
+          "archived": "research/nz/electorates/west-coast-tasman/milne-national-candidate-page.html"
+        },
+        {
+          "title": "National: Katie Milne selected as National's candidate in West Coast-Tasman",
+          "url": "https://www.national.org.nz/news/20260411-katie-milne-selected-as-nationals-candidate",
+          "date": "2026-04-11",
+          "archived": "research/nz/electorates/west-coast-tasman/milne-national-selection-release.html"
+        }
+      ],
+      "dimensions": {
+        "solidarity": {
+          "basis": "candidate",
+          "score": -40,
+          "confidence": "medium",
+          "rationale": "Her selection statement praises the government for having 'reigned in wasteful spending, saving taxpayers $43 billion' and describes fuel-price relief as 'timely, temporary, and targeted' so that 'fiscal responsibility remains in place while those who need it most receive relief'. That is her party's position in her own words, with a slightly warmer emphasis on targeted support for rural care workers.",
+          "sources": [
+            {
+              "title": "National: Katie Milne selected as National's candidate in West Coast-Tasman",
+              "url": "https://www.national.org.nz/news/20260411-katie-milne-selected-as-nationals-candidate",
+              "date": "2026-04-11",
+              "archived": "research/nz/electorates/west-coast-tasman/milne-national-selection-release.html",
+              "quote": "timely, temporary, and targeted support is ensuring fiscal responsibility remains in place while those who need it most receive relief"
+            }
+          ]
+        },
+        "regulation": {
+          "basis": "candidate",
+          "score": -60,
+          "confidence": "medium",
+          "rationale": "As a former Federated Farmers president and 'lifelong advocate for farmers', she credits the government with having 'reduced red tape to get farmers back to farming' and lists trade deals and investment incentives as its achievements. Deregulation of the primary sector is her stated cause, a little firmer than her party's overall score.",
+          "sources": [
+            {
+              "title": "National: Katie Milne selected as National's candidate in West Coast-Tasman",
+              "url": "https://www.national.org.nz/news/20260411-katie-milne-selected-as-nationals-candidate",
+              "date": "2026-04-11",
+              "archived": "research/nz/electorates/west-coast-tasman/milne-national-selection-release.html",
+              "quote": "reduced red tape to get farmers back to farming"
+            }
+          ]
+        },
+        "environment": {
+          "note": "She is a director of Predator Free 2050 and a keen hunter and fisher, alongside a career advocating for farming; she has not stated a position on mining or emissions in the archived material."
+        },
+        "local": {
+          "note": "Nearly three decades in West Coast farming leadership; no stated position on devolution."
+        }
+      }
+    },
+    {
+      "id": "paterson",
+      "name": "Rory Paterson",
+      "short": "Paterson",
+      "party": "labour",
+      "partyName": "Labour",
+      "bio": "Born in Greymouth, raised partly in Reefton, former deputy principal at St Patrick's School Greymouth, now director of religious education for the Catholic Diocese of Christchurch. Father of four, relocating to the electorate for the campaign. Labour's first new candidate here in 30 years.",
+      "sources": [
+        {
+          "title": "Labour: Rory Paterson selected for West Coast-Tasman (release, 13 April 2026)",
+          "url": "https://cathnewsnz.com/wp-content/uploads/2026/04/Rory-Paterson-selected-as-candidate.pdf",
+          "date": "2026-04-13",
+          "archived": "research/nz/electorates/west-coast-tasman/paterson-labour-selection-release.pdf"
+        }
+      ],
+      "dimensions": {
+        "solidarity": {
+          "basis": "candidate",
+          "score": 55,
+          "confidence": "medium",
+          "rationale": "His selection statement puts 'equitable access to healthcare, education and other government services' first, says 'good jobs are at the heart of social justice', and frames the campaign as 'putting people back at the heart of government decisions'. Consistent with Labour's score and stated in his own words.",
+          "sources": [
+            {
+              "title": "Labour: Rory Paterson selected for West Coast-Tasman",
+              "url": "https://cathnewsnz.com/wp-content/uploads/2026/04/Rory-Paterson-selected-as-candidate.pdf",
+              "date": "2026-04-13",
+              "archived": "research/nz/electorates/west-coast-tasman/paterson-labour-selection-release.pdf",
+              "quote": "Good jobs are at the heart of social justice"
+            }
+          ]
+        },
+        "local": {
+          "basis": "candidate",
+          "score": 10,
+          "confidence": "low",
+          "rationale": "He stresses that 'each community has its own way of doing things', that 'we are not an electorate where one size fits all', and that he is 'firm on listening first' so that policy 'takes that into account'. A stronger local emphasis than his party's programme, though as campaign framing rather than a devolution policy.",
+          "sources": [
+            {
+              "title": "Labour: Rory Paterson selected for West Coast-Tasman",
+              "url": "https://cathnewsnz.com/wp-content/uploads/2026/04/Rory-Paterson-selected-as-candidate.pdf",
+              "date": "2026-04-13",
+              "archived": "research/nz/electorates/west-coast-tasman/paterson-labour-selection-release.pdf",
+              "quote": "We are not an electorate where one size fits all."
+            }
+          ]
+        },
+        "environment": {
+          "note": "He emphasises retaining jobs in the electorate's 'incredible industries' and 'healthy industries' and has not stated a position on mining or the exploration ban in the archived material."
+        }
+      }
+    },
+    {
+      "id": "cleine",
+      "name": "Jamie Cleine",
+      "short": "Cleine",
+      "party": "nzfirst",
+      "partyName": "NZ First",
+      "bio": "Two-term Buller mayor (lost the mayoralty in October 2025), dairy and livestock farmer for 26 years. Led Westport's flood responses and the plan to relocate parts of the town. Says the mining-royalties policy grew out of a mayors, chairs and iwi group he sat on.",
+      "sources": [
+        {
+          "title": "NZ First: Candidate announcement, West Coast-Tasman",
+          "url": "https://www.nzfirst.nz/candidate_announcement_west_coast_tasman",
+          "date": "2026-03-29",
+          "archived": "research/nz/electorates/west-coast-tasman/cleine-nzfirst-candidate-announcement.html"
+        },
+        {
+          "title": "RNZ: NZ First announces former mayor as West Coast candidate",
+          "url": "https://www.rnz.co.nz/news/politics/590949/nz-first-announces-former-mayor-as-west-coast-candidate",
+          "date": "2026-03-29",
+          "archived": "research/nz/electorates/west-coast-tasman/rnz-nzfirst-cleine-announced.html"
+        },
+        {
+          "title": "Newsroom: NZ First's West Coast contender wants banks to pay for climate resilience",
+          "url": "https://newsroom.co.nz/2026/05/15/nz-firsts-west-coast-contender-wants-banks-to-pay-for-climate-resilience/",
+          "date": "2026-05-15",
+          "archived": "research/nz/electorates/west-coast-tasman/newsroom-cleine-banks-climate-resilience.html"
+        }
+      ],
+      "dimensions": {
+        "environment": {
+          "basis": "candidate",
+          "score": -70,
+          "confidence": "high",
+          "rationale": "He supports coal mining in the region, calls the conservation estate 'a promise of prosperity held behind bars', says his focus is 'not on the emissions control side of stuff' but on living with the effects, and 'won't go so far as to say' climate change is entirely humanity's fault. He backs his party's plan to curb DOC's ability to intervene. He does want long-term investment in flood resilience and accepts that mining 'is not an infinite resource'. Growth and extraction clearly first, matching his party.",
+          "sources": [
+            {
+              "title": "Newsroom: NZ First's West Coast contender wants banks to pay for climate resilience",
+              "url": "https://newsroom.co.nz/2026/05/15/nz-firsts-west-coast-contender-wants-banks-to-pay-for-climate-resilience/",
+              "date": "2026-05-15",
+              "archived": "research/nz/electorates/west-coast-tasman/newsroom-cleine-banks-climate-resilience.html",
+              "quote": "it's not on the emissions control side of stuff, it's on, how do you learn to live with the effects?"
+            },
+            {
+              "title": "Scoop: The mining political divide, Greens vs NZ First",
+              "url": "https://www.scoop.co.nz/stories/AK2608/S00605/the-mining-political-divide-greens-vs-nz-first.htm",
+              "date": "2026-08-19",
+              "archived": "research/nz/electorates/west-coast-tasman/scoop-mining-divide-greens-nzfirst.html"
+            }
+          ]
+        },
+        "regulation": {
+          "basis": "candidate",
+          "score": 40,
+          "confidence": "medium",
+          "rationale": "He argues banks and insurers 'benefit from risk reduction investment, and yet they're not in any way compelled to contribute' and should be made to pay towards resilience, wants central government to fund council amalgamations, and champions a royalties regime that directs private mining revenue to communities. Interventionist where the region benefits, in line with his party.",
+          "sources": [
+            {
+              "title": "Newsroom: NZ First's West Coast contender wants banks to pay for climate resilience",
+              "url": "https://newsroom.co.nz/2026/05/15/nz-firsts-west-coast-contender-wants-banks-to-pay-for-climate-resilience/",
+              "date": "2026-05-15",
+              "archived": "research/nz/electorates/west-coast-tasman/newsroom-cleine-banks-climate-resilience.html",
+              "quote": "They benefit from risk reduction investment, and yet they're not in any way compelled to contribute."
+            }
+          ]
+        },
+        "local": {
+          "basis": "candidate",
+          "score": 55,
+          "confidence": "high",
+          "rationale": "Returning half of mining royalties to the host region is 'central' to his candidacy and came from a local mayors, chairs and iwi group; he told the regional council he supports directing the International Visitor Levy to local government and that prioritising it 'would be up to the West Coast'. Ten years in local government. A stronger local lean than his party's overall score.",
+          "sources": [
+            {
+              "title": "Otago Daily Times: Former mayor, now NZ First candidate grilled over council policies",
+              "url": "https://www.odt.co.nz/news/west-coast/former-mayor-now-nz-first-candidate-grilled-over-council-policies-o26d6jbm",
+              "date": "2026-08",
+              "archived": "research/nz/electorates/west-coast-tasman/odt-cleine-grilled-council-policies.html"
+            },
+            {
+              "title": "RNZ: NZ First announces former mayor as West Coast candidate",
+              "url": "https://www.rnz.co.nz/news/politics/590949/nz-first-announces-former-mayor-as-west-coast-candidate",
+              "date": "2026-03-29",
+              "archived": "research/nz/electorates/west-coast-tasman/rnz-nzfirst-cleine-announced.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "beaumont",
+      "name": "Andrew Beaumont",
+      "short": "Beaumont",
+      "party": "green",
+      "partyName": "Green",
+      "bio": "Community advocate who describes himself as 'an active listener, advocate, and good mediator', currently supporting local communities to protect the environment and food security, and wanting to empower young people in democracy.",
+      "sources": [
+        {
+          "title": "Green Party: Andrew Beaumont, West Coast-Tasman",
+          "url": "https://www.greens.org.nz/andrewbeaumont_2026",
+          "date": "2026",
+          "archived": "research/nz/electorates/west-coast-tasman/beaumont-green-candidate-page.html"
+        }
+      ],
+      "dimensions": {
+        "environment": {
+          "basis": "candidate",
+          "score": 75,
+          "confidence": "medium",
+          "rationale": "Asked by the regional council about the Greens' anti-mining stance he said the party is against mining 'in the wrong place, in the wrong way', and on harvesting pest animals repeatedly said the party would 'follow evidence'. His own page centres on protecting the environment and food security. A firm environmental position, expressed more cautiously than the manifesto's ban on new mining on conservation land, so a little below his party's score.",
+          "sources": [
+            {
+              "title": "Scoop: The mining political divide, Greens vs NZ First",
+              "url": "https://www.scoop.co.nz/stories/AK2608/S00605/the-mining-political-divide-greens-vs-nz-first.htm",
+              "date": "2026-08-19",
+              "archived": "research/nz/electorates/west-coast-tasman/scoop-mining-divide-greens-nzfirst.html",
+              "quote": "against mining \"in the wrong place, in the wrong way\""
+            },
+            {
+              "title": "NZ Herald: West Coast-Tasman Greens candidate vague on harvesting of pest animals",
+              "url": "https://www.nzherald.co.nz/the-country/news/west-coast-tasman-greens-candidate-vague-on-harvesting-of-pest-animals/VMWOF54TJBHY7APKPDVVLUU6ZQ/",
+              "date": "2026-08",
+              "archived": "research/nz/electorates/west-coast-tasman/herald-beaumont-pest-animals.html"
+            }
+          ]
+        },
+        "local": {
+          "basis": "candidate",
+          "score": 55,
+          "confidence": "medium",
+          "rationale": "On pest control he told the council 'the local people are the ones who know best' and that the Greens would work with local councils and look at their input; his page commits to liaising with local government to create jobs. Consistent with his party's local lean and stated in his own words.",
+          "sources": [
+            {
+              "title": "NZ Herald: West Coast-Tasman Greens candidate vague on harvesting of pest animals",
+              "url": "https://www.nzherald.co.nz/the-country/news/west-coast-tasman-greens-candidate-vague-on-harvesting-of-pest-animals/VMWOF54TJBHY7APKPDVVLUU6ZQ/",
+              "date": "2026-08",
+              "archived": "research/nz/electorates/west-coast-tasman/herald-beaumont-pest-animals.html",
+              "quote": "The local people are the ones who know best."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "uddstrom",
+      "name": "Cindie Uddstrom",
+      "short": "Uddstrom",
+      "party": "top",
+      "partyName": "Opportunity",
+      "bio": "Greymouth-born owner of a fibreglass manufacturing business she took over from her father and grew into a national supplier, after ten years in computer networking in Wellington. Treasurer of the Grey Valley Riding Club; third-generation Coaster.",
+      "sources": [
+        {
+          "title": "Opportunity: Cindie Uddstrom for West Coast-Tasman",
+          "url": "https://www.opportunity.org.nz/candidate-cindie-uddstrom",
+          "date": "2026",
+          "archived": "research/nz/electorates/west-coast-tasman/uddstrom-opportunity-candidate-page.html"
+        }
+      ],
+      "dimensions": {
+        "local": {
+          "basis": "candidate",
+          "score": 35,
+          "confidence": "low",
+          "rationale": "She says 'strong, prosperous regions are built by including local communities in decision-making' and values knowledge 'at the coal-face'. A local lean stated as principle, without a policy behind it.",
+          "sources": [
+            {
+              "title": "Opportunity: Cindie Uddstrom for West Coast-Tasman",
+              "url": "https://www.opportunity.org.nz/candidate-cindie-uddstrom",
+              "date": "2026",
+              "archived": "research/nz/electorates/west-coast-tasman/uddstrom-opportunity-candidate-page.html",
+              "quote": "strong, prosperous regions are built by including local communities in decision-making"
+            }
+          ]
+        },
+        "change": {
+          "basis": "candidate",
+          "score": 40,
+          "confidence": "low",
+          "rationale": "She argues New Zealand 'needs to return to long-term thinking' and that 'trying to recreate the good old days is holding the country back, rather than preparing it for the future'. Forward-looking and reform-minded in tone, gentler than her party's system-change pitch.",
+          "sources": [
+            {
+              "title": "Opportunity: Cindie Uddstrom for West Coast-Tasman",
+              "url": "https://www.opportunity.org.nz/candidate-cindie-uddstrom",
+              "date": "2026",
+              "archived": "research/nz/electorates/west-coast-tasman/uddstrom-opportunity-candidate-page.html",
+              "quote": "Trying to recreate the \"good old days\" is holding the country back"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "hocking",
+      "name": "Janelle Hocking",
+      "short": "Hocking",
+      "party": "act",
+      "partyName": "ACT",
+      "bio": "Owner-operator of the Murchison Four Square since 2014, with hospitality and transport businesses in the region and 20 years across retail, hospitality, communications and tourism. Formerly chair and policy chair of National's West Coast-Tasman electorate before joining ACT.",
+      "sources": [
+        {
+          "title": "ACT: ACT expands 2026 candidate team (release)",
+          "url": "https://www.act.org.nz/news/act-expands-2026-candidate-team",
+          "date": "2026-06",
+          "archived": "research/nz/electorates/west-coast-tasman/act-expands-candidate-team-release.html"
+        }
+      ],
+      "dimensions": {
+        "solidarity": {
+          "basis": "candidate",
+          "score": -60,
+          "confidence": "low",
+          "rationale": "ACT's announcement says she joined the party because its values best aligned with 'her belief in practical solutions, regional growth, and individual responsibility'. Personal responsibility as a stated value, slightly softer than ACT's overall score and resting on one sentence.",
+          "sources": [
+            {
+              "title": "ACT: ACT expands 2026 candidate team (release)",
+              "url": "https://www.act.org.nz/news/act-expands-2026-candidate-team",
+              "date": "2026-06",
+              "archived": "research/nz/electorates/west-coast-tasman/act-expands-candidate-team-release.html",
+              "quote": "her belief in practical solutions, regional growth, and individual responsibility"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dyatlova-murphy",
+      "name": "Sara Dyatlova-Murphy",
+      "short": "Dyatlova-Murphy",
+      "party": null,
+      "partyName": "Alliance",
+      "colour": "#7a1f4d",
+      "bio": "Software developer, community advocate and stay-at-home mother in Riwaka, born and raised in Nelson with family roots in Golden Bay, Motueka and the West Coast. The Alliance is not scored as a party, so only her own stated positions are scored here.",
+      "sources": [
+        {
+          "title": "Alliance Party: Sara Dyatlova-Murphy announced as candidate (release via Scoop)",
+          "url": "https://www.scoop.co.nz/stories/PO2607/S00195/alliance-party-announces-sara-dyatlova-murphy-as-candidate-for-west-coast-tasman.htm",
+          "date": "2026-07-30",
+          "archived": "research/nz/electorates/west-coast-tasman/alliance-dyatlova-murphy-release.html"
+        },
+        {
+          "title": "Alliance Party: Coal mines to return to state ownership (release via Scoop)",
+          "url": "https://www.scoop.co.nz/stories/PO2608/S00210/alliance-calls-for-coal-mines-to-return-to-state-ownership.htm",
+          "date": "2026-08-29",
+          "archived": "research/nz/electorates/west-coast-tasman/alliance-coal-mines-state-ownership-release.html"
+        },
+        {
+          "title": "Alliance Party: Universal child benefit (release via Scoop; Dyatlova-Murphy as welfare spokesperson)",
+          "url": "https://www.scoop.co.nz/stories/PO2608/S00139/alliance-calls-for-universal-child-benefit.htm",
+          "date": "2026-08-19",
+          "archived": "research/nz/electorates/west-coast-tasman/alliance-universal-child-benefit-release.html"
+        }
+      ],
+      "dimensions": {
+        "regulation": {
+          "basis": "candidate",
+          "score": 80,
+          "confidence": "medium",
+          "rationale": "She says existing coal mines 'should be returned to public ownership' because 'the government, not private and overseas interests, are best placed to manage environmental impacts' and that 'the government has to take an active role in creating well paid jobs'. Public ownership as the instrument of policy.",
+          "sources": [
+            {
+              "title": "Alliance Party: Coal mines to return to state ownership",
+              "url": "https://www.scoop.co.nz/stories/PO2608/S00210/alliance-calls-for-coal-mines-to-return-to-state-ownership.htm",
+              "date": "2026-08-29",
+              "archived": "research/nz/electorates/west-coast-tasman/alliance-coal-mines-state-ownership-release.html",
+              "quote": "existing coal mines should be returned to public ownership"
+            }
+          ]
+        },
+        "environment": {
+          "basis": "candidate",
+          "score": 50,
+          "confidence": "medium",
+          "rationale": "She backs 'a rapid plan for decarbonisation', is 'deeply concerned' at the fast-track application to extend West Coast mining, and wants a 'just transition' managed by the state. But she also says 'society still has a need for these resources' and that offshoring production 'hides the environmental cost', so she would keep mines running under public ownership rather than close them. A clear environmental lean tempered by a workers-first stance on coal.",
+          "sources": [
+            {
+              "title": "Alliance Party: Coal mines to return to state ownership",
+              "url": "https://www.scoop.co.nz/stories/PO2608/S00210/alliance-calls-for-coal-mines-to-return-to-state-ownership.htm",
+              "date": "2026-08-29",
+              "archived": "research/nz/electorates/west-coast-tasman/alliance-coal-mines-state-ownership-release.html",
+              "quote": "Society still has a need for these resources"
+            }
+          ]
+        },
+        "solidarity": {
+          "basis": "candidate",
+          "score": 70,
+          "confidence": "medium",
+          "rationale": "As the Alliance's welfare spokesperson she fronted its call for a universal child benefit, 'regardless of their background or employment status', arguing families are delaying children because of the cost of living, and its coal policy promises the state 'will not throw workers, households, and the wider community under the bus'. Strongly redistributive, in her own words.",
+          "sources": [
+            {
+              "title": "Alliance Party: Universal child benefit",
+              "url": "https://www.scoop.co.nz/stories/PO2608/S00139/alliance-calls-for-universal-child-benefit.htm",
+              "date": "2026-08-19",
+              "archived": "research/nz/electorates/west-coast-tasman/alliance-universal-child-benefit-release.html",
+              "quote": "stronger support for young families, regardless of their background or employment status"
+            },
+            {
+              "title": "Alliance Party: Coal mines to return to state ownership",
+              "url": "https://www.scoop.co.nz/stories/PO2608/S00210/alliance-calls-for-coal-mines-to-return-to-state-ownership.htm",
+              "date": "2026-08-29",
+              "archived": "research/nz/electorates/west-coast-tasman/alliance-coal-mines-state-ownership-release.html",
+              "quote": "We will not throw workers, households, and the wider community under the bus"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "grey",
+      "name": "Sue Grey",
+      "short": "Grey",
+      "party": null,
+      "partyName": "NZ Outdoors & Freedom",
+      "colour": "#5a7d2a",
+      "bio": "Leader of the NZ Outdoors & Freedom Party, a self-employed lawyer based in Dovedale, Tasman, with degrees in law, biochemistry and microbiology. Contested this electorate in 2023. Her legal work includes medicinal cannabis reform, challenges to aerial 1080 operations and claims about electromagnetic radiation. The party is not scored, so only her own stated positions are scored here.",
+      "sources": [
+        {
+          "title": "NZ Outdoors & Freedom Party: 2026 candidates",
+          "url": "https://nzofp.co.nz/2026-candidates",
+          "date": "2026",
+          "archived": "research/nz/electorates/west-coast-tasman/nzofp-2026-candidates.html"
+        }
+      ],
+      "dimensions": {
+        "institutions": {
+          "basis": "candidate",
+          "score": -60,
+          "confidence": "medium",
+          "rationale": "She stands for 'Direct Democracy, where people play an active role in decision making' and 'freedom from excessive government and international interference', and her legal career includes forcing publication of judicial conduct guidelines. Popular will over institutional constraint is the stated principle.",
+          "sources": [
+            {
+              "title": "NZ Outdoors & Freedom Party: 2026 candidates",
+              "url": "https://nzofp.co.nz/2026-candidates",
+              "date": "2026",
+              "archived": "research/nz/electorates/west-coast-tasman/nzofp-2026-candidates.html",
+              "quote": "Direct Democracy, where people play an active role in decision making"
+            }
+          ]
+        },
+        "liberty": {
+          "basis": "candidate",
+          "score": 40,
+          "confidence": "low",
+          "rationale": "Her platform is built on 'freedom from excessive government', and her legal work on medicinal cannabis reform and against aerial toxin operations sits with personal liberty over state direction. Inferred from a short biography rather than a policy statement.",
+          "sources": [
+            {
+              "title": "NZ Outdoors & Freedom Party: 2026 candidates",
+              "url": "https://nzofp.co.nz/2026-candidates",
+              "date": "2026",
+              "archived": "research/nz/electorates/west-coast-tasman/nzofp-2026-candidates.html",
+              "quote": "freedom from excessive government and international interference"
+            }
+          ]
+        },
+        "cosmopolitan": {
+          "basis": "candidate",
+          "score": -40,
+          "confidence": "low",
+          "rationale": "Freedom from 'international interference' is one of her two stated planks, which points towards national sovereignty over international obligations; nothing is said about immigration or the Treaty.",
+          "sources": [
+            {
+              "title": "NZ Outdoors & Freedom Party: 2026 candidates",
+              "url": "https://nzofp.co.nz/2026-candidates",
+              "date": "2026",
+              "archived": "research/nz/electorates/west-coast-tasman/nzofp-2026-candidates.html"
+            }
+          ]
+        },
+        "environment": {
+          "note": "She has litigated against aerial 1080 operations and describes herself as inspired by nature, but opposing pest-control toxins does not map cleanly onto the environment-versus-growth dimension, so this is left unscored."
+        }
+      }
+    },
+    {
+      "id": "hislop",
+      "name": "Alex Hislop",
+      "short": "Hislop",
+      "party": null,
+      "partyName": "NZ Loyal",
+      "colour": "#6b6b6b",
+      "bio": "Announced by NZ Loyal on 29 August 2026. The party's announcement page sits behind a bot check and could not be archived, and NZ Loyal is not scored as a party, so no dimension is scored for this candidate.",
+      "sources": [
+        {
+          "title": "Wikipedia: Candidates in the 2026 New Zealand general election by electorate (West Coast-Tasman)",
+          "url": "https://en.wikipedia.org/wiki/Candidates_in_the_2026_New_Zealand_general_election_by_electorate",
+          "date": "2026-08-30",
+          "archived": "research/nz/electorates/west-coast-tasman/wikipedia-2026-candidates-by-electorate.html"
+        }
+      ],
+      "dimensions": {}
+    }
+  ]
+}

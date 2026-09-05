@@ -211,6 +211,7 @@
 
     $("summary").value = profile.summary;
     renderParties(profile);
+    renderElectorates(profile);
     refreshJson();
   }
 
@@ -272,6 +273,81 @@
       ". Latest assessment " + meta.assessedAt + ", rubric v" + meta.rubricVersion + ".";
   }
 
+  // ---------- electorates ----------
+  var ELECTORATE_KEY = "values-compass.electorate";
+  function electoratesAvailable() {
+    return typeof ELECTORATES_NZ !== "undefined" && ELECTORATES_NZ.electorates && ELECTORATES_NZ.electorates.length > 0;
+  }
+  function renderElectorates(profile) {
+    var section = $("electorate-section");
+    if (!electoratesAvailable()) { section.hidden = true; return; }
+    section.hidden = false;
+    var sel = $("electorate-select");
+    if (sel.options.length <= 1) {
+      ELECTORATES_NZ.electorates.forEach(function (e) { sel.appendChild(el("option", { value: e.id, text: e.name })); });
+      var saved = null;
+      try { saved = localStorage.getItem(ELECTORATE_KEY); } catch (e) {}
+      if (saved) sel.value = saved;
+      sel.addEventListener("change", function () {
+        try { localStorage.setItem(ELECTORATE_KEY, sel.value); } catch (e) {}
+        if (current) { renderCandidates(current, sel.value); refreshJson(); }
+      });
+    }
+    renderCandidates(profile, sel.value);
+    $("method-electorates").textContent = "Electorates researched so far: " + ELECTORATES_NZ.electorates.map(function (e) { return e.name + " (" + e.candidates.length + " candidates, assessed " + e.assessedAt + ")"; }).join("; ") + ".";
+  }
+  function selectedElectorate() {
+    if (!electoratesAvailable()) return null;
+    var id = $("electorate-select").value;
+    return ELECTORATES_NZ.electorates.filter(function (e) { return e.id === id; })[0] || null;
+  }
+  function renderCandidates(profile, id) {
+    var e = ELECTORATES_NZ.electorates.filter(function (x) { return x.id === id; })[0];
+    var ctx = $("electorate-context"), list = $("candidate-ranking");
+    list.innerHTML = "";
+    if (!e) { ctx.hidden = true; return; }
+    var byId = {};
+    DIMENSIONS.forEach(function (d) { byId[d.id] = d; });
+    var r23 = e.context.result2023;
+    ctx.hidden = false;
+    ctx.innerHTML = "";
+    ctx.appendChild(el("p", { html: "<b>Incumbent.</b> " + e.context.incumbent }));
+    if (r23) {
+      var cv = r23.candidateVote.map(function (v) { return v.candidate + " (" + v.party + ") " + v.percent + "%"; }).join(", ");
+      var pv = r23.partyVote.map(function (v) { return v.party + " " + v.percent + "%"; }).join(", ");
+      ctx.appendChild(el("p", { html: "<b>2023 result.</b> Candidate vote: " + cv + ", majority " + r23.majority + ". Party vote: " + pv + "." }));
+    }
+    ctx.appendChild(el("p", { html: "<b>What this vote changes.</b> " + e.context.whatTheVoteChanges }));
+    if (e.context.localIssues) ctx.appendChild(el("p", { html: "<b>Local issues.</b> " + e.context.localIssues }));
+    ctx.appendChild(el("p", { class: "help", text: "Assessed " + e.assessedAt + " (" + e.status + "). " + (e.notes || "") }));
+
+    var ranking = Matching.matchParties(profile, e.candidates);
+    ranking.forEach(function (r) {
+      var cand = e.candidates.filter(function (c) { return c.id === r.id; })[0];
+      var own = DIMENSIONS.filter(function (d) { return cand.dimensions[d.id] && cand.dimensions[d.id].basis === "candidate"; }).length;
+      var agree = r.agreements.map(function (id) { return byId[id].poles.join(" vs. "); });
+      var conflict = r.conflicts.map(function (id) { return byId[id].poles.join(" vs. "); });
+      var drivers = el("div", { class: "drivers" });
+      drivers.appendChild(el("span", { html: "<b>Closest on</b> " + (agree.length ? agree.join(", ") : "nothing in particular") + ". " }));
+      drivers.appendChild(el("span", { html: "<b>Furthest on</b> " + (conflict.length ? conflict.join(", ") : "no dimension by 30 points or more") + "." }));
+      var sw = el("i", { class: "sw", "aria-hidden": "true" }); sw.style.background = cand.colour;
+      var summary = el("summary", null, [
+        el("span", { class: "rank", text: r.rank + "." }),
+        el("span", { class: "party-name" }, [sw, el("span", { html: cand.name + " <small>" + cand.partyName + "</small>" })]),
+        el("span", { class: "align", html: (r.scoredDimensions ? r.alignment + "% aligned" : "not scored") + "<small>" +
+          (r.scoredDimensions ? "confidence " + r.confidence + ", " : "") + r.scoredDimensions + " of 10 scored, " + own + " from own statements</small>" }),
+        drivers,
+        el("div", { class: "bio", text: cand.bio })
+      ]);
+      var cells = el("div", { class: "cells" });
+      cells.appendChild(el("p", { class: "intro", text: "Your position is the bar; " + cand.short + "'s is the dot. Cells marked 'own statements' are scored from what the candidate has said; the rest inherit the party." }));
+      profile.priorities.forEach(function (id) {
+        cells.appendChild(renderCell(byId[id], profile.dimensions.filter(function (x) { return x.id === id; })[0], cand));
+      });
+      list.appendChild(el("details", { class: "party-card" }, [summary, cells]));
+    });
+  }
+
   function renderCell(d, pd, party) {
     var cell = party.dimensions[d.id];
     var wrap = el("div", { class: "cell" });
@@ -302,8 +378,10 @@
       ps.style.setProperty("--marker", party.colour);
       meta.appendChild(ps);
       meta.appendChild(el("span", { class: "badge" + (cell.confidence === "low" ? " low" : ""), text: "confidence " + cell.confidence }));
+      if (cell.basis === "candidate") meta.appendChild(el("span", { class: "badge basis-candidate", text: "own statements" }));
+      if (cell.basis === "party") meta.appendChild(el("span", { class: "badge basis-party", text: "inherited from " + (party.partyName || "party") }));
     } else {
-      meta.appendChild(el("span", { class: "nodata", text: party.short + ": no discernible position" }));
+      meta.appendChild(el("span", { class: "nodata", text: party.short + ": " + (cell && cell.basis === "none" ? "not scored" : "no discernible position") }));
     }
     wrap.appendChild(meta);
     if (cell) {
@@ -339,6 +417,13 @@
     p.dimensions.forEach(function (d) { delete d.sd; });
     if (partiesAvailable()) {
       p.partyMatch = Matching.exportBlock(Matching.matchParties(current, PARTIES_NZ.parties), PARTIES_NZ.meta);
+      var e = selectedElectorate();
+      if (e) {
+        var cr = Matching.matchParties(current, e.candidates);
+        p.partyMatch.electorate = { id: e.id, name: e.name, assessedAt: e.assessedAt,
+          ranking: cr.map(function (r) { var c = e.candidates.filter(function (x) { return x.id === r.id; })[0];
+            return { rank: r.rank, candidate: c.name, party: c.partyName, alignment: r.scoredDimensions ? r.alignment : null, confidence: r.confidence, scoredDimensions: r.scoredDimensions }; }) };
+      }
     }
     return p;
   }

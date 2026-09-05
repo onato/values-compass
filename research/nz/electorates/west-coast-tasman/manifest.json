@@ -167,6 +167,22 @@
       "sourceUrl": "https://allianceparty.nz/candidates/",
       "fetchedAt": "2026-09-05",
       "kind": "party"
+    },
+    {
+      "filename": "electoral-commission-2023-result-west-coast-tasman.html",
+      "textFile": "electoral-commission-2023-result-west-coast-tasman.txt",
+      "title": "Electoral Commission: West Coast-Tasman official result, 2023 general election",
+      "sourceUrl": "https://www.electionresults.govt.nz/electionresults_2023/electorate-details-61.html",
+      "fetchedAt": "2026-09-05",
+      "kind": "official"
+    },
+    {
+      "filename": "alliance-universal-child-benefit-release.html",
+      "textFile": "alliance-universal-child-benefit-release.txt",
+      "title": "Alliance Party: Universal child benefit (release via Scoop)",
+      "sourceUrl": "https://www.scoop.co.nz/stories/PO2608/S00139/alliance-calls-for-universal-child-benefit.htm",
+      "fetchedAt": "2026-09-05",
+      "kind": "party"
     }
   ],
   "notes": "Candidate-level research for the West Coast-Tasman electorate. 'party' = the candidate's or party's own page; 'media' = report of a candidate's statements (lead, not record); nominations do not close until 8 October 2026 so the field is provisional."

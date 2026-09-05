@@ -77,6 +77,16 @@
         <p class="help">Alignment is how close a party sits to your profile across the ten dimensions, weighted by how strongly you lean. Every score is our reading of the party's programme and record; open a party to see the evidence for each dimension, and read <button class="link inline" id="link-method">how parties are scored</button>. Candidates are not scored; the research prompt below covers them.</p>
       </section>
 
+      <section id="electorate-section" class="party-section" hidden>
+        <h2>Your electorate</h2>
+        <p class="help">The electorate vote chooses your local MP. Candidates are scored only where they have said something themselves; every other cell inherits the party's score with lower confidence, and candidates from unscored parties are scored only on their own statements.</p>
+        <label class="select-wrap">Electorate
+          <select id="electorate-select"><option value="">Choose an electorate</option></select>
+        </label>
+        <div id="electorate-context" class="electorate-context" hidden></div>
+        <div id="candidate-ranking" class="party-ranking"></div>
+      </section>
+
       <h2>Get your own analysis</h2>
       <p class="help">The research prompt below asks an AI agent of your choice to research the parties and candidates on your ballot, score them on the same ten dimensions, and rank them against your profile with sources. You run it yourself, so you do not have to trust our analysis. Check the country and election, and add your electorate if you know it.</p>
       <div class="context">
@@ -161,6 +171,9 @@
       <p>Matching is a weighted distance. Each dimension is weighted by how strongly you lean on it, with a small floor so a balanced profile still produces a ranking, and halved where your answers were mixed. Alignment is 100 minus that distance as a share of the maximum possible, so 100 per cent means a party sits exactly where you do on every dimension you care about.</p>
       <p>Every cell on the results page shows its rationale, confidence and dated sources, and the source documents are archived in the project repository so the scores can be re-checked when parties publish new material. If you disagree with a score, the research prompt gives you an independent route: hand it to an agent of your choice and compare. Coalition commitments demanded by one party are attributed to that party in the rationale; they count for the lead party only where it adopted them as government policy.</p>
       <p id="method-parties" class="help"></p>
+      <h2>How candidates are scored</h2>
+      <p>Where an electorate has been researched, its candidates appear below the party ranking. Individual positions are hard to establish in New Zealand: most parliamentary votes are party votes, and new candidates have no record at all. So a candidate's cell is scored from their own statements only where such statements exist, with a source for each. Every other cell inherits the party's score with its confidence lowered one step, and says so. Candidates whose party is not scored are scored only on what they have said themselves, and are otherwise left unscored, which also lowers their alignment's certainty rather than their alignment. The field is provisional until nominations close on 8 October 2026.</p>
+      <p id="method-electorates" class="help"></p>
 
       <h2>Privacy</h2>
       <p>The page has no server. Answers, scores and the summary are stored only in this browser's local storage and leave it only when you copy or download them.</p>
@@ -176,6 +189,7 @@
   <script src="js/scoring.js"></script>
   <script src="js/matching.js"></script>
   <script src="data/nz/parties.js"></script>
+  <script src="data/nz/electorates.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

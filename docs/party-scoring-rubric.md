@@ -84,3 +84,7 @@ Candidates to verify during research; a party's position on these is the quickes
 ## Writing a cell
 
 Each cell has a score, a confidence, a rationale of two to four sentences, and at least one dated source that is archived in the repo. The rationale says what the programme proposes, what the record shows, and why that lands on this number. Quote a short phrase where a phrase settles the matter.
+
+## Candidates
+
+Candidate-level scoring follows the same anchors with one extra rule: a cell is scored from the candidate only where the candidate has said or done something on that dimension, with a source. Otherwise it inherits the party's score with confidence lowered one step and says so. Candidates whose party is not scored get only their own-statement cells; the rest stay unscored, which lowers the certainty of their alignment rather than the alignment itself. Selection statements, candidate pages, council candidate briefings, local media interviews and, for former officeholders, their record are the usual sources. Do not infer a position from a candidate's occupation, religion or background.

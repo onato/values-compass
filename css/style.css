@@ -232,3 +232,16 @@ button.link.inline { padding: 0; font: inherit; font-size: inherit; color: var(-
 /* In party cells the person's bar is neutral so the party marker carries the only colour. */
 .cell .track .bar.a, .cell .track .bar.b { background-color: var(--text-3); opacity: 0.55; }
 .cell .cell-meta .you::before { background: var(--text-3); }
+
+/* Electorate section */
+.select-wrap { display: grid; gap: 4px; font-size: 0.85rem; color: var(--text-2); margin: 8px 0 12px; max-width: 360px; }
+.select-wrap select { font: inherit; font-size: 0.98rem; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--text); }
+.select-wrap select:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
+.electorate-context { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin-bottom: 12px; font-size: 0.92rem; color: var(--text-2); }
+.electorate-context p { margin: 0 0 8px; }
+.electorate-context p:last-child { margin-bottom: 0; }
+.electorate-context b { color: var(--text); }
+.party-card .party-name small { font-weight: 400; color: var(--text-3); }
+.party-card .bio { grid-column: 2 / 4; color: var(--text-3); font-size: 0.82rem; }
+.badge.basis-candidate { border-color: var(--pole-a); }
+.badge.basis-party { border-style: dashed; }
