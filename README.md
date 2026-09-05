@@ -15,6 +15,8 @@ python3 -m http.server 8080
 
 Everything stays in the browser. Progress and results are saved to `localStorage` so a closed tab can resume.
 
+The site is deployed to GitHub Pages by `.github/workflows/static.yml` on every push to `main`. Before uploading, the workflow runs `node scripts/stamp-assets.js`, which appends a content hash to every local stylesheet, script and audio reference in the HTML (`css/style.css?v=1a2b3c4d`), so a change to CSS or JS is never served stale from a browser cache. The repository itself keeps the plain references. Share previews use the Open Graph tags in `index.html` and the image in `img/share.png`, rendered from `img/share.svg` with `rsvg-convert -w 1200 -h 630 img/share.svg -o img/share.png`.
+
 ## Party alignment (New Zealand)
 
 After the questionnaire, the results page ranks the New Zealand parties in Parliament, plus Opportunity (TOP), by how closely each sits to the person's profile on the same twelve dimensions. Every party score shows its rationale, confidence and dated sources.

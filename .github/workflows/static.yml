@@ -33,6 +33,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Stamp stylesheets and scripts with content hashes
+        # Rewrites css/style.css to css/style.css?v=<hash> and so on in the
+        # uploaded copy only, so a deploy never leaves browsers on stale CSS or JS.
+        run: node scripts/stamp-assets.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

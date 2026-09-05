@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#fcfcfb"/>
+  <text x="80" y="112" font-size="22" font-weight="700" letter-spacing="3" fill="#2a78d6">VALUES COMPASS</text>
+  <text x="80" y="196" font-size="60" font-weight="700" fill="#0b0b0b">Find the parties that fit your</text>
+  <text x="80" y="268" font-size="60" font-weight="700" fill="#0b0b0b">values, and see the evidence.</text>
+  <text x="80" y="330" font-size="27" fill="#52514e">Sixty statements about what you value when things collide, then the</text>
+  <text x="80" y="368" font-size="27" fill="#52514e">New Zealand parties and candidates that pull the same way.</text>
+  <rect x="80" y="418" width="1040" height="132" rx="14" fill="#ffffff" stroke="#e6e5e1"/>
+  <text x="108" y="462" font-size="22" font-weight="700" fill="#0b0b0b">Environment</text>
+  <text x="1092" y="462" font-size="22" fill="#52514e" text-anchor="end">Growth</text>
+  <rect x="108" y="482" width="984" height="30" rx="6" fill="#f0efec"/>
+  <rect x="404" y="485" width="196" height="24" rx="5" fill="#2a78d6"/>
+  <rect x="600" y="482" width="1" height="30" fill="#8a8983" opacity="0.6"/>
+  <circle cx="305" cy="497" r="10" fill="#098137" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="462" cy="497" r="10" fill="#D82A20" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="757" cy="497" r="10" fill="#00529F" stroke="#ffffff" stroke-width="3"/>
+  <text x="108" y="538" font-size="17" fill="#52514e">You: 70 towards Environment  ·  Green 95  ·  Labour 60  ·  National 50 towards Growth</text>
+  <text x="80" y="596" font-size="20" fill="#8a8983">60 statements, about 12 minutes  ·  12 dimensions  ·  every source archived  ·  nothing leaves your browser</text>
+</svg>
