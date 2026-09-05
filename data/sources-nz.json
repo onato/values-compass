@@ -3,7 +3,7 @@
   "jurisdiction": "New Zealand",
   "election": "General election, 7 November 2026",
   "compiledAt": "2026-09-05",
-  "purpose": "Independent, non-advocacy sources a research agent can trawl for evidence of how New Zealand parties and candidates align with the ten value dimensions. Supplies the concrete source hierarchy for step 1.3 of the generated research prompt.",
+  "purpose": "Independent, non-advocacy sources a research agent can trawl for evidence of how New Zealand parties and candidates align with the twelve value dimensions. Supplies the concrete source hierarchy for step 1.3 of the generated research prompt.",
   "neutralityStandard": {
     "include": [
       "Official government, parliamentary, electoral-commission and national-statistics records",
@@ -1301,7 +1301,7 @@
     }
   ],
   "dimensionCoverage": {
-    "note": "Which sources bear most directly on each dimension. Dimensions with thin coverage need the most careful sourcing.",
+    "note": "Which sources bear most directly on each dimension. Dimensions with thin coverage need the most careful sourcing. The animals and drugs dimensions were added in September 2026; their markers are the greyhound racing ban, the live export ban and its abandoned repeal, the 2020 cannabis referendum and the psilocybin and MDMA prescribing approvals.",
     "solidarity": [
       "gps",
       "marpor",
@@ -1415,7 +1415,21 @@
       "local",
       "change"
     ],
-    "thinnestNote": "No survey dataset covers diplomacy, liberty, local or change for New Zealand. For those, the primary recourse is now recorded party votes and second-reading speeches on the marker bills for each dimension, the party's own manifesto, and the coalition agreements, with MARPOR per-category codes as the academic cross-check. Diplomacy stays thinnest because most defence and foreign policy is set by the executive without a division."
+    "thinnestNote": "No survey dataset covers diplomacy, liberty, local or change for New Zealand. For those, the primary recourse is now recorded party votes and second-reading speeches on the marker bills for each dimension, the party's own manifesto, and the coalition agreements, with MARPOR per-category codes as the academic cross-check. Diplomacy stays thinnest because most defence and foreign policy is set by the executive without a division.",
+    "animals": [
+      "party-policy-pages",
+      "journals-and-divisions",
+      "coalition-agreements",
+      "legislation-api",
+      "hansard"
+    ],
+    "drugs": [
+      "party-policy-pages",
+      "journals-and-divisions",
+      "hansard",
+      "legislation-api",
+      "beehive"
+    ]
   },
   "reviewedAt": "2026-09-05",
   "contextSources": {

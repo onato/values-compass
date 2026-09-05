@@ -684,15 +684,6 @@
     } else fallback();
   }
 
-  function download() {
-    var p = exportProfile();
-    var blob = new Blob([JSON.stringify(p, null, 2)], { type: "application/json" });
-    var a = el("a", { href: URL.createObjectURL(blob), download: "values-profile-" + p.completedAt.slice(0, 10) + ".json" });
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
-    toast("Download started.");
-  }
-
   // ---------- wiring ----------
   function startQuestionnaire() {
     leaveSample(); linkedMode = false;
@@ -720,7 +711,6 @@
     if (jumpTarget) { jumpTarget = null; var r = loadResult(); if (r) { renderResults(r); show("screen-results"); return; } }
     renderIntro(); show("screen-intro");
   });
-  $("btn-copy-json").addEventListener("click", function () { copy(JSON.stringify(exportProfile(), null, 2), "JSON"); });
   $("btn-copy-link").addEventListener("click", function () { copy(resultLink(), "Link"); });
   $("btn-save-named").addEventListener("click", function () {
     var name = $("save-name").value.trim();
@@ -735,7 +725,6 @@
   });
   $("save-name").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); $("btn-save-named").click(); } });
   $("btn-copy-prompt").addEventListener("click", function () { copy(Scoring.buildPrompt(exportProfile(), DIMENSIONS, promptOpts()), "Prompt"); });
-  $("btn-download").addEventListener("click", download);
   $("btn-retake").addEventListener("click", function () {
     if (sampleMode) { startQuestionnaire(); return; }
     if (!confirm("Discard these results and start again?")) return;
