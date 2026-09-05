@@ -1,0 +1,118 @@
+{
+  "electorate": "west-coast-tasman",
+  "entries": [
+    {
+      "filename": "milne-national-candidate-page.html",
+      "title": "National: Katie Milne, candidate for West Coast-Tasman",
+      "sourceUrl": "https://www.national.org.nz/team/katiemilne",
+      "fetchedAt": "2026-09-05",
+      "kind": "party",
+      "textFile": "milne-national-candidate-page.txt"
+    },
+    {
+      "filename": "milne-national-selection-release.html",
+      "title": "National: Katie Milne selected as candidate (release, 11 April 2026)",
+      "sourceUrl": "https://www.national.org.nz/news/20260411-katie-milne-selected-as-nationals-candidate",
+      "fetchedAt": "2026-09-05",
+      "kind": "party",
+      "textFile": "milne-national-selection-release.txt"
+    },
+    {
+      "filename": "beaumont-green-candidate-page.html",
+      "title": "Green Party: Andrew Beaumont, West Coast-Tasman",
+      "sourceUrl": "https://www.greens.org.nz/andrewbeaumont_2026",
+      "fetchedAt": "2026-09-05",
+      "kind": "party",
+      "textFile": "beaumont-green-candidate-page.txt"
+    },
+    {
+      "filename": "green-west-coast-tasman-page.html",
+      "title": "Green Party: West Coast-Tasman page",
+      "sourceUrl": "https://www.greens.org.nz/govt_west_coast_tasman",
+      "fetchedAt": "2026-09-05",
+      "kind": "party",
+      "textFile": "green-west-coast-tasman-page.txt"
+    },
+    {
+      "filename": "cleine-nzfirst-candidate-announcement.html",
+      "title": "NZ First: Candidate announcement, West Coast-Tasman (Jamie Cleine)",
+      "sourceUrl": "https://www.nzfirst.nz/candidate_announcement_west_coast_tasman",
+      "fetchedAt": "2026-09-05",
+      "kind": "party",
+      "textFile": "cleine-nzfirst-candidate-announcement.txt"
+    },
+    {
+      "filename": "uddstrom-opportunity-candidate-page.html",
+      "title": "Opportunity: Cindie Uddstrom, West Coast-Tasman",
+      "sourceUrl": "https://www.opportunity.org.nz/candidate-cindie-uddstrom",
+      "fetchedAt": "2026-09-05",
+      "kind": "party",
+      "textFile": "uddstrom-opportunity-candidate-page.txt"
+    },
+    {
+      "filename": "paterson-labour-selection-release.pdf",
+      "title": "Labour: Rory Paterson selected for West Coast-Tasman (release, 13 April 2026, via CathNews)",
+      "sourceUrl": "https://cathnewsnz.com/wp-content/uploads/2026/04/Rory-Paterson-selected-as-candidate.pdf",
+      "fetchedAt": "2026-09-05",
+      "kind": "party",
+      "textFile": "paterson-labour-selection-release.txt"
+    },
+    {
+      "filename": "odt-national-labour-confirm-candidates.html",
+      "title": "Otago Daily Times: National, Labour confirm candidates",
+      "sourceUrl": "https://www.odt.co.nz/regions/west-coast/national-labour-confirm-candidates",
+      "fetchedAt": "2026-09-05",
+      "kind": "media",
+      "textFile": "odt-national-labour-confirm-candidates.txt"
+    },
+    {
+      "filename": "rnz-nzfirst-cleine-announced.html",
+      "title": "RNZ: NZ First announces former mayor as West Coast candidate",
+      "sourceUrl": "https://www.rnz.co.nz/news/politics/590949/nz-first-announces-former-mayor-as-west-coast-candidate",
+      "fetchedAt": "2026-09-05",
+      "kind": "media",
+      "textFile": "rnz-nzfirst-cleine-announced.txt"
+    },
+    {
+      "filename": "newsroom-cleine-banks-climate-resilience.html",
+      "title": "Newsroom: NZ First's West Coast contender wants banks to pay for climate resilience",
+      "sourceUrl": "https://newsroom.co.nz/2026/05/15/nz-firsts-west-coast-contender-wants-banks-to-pay-for-climate-resilience/",
+      "fetchedAt": "2026-09-05",
+      "kind": "media",
+      "textFile": "newsroom-cleine-banks-climate-resilience.txt"
+    },
+    {
+      "filename": "odt-cleine-grilled-council-policies.html",
+      "title": "Otago Daily Times: Former mayor, now NZ First candidate grilled over council policies",
+      "sourceUrl": "https://www.odt.co.nz/news/west-coast/former-mayor-now-nz-first-candidate-grilled-over-council-policies-o26d6jbm",
+      "fetchedAt": "2026-09-05",
+      "kind": "media",
+      "textFile": "odt-cleine-grilled-council-policies.txt"
+    },
+    {
+      "filename": "scoop-mining-divide-greens-nzfirst.html",
+      "title": "Scoop: The mining political divide, Greens vs NZ First",
+      "sourceUrl": "https://www.scoop.co.nz/stories/AK2608/S00605/the-mining-political-divide-greens-vs-nz-first.htm",
+      "fetchedAt": "2026-09-05",
+      "kind": "media",
+      "textFile": "scoop-mining-divide-greens-nzfirst.txt"
+    },
+    {
+      "filename": "herald-beaumont-pest-animals.html",
+      "title": "NZ Herald: West Coast-Tasman Greens candidate vague on harvesting of pest animals",
+      "sourceUrl": "https://www.nzherald.co.nz/the-country/news/west-coast-tasman-greens-candidate-vague-on-harvesting-of-pest-animals/VMWOF54TJBHY7APKPDVVLUU6ZQ/",
+      "fetchedAt": "2026-09-05",
+      "kind": "media",
+      "textFile": "herald-beaumont-pest-animals.txt"
+    },
+    {
+      "filename": "wikipedia-west-coast-tasman.html",
+      "title": "Wikipedia: West Coast-Tasman electorate (candidates and 2023 result)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/West_Coast-Tasman",
+      "fetchedAt": "2026-09-05",
+      "kind": "reference",
+      "textFile": "wikipedia-west-coast-tasman.txt"
+    }
+  ],
+  "notes": "Candidate-level research for the West Coast-Tasman electorate. 'party' = the candidate's or party's own page; 'media' = report of a candidate's statements (lead, not record); nominations do not close until 8 October 2026 so the field is provisional."
+}
