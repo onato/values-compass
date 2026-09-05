@@ -59,7 +59,7 @@
         <details class="table-view">
           <summary>Show as table</summary>
           <table id="score-table">
-            <thead><tr><th>Dimension</th><th>Leaning</th><th>Score</th><th>Strength</th><th>Consistency</th></tr></thead>
+            <thead><tr><th>Dimension</th><th>Leaning</th><th>Distance from midpoint</th><th>Strength</th><th>Consistency</th></tr></thead>
             <tbody></tbody>
           </table>
         </details>
@@ -139,11 +139,11 @@
         <li>Each answer is a number from 1 (strongly disagree) to 5 (strongly agree).</li>
         <li>Reverse-keyed statements are flipped (6 minus the answer), so that 5 always means "fully the first pole".</li>
         <li>The five keyed values in a dimension are averaged, giving a mean between 1 and 5.</li>
-        <li>The mean is rescaled to a score from −100 to +100: <code>(mean − 3) ÷ 2 × 100</code>. Positive scores lean to the first pole, negative to the second, and 0 is the exact midpoint.</li>
+        <li>The mean is rescaled to a distance from the midpoint: <code>(mean − 3) ÷ 2 × 100</code>, shown on the page as a strength from 0 to 100 towards one pole, for example "55 towards Security". In the JSON export the same value is written as a signed number from −100 to +100, positive meaning the first-named pole, because that is the form the matching arithmetic and the research prompt use.</li>
       </ol>
-      <p>Strength labels are attached by the size of the score, ignoring its sign:</p>
+      <p>Strength labels are attached by the distance from the midpoint, whichever pole it points to:</p>
       <table class="thresholds">
-        <thead><tr><th>Absolute score</th><th>Label</th><th>Meaning</th></tr></thead>
+        <thead><tr><th>Distance</th><th>Label</th><th>Meaning</th></tr></thead>
         <tbody>
           <tr><td>0 to 14</td><td>balanced</td><td>No clear leaning; roughly neutral, or agreement split across the poles.</td></tr>
           <tr><td>15 to 44</td><td>leans</td><td>A mild but real preference.</td></tr>

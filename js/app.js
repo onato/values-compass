@@ -197,8 +197,8 @@
         poles.firstChild.appendChild(el("span", { class: "badge", text: "mixed" }));
       }
       var track = el("div", { class: "track", tabindex: "0",
-        title: d.poles[0] + " vs. " + d.poles[1] + ": " + fmt(s.score) + " (" + s.strength + (s.consistency === "mixed" ? ", mixed" : "") + ")",
-        "aria-label": d.poles[0] + " versus " + d.poles[1] + ", score " + fmt(s.score) + ", " + s.strength });
+        title: d.poles[0] + " vs. " + d.poles[1] + ": " + fmtLean(s.score, d) + " (" + s.strength + (s.consistency === "mixed" ? ", mixed" : "") + ")",
+        "aria-label": d.poles[0] + " versus " + d.poles[1] + ", " + fmtLean(s.score, d) + ", " + s.strength });
       track.appendChild(el("div", { class: "axis" }));
       if (s.score !== 0) {
         var bar = el("div", { class: "bar " + side + (s.consistency === "mixed" ? " mixed" : "") });
@@ -208,7 +208,7 @@
       // Pole A bars grow leftward from the axis, pole B bars rightward. The label
       // sits just past the bar's outer end, or inside it when there is no room.
       var inside = half > 40;
-      var val = el("div", { class: "val" + (inside ? " inside" : ""), text: fmt(s.score) });
+      var val = el("div", { class: "val" + (inside ? " inside" : ""), text: String(Math.abs(s.score)) });
       if (s.score > 0) {
         if (inside) val.style.left = (50 - half) + "%"; else val.style.right = (50 + half) + "%";
       } else {
@@ -230,7 +230,7 @@
       tbody.appendChild(el("tr", null, [
         el("td", { text: s.poles[0] + " vs. " + s.poles[1] }),
         el("td", { text: s.leaning || "—" }),
-        el("td", { class: "num", text: fmt(s.score) }),
+        el("td", { class: "num", text: String(Math.abs(s.score)) }),
         el("td", { text: s.strength }),
         el("td", { text: s.consistency })
       ]));
@@ -388,7 +388,7 @@
       el("span", { html: pd.score > 0 && pd.strength !== "balanced" ? "<b>" + d.poles[0] + "</b>" : d.poles[0] }),
       el("span", { html: pd.score < 0 && pd.strength !== "balanced" ? "<b>" + d.poles[1] + "</b>" : d.poles[1] })
     ]));
-    var track = el("div", { class: "track", "aria-label": d.poles[0] + " versus " + d.poles[1] + ": you " + fmt(pd.score) + (cell && typeof cell.score === "number" ? ", " + party.short + " " + fmt(cell.score) : "") });
+    var track = el("div", { class: "track", "aria-label": d.poles[0] + " versus " + d.poles[1] + ": you " + fmtLean(pd.score, d) + (cell && typeof cell.score === "number" ? ", " + party.short + " " + fmtLean(cell.score, d) : "") });
     track.appendChild(el("div", { class: "axis" }));
     if (pd.score !== 0) {
       var bar = el("div", { class: "bar " + (pd.score > 0 ? "a" : "b") + (pd.consistency === "mixed" ? " mixed" : "") });
@@ -396,7 +396,7 @@
       track.appendChild(bar);
     }
     if (cell && typeof cell.score === "number") {
-      var m = el("div", { class: "marker", title: party.short + " " + fmt(cell.score) });
+      var m = el("div", { class: "marker", title: party.short + ": " + fmtLean(cell.score, d) });
       // Pole A is the left end, so +100 sits at 0% and -100 at 100%.
       m.style.left = (50 - cell.score / 2) + "%";
       m.style.background = party.colour;
@@ -404,9 +404,9 @@
     }
     wrap.appendChild(track);
     var meta = el("div", { class: "cell-meta" });
-    meta.appendChild(el("span", { class: "you", text: "You " + fmt(pd.score) + (pd.consistency === "mixed" ? " (mixed)" : "") }));
+    meta.appendChild(el("span", { class: "you", text: "You: " + fmtLean(pd.score, d) + (pd.consistency === "mixed" ? " (mixed)" : "") }));
     if (cell && typeof cell.score === "number") {
-      var ps = el("span", { class: "party", text: party.short + " " + fmt(cell.score) });
+      var ps = el("span", { class: "party", text: party.short + ": " + fmtLean(cell.score, d) });
       ps.style.setProperty("--marker", party.colour);
       meta.appendChild(ps);
       meta.appendChild(el("span", { class: "badge" + (cell.confidence === "low" ? " low" : ""), text: "confidence " + cell.confidence }));
@@ -468,12 +468,18 @@
     });
     box.appendChild(ul);
     var mean = typeof s.mean === "number" ? s.mean : null;
-    box.appendChild(el("p", { class: "help", html: "Average of the keyed answers: <b>" + (mean === null ? "?" : mean) + "</b> of 5. Score = (average − 3) ÷ 2 × 100 = <b>" + fmt(s.score) + "</b>, which reads as \"" + s.strength + (s.leaning ? " " + s.leaning : "") + "\"." +
+    box.appendChild(el("p", { class: "help", html: "Average of the keyed answers: <b>" + (mean === null ? "?" : mean) + "</b> of 5. Distance from the midpoint = (average − 3) ÷ 2 × 100 = <b>" + fmtLean(s.score, d) + "</b>, which reads as \"" + s.strength + (s.leaning ? " " + s.leaning : "") + "\"." +
       (s.consistency === "mixed" ? " Your answers pointed in different directions (spread " + s.sd + "), so this score is marked mixed and counts for less in matching." : "") }));
     return box;
   }
 
   function fmt(n) { return (n > 0 ? "+" : "") + n; }
+  // Human display: a strength towards a named pole, never a signed number.
+  function fmtLean(score, d) {
+    if (score > 0) return score + " towards " + d.poles[0];
+    if (score < 0) return (-score) + " towards " + d.poles[1];
+    return "0, balanced";
+  }
 
   function exportProfile() {
     var p = JSON.parse(JSON.stringify(current));

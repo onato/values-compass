@@ -17,6 +17,8 @@ const OUT = path.join(ROOT, "data", "nz", "electorates.js");
 const { DIMENSIONS } = require(path.join(ROOT, "js", "data.js"));
 const PARTIES = require(path.join(ROOT, "data", "nz", "parties.js"));
 const DIM_IDS = DIMENSIONS.map((d) => d.id);
+const DIM_BY_ID = Object.fromEntries(DIMENSIONS.map((d) => [d.id, d]));
+const lean = (score, d) => (score > 0 ? `${score} towards ${d.poles[0]}` : score < 0 ? `${-score} towards ${d.poles[1]}` : "0, balanced");
 const CONFIDENCE = ["high", "medium", "low"];
 const DOWNGRADE = { high: "medium", medium: "low", low: "low" };
 
@@ -47,7 +49,7 @@ function resolve(electorate, file) {
         dims[id] = {
           score: pc.score, confidence: DOWNGRADE[pc.confidence], basis: "party",
           rationale: (given && given.note ? given.note + " " : "") +
-            `No direct evidence of ${c.name}'s own position on this dimension; inherits ${party.short}'s score (${pc.score}, ${pc.confidence} confidence) with confidence lowered one step. ${party.short}: ${pc.rationale}`,
+            `No direct evidence of ${c.name}'s own position on this dimension; inherits ${party.short}'s score (${lean(pc.score, DIM_BY_ID[id])}, ${pc.confidence} confidence) with confidence lowered one step. ${party.short}: ${pc.rationale}`,
           sources: pc.sources
         };
       } else {
