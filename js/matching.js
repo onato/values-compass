@@ -2,12 +2,15 @@
 
 var Matching = (function () {
   var CONFIDENCE_VALUE = { high: 1, medium: 0.6, low: 0.3 };
+  var IMPORTANCE_MULT = { low: 0.5, normal: 1, high: 1.5 };
   var WEIGHT_FLOOR = 10;
 
-  // Weight per dimension: how much the person leans, with a floor so an
-  // all-balanced person still gets a ranking; halved where their answers were mixed.
+  // Weight per dimension: how much the person leans, with a floor so an all-balanced
+  // person still gets a ranking; scaled by how much they said it matters to their vote;
+  // halved where their answers were mixed.
   function weightFor(personDim) {
     var w = Math.max(Math.abs(personDim.score), WEIGHT_FLOOR);
+    w = w * (IMPORTANCE_MULT[personDim.importance] || 1);
     if (personDim.consistency === "mixed") w = w / 2;
     return w;
   }
@@ -34,7 +37,8 @@ var Matching = (function () {
       var delta = pd.score - cell.score;
       var contribution = w * delta * delta;
       sumW += w; sumWd2 += contribution; scored++;
-      sumWc += w * (CONFIDENCE_VALUE[cell.confidence] || 0.3);
+      // A party cell flagged as a split position summarises two pulls in one number, so it counts as less certain.
+      sumWc += w * (CONFIDENCE_VALUE[cell.confidence] || 0.3) * (cell.mixed ? 0.7 : 1);
       cells.push({ id: pd.id, person: pd.score, party: cell.score, weight: w, delta: delta, contribution: contribution, confidence: cell.confidence });
     });
     var distance = scored ? Math.sqrt(sumWd2 / sumW) : 200;

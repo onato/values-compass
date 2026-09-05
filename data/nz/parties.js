@@ -145,7 +145,8 @@ var PARTIES_NZ = {
               "date": "2025-12-16",
               "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html"
             }
-          ]
+          ],
+          "mixed": true
         },
         "tradition": {
           "score": -20,
@@ -179,7 +180,8 @@ var PARTIES_NZ = {
               "date": "2022-02-15",
               "archived": "research/nz/shared/rnz-conversion-practices-third-reading-2022.html"
             }
-          ]
+          ],
+          "mixed": true
         },
         "institutions": {
           "score": -60,
@@ -490,7 +492,8 @@ var PARTIES_NZ = {
               "date": "2025-12-16",
               "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html"
             }
-          ]
+          ],
+          "mixed": true
         },
         "tradition": {
           "score": -85,
@@ -912,7 +915,8 @@ var PARTIES_NZ = {
               "date": "2025-04-10",
               "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html"
             }
-          ]
+          ],
+          "mixed": true
         },
         "environment": {
           "score": 60,
@@ -1140,7 +1144,8 @@ var PARTIES_NZ = {
               "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html",
               "quote": "set 2040 as the target for constitutional transformation in Aotearoa"
             }
-          ]
+          ],
+          "mixed": true
         },
         "institutions": {
           "score": -10,
@@ -1167,7 +1172,8 @@ var PARTIES_NZ = {
               "date": "2025-04-10",
               "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html"
             }
-          ]
+          ],
+          "mixed": true
         },
         "cosmopolitan": {
           "score": 55,
@@ -1484,7 +1490,8 @@ var PARTIES_NZ = {
               "date": "2023-11-24",
               "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf"
             }
-          ]
+          ],
+          "mixed": true
         },
         "cosmopolitan": {
           "score": -20,
@@ -1618,7 +1625,8 @@ var PARTIES_NZ = {
               "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
               "quote": "Establish a Regional Infrastructure Fund with $1.2 billion in capital funding"
             }
-          ]
+          ],
+          "mixed": true
         },
         "change": {
           "score": -25,
@@ -1733,7 +1741,8 @@ var PARTIES_NZ = {
               "date": "2025-11-20",
               "archived": "research/nz/shared/rnz-peters-vows-repeal-regulatory-standards-2025.html"
             }
-          ]
+          ],
+          "mixed": true
         },
         "liberty": {
           "score": -30,
@@ -1975,7 +1984,8 @@ var PARTIES_NZ = {
               "date": "2026",
               "archived": "research/nz/nzfirst/backing_a_new_zealand_owned_bank.html"
             }
-          ]
+          ],
+          "mixed": true
         }
       }
     },

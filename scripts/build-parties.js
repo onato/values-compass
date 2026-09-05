@@ -28,6 +28,7 @@ function validate(party, file) {
     if (!c) { err(`missing dimension ${id}`); return; }
     if (c.score !== null && (!Number.isInteger(c.score) || c.score < -100 || c.score > 100)) err(`${id}: score must be an integer -100..100 or null`);
     if (!CONFIDENCE.includes(c.confidence)) err(`${id}: confidence must be high, medium or low`);
+    if ("mixed" in c && typeof c.mixed !== "boolean") err(`${id}: mixed must be true or false`);
     if (c.score === null && c.confidence !== "low") err(`${id}: a null score must carry low confidence`);
     if (typeof c.rationale !== "string" || c.rationale.trim().length < 40) err(`${id}: rationale missing or too short`);
     if (c.score !== null) {

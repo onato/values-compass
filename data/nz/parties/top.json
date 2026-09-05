@@ -15,9 +15,27 @@
       "confidence": "high",
       "rationale": "The Tax Reset gives every adult a Citizen's Income of $19,400 a year, replaces most main benefits without sanctions or 'intrusive monitoring', adds automatic child, disability, housing and single-parent supports, and is funded by a land value tax of 1.75 per cent on urban land, which the party says lifts at least 50,000 families out of poverty and cuts tax for 70 per cent of people. It also recognises unpaid caring work. Against that, it shifts retirement from a pay-as-you-go pension to compulsory individual contributions of 12 per cent and frames the package as making work rewarding and building 'a large pool of savings'. Universal provision through a land tax rather than income redistribution: a clear solidarity lean.",
       "sources": [
-        { "title": "Opportunity: Tax Reset policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf", "date": "2026-05", "archived": "research/nz/top/Opportunity-Policy---Tax-Reset.pdf", "quote": "a Citizen's Income providing $19,400 annually to every adult" },
-        { "title": "Opportunity: Tax Reset policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf", "date": "2026-05", "archived": "research/nz/top/Opportunity-Policy---Tax-Reset.pdf", "quote": "Lifting at least 50,000 families out of poverty" },
-        { "title": "Opportunity: Tax Reset (web page)", "url": "https://www.opportunity.org.nz/tax-reset", "date": "2026", "archived": "research/nz/top/tax-reset.html", "quote": "The Tax Reset will increase incomes for 70% of New Zealanders." }
+        {
+          "title": "Opportunity: Tax Reset policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf",
+          "date": "2026-05",
+          "archived": "research/nz/top/Opportunity-Policy---Tax-Reset.pdf",
+          "quote": "a Citizen's Income providing $19,400 annually to every adult"
+        },
+        {
+          "title": "Opportunity: Tax Reset policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf",
+          "date": "2026-05",
+          "archived": "research/nz/top/Opportunity-Policy---Tax-Reset.pdf",
+          "quote": "Lifting at least 50,000 families out of poverty"
+        },
+        {
+          "title": "Opportunity: Tax Reset (web page)",
+          "url": "https://www.opportunity.org.nz/tax-reset",
+          "date": "2026",
+          "archived": "research/nz/top/tax-reset.html",
+          "quote": "The Tax Reset will increase incomes for 70% of New Zealanders."
+        }
       ]
     },
     "regulation": {
@@ -25,10 +43,33 @@
       "confidence": "medium",
       "rationale": "Opportunity would reshape markets with state instruments: a Capacity Investment Scheme awarding long-term government contracts that guarantee revenue for new renewables, a 25-year Energy Strategy, a land value tax to redirect capital 'toward productive uses', doubled start-up funding, 25 per cent tax credits for technology adoption, cameras on every fishing vessel, and regulation of AI and of lobbying. It describes itself as 'blue-green' and would 'keep Labour honest on the economy', backs 'market-based climate action', wants to cut fragmented energy 'red tape' and says its charter puts 'economic efficiency subject to societal wellbeing and environmental sustainability'. Active government that works through markets rather than against them.",
       "sources": [
-        { "title": "Opportunity: Abundant Energy policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Abundant%20Energy.pdf", "date": "2026-02", "archived": "research/nz/top/Opportunity-Policy---Abundant-Energy.pdf", "quote": "long-term government contracts guarantee a minimum revenue for new renewables and storage" },
-        { "title": "Opportunity: Breakthrough Economy policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf", "date": "2026-07", "archived": "research/nz/top/breakthrough-economy-policy-overview.pdf" },
-        { "title": "Opportunity: About", "url": "https://www.opportunity.org.nz/about", "date": "2026", "archived": "research/nz/top/about.html", "quote": "we'll keep National honest on the environment and Labour honest on the economy" },
-        { "title": "Opportunity: Charter", "url": "https://cdn.opportunity.org.nz/documents/party-information-charter.pdf", "date": "2024-10-12", "archived": "research/nz/top/party-information-charter.pdf", "quote": "Ensure economic efficiency is subject to both societal wellbeing and environmental sustainability." }
+        {
+          "title": "Opportunity: Abundant Energy policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Abundant%20Energy.pdf",
+          "date": "2026-02",
+          "archived": "research/nz/top/Opportunity-Policy---Abundant-Energy.pdf",
+          "quote": "long-term government contracts guarantee a minimum revenue for new renewables and storage"
+        },
+        {
+          "title": "Opportunity: Breakthrough Economy policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf",
+          "date": "2026-07",
+          "archived": "research/nz/top/breakthrough-economy-policy-overview.pdf"
+        },
+        {
+          "title": "Opportunity: About",
+          "url": "https://www.opportunity.org.nz/about",
+          "date": "2026",
+          "archived": "research/nz/top/about.html",
+          "quote": "we'll keep National honest on the environment and Labour honest on the economy"
+        },
+        {
+          "title": "Opportunity: Charter",
+          "url": "https://cdn.opportunity.org.nz/documents/party-information-charter.pdf",
+          "date": "2024-10-12",
+          "archived": "research/nz/top/party-information-charter.pdf",
+          "quote": "Ensure economic efficiency is subject to both societal wellbeing and environmental sustainability."
+        }
       ]
     },
     "liberty": {
@@ -36,8 +77,20 @@
       "confidence": "low",
       "rationale": "Opportunity has no justice or civil-liberties policy. Its Tax Reset would end the 'intrusive monitoring' of beneficiaries that it calls 'degrading', and Clean Up Politics would strengthen the Official Information Act and whistleblower protection. The same policy would prohibit 'inaccurate and misleading' election advertisements with corrections enforced by an anti-corruption body holding search and surveillance powers under warrant. A mild liberty lean on thin, indirect evidence.",
       "sources": [
-        { "title": "Opportunity: Tax Reset policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf", "date": "2026-05", "archived": "research/nz/top/Opportunity-Policy---Tax-Reset.pdf", "quote": "The system subjects beneficiaries to intrusive monitoring that costs hundreds of millions annually and is degrading" },
-        { "title": "Opportunity: Clean Up Politics policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Clean%20Up%20Politics.pdf", "date": "2026-08", "archived": "research/nz/top/Opportunity-Policy---Clean-Up-Politics.pdf", "quote": "Enforcing new rules that prohibit authorised electoral advertisements containing statements of fact that are inaccurate and misleading" }
+        {
+          "title": "Opportunity: Tax Reset policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf",
+          "date": "2026-05",
+          "archived": "research/nz/top/Opportunity-Policy---Tax-Reset.pdf",
+          "quote": "The system subjects beneficiaries to intrusive monitoring that costs hundreds of millions annually and is degrading"
+        },
+        {
+          "title": "Opportunity: Clean Up Politics policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Clean%20Up%20Politics.pdf",
+          "date": "2026-08",
+          "archived": "research/nz/top/Opportunity-Policy---Clean-Up-Politics.pdf",
+          "quote": "Enforcing new rules that prohibit authorised electoral advertisements containing statements of fact that are inaccurate and misleading"
+        }
       ]
     },
     "tradition": {
@@ -45,8 +98,19 @@
       "confidence": "low",
       "rationale": "Opportunity does not campaign on social or moral questions. Its charter commits to 'dignity, respect, and self determination regardless of background, situation, or beliefs' and to following 'evidence over ideology', and its whole pitch is that New Zealand 'was built on the courage to change'. Nothing in its material seeks to preserve established customs. A mild progress lean inferred from disposition rather than policy.",
       "sources": [
-        { "title": "Opportunity: Charter", "url": "https://cdn.opportunity.org.nz/documents/party-information-charter.pdf", "date": "2024-10-12", "archived": "research/nz/top/party-information-charter.pdf", "quote": "Every individual is entitled to dignity, respect, and self determination regardless of background, situation, or beliefs." },
-        { "title": "Opportunity: About", "url": "https://www.opportunity.org.nz/about", "date": "2026", "archived": "research/nz/top/about.html" }
+        {
+          "title": "Opportunity: Charter",
+          "url": "https://cdn.opportunity.org.nz/documents/party-information-charter.pdf",
+          "date": "2024-10-12",
+          "archived": "research/nz/top/party-information-charter.pdf",
+          "quote": "Every individual is entitled to dignity, respect, and self determination regardless of background, situation, or beliefs."
+        },
+        {
+          "title": "Opportunity: About",
+          "url": "https://www.opportunity.org.nz/about",
+          "date": "2026",
+          "archived": "research/nz/top/about.html"
+        }
       ]
     },
     "institutions": {
@@ -54,10 +118,33 @@
       "confidence": "high",
       "rationale": "Strengthening independent institutions is a defining theme. Opportunity would defend the Climate Change Commission against ACT because 'independent advice is especially important when governments find it inconvenient', create an independent anti-corruption body, a lobbying register with a statutory code, a cap on donations with only registered voters allowed to donate, an independent policy costing unit for all parties, a stronger Electoral Commission, and 25-year and 10-year cross-party plans so policy stops 'changing tack with every change of government'. Its charter's first principle is 'follow evidence over ideology'. Citizens' assemblies add a participatory element, but as a deliberative complement to institutions rather than a substitute for them.",
       "sources": [
-        { "title": "Opportunity will defend Climate Change Commission from ACT", "url": "https://www.opportunity.org.nz/opportunity_will_defend_climate_change_commission_in_national_led_government", "date": "2026", "archived": "research/nz/top/opportunity_will_defend_climate_change_commission_in_national_led_government.html", "quote": "Independent advice is especially important when governments find it inconvenient." },
-        { "title": "Opportunity: Clean Up Politics policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Clean%20Up%20Politics.pdf", "date": "2026-08", "archived": "research/nz/top/Opportunity-Policy---Clean-Up-Politics.pdf", "quote": "establish a genuinely independent anti-corruption body with investigative, prevention, and education functions" },
-        { "title": "Opportunity: 10-year plans to strengthen health and education", "url": "https://www.opportunity.org.nz/10_year_plans_to_strengthen_health_and_education", "date": "2026", "archived": "research/nz/top/10_year_plans_to_strengthen_health_and_education.html" },
-        { "title": "Opportunity: Charter", "url": "https://cdn.opportunity.org.nz/documents/party-information-charter.pdf", "date": "2024-10-12", "archived": "research/nz/top/party-information-charter.pdf", "quote": "Follow evidence over ideology." }
+        {
+          "title": "Opportunity will defend Climate Change Commission from ACT",
+          "url": "https://www.opportunity.org.nz/opportunity_will_defend_climate_change_commission_in_national_led_government",
+          "date": "2026",
+          "archived": "research/nz/top/opportunity_will_defend_climate_change_commission_in_national_led_government.html",
+          "quote": "Independent advice is especially important when governments find it inconvenient."
+        },
+        {
+          "title": "Opportunity: Clean Up Politics policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Clean%20Up%20Politics.pdf",
+          "date": "2026-08",
+          "archived": "research/nz/top/Opportunity-Policy---Clean-Up-Politics.pdf",
+          "quote": "establish a genuinely independent anti-corruption body with investigative, prevention, and education functions"
+        },
+        {
+          "title": "Opportunity: 10-year plans to strengthen health and education",
+          "url": "https://www.opportunity.org.nz/10_year_plans_to_strengthen_health_and_education",
+          "date": "2026",
+          "archived": "research/nz/top/10_year_plans_to_strengthen_health_and_education.html"
+        },
+        {
+          "title": "Opportunity: Charter",
+          "url": "https://cdn.opportunity.org.nz/documents/party-information-charter.pdf",
+          "date": "2024-10-12",
+          "archived": "research/nz/top/party-information-charter.pdf",
+          "quote": "Follow evidence over ideology."
+        }
       ]
     },
     "cosmopolitan": {
@@ -65,9 +152,26 @@
       "confidence": "medium",
       "rationale": "Opportunity wants 'to attract the best and brightest globally', proposes a long-term population strategy with 'moderate sustained positive migration' matched to infrastructure planning, would forgive student loan interest to bring Kiwis home, and frames ocean policy around obligations under Te Tiriti. Clean Up Politics adds foreign-lobbying safeguards and heightened scrutiny of foreign-controlled interests in strategic sectors. It publishes nothing on refugees, aid or foreign affairs. Open and managed rather than either cosmopolitan or nationalist: a modest lean to openness.",
       "sources": [
-        { "title": "Opportunity: Breakthrough Economy policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf", "date": "2026-07", "archived": "research/nz/top/breakthrough-economy-policy-overview.pdf", "quote": "We need to attract the best and brightest globally to come and help us build a breakthrough economy." },
-        { "title": "Opportunity: Healthy Oceans policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/oceans-policy.pdf", "date": "2026-02", "archived": "research/nz/top/oceans-policy.pdf", "quote": "our obligations under Te Tiriti o Waitangi" },
-        { "title": "Opportunity: Clean Up Politics policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Clean%20Up%20Politics.pdf", "date": "2026-08", "archived": "research/nz/top/Opportunity-Policy---Clean-Up-Politics.pdf" }
+        {
+          "title": "Opportunity: Breakthrough Economy policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf",
+          "date": "2026-07",
+          "archived": "research/nz/top/breakthrough-economy-policy-overview.pdf",
+          "quote": "We need to attract the best and brightest globally to come and help us build a breakthrough economy."
+        },
+        {
+          "title": "Opportunity: Healthy Oceans policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/oceans-policy.pdf",
+          "date": "2026-02",
+          "archived": "research/nz/top/oceans-policy.pdf",
+          "quote": "our obligations under Te Tiriti o Waitangi"
+        },
+        {
+          "title": "Opportunity: Clean Up Politics policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Clean%20Up%20Politics.pdf",
+          "date": "2026-08",
+          "archived": "research/nz/top/Opportunity-Policy---Clean-Up-Politics.pdf"
+        }
       ]
     },
     "environment": {
@@ -75,10 +179,33 @@
       "confidence": "high",
       "rationale": "Nature is one of the party's three pillars. Healthy Oceans would expand marine protection from 0.5 to 30 per cent of the ocean territory, permanently ban seabed mining, phase out inshore bottom trawling by 2030 and put cameras on every fishing boat; Abundant Energy would triple renewable capacity to 30 GW by 2050 and criticises the LNG terminal; the party would defend the Climate Change Commission and its economic policy rejects 'mining the conservation estate and trawling our ocean-floors' as short-term. It calls itself 'blue-green', believing 'industry and nature can grow together', and backs 'market-based climate action', which keeps it below the Greens' anchor.",
       "sources": [
-        { "title": "Opportunity: Healthy Oceans policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/oceans-policy.pdf", "date": "2026-02", "archived": "research/nz/top/oceans-policy.pdf", "quote": "Expand marine protected areas from 0.5% to 30% of our ocean territory" },
-        { "title": "Opportunity: Abundant Energy policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Abundant%20Energy.pdf", "date": "2026-02", "archived": "research/nz/top/Opportunity-Policy---Abundant-Energy.pdf", "quote": "Triple our renewable electricity generation capacity to 30 Gigawatts by 2050" },
-        { "title": "Opportunity: Breakthrough Economy policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf", "date": "2026-07", "archived": "research/nz/top/breakthrough-economy-policy-overview.pdf", "quote": "Mining the conservation estate and trawling our ocean-floors are short term solutions" },
-        { "title": "Opportunity will defend Climate Change Commission from ACT", "url": "https://www.opportunity.org.nz/opportunity_will_defend_climate_change_commission_in_national_led_government", "date": "2026", "archived": "research/nz/top/opportunity_will_defend_climate_change_commission_in_national_led_government.html" }
+        {
+          "title": "Opportunity: Healthy Oceans policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/oceans-policy.pdf",
+          "date": "2026-02",
+          "archived": "research/nz/top/oceans-policy.pdf",
+          "quote": "Expand marine protected areas from 0.5% to 30% of our ocean territory"
+        },
+        {
+          "title": "Opportunity: Abundant Energy policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Abundant%20Energy.pdf",
+          "date": "2026-02",
+          "archived": "research/nz/top/Opportunity-Policy---Abundant-Energy.pdf",
+          "quote": "Triple our renewable electricity generation capacity to 30 Gigawatts by 2050"
+        },
+        {
+          "title": "Opportunity: Breakthrough Economy policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf",
+          "date": "2026-07",
+          "archived": "research/nz/top/breakthrough-economy-policy-overview.pdf",
+          "quote": "Mining the conservation estate and trawling our ocean-floors are short term solutions"
+        },
+        {
+          "title": "Opportunity will defend Climate Change Commission from ACT",
+          "url": "https://www.opportunity.org.nz/opportunity_will_defend_climate_change_commission_in_national_led_government",
+          "date": "2026",
+          "archived": "research/nz/top/opportunity_will_defend_climate_change_commission_in_national_led_government.html"
+        }
       ]
     },
     "diplomacy": {
@@ -92,8 +219,20 @@
       "confidence": "low",
       "rationale": "Opportunity would expand marine protection through 'community-led marine spatial planning', make polytechnics 'regional anchors' with a mandate to lead regional productivity, and convene citizens' assemblies. Its main instruments are nevertheless national: a 25-year Energy Strategy, a reinstated Ocean Secretariat, a national Capacity Investment Scheme and cross-party 10-year plans. Slight local lean on thin evidence.",
       "sources": [
-        { "title": "Opportunity: Healthy Oceans policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/oceans-policy.pdf", "date": "2026-02", "archived": "research/nz/top/oceans-policy.pdf", "quote": "science-based, Treaty-consistent, community-led marine spatial planning" },
-        { "title": "Opportunity: Breakthrough Economy policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf", "date": "2026-07", "archived": "research/nz/top/breakthrough-economy-policy-overview.pdf", "quote": "Empower polytechs with a mandate to lead regional productivity growth" }
+        {
+          "title": "Opportunity: Healthy Oceans policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/oceans-policy.pdf",
+          "date": "2026-02",
+          "archived": "research/nz/top/oceans-policy.pdf",
+          "quote": "science-based, Treaty-consistent, community-led marine spatial planning"
+        },
+        {
+          "title": "Opportunity: Breakthrough Economy policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf",
+          "date": "2026-07",
+          "archived": "research/nz/top/breakthrough-economy-policy-overview.pdf",
+          "quote": "Empower polytechs with a mandate to lead regional productivity growth"
+        }
       ]
     },
     "change": {
@@ -101,9 +240,27 @@
       "confidence": "high",
       "rationale": "'No too-hard basket' is a stated value: 'we do system change, the big hard stuff that matters like tax, superannuation, or climate action'. The Tax Reset would 'fundamentally reset' the tax and welfare system with a universal income, a land value tax and compulsory superannuation, and the party wants to replace the Marine Reserves Act and the quota management system. It couples this with an emphasis on stability, cross-party long-term plans, and a transition plan that phases the Tax Reset in over a decade 'to avoid excessive inflationary impacts or other economic disruption'. Radical in destination, deliberate in pace.",
       "sources": [
-        { "title": "Opportunity: About", "url": "https://www.opportunity.org.nz/about", "date": "2026", "archived": "research/nz/top/about.html", "quote": "We do system change - the big hard stuff that matters like tax, superannuation, or climate action." },
-        { "title": "Opportunity: Tax Reset policy overview", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf", "date": "2026-05", "archived": "research/nz/top/Opportunity-Policy---Tax-Reset.pdf", "quote": "We would fundamentally reset New Zealand's tax system through three interconnected reforms" },
-        { "title": "Opportunity: Tax Reset Transition Plan", "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset%20Transition%20Plan.pdf", "date": "2026-05", "archived": "research/nz/top/Opportunity-Policy---Tax-Reset-Transition-Plan.pdf", "quote": "Careful implementation would take a full decade." }
+        {
+          "title": "Opportunity: About",
+          "url": "https://www.opportunity.org.nz/about",
+          "date": "2026",
+          "archived": "research/nz/top/about.html",
+          "quote": "We do system change - the big hard stuff that matters like tax, superannuation, or climate action."
+        },
+        {
+          "title": "Opportunity: Tax Reset policy overview",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf",
+          "date": "2026-05",
+          "archived": "research/nz/top/Opportunity-Policy---Tax-Reset.pdf",
+          "quote": "We would fundamentally reset New Zealand's tax system through three interconnected reforms"
+        },
+        {
+          "title": "Opportunity: Tax Reset Transition Plan",
+          "url": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset%20Transition%20Plan.pdf",
+          "date": "2026-05",
+          "archived": "research/nz/top/Opportunity-Policy---Tax-Reset-Transition-Plan.pdf",
+          "quote": "Careful implementation would take a full decade."
+        }
       ]
     }
   }

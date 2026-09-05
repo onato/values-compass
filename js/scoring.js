@@ -63,27 +63,46 @@ var Scoring = (function () {
     };
   }
 
-  function buildProfile(dimensions, items, answers, now) {
-    var scored = dimensions.map(function (d) { return scoreDimension(d, items, answers); });
+  var IMPORTANCE_MULT = { low: 0.5, normal: 1, high: 1.5 };
+
+  // Weight of a dimension for ordering and matching: how far the person leans (with a
+  // floor) times how much they said it matters to their vote.
+  function priorityWeight(s) {
+    return Math.max(Math.abs(s.score), 10) * (IMPORTANCE_MULT[s.importance] || 1);
+  }
+
+  // extras: { importance: { dimensionId: "low"|"normal"|"high" }, otherConcerns: string }
+  function buildProfile(dimensions, items, answers, now, extras) {
+    extras = extras || {};
+    var imp = extras.importance || {};
+    var scored = dimensions.map(function (d) {
+      var s = scoreDimension(d, items, answers);
+      if (s) s.importance = IMPORTANCE_MULT[imp[d.id]] ? imp[d.id] : "normal";
+      return s;
+    });
     if (scored.some(function (s) { return s === null; })) return null;
     var priorities = scored.slice().sort(function (a, b) {
-      return Math.abs(b.score) - Math.abs(a.score);
+      return priorityWeight(b) - priorityWeight(a) || Math.abs(b.score) - Math.abs(a.score);
     }).map(function (s) { return s.id; });
-    return {
-      version: "1.0",
+    var other = (extras.otherConcerns || "").trim();
+    var profile = {
+      version: "1.1",
       completedAt: (now || new Date()).toISOString(),
       scale: { min: -100, max: 100, positiveMeans: "pole A (first-listed pole)" },
       dimensions: scored,
       priorities: priorities,
-      summary: buildSummary(dimensions, scored)
+      summary: ""
     };
+    if (other) profile.otherConcerns = other;
+    profile.summary = buildSummary(dimensions, scored, other);
+    return profile;
   }
 
-  function buildSummary(dimensions, scored) {
+  function buildSummary(dimensions, scored, otherConcerns) {
     var byId = {};
     dimensions.forEach(function (d) { byId[d.id] = d; });
     var ordered = scored.slice().sort(function (a, b) {
-      return Math.abs(b.score) - Math.abs(a.score);
+      return priorityWeight(b) - priorityWeight(a) || Math.abs(b.score) - Math.abs(a.score);
     });
     var lines = [];
     var balanced = [];
@@ -107,6 +126,11 @@ var Scoring = (function () {
         " pointed in different directions, so " + (mixed.length === 1 ? "that score is" : "those scores are") +
         " less certain.");
     }
+    var high = scored.filter(function (s) { return s.importance === "high"; }).map(function (s) { return byId[s.id].poles[0] + " vs. " + byId[s.id].poles[1]; });
+    var low = scored.filter(function (s) { return s.importance === "low"; }).map(function (s) { return byId[s.id].poles[0] + " vs. " + byId[s.id].poles[1]; });
+    if (high.length) lines.push("What matters most to my vote is " + joinNatural(high) + ".");
+    if (low.length) lines.push(joinNatural(low) + (low.length === 1 ? " matters" : " matter") + " less to my vote.");
+    if (otherConcerns) lines.push("Beyond these dimensions, I also care about: " + otherConcerns);
     return lines.join(" ");
   }
 
@@ -184,10 +208,19 @@ var Scoring = (function () {
       var s = profile.dimensions.filter(function (x) { return x.id === id; })[0];
       var d = byId[id];
       var lean = s.leaning ? s.leaning : "balanced";
+      var impNote = s.importance === "high" ? ", matters a lot to my vote" : s.importance === "low" ? ", matters less to my vote" : "";
       return "- " + d.poles[0] + " vs. " + d.poles[1] + ": " + (s.score > 0 ? "+" : "") + s.score +
-        " (" + s.strength + (s.consistency === "mixed" ? ", mixed answers" : "") + ")" +
+        " (" + s.strength + (s.consistency === "mixed" ? ", mixed answers" : "") + impNote + ")" +
         (s.leaning ? " → " + lean : "");
     });
+    var otherSection = profile.otherConcerns ? [
+      "",
+      "## Other things I care about",
+      "",
+      "These are not covered by the ten dimensions. Research each party's position on them too, report them in",
+      "their own section, and do not fold them into the dimension scores:",
+      profile.otherConcerns
+    ] : [];
 
     return [
       "# Task: match political parties and candidates to my values",
@@ -203,8 +236,9 @@ var Scoring = (function () {
       "",
       "In my own words: " + profile.summary,
       "",
-      "Scores from −100 to +100, listed in priority order (strongest leaning first):",
-      profileLines.join("\n"),
+      "Scores from −100 to +100, listed in priority order (how strongly I lean, weighted by how much I said each",
+      "dimension matters to my vote):",
+      profileLines.join("\n")].concat(otherSection).concat([
       "",
       "## The ten dimensions",
       "",
@@ -244,7 +278,8 @@ var Scoring = (function () {
       "## Step 2: match",
       "",
       "For each party, compute a weighted distance from my profile:",
-      "- weight each dimension by the absolute value of my score (my strongest leanings matter most);",
+      "- weight each dimension by the absolute value of my score (my strongest leanings matter most),",
+      "  multiplied by 1.5 where I said it matters a lot and by 0.5 where I said it matters less;",
       "- halve the weight of any dimension where my answers were marked mixed;",
       "- distance = sqrt( Σ weight × (my score − party score)² / Σ weight ).",
       "Rank parties by distance, lowest first. Where a candidate has their own scores, rank them separately.",
@@ -293,7 +328,7 @@ var Scoring = (function () {
       "```json",
       JSON.stringify(profile, null, 2),
       "```"
-    ].join("\n");
+    ]).join("\n");
   }
 
   return {
@@ -304,6 +339,8 @@ var Scoring = (function () {
     buildSummary: buildSummary,
     shuffleItems: shuffleItems,
     buildPrompt: buildPrompt,
+    priorityWeight: priorityWeight,
+    IMPORTANCE_MULT: IMPORTANCE_MULT,
     stddev: stddev,
     MIXED_SD: MIXED_SD
   };

@@ -15,10 +15,32 @@
       "confidence": "high",
       "rationale": "ACT's economic page states that 'the Government cannot create wealth itself, because every dollar the Government has is taxed from someone who created it' and that government should provide 'only essential services'. Its 2026 welfare policy titled 'a hand up, not a way of life' would put all health-related benefits through MSD-designated doctors with phased reassessment of existing recipients, and impose electronic money management on anyone on Jobseeker for more than four months; it would collapse 43 departments into 19 and 28 ministers into 18. In coalition it secured benefit sanctions and interest deductibility for landlords. The one spending commitment, lifting medicines funding to Australian parity, is funded from within health growth. Personal responsibility and a minimal state, short of the −100 anchor only because it keeps universal health and education.",
       "sources": [
-        { "title": "ACT: Economy & Cost of Living", "url": "https://www.act.org.nz/policies/economy", "date": "2026", "archived": "research/nz/act/policies_economy.html", "quote": "Government should be a careful spender, keeping your taxes low, providing only essential services and doing them well" },
-        { "title": "ACT: Welfare as a Hand Up, not a Way of Life", "url": "https://www.act.org.nz/welfare", "date": "2026", "archived": "research/nz/act/welfare.html", "quote": "electronic money management for Jobseeker Support Work Ready recipients who remain on a benefit for more than four months" },
-        { "title": "ACT: A Smaller, More Affordable Government", "url": "https://www.act.org.nz/affordable-government", "date": "2026", "archived": "research/nz/act/affordable-government.html" },
-        { "title": "Coalition Agreement National-ACT 2023, ACT Policy Programme", "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf" }
+        {
+          "title": "ACT: Economy & Cost of Living",
+          "url": "https://www.act.org.nz/policies/economy",
+          "date": "2026",
+          "archived": "research/nz/act/policies_economy.html",
+          "quote": "Government should be a careful spender, keeping your taxes low, providing only essential services and doing them well"
+        },
+        {
+          "title": "ACT: Welfare as a Hand Up, not a Way of Life",
+          "url": "https://www.act.org.nz/welfare",
+          "date": "2026",
+          "archived": "research/nz/act/welfare.html",
+          "quote": "electronic money management for Jobseeker Support Work Ready recipients who remain on a benefit for more than four months"
+        },
+        {
+          "title": "ACT: A Smaller, More Affordable Government",
+          "url": "https://www.act.org.nz/affordable-government",
+          "date": "2026",
+          "archived": "research/nz/act/affordable-government.html"
+        },
+        {
+          "title": "Coalition Agreement National-ACT 2023, ACT Policy Programme",
+          "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf"
+        }
       ]
     },
     "regulation": {
@@ -26,11 +48,39 @@
       "confidence": "high",
       "rationale": "Deregulation is ACT's central purpose. It wrote the Regulatory Standards Act and created the Ministry for Regulation, and its 2026 programme adds Innovation Trials that suspend specific regulations for tests, a property-rights-based RMA replacement, fintech and stablecoin deregulation, letting pharmacies do more and removing ownership caps, hunter-led game management in place of DOC, and a consolidated bureaucracy with ministers able to remove chief executives. Its stated principle is that government should make rules only 'when there is no other way to solve a problem'. The few new rules it proposes, such as limiting compulsory school uniform items and licensing security operators, are marginal against this direction.",
       "sources": [
-        { "title": "ACT: Innovation Trials", "url": "https://www.act.org.nz/innovation-trials", "date": "2026", "archived": "research/nz/act/innovation-trials.html", "quote": "Allow a specific regulation to be set aside for a limited test in one location" },
-        { "title": "ACT: Economy & Cost of Living", "url": "https://www.act.org.nz/policies/economy", "date": "2026", "archived": "research/nz/act/policies_economy.html", "quote": "making rules when there is no other way to solve a problem, and removing red tape when it's no longer needed" },
-        { "title": "ACT: Unlocking New Zealand's Digital Economy", "url": "https://www.act.org.nz/unlocking-new-zealands-digital-economy", "date": "2026", "archived": "research/nz/act/unlocking-new-zealands-digital-economy.html" },
-        { "title": "Hansard: Regulatory Standards Bill, third reading, 13 November 2025", "url": "https://community.scoop.co.nz/2025/11/regulatory-standards-bill-third-reading/", "date": "2025-11-13", "archived": "research/nz/shared/hansard-regulatory-standards-third-reading-scoop.html" },
-        { "title": "Coalition Agreement National-ACT 2023, Regulation", "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf", "quote": "passing the Regulatory Standards Act as soon as practicable" }
+        {
+          "title": "ACT: Innovation Trials",
+          "url": "https://www.act.org.nz/innovation-trials",
+          "date": "2026",
+          "archived": "research/nz/act/innovation-trials.html",
+          "quote": "Allow a specific regulation to be set aside for a limited test in one location"
+        },
+        {
+          "title": "ACT: Economy & Cost of Living",
+          "url": "https://www.act.org.nz/policies/economy",
+          "date": "2026",
+          "archived": "research/nz/act/policies_economy.html",
+          "quote": "making rules when there is no other way to solve a problem, and removing red tape when it's no longer needed"
+        },
+        {
+          "title": "ACT: Unlocking New Zealand's Digital Economy",
+          "url": "https://www.act.org.nz/unlocking-new-zealands-digital-economy",
+          "date": "2026",
+          "archived": "research/nz/act/unlocking-new-zealands-digital-economy.html"
+        },
+        {
+          "title": "Hansard: Regulatory Standards Bill, third reading, 13 November 2025",
+          "url": "https://community.scoop.co.nz/2025/11/regulatory-standards-bill-third-reading/",
+          "date": "2025-11-13",
+          "archived": "research/nz/shared/hansard-regulatory-standards-third-reading-scoop.html"
+        },
+        {
+          "title": "Coalition Agreement National-ACT 2023, Regulation",
+          "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+          "quote": "passing the Regulatory Standards Act as soon as practicable"
+        }
       ]
     },
     "liberty": {
@@ -38,35 +88,121 @@
       "confidence": "medium",
       "rationale": "ACT pulls hard in both directions. For liberty: it would ban professional regulators from disciplining lawful speech, require free-speech policies at funded tertiary providers, add property rights to the Bill of Rights, widen End of Life Choice, defend lawful hunting and firearms ownership, and it opposed hate speech legislation. For order: 'the Government's first job is stopping crime'; it restored Three Strikes and would extend it to burglary with three-year minimums and no parole, deport resident offenders, give licensed security guards powers to demand identity and detain, let teachers use reasonable force to remove disruptive students, put beneficiaries on managed payment cards, and it voted for the Electoral Amendment Act despite the Attorney-General's rights report. Libertarian on speech, property and dying; authoritarian on crime and welfare. A slight net lean to security, because the coercive powers are more concrete than the freedoms.",
       "sources": [
-        { "title": "ACT: Law & Order", "url": "https://www.act.org.nz/policies/law-and-order", "date": "2026", "archived": "research/nz/act/policies_law-and-order.html", "quote": "The Government's first job is stopping crime." },
-        { "title": "ACT: Three Strikes for Burglary", "url": "https://www.act.org.nz/burglary", "date": "2026", "archived": "research/nz/act/burglary.html" },
-        { "title": "ACT: Keeping Public Spaces Safe", "url": "https://www.act.org.nz/public-safety", "date": "2026", "archived": "research/nz/act/public-safety.html", "quote": "detain them until Police arrive if they refuse and won't leave" },
-        { "title": "ACT: Free Speech for Regulated Professionals", "url": "https://www.act.org.nz/professional-free-speech", "date": "2026", "archived": "research/nz/act/professional-free-speech.html" },
-        { "title": "ACT: Strengthening End of Life Choice", "url": "https://www.act.org.nz/strengthening-end-of-life-choice", "date": "2026", "archived": "research/nz/act/strengthening-end-of-life-choice.html" },
-        { "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025", "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm", "date": "2025-12-16", "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html" }
-      ]
+        {
+          "title": "ACT: Law & Order",
+          "url": "https://www.act.org.nz/policies/law-and-order",
+          "date": "2026",
+          "archived": "research/nz/act/policies_law-and-order.html",
+          "quote": "The Government's first job is stopping crime."
+        },
+        {
+          "title": "ACT: Three Strikes for Burglary",
+          "url": "https://www.act.org.nz/burglary",
+          "date": "2026",
+          "archived": "research/nz/act/burglary.html"
+        },
+        {
+          "title": "ACT: Keeping Public Spaces Safe",
+          "url": "https://www.act.org.nz/public-safety",
+          "date": "2026",
+          "archived": "research/nz/act/public-safety.html",
+          "quote": "detain them until Police arrive if they refuse and won't leave"
+        },
+        {
+          "title": "ACT: Free Speech for Regulated Professionals",
+          "url": "https://www.act.org.nz/professional-free-speech",
+          "date": "2026",
+          "archived": "research/nz/act/professional-free-speech.html"
+        },
+        {
+          "title": "ACT: Strengthening End of Life Choice",
+          "url": "https://www.act.org.nz/strengthening-end-of-life-choice",
+          "date": "2026",
+          "archived": "research/nz/act/strengthening-end-of-life-choice.html"
+        },
+        {
+          "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025",
+          "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm",
+          "date": "2025-12-16",
+          "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html"
+        }
+      ],
+      "mixed": true
     },
     "tradition": {
       "score": -20,
       "confidence": "medium",
       "rationale": "In law ACT is socially liberal: End of Life Choice was its member's bill and it would widen eligibility, it voted for the conversion practices ban, and it treats moral questions as matters of individual choice. Its cultural rhetoric points the other way, appealing to 'Kiwis who are proud of our settler heritage', promising to 'restore balance' to the histories curriculum and to remove 'ideology' from schools, and casting Treaty-based arrangements as departures from equal citizenship. Liberal on personal morality, conservative on national identity, which nets to a mild progress lean.",
       "sources": [
-        { "title": "ACT: Strengthening End of Life Choice", "url": "https://www.act.org.nz/strengthening-end-of-life-choice", "date": "2026", "archived": "research/nz/act/strengthening-end-of-life-choice.html", "quote": "A terminally ill person suffering unbearably should have the final say over how and when they die." },
-        { "title": "ACT: Deport Serious Offenders (six-point immigration plan)", "url": "https://www.act.org.nz/deport", "date": "2026", "archived": "research/nz/act/deport.html", "quote": "Kiwis who are proud of our settler heritage are asking themselves why something doesn't quite feel right with immigration" },
-        { "title": "Coalition Agreement National-ACT 2023, Education", "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf", "quote": "Restore balance to the Aotearoa New Zealand's Histories curriculum" },
-        { "title": "RNZ: Bill to ban conversion practices passes third reading", "url": "https://www.rnz.co.nz/news/political/461597/bill-to-ban-conversion-practices-passes-third-reading", "date": "2022-02-15", "archived": "research/nz/shared/rnz-conversion-practices-third-reading-2022.html" }
-      ]
+        {
+          "title": "ACT: Strengthening End of Life Choice",
+          "url": "https://www.act.org.nz/strengthening-end-of-life-choice",
+          "date": "2026",
+          "archived": "research/nz/act/strengthening-end-of-life-choice.html",
+          "quote": "A terminally ill person suffering unbearably should have the final say over how and when they die."
+        },
+        {
+          "title": "ACT: Deport Serious Offenders (six-point immigration plan)",
+          "url": "https://www.act.org.nz/deport",
+          "date": "2026",
+          "archived": "research/nz/act/deport.html",
+          "quote": "Kiwis who are proud of our settler heritage are asking themselves why something doesn't quite feel right with immigration"
+        },
+        {
+          "title": "Coalition Agreement National-ACT 2023, Education",
+          "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+          "quote": "Restore balance to the Aotearoa New Zealand's Histories curriculum"
+        },
+        {
+          "title": "RNZ: Bill to ban conversion practices passes third reading",
+          "url": "https://www.rnz.co.nz/news/political/461597/bill-to-ban-conversion-practices-passes-third-reading",
+          "date": "2022-02-15",
+          "archived": "research/nz/shared/rnz-conversion-practices-third-reading-2022.html"
+        }
+      ],
+      "mixed": true
     },
     "institutions": {
       "score": -60,
       "confidence": "high",
       "rationale": "ACT's constitutional programme asserts parliamentary sovereignty and elected majorities over courts and independent bodies: 'stop courts using broad Treaty interpretations', enshrine that 'Parliament makes the law' in the Constitution Act, abolish the Climate Change Commission as an independent Crown entity, let ministers appoint and remove departmental chief executives, strip voting rights from unelected council appointees, restore referendums on Māori wards, and put Treaty principles to a referendum through the Treaty Principles Bill, which only ACT voted for at its second reading. It frames independent expert bodies as bureaucracies that 'recommend policies that harm the country'. The Regulatory Standards Act does create a rules-based check on regulation, and ACT would protect the operational independence of Police, NZSIS and NZDF, but the weight is clearly on popular mandate over institutional constraint.",
       "sources": [
-        { "title": "ACT: One Law for All. One Future Together.", "url": "https://www.act.org.nz/one-law-for-all", "date": "2026", "archived": "research/nz/act/one-law-for-all.html", "quote": "Stop courts using broad Treaty interpretations to impose obligations Parliament never actually legislated" },
-        { "title": "ACT: Scrap the Climate Change Commission", "url": "https://www.act.org.nz/scrap-the-climate-change-commission", "date": "2026", "archived": "research/nz/act/scrap-the-climate-change-commission.html", "quote": "Abolish the Climate Change Commission as an independent Crown entity" },
-        { "title": "ACT: A Smaller, More Affordable Government", "url": "https://www.act.org.nz/affordable-government", "date": "2026", "archived": "research/nz/act/affordable-government.html", "quote": "Chief executives could be removed by Ministers for specified reasons such as non-performance or policy misalignment" },
-        { "title": "ACT: No Votes for Unelected Reps", "url": "https://www.act.org.nz/no-votes-for-unelected-reps", "date": "2026", "archived": "research/nz/act/no-votes-for-unelected-reps.html" },
-        { "title": "Principles of the Treaty of Waitangi Bill, second reading (Hansard, 10 April 2025)", "url": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/", "date": "2025-04-10", "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html", "quote": "Ayes 11 ACT New Zealand 11." }
+        {
+          "title": "ACT: One Law for All. One Future Together.",
+          "url": "https://www.act.org.nz/one-law-for-all",
+          "date": "2026",
+          "archived": "research/nz/act/one-law-for-all.html",
+          "quote": "Stop courts using broad Treaty interpretations to impose obligations Parliament never actually legislated"
+        },
+        {
+          "title": "ACT: Scrap the Climate Change Commission",
+          "url": "https://www.act.org.nz/scrap-the-climate-change-commission",
+          "date": "2026",
+          "archived": "research/nz/act/scrap-the-climate-change-commission.html",
+          "quote": "Abolish the Climate Change Commission as an independent Crown entity"
+        },
+        {
+          "title": "ACT: A Smaller, More Affordable Government",
+          "url": "https://www.act.org.nz/affordable-government",
+          "date": "2026",
+          "archived": "research/nz/act/affordable-government.html",
+          "quote": "Chief executives could be removed by Ministers for specified reasons such as non-performance or policy misalignment"
+        },
+        {
+          "title": "ACT: No Votes for Unelected Reps",
+          "url": "https://www.act.org.nz/no-votes-for-unelected-reps",
+          "date": "2026",
+          "archived": "research/nz/act/no-votes-for-unelected-reps.html"
+        },
+        {
+          "title": "Principles of the Treaty of Waitangi Bill, second reading (Hansard, 10 April 2025)",
+          "url": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/",
+          "date": "2025-04-10",
+          "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html",
+          "quote": "Ayes 11 ACT New Zealand 11."
+        }
       ]
     },
     "cosmopolitan": {
@@ -74,11 +210,39 @@
       "confidence": "high",
       "rationale": "ACT's 'one law for all' programme rejects Treaty partnership in favour of equal citizenship, ending race-based public service provisions and university support, and it authored the Treaty Principles Bill. Its immigration plan says the system should welcome people 'only if they share values of tolerance, freedom and democracy', would deport resident offenders regardless of time in the country, expire skill categories annually and charge temporary workers a $6-a-day infrastructure surcharge; it would leave the Paris Agreement if it cannot accommodate New Zealand's targets. Against that, ACT states plainly that 'New Zealand needs immigration', proposes a rural workforce visa with a residence pathway and liberalised skilled-migrant rules in coalition. Open to migrants as workers, closed to group rights and international constraints: a clear national lean.",
       "sources": [
-        { "title": "ACT: One Public Service for All", "url": "https://www.act.org.nz/equal-service", "date": "2026", "archived": "research/nz/act/equal-service.html", "quote": "one public service with one standard for everyone" },
-        { "title": "ACT: Deport Serious Offenders (six-point immigration plan)", "url": "https://www.act.org.nz/deport", "date": "2026", "archived": "research/nz/act/deport.html", "quote": "The system should welcome people, but only if they share values of tolerance, freedom and democracy" },
-        { "title": "ACT: A Fair Contribution for Infrastructure", "url": "https://www.act.org.nz/fair-contribution", "date": "2026", "archived": "research/nz/act/fair-contribution.html", "quote": "New Zealand needs immigration." },
-        { "title": "ACT: Paris Needs to Change", "url": "https://www.act.org.nz/paris", "date": "2026", "archived": "research/nz/act/paris.html" },
-        { "title": "ACT: A Rural Workforce Visa", "url": "https://www.act.org.nz/rural-visa", "date": "2026", "archived": "research/nz/act/rural-visa.html" }
+        {
+          "title": "ACT: One Public Service for All",
+          "url": "https://www.act.org.nz/equal-service",
+          "date": "2026",
+          "archived": "research/nz/act/equal-service.html",
+          "quote": "one public service with one standard for everyone"
+        },
+        {
+          "title": "ACT: Deport Serious Offenders (six-point immigration plan)",
+          "url": "https://www.act.org.nz/deport",
+          "date": "2026",
+          "archived": "research/nz/act/deport.html",
+          "quote": "The system should welcome people, but only if they share values of tolerance, freedom and democracy"
+        },
+        {
+          "title": "ACT: A Fair Contribution for Infrastructure",
+          "url": "https://www.act.org.nz/fair-contribution",
+          "date": "2026",
+          "archived": "research/nz/act/fair-contribution.html",
+          "quote": "New Zealand needs immigration."
+        },
+        {
+          "title": "ACT: Paris Needs to Change",
+          "url": "https://www.act.org.nz/paris",
+          "date": "2026",
+          "archived": "research/nz/act/paris.html"
+        },
+        {
+          "title": "ACT: A Rural Workforce Visa",
+          "url": "https://www.act.org.nz/rural-visa",
+          "date": "2026",
+          "archived": "research/nz/act/rural-visa.html"
+        }
       ]
     },
     "environment": {
@@ -86,10 +250,32 @@
       "confidence": "high",
       "rationale": "ACT would abolish the Climate Change Commission, leave the Paris Agreement unless its targets change, keep agriculture out of the Emissions Trading Scheme and oppose any methane price; in coalition it secured the repeal of the offshore oil and gas exploration ban, a Crown Minerals Act 'promoting the use of Crown minerals', an end to new Significant Natural Areas and the rebalancing of freshwater rules towards 'all water users'. Its rural policy would open conservation land to grazing and its conservation policy hands game management to hunters, describing its approach as 'practical environmentalism'. It describes emissions targets as making 'the economy 2.2 per cent smaller'. Growth and production first, with environmental rules treated as costs.",
       "sources": [
-        { "title": "ACT: Scrap the Climate Change Commission", "url": "https://www.act.org.nz/scrap-the-climate-change-commission", "date": "2026", "archived": "research/nz/act/scrap-the-climate-change-commission.html" },
-        { "title": "ACT: Paris Needs to Change", "url": "https://www.act.org.nz/paris", "date": "2026", "archived": "research/nz/act/paris.html", "quote": "If the Paris Agreement cannot accommodate targets that reflect the real warming impact of New Zealand's emissions, then New Zealand should leave it." },
-        { "title": "ACT: Grazing to Cut Pests and Fire Risk", "url": "https://www.act.org.nz/grazing", "date": "2026", "archived": "research/nz/act/grazing.html" },
-        { "title": "Coalition Agreement National-ACT 2023, Natural Resources", "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf", "quote": "Repeal the ban on offshore oil and gas exploration." }
+        {
+          "title": "ACT: Scrap the Climate Change Commission",
+          "url": "https://www.act.org.nz/scrap-the-climate-change-commission",
+          "date": "2026",
+          "archived": "research/nz/act/scrap-the-climate-change-commission.html"
+        },
+        {
+          "title": "ACT: Paris Needs to Change",
+          "url": "https://www.act.org.nz/paris",
+          "date": "2026",
+          "archived": "research/nz/act/paris.html",
+          "quote": "If the Paris Agreement cannot accommodate targets that reflect the real warming impact of New Zealand's emissions, then New Zealand should leave it."
+        },
+        {
+          "title": "ACT: Grazing to Cut Pests and Fire Risk",
+          "url": "https://www.act.org.nz/grazing",
+          "date": "2026",
+          "archived": "research/nz/act/grazing.html"
+        },
+        {
+          "title": "Coalition Agreement National-ACT 2023, Natural Resources",
+          "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+          "quote": "Repeal the ban on offshore oil and gas exploration."
+        }
       ]
     },
     "diplomacy": {
@@ -97,8 +283,19 @@
       "confidence": "medium",
       "rationale": "ACT publishes no foreign or defence policy of its own for 2026. As a coalition partner it shared in the 2025 Defence Capability Plan, $12 billion over four years and a path above 2 per cent of GDP, and its immigration policy frames New Zealand around shared 'values of tolerance, freedom and democracy' with like-minded partners. Its coalition agreement protects the operational independence of NZDF and NZSIS while cutting elsewhere. Supportive of the strength-oriented consensus without campaigning on it, so a moderate strength lean on thin party-specific evidence.",
       "sources": [
-        { "title": "Ministry of Defence: Defence Capability Plan released", "url": "https://www.defence.govt.nz/news/defence-capability-plan-released/", "date": "2025-04-07", "archived": "research/nz/shared/mod-defence-capability-plan-2025.html" },
-        { "title": "ACT: A Smaller, More Affordable Government", "url": "https://www.act.org.nz/affordable-government", "date": "2026", "archived": "research/nz/act/affordable-government.html", "quote": "Operational independence would be protected by law for agencies that need it, such as Police, NZSIS, and NZDF." }
+        {
+          "title": "Ministry of Defence: Defence Capability Plan released",
+          "url": "https://www.defence.govt.nz/news/defence-capability-plan-released/",
+          "date": "2025-04-07",
+          "archived": "research/nz/shared/mod-defence-capability-plan-2025.html"
+        },
+        {
+          "title": "ACT: A Smaller, More Affordable Government",
+          "url": "https://www.act.org.nz/affordable-government",
+          "date": "2026",
+          "archived": "research/nz/act/affordable-government.html",
+          "quote": "Operational independence would be protected by law for agencies that need it, such as Police, NZSIS, and NZDF."
+        }
       ]
     },
     "local": {
@@ -106,10 +303,32 @@
       "confidence": "medium",
       "rationale": "ACT's localism runs through incentives: a Local Tourism Dividend paying councils $1 per guest night with no application, sharing GST on new housing with councils, making medium-density rules optional for councils, and letting hunting groups rather than 'Wellington' manage game and backcountry. It also constrains councils: removing appointees' votes, ring-fencing road maintenance in the national fund so councils cannot 'raid' it for street redesigns, national rules on school uniforms and buses, and a preference for property rights over local planning. Devolution of revenue and delivery to communities, alongside central limits on what councils may decide, gives a slight local lean.",
       "sources": [
-        { "title": "ACT: Local Tourism Dividend", "url": "https://www.act.org.nz/local_tourism_dividend", "date": "2026", "archived": "research/nz/act/local_tourism_dividend.html", "quote": "when councils help enable economic activity that generates revenue for central government, they should share in the benefits" },
-        { "title": "ACT: Hunter-Led Game Management", "url": "https://www.act.org.nz/game-management", "date": "2026", "archived": "research/nz/act/game-management.html" },
-        { "title": "ACT: Keep New Zealand Moving", "url": "https://www.act.org.nz/keep-new-zealand-moving", "date": "2026", "archived": "research/nz/act/keep-new-zealand-moving.html" },
-        { "title": "Coalition Agreement National-ACT 2023, Infrastructure and Housing", "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf", "quote": "Legislate to make the MDRS optional for councils" }
+        {
+          "title": "ACT: Local Tourism Dividend",
+          "url": "https://www.act.org.nz/local_tourism_dividend",
+          "date": "2026",
+          "archived": "research/nz/act/local_tourism_dividend.html",
+          "quote": "when councils help enable economic activity that generates revenue for central government, they should share in the benefits"
+        },
+        {
+          "title": "ACT: Hunter-Led Game Management",
+          "url": "https://www.act.org.nz/game-management",
+          "date": "2026",
+          "archived": "research/nz/act/game-management.html"
+        },
+        {
+          "title": "ACT: Keep New Zealand Moving",
+          "url": "https://www.act.org.nz/keep-new-zealand-moving",
+          "date": "2026",
+          "archived": "research/nz/act/keep-new-zealand-moving.html"
+        },
+        {
+          "title": "Coalition Agreement National-ACT 2023, Infrastructure and Housing",
+          "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+          "quote": "Legislate to make the MDRS optional for councils"
+        }
       ]
     },
     "change": {
@@ -117,9 +336,26 @@
       "confidence": "high",
       "rationale": "ACT proposes structural change at pace: collapsing 43 departments into 19 and 28 ministers into 18, rewriting the constitutional relationship between Parliament, courts and the Treaty, abolishing the Climate Change Commission, potentially leaving Paris, replacing the RMA with a property-rights system, and mandatory reassessment of existing health-benefit recipients. In government it drove the Regulatory Standards Act and the Treaty Principles Bill against broad opposition. The direction is towards a smaller state, but the appetite for disruption to get there is high.",
       "sources": [
-        { "title": "ACT: A Smaller, More Affordable Government", "url": "https://www.act.org.nz/affordable-government", "date": "2026", "archived": "research/nz/act/affordable-government.html", "quote": "The 43 departments would be consolidated into 19 coherent departments." },
-        { "title": "ACT: One Law for All. One Future Together.", "url": "https://www.act.org.nz/one-law-for-all", "date": "2026", "archived": "research/nz/act/one-law-for-all.html" },
-        { "title": "ACT: Welfare as a Hand Up, not a Way of Life", "url": "https://www.act.org.nz/welfare", "date": "2026", "archived": "research/nz/act/welfare.html", "quote": "Existing Jobseeker Support – Health Condition or Disability and Supported Living Payment recipients will be reassessed against the new criteria on a phased basis." }
+        {
+          "title": "ACT: A Smaller, More Affordable Government",
+          "url": "https://www.act.org.nz/affordable-government",
+          "date": "2026",
+          "archived": "research/nz/act/affordable-government.html",
+          "quote": "The 43 departments would be consolidated into 19 coherent departments."
+        },
+        {
+          "title": "ACT: One Law for All. One Future Together.",
+          "url": "https://www.act.org.nz/one-law-for-all",
+          "date": "2026",
+          "archived": "research/nz/act/one-law-for-all.html"
+        },
+        {
+          "title": "ACT: Welfare as a Hand Up, not a Way of Life",
+          "url": "https://www.act.org.nz/welfare",
+          "date": "2026",
+          "archived": "research/nz/act/welfare.html",
+          "quote": "Existing Jobseeker Support – Health Condition or Disability and Supported Living Payment recipients will be reassessed against the new criteria on a phased basis."
+        }
       ]
     }
   }

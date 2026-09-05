@@ -143,3 +143,24 @@ test("prompt uses supplied country and election", () => {
   assert.match(txt, /Election: Bundestag 2029/);
   assert.doesNotMatch(txt, /\[COUNTRY\]/);
 });
+
+test("importance reorders priorities and reaches the summary and prompt; other concerns flow through", () => {
+  const a = answerAll(() => 3);
+  ITEMS.filter((i) => i.dim === "environment").forEach((i) => { a[i.id] = i.key > 0 ? 5 : 1; }); // +100
+  ITEMS.filter((i) => i.dim === "liberty").forEach((i) => { a[i.id] = i.key > 0 ? 4 : 2; });     // +50
+  const p = S.buildProfile(DIMENSIONS, ITEMS, a, new Date("2026-09-05T10:00:00Z"),
+    { importance: { liberty: "high", environment: "low" }, otherConcerns: "animal welfare" });
+  assert.equal(p.priorities[0], "liberty", "50 x 1.5 outranks 100 x 0.5");
+  assert.equal(p.dimensions.find((d) => d.id === "liberty").importance, "high");
+  assert.equal(p.dimensions.find((d) => d.id === "solidarity").importance, "normal");
+  assert.match(p.summary, /What matters most to my vote is Liberty vs. Security/);
+  assert.match(p.summary, /Environment vs. Growth matters less to my vote/);
+  assert.match(p.summary, /I also care about: animal welfare/);
+  assert.equal(p.otherConcerns, "animal welfare");
+  const txt = S.buildPrompt(p, DIMENSIONS);
+  assert.match(txt, /## Other things I care about/);
+  assert.match(txt, /matters a lot to my vote/);
+  assert.match(txt, /multiplied by 1.5 where I said it matters a lot/);
+  const json = txt.split("```json\n")[1].split("\n```")[0];
+  assert.deepEqual(JSON.parse(json), p);
+});

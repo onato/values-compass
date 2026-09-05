@@ -15,10 +15,33 @@
       "confidence": "medium",
       "rationale": "NZ First mixes universal supports for citizens with a work-first view of welfare. It would give every citizen child $1,000 in KiwiSaver at birth, pay a 'Kiwi Kids Grant' to citizens for their first three children, keep the superannuation age at 65, maintain the Winter Energy Payment and commit to annual minimum wage rises. Its principles say the welfare state 'must be an umbrella to meet genuine and deserving need' but 'must no longer neglect assisting recipients to become independent of the State', and in coalition it strengthened Jobseeker obligations and sanctions, prioritised 'wealth creation over consumption' and cut core Crown spending as a share of GDP. Its economic nationalism, a state bank and a $100 billion state fund, is about ownership rather than redistribution. Balanced overall.",
       "sources": [
-        { "title": "NZ First: The Kiwi Kids Grant", "url": "https://www.nzfirst.nz/the_kiwi_kids_grant", "date": "2026", "archived": "research/nz/nzfirst/the_kiwi_kids_grant.html" },
-        { "title": "NZ First: Establishing a KiwiSaver Generation", "url": "https://www.nzfirst.nz/establishing_a_kiwisaver_generation", "date": "2026", "archived": "research/nz/nzfirst/establishing_a_kiwisaver_generation.html", "quote": "an automatic immediate Crown contribution of $1000 for New Zealand citizens only" },
-        { "title": "NZ First: Our Principles", "url": "https://www.nzfirst.nz/principle", "date": "2026", "archived": "research/nz/nzfirst/principle.html", "quote": "social welfare must no longer neglect assisting recipients to become independent of the State" },
-        { "title": "Coalition Agreement National-NZ First 2023, Economy and Employment", "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf", "quote": "Strengthen obligations on Jobseeker work ready beneficiaries to find work and make use of sanctions" }
+        {
+          "title": "NZ First: The Kiwi Kids Grant",
+          "url": "https://www.nzfirst.nz/the_kiwi_kids_grant",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/the_kiwi_kids_grant.html"
+        },
+        {
+          "title": "NZ First: Establishing a KiwiSaver Generation",
+          "url": "https://www.nzfirst.nz/establishing_a_kiwisaver_generation",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/establishing_a_kiwisaver_generation.html",
+          "quote": "an automatic immediate Crown contribution of $1000 for New Zealand citizens only"
+        },
+        {
+          "title": "NZ First: Our Principles",
+          "url": "https://www.nzfirst.nz/principle",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/principle.html",
+          "quote": "social welfare must no longer neglect assisting recipients to become independent of the State"
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Economy and Employment",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "Strengthen obligations on Jobseeker work ready beneficiaries to find work and make use of sanctions"
+        }
       ]
     },
     "regulation": {
@@ -26,21 +49,67 @@
       "confidence": "high",
       "rationale": "NZ First's 2026 programme is built on state intervention in markets: buying back BNZ and merging it with Kiwibank into a Crown-owned bank, legislating to break Foodstuffs into two competing cooperatives, splitting the gentailers into generators and retailers under a National Energy Strategy, a $100 billion state Future Fund that rejects the idea 'that the tax system should be neutral and not pick winners', and a 'use it or lose it' rule for dairy processing. Its leader has vowed to repeal the Regulatory Standards Act his party voted for. Against this, its Marsden Point Special Economic Zone would exempt firms from the RMA and council rules, and its principles call for 'less Government'. Willing to direct and own where it sees foreign or duopoly power, deregulatory where it sees red tape.",
       "sources": [
-        { "title": "NZ First: Backing a New Zealand Owned Bank", "url": "https://www.nzfirst.nz/backing_a_new_zealand_owned_bank", "date": "2026", "archived": "research/nz/nzfirst/backing_a_new_zealand_owned_bank.html", "quote": "a fully Crown owned, commercially run, systemically significant domestic bank" },
-        { "title": "NZ First: Break up the Supermarket Duopoly", "url": "https://www.nzfirst.nz/break_up_the_supermarket_duopoly", "date": "2026", "archived": "research/nz/nzfirst/break_up_the_supermarket_duopoly.html" },
-        { "title": "NZ First: The $100bn New Zealand Future Fund", "url": "https://www.nzfirst.nz/the_100bn_new_zealand_future_fund", "date": "2026", "archived": "research/nz/nzfirst/the_100bn_new_zealand_future_fund.html", "quote": "the paralysis of blind ideology, that begins with the belief that the tax system should be neutral and not pick winners" },
-        { "title": "NZ First: Establishing a Special Economic Zone at Marsden Point", "url": "https://www.nzfirst.nz/establishing_a_special_economic_zone_at_marsden_point", "date": "2026", "archived": "research/nz/nzfirst/establishing_a_special_economic_zone_at_marsden_point.html", "quote": "The principal benefit this economic zone would provide is relief from planning regulations and the RMA." },
-        { "title": "RNZ: Winston Peters vows to repeal Regulatory Standards Bill", "url": "https://www.rnz.co.nz/news/political/579493/winston-peters-vows-to-repeal-regulatory-standards-bill-david-seymour-hits-back", "date": "2025-11-20", "archived": "research/nz/shared/rnz-peters-vows-repeal-regulatory-standards-2025.html" }
-      ]
+        {
+          "title": "NZ First: Backing a New Zealand Owned Bank",
+          "url": "https://www.nzfirst.nz/backing_a_new_zealand_owned_bank",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/backing_a_new_zealand_owned_bank.html",
+          "quote": "a fully Crown owned, commercially run, systemically significant domestic bank"
+        },
+        {
+          "title": "NZ First: Break up the Supermarket Duopoly",
+          "url": "https://www.nzfirst.nz/break_up_the_supermarket_duopoly",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/break_up_the_supermarket_duopoly.html"
+        },
+        {
+          "title": "NZ First: The $100bn New Zealand Future Fund",
+          "url": "https://www.nzfirst.nz/the_100bn_new_zealand_future_fund",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/the_100bn_new_zealand_future_fund.html",
+          "quote": "the paralysis of blind ideology, that begins with the belief that the tax system should be neutral and not pick winners"
+        },
+        {
+          "title": "NZ First: Establishing a Special Economic Zone at Marsden Point",
+          "url": "https://www.nzfirst.nz/establishing_a_special_economic_zone_at_marsden_point",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/establishing_a_special_economic_zone_at_marsden_point.html",
+          "quote": "The principal benefit this economic zone would provide is relief from planning regulations and the RMA."
+        },
+        {
+          "title": "RNZ: Winston Peters vows to repeal Regulatory Standards Bill",
+          "url": "https://www.rnz.co.nz/news/political/579493/winston-peters-vows-to-repeal-regulatory-standards-bill-david-seymour-hits-back",
+          "date": "2025-11-20",
+          "archived": "research/nz/shared/rnz-peters-vows-repeal-regulatory-standards-2025.html"
+        }
+      ],
+      "mixed": true
     },
     "liberty": {
       "score": -30,
       "confidence": "medium",
       "rationale": "NZ First would restrict the franchise to citizens, removing the vote from permanent residents, and it voted for the Electoral Amendment Act despite the Attorney-General's finding on the right to vote. Its coalition programme added 500 police, mandatory minimum sentences for assaults on first responders, a 'coward punch' offence and tougher sentencing. On the other side it ruled out hate speech legislation, ended remaining vaccine mandates, demanded a public Covid inquiry and its principles invoke equal access 'to the law'. Order and a bounded citizenry outweigh its free-speech commitments.",
       "sources": [
-        { "title": "NZ First: Citizen's Only Voting", "url": "https://www.nzfirst.nz/citizens_only_voting", "date": "2026", "archived": "research/nz/nzfirst/citizens_only_voting.html", "quote": "Voting in general elections should be reserved for those who have made the commitment to New Zealand" },
-        { "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025", "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm", "date": "2025-12-16", "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html" },
-        { "title": "Coalition Agreement National-NZ First 2023, Law and Order; Strengthening Democracy and Freedoms", "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf", "quote": "Protect freedom of speech by ruling out the introduction of hate speech legislation" }
+        {
+          "title": "NZ First: Citizen's Only Voting",
+          "url": "https://www.nzfirst.nz/citizens_only_voting",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/citizens_only_voting.html",
+          "quote": "Voting in general elections should be reserved for those who have made the commitment to New Zealand"
+        },
+        {
+          "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025",
+          "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm",
+          "date": "2025-12-16",
+          "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html"
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Law and Order; Strengthening Democracy and Freedoms",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "Protect freedom of speech by ruling out the introduction of hate speech legislation"
+        }
       ]
     },
     "tradition": {
@@ -48,10 +117,33 @@
       "confidence": "high",
       "rationale": "Preserving national custom and identity is central. In coalition NZ First secured English as an official language, English-first names for departments, removal of the gender, sexuality and relationship education guidelines, a rule that publicly funded sport is 'not compromised by rules relating to gender', a commitment not to change the country's name without a referendum and to 'restore national unity'. Its 2026 pages fund the Christ Church Cathedral rebuild, frame the falling citizen birthrate as 'a ticking timebomb' to be met with a grant for citizens' children, and its principles pledge to 'protect our natural and cultural heritage'. A consistent traditional lean, without a religious or moral-legislation programme.",
       "sources": [
-        { "title": "Coalition Agreement National-NZ First 2023, Strengthening Democracy and Freedoms; Education", "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf", "quote": "Legislate to make English an official language of New Zealand." },
-        { "title": "NZ First: The Kiwi Kids Grant", "url": "https://www.nzfirst.nz/the_kiwi_kids_grant", "date": "2026", "archived": "research/nz/nzfirst/the_kiwi_kids_grant.html", "quote": "This is a ticking timebomb for the future of our country." },
-        { "title": "NZ First: Our Policy", "url": "https://www.nzfirst.nz/policy", "date": "2026", "archived": "research/nz/nzfirst/policy.html" },
-        { "title": "NZ First: Our Principles", "url": "https://www.nzfirst.nz/principle", "date": "2026", "archived": "research/nz/nzfirst/principle.html", "quote": "protects our natural and cultural heritage" }
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Strengthening Democracy and Freedoms; Education",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "Legislate to make English an official language of New Zealand."
+        },
+        {
+          "title": "NZ First: The Kiwi Kids Grant",
+          "url": "https://www.nzfirst.nz/the_kiwi_kids_grant",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/the_kiwi_kids_grant.html",
+          "quote": "This is a ticking timebomb for the future of our country."
+        },
+        {
+          "title": "NZ First: Our Policy",
+          "url": "https://www.nzfirst.nz/policy",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/policy.html"
+        },
+        {
+          "title": "NZ First: Our Principles",
+          "url": "https://www.nzfirst.nz/principle",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/principle.html",
+          "quote": "protects our natural and cultural heritage"
+        }
       ]
     },
     "institutions": {
@@ -59,10 +151,33 @@
       "confidence": "high",
       "rationale": "NZ First prefers the direct mandate: a binding referendum on the Māori seats, a referendum before any four-year term or name change, a founding principle that policies not in the manifesto 'will first be referred to the electorate for a mandate', disestablishing Auckland's 'unelected' Independent Māori Statutory Board, refocusing the Waitangi Tribunal, a 'National Interest Test' before accepting UN agreements, and a standing critique of 'Wellington' and 'unelected officials'. It supported the Regulatory Standards Act then vowed to repeal it, and voted down the Treaty Principles Bill. Its principles do call for an independent anti-corruption commission and it would use expert panels in its economic zone. Popular will over institutional constraint, clearly.",
       "sources": [
-        { "title": "NZ First: Referendum on Maori Seats", "url": "https://www.nzfirst.nz/referendum_on_maori_seats", "date": "2026", "archived": "research/nz/nzfirst/referendum_on_maori_seats.html" },
-        { "title": "NZ First: Disestablish Auckland's Independent Maori Statutory Board", "url": "https://www.nzfirst.nz/disestablish_auckland_s_independent_maori_statutory_board", "date": "2026", "archived": "research/nz/nzfirst/disestablish_auckland_s_independent_maori_statutory_board.html", "quote": "key decisions are shaped by unelected officials, parallel governance structures, and statutory bodies that are not accountable to ratepayers" },
-        { "title": "NZ First: Our Principles", "url": "https://www.nzfirst.nz/principle", "date": "2026", "archived": "research/nz/nzfirst/principle.html", "quote": "All policies not contained in the party manifesto, where no national emergency clearly exists, will first be referred to the electorate for a mandate." },
-        { "title": "Coalition Agreement National-NZ First 2023, Equal Citizenship", "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf", "quote": "Amend the Waitangi Tribunal legislation to refocus the scope, purpose, and nature of its inquiries" }
+        {
+          "title": "NZ First: Referendum on Maori Seats",
+          "url": "https://www.nzfirst.nz/referendum_on_maori_seats",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/referendum_on_maori_seats.html"
+        },
+        {
+          "title": "NZ First: Disestablish Auckland's Independent Maori Statutory Board",
+          "url": "https://www.nzfirst.nz/disestablish_auckland_s_independent_maori_statutory_board",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/disestablish_auckland_s_independent_maori_statutory_board.html",
+          "quote": "key decisions are shaped by unelected officials, parallel governance structures, and statutory bodies that are not accountable to ratepayers"
+        },
+        {
+          "title": "NZ First: Our Principles",
+          "url": "https://www.nzfirst.nz/principle",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/principle.html",
+          "quote": "All policies not contained in the party manifesto, where no national emergency clearly exists, will first be referred to the electorate for a mandate."
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Equal Citizenship",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "Amend the Waitangi Tribunal legislation to refocus the scope, purpose, and nature of its inquiries"
+        }
       ]
     },
     "cosmopolitan": {
@@ -70,10 +185,32 @@
       "confidence": "high",
       "rationale": "'Put New Zealand and all New Zealanders first' is the founding principle. NZ First would limit voting to citizens, pay the Kiwi Kids Grant and KiwiSaver kick-start to citizens only, withdraw from the Paris Agreement, subject UN agreements to a National Interest Test and declare UNDRIP non-binding, hold a referendum on the Māori seats and end co-governance, and its principles say immigration must 'cease to be used as an excuse for our failure to train, skill and employ our own people'. It kept the foreign-buyer ban National wanted lifted. Its foreign policy aims at being 'a reliable neighbour in our region' and it backs export trade deals, which keeps it off the extreme.",
       "sources": [
-        { "title": "NZ First: Citizen's Only Voting", "url": "https://www.nzfirst.nz/citizens_only_voting", "date": "2026", "archived": "research/nz/nzfirst/citizens_only_voting.html" },
-        { "title": "NZ First: We Will Withdraw From The Paris Accord", "url": "https://www.nzfirst.nz/withdraw_from_paris_accord", "date": "2026", "archived": "research/nz/nzfirst/withdraw_from_paris_accord.html" },
-        { "title": "NZ First: Our Principles", "url": "https://www.nzfirst.nz/principle", "date": "2026", "archived": "research/nz/nzfirst/principle.html", "quote": "Put New Zealand & all New Zealanders First" },
-        { "title": "Coalition Agreement National-NZ First 2023, Equal Citizenship", "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf", "quote": "does not recognise the United Nations Declaration on the Rights of Indigenous Peoples (UNDRIP) as having any binding legal effect" }
+        {
+          "title": "NZ First: Citizen's Only Voting",
+          "url": "https://www.nzfirst.nz/citizens_only_voting",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/citizens_only_voting.html"
+        },
+        {
+          "title": "NZ First: We Will Withdraw From The Paris Accord",
+          "url": "https://www.nzfirst.nz/withdraw_from_paris_accord",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/withdraw_from_paris_accord.html"
+        },
+        {
+          "title": "NZ First: Our Principles",
+          "url": "https://www.nzfirst.nz/principle",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/principle.html",
+          "quote": "Put New Zealand & all New Zealanders First"
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Equal Citizenship",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "does not recognise the United Nations Declaration on the Rights of Indigenous Peoples (UNDRIP) as having any binding legal effect"
+        }
       ]
     },
     "environment": {
@@ -81,10 +218,32 @@
       "confidence": "high",
       "rationale": "NZ First would withdraw from the Paris Agreement altogether, arguing New Zealand's 0.17 per cent of emissions makes targets 'a rod for our own backs', spend $1 billion mapping oil, gas and geothermal prospects for extraction, expand mining with royalties shared to regions, and in coalition it restarted offshore exploration, stopped the ETS review, investigated reopening the Marsden Point refinery and reduced cycleway spending. Its principles describe 'pragmatic environmentalism' and its energy policy is framed as security and price. Growth, extraction and energy sovereignty come first; environmental commitments are treated as costs to be shed.",
       "sources": [
-        { "title": "NZ First: We Will Withdraw From The Paris Accord", "url": "https://www.nzfirst.nz/withdraw_from_paris_accord", "date": "2026", "archived": "research/nz/nzfirst/withdraw_from_paris_accord.html", "quote": "New Zealand First is saying we need to get out of the Paris Accord altogether" },
-        { "title": "NZ First: Future Proofing our Fuel Security", "url": "https://www.nzfirst.nz/future_proofing_our_fuel_security", "date": "2026", "archived": "research/nz/nzfirst/future_proofing_our_fuel_security.html" },
-        { "title": "NZ First: Returning 50% of mining royalties to the regions", "url": "https://www.nzfirst.nz/returning_50_of_mining_royalties_to_the_regions", "date": "2026", "archived": "research/nz/nzfirst/returning_50_of_mining_royalties_to_the_regions.html" },
-        { "title": "Coalition Agreement National-NZ First 2023, Infrastructure, Energy, and Natural Resources", "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf", "quote": "Future-proof the natural gas industry by restarting offshore exploration" }
+        {
+          "title": "NZ First: We Will Withdraw From The Paris Accord",
+          "url": "https://www.nzfirst.nz/withdraw_from_paris_accord",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/withdraw_from_paris_accord.html",
+          "quote": "New Zealand First is saying we need to get out of the Paris Accord altogether"
+        },
+        {
+          "title": "NZ First: Future Proofing our Fuel Security",
+          "url": "https://www.nzfirst.nz/future_proofing_our_fuel_security",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/future_proofing_our_fuel_security.html"
+        },
+        {
+          "title": "NZ First: Returning 50% of mining royalties to the regions",
+          "url": "https://www.nzfirst.nz/returning_50_of_mining_royalties_to_the_regions",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/returning_50_of_mining_royalties_to_the_regions.html"
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Infrastructure, Energy, and Natural Resources",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "Future-proof the natural gas industry by restarting offshore exploration"
+        }
       ]
     },
     "diplomacy": {
@@ -92,9 +251,26 @@
       "confidence": "medium",
       "rationale": "As Foreign Minister its leader fronted the government that adopted the 2025 Defence Capability Plan with its path above 2 per cent of GDP, and NZ First's coalition programme includes a Marsden Point dry dock to 'support our Navy vessels' and a fuel security plan framed as national security. Its principles pledge to be 'a reliable neighbour in our region', focus aid on the Pacific and respect the non-nuclear tradition. Strength through sovereignty and regional security, without an expeditionary or alliance-first posture.",
       "sources": [
-        { "title": "Ministry of Defence: Defence Capability Plan released", "url": "https://www.defence.govt.nz/news/defence-capability-plan-released/", "date": "2025-04-07", "archived": "research/nz/shared/mod-defence-capability-plan-2025.html" },
-        { "title": "Coalition Agreement National-NZ First 2023, Infrastructure, Energy, and Natural Resources", "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf", "quote": "a dry dock at Marsden Point to service domestic and international shipping needs and to support our Navy vessels" },
-        { "title": "NZ First: Our Principles", "url": "https://www.nzfirst.nz/principle", "date": "2026", "archived": "research/nz/nzfirst/principle.html", "quote": "Our foreign policy objective will be good government at home and being a reliable neighbour in our region." }
+        {
+          "title": "Ministry of Defence: Defence Capability Plan released",
+          "url": "https://www.defence.govt.nz/news/defence-capability-plan-released/",
+          "date": "2025-04-07",
+          "archived": "research/nz/shared/mod-defence-capability-plan-2025.html"
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Infrastructure, Energy, and Natural Resources",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "a dry dock at Marsden Point to service domestic and international shipping needs and to support our Navy vessels"
+        },
+        {
+          "title": "NZ First: Our Principles",
+          "url": "https://www.nzfirst.nz/principle",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/principle.html",
+          "quote": "Our foreign policy objective will be good government at home and being a reliable neighbour in our region."
+        }
       ]
     },
     "local": {
@@ -102,9 +278,27 @@
       "confidence": "medium",
       "rationale": "NZ First's regionalism is fiscal: half of all mining royalties returned 'to the region from which it came, not Wellington', the $1.2 billion Regional Infrastructure Fund it secured in coalition, and a Northland Special Economic Zone. It also restored local referendums on Māori wards. But the Special Economic Zone would take planning decisions away from councils and give them to a government panel, and disestablishing Auckland's Māori board is a central intervention in a council's structure. Money and projects to the regions, decisions kept in Wellington where growth is at stake.",
       "sources": [
-        { "title": "NZ First: Returning 50% of mining royalties to the regions", "url": "https://www.nzfirst.nz/returning_50_of_mining_royalties_to_the_regions", "date": "2026", "archived": "research/nz/nzfirst/returning_50_of_mining_royalties_to_the_regions.html", "quote": "directly returned to the region from which it came – not Wellington" },
-        { "title": "NZ First: Establishing a Special Economic Zone at Marsden Point", "url": "https://www.nzfirst.nz/establishing_a_special_economic_zone_at_marsden_point", "date": "2026", "archived": "research/nz/nzfirst/establishing_a_special_economic_zone_at_marsden_point.html", "quote": "No longer will industries in the zone have to deal with local/regional councils" },
-        { "title": "Coalition Agreement National-NZ First 2023, Infrastructure", "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf", "date": "2023-11-24", "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf", "quote": "Establish a Regional Infrastructure Fund with $1.2 billion in capital funding" }
+        {
+          "title": "NZ First: Returning 50% of mining royalties to the regions",
+          "url": "https://www.nzfirst.nz/returning_50_of_mining_royalties_to_the_regions",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/returning_50_of_mining_royalties_to_the_regions.html",
+          "quote": "directly returned to the region from which it came – not Wellington"
+        },
+        {
+          "title": "NZ First: Establishing a Special Economic Zone at Marsden Point",
+          "url": "https://www.nzfirst.nz/establishing_a_special_economic_zone_at_marsden_point",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/establishing_a_special_economic_zone_at_marsden_point.html",
+          "quote": "No longer will industries in the zone have to deal with local/regional councils"
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Infrastructure",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "Establish a Regional Infrastructure Fund with $1.2 billion in capital funding"
+        }
       ]
     },
     "change": {
@@ -112,10 +306,27 @@
       "confidence": "medium",
       "rationale": "NZ First presents itself as the party of 'balance and stability, through pragmatic, commonsense decision making' against 'an ideology of extremism', yet its 2026 programme is structurally ambitious: nationalising a major bank, breaking up the supermarket and electricity industries by legislation, a $100 billion state fund, leaving Paris, restricting the franchise and a referendum on the Māori seats. Conservative in self-description and on social settings, radical on economic ownership and constitutional questions, netting to a mild lean towards bold change.",
       "sources": [
-        { "title": "NZ First: Our Principles", "url": "https://www.nzfirst.nz/principle", "date": "2026", "archived": "research/nz/nzfirst/principle.html", "quote": "ensuring balance and stability, through pragmatic, commonsense decision making" },
-        { "title": "NZ First: Breaking up the Gentailers", "url": "https://www.nzfirst.nz/breaking_up_the_gentailers", "date": "2026", "archived": "research/nz/nzfirst/breaking_up_the_gentailers.html" },
-        { "title": "NZ First: Backing a New Zealand Owned Bank", "url": "https://www.nzfirst.nz/backing_a_new_zealand_owned_bank", "date": "2026", "archived": "research/nz/nzfirst/backing_a_new_zealand_owned_bank.html" }
-      ]
+        {
+          "title": "NZ First: Our Principles",
+          "url": "https://www.nzfirst.nz/principle",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/principle.html",
+          "quote": "ensuring balance and stability, through pragmatic, commonsense decision making"
+        },
+        {
+          "title": "NZ First: Breaking up the Gentailers",
+          "url": "https://www.nzfirst.nz/breaking_up_the_gentailers",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/breaking_up_the_gentailers.html"
+        },
+        {
+          "title": "NZ First: Backing a New Zealand Owned Bank",
+          "url": "https://www.nzfirst.nz/backing_a_new_zealand_owned_bank",
+          "date": "2026",
+          "archived": "research/nz/nzfirst/backing_a_new_zealand_owned_bank.html"
+        }
+      ],
+      "mixed": true
     }
   }
 }

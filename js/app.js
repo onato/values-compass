@@ -7,7 +7,7 @@
 
   // ---------- persistence ----------
   function freshState() {
-    return { seed: (Math.random() * 0xffffffff) >>> 0, answers: {}, index: 0 };
+    return { seed: (Math.random() * 0xffffffff) >>> 0, answers: {}, index: 0, importance: {}, otherConcerns: "", importanceAsked: false };
   }
   function load() {
     try {
@@ -15,6 +15,8 @@
       if (!raw) return null;
       var s = JSON.parse(raw);
       if (typeof s.seed !== "number" || typeof s.answers !== "object") return null;
+      if (!s.importance) s.importance = {};
+      if (typeof s.otherConcerns !== "string") s.otherConcerns = "";
       return s;
     } catch (e) { return null; }
   }
@@ -45,7 +47,7 @@
   }
   var lastAssessScreen = "screen-intro";
   function show(id) {
-    ["screen-intro", "screen-quiz", "screen-results", "screen-method"].forEach(function (s) { $(s).hidden = s !== id; });
+    ["screen-intro", "screen-quiz", "screen-importance", "screen-results", "screen-method"].forEach(function (s) { $(s).hidden = s !== id; });
     if (id !== "screen-method") lastAssessScreen = id;
     $("tab-assess").setAttribute("aria-selected", id !== "screen-method");
     $("tab-method").setAttribute("aria-selected", id === "screen-method");
@@ -138,7 +140,8 @@
   var jumpTarget = null; // item id when the person came from the results to change one answer
 
   function finish() {
-    var profile = Scoring.buildProfile(DIMENSIONS, ITEMS, state.answers);
+    if (!state.importanceAsked && !jumpTarget) { showImportance(); return; }
+    var profile = Scoring.buildProfile(DIMENSIONS, ITEMS, state.answers, null, { importance: state.importance, otherConcerns: state.otherConcerns });
     var previous = loadResult();
     if (profile && previous && previous.summaryEdited) {
       profile.summary = previous.summary;
@@ -162,6 +165,37 @@
       if (row) { row.open = true; row.scrollIntoView({ block: "start" }); }
     }
   }
+
+  // ---------- importance and other concerns ----------
+  function showImportance() {
+    var list = $("importance-list");
+    list.innerHTML = "";
+    DIMENSIONS.forEach(function (d) {
+      var choices = el("div", { class: "choices", role: "radiogroup", "aria-label": "How much " + d.poles[0] + " vs. " + d.poles[1] + " matters" });
+      IMPORTANCE.forEach(function (o) {
+        var b = el("button", { type: "button", role: "radio", "aria-checked": (state.importance[d.id] || "normal") === o.value ? "true" : "false", text: o.label });
+        b.addEventListener("click", function () {
+          state.importance[d.id] = o.value; save();
+          choices.querySelectorAll("button").forEach(function (q) { q.setAttribute("aria-checked", q === b ? "true" : "false"); });
+        });
+        choices.appendChild(b);
+      });
+      list.appendChild(el("div", { class: "importance-row" }, [
+        el("span", { class: "dim-name", text: d.poles[0] + " vs. " + d.poles[1] }),
+        choices,
+        el("span", { class: "dim-blurb", text: d.blurb })
+      ]));
+    });
+    $("other-concerns").value = state.otherConcerns || "";
+    show("screen-importance");
+  }
+  $("btn-importance-done").addEventListener("click", function () {
+    state.otherConcerns = $("other-concerns").value.trim(); state.importanceAsked = true; save(); finish();
+  });
+  $("btn-importance-skip").addEventListener("click", function () {
+    state.importanceAsked = true; save(); finish();
+  });
+  $("link-importance").addEventListener("click", function () { showImportance(); });
 
   // From the results: go to one question, answer it, come straight back.
   function jumpToItem(itemId) {
@@ -196,6 +230,8 @@
       if (s.consistency === "mixed") {
         poles.firstChild.appendChild(el("span", { class: "badge", text: "mixed" }));
       }
+      if (s.importance === "high") poles.firstChild.appendChild(el("span", { class: "badge importance-high", text: "matters a lot" }));
+      if (s.importance === "low") poles.firstChild.appendChild(el("span", { class: "badge importance-low", text: "matters less" }));
       var track = el("div", { class: "track", tabindex: "0",
         title: d.poles[0] + " vs. " + d.poles[1] + ": " + fmtLean(s.score, d) + " (" + s.strength + (s.consistency === "mixed" ? ", mixed" : "") + ")",
         "aria-label": d.poles[0] + " versus " + d.poles[1] + ", " + fmtLean(s.score, d) + ", " + s.strength });
@@ -411,6 +447,7 @@
       ps.style.setProperty("--marker", party.colour);
       meta.appendChild(ps);
       meta.appendChild(el("span", { class: "badge" + (cell.confidence === "low" ? " low" : ""), text: "confidence " + cell.confidence }));
+      if (cell.mixed) meta.appendChild(el("span", { class: "badge split", title: "The party's evidence pulls both ways on this dimension; the score is the net direction and counts as less certain.", text: "split position" }));
       if (cell.basis === "candidate") meta.appendChild(el("span", { class: "badge basis-candidate", text: "own statements" }));
       if (cell.basis === "party") meta.appendChild(el("span", { class: "badge basis-party", text: "inherited from the party" }));
     } else {

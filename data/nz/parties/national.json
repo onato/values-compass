@@ -186,7 +186,8 @@
           "date": "2023-11-24",
           "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf"
         }
-      ]
+      ],
+      "mixed": true
     },
     "cosmopolitan": {
       "score": -20,
@@ -320,7 +321,8 @@
           "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
           "quote": "Establish a Regional Infrastructure Fund with $1.2 billion in capital funding"
         }
-      ]
+      ],
+      "mixed": true
     },
     "change": {
       "score": -25,

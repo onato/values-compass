@@ -176,6 +176,14 @@ var SCALE = [
   { value: 5, label: "Strongly agree" }
 ];
 
+// How much a dimension matters to the person's vote, asked after the statements.
+// The multiplier scales that dimension's weight in matching and its place in the priority order.
+var IMPORTANCE = [
+  { value: "low", label: "Matters less", mult: 0.5 },
+  { value: "normal", label: "Matters", mult: 1 },
+  { value: "high", label: "Matters a lot", mult: 1.5 }
+];
+
 if (typeof module !== "undefined") {
-  module.exports = { DIMENSIONS: DIMENSIONS, ITEMS: ITEMS, SCALE: SCALE };
+  module.exports = { DIMENSIONS: DIMENSIONS, ITEMS: ITEMS, SCALE: SCALE, IMPORTANCE: IMPORTANCE };
 }

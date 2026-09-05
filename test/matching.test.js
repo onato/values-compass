@@ -25,6 +25,18 @@ test("weight floor and mixed halving", () => {
   assert.equal(M.weightFor({ score: 0, consistency: "mixed" }), 5);
 });
 
+test("importance scales the weight; a split party cell counts as less certain", () => {
+  assert.equal(M.weightFor({ score: 40, consistency: "consistent", importance: "high" }), 60);
+  assert.equal(M.weightFor({ score: 40, consistency: "consistent", importance: "low" }), 20);
+  assert.equal(M.weightFor({ score: 40, consistency: "consistent" }), 40);
+  const p = person((id) => (id === "liberty" ? 60 : 0));
+  const clear = party("clear", (id) => (id === "liberty" ? 60 : 0), "high");
+  const split = party("split", (id) => (id === "liberty" ? 60 : 0), "high");
+  split.dimensions.liberty.mixed = true;
+  assert.ok(M.matchParty(p, split).confidenceValue < M.matchParty(p, clear).confidenceValue);
+  assert.equal(M.matchParty(p, split).alignment, M.matchParty(p, clear).alignment, "the split flag changes certainty, not alignment");
+});
+
 test("identical profile gives 100, opposite gives 0", () => {
   const p = person((id) => (id === "environment" ? 80 : -40));
   const same = party("same", (id) => (id === "environment" ? 80 : -40));
