@@ -63,6 +63,251 @@
       "title": "ACT: policies/rural",
       "sourceUrl": "https://www.act.org.nz/policies/rural",
       "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "a-starship-for-cancer.html",
+      "textFile": "a-starship-for-cancer.txt",
+      "title": "ACT policy: a starship for cancer",
+      "sourceUrl": "https://www.act.org.nz/a-starship-for-cancer",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "affordable-government.html",
+      "textFile": "affordable-government.txt",
+      "title": "ACT policy: affordable government",
+      "sourceUrl": "https://www.act.org.nz/affordable-government",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "affordable-uniforms.html",
+      "textFile": "affordable-uniforms.txt",
+      "title": "ACT policy: affordable uniforms",
+      "sourceUrl": "https://www.act.org.nz/affordable-uniforms",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "back-the-volunteers.html",
+      "textFile": "back-the-volunteers.txt",
+      "title": "ACT policy: back the volunteers",
+      "sourceUrl": "https://www.act.org.nz/back-the-volunteers",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "burglary.html",
+      "textFile": "burglary.txt",
+      "title": "ACT policy: burglary",
+      "sourceUrl": "https://www.act.org.nz/burglary",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "closing-medicines-gap.html",
+      "textFile": "closing-medicines-gap.txt",
+      "title": "ACT policy: closing medicines gap",
+      "sourceUrl": "https://www.act.org.nz/closing-medicines-gap",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "deport.html",
+      "textFile": "deport.txt",
+      "title": "ACT policy: deport",
+      "sourceUrl": "https://www.act.org.nz/deport",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "disrupt-the-class-leave-the-class.html",
+      "textFile": "disrupt-the-class-leave-the-class.txt",
+      "title": "ACT policy: disrupt the class leave the class",
+      "sourceUrl": "https://www.act.org.nz/disrupt-the-class-leave-the-class",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "equal-service.html",
+      "textFile": "equal-service.txt",
+      "title": "ACT policy: equal service",
+      "sourceUrl": "https://www.act.org.nz/equal-service",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "equal-treatment-at-universities.html",
+      "textFile": "equal-treatment-at-universities.txt",
+      "title": "ACT policy: equal treatment at universities",
+      "sourceUrl": "https://www.act.org.nz/equal-treatment-at-universities",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "fair-contribution.html",
+      "textFile": "fair-contribution.txt",
+      "title": "ACT policy: fair contribution",
+      "sourceUrl": "https://www.act.org.nz/fair-contribution",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "game-management.html",
+      "textFile": "game-management.txt",
+      "title": "ACT policy: game management",
+      "sourceUrl": "https://www.act.org.nz/game-management",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "grazing.html",
+      "textFile": "grazing.txt",
+      "title": "ACT policy: grazing",
+      "sourceUrl": "https://www.act.org.nz/grazing",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "innovation-trials.html",
+      "textFile": "innovation-trials.txt",
+      "title": "ACT policy: innovation trials",
+      "sourceUrl": "https://www.act.org.nz/innovation-trials",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "keep-new-zealand-moving.html",
+      "textFile": "keep-new-zealand-moving.txt",
+      "title": "ACT policy: keep new zealand moving",
+      "sourceUrl": "https://www.act.org.nz/keep-new-zealand-moving",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "keeping-children-safe.html",
+      "textFile": "keeping-children-safe.txt",
+      "title": "ACT policy: keeping children safe",
+      "sourceUrl": "https://www.act.org.nz/keeping-children-safe",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "let-pharmacies-do-more.html",
+      "textFile": "let-pharmacies-do-more.txt",
+      "title": "ACT policy: let pharmacies do more",
+      "sourceUrl": "https://www.act.org.nz/let-pharmacies-do-more",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "let-the-kid-on-the-bus.html",
+      "textFile": "let-the-kid-on-the-bus.txt",
+      "title": "ACT policy: let the kid on the bus",
+      "sourceUrl": "https://www.act.org.nz/let-the-kid-on-the-bus",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "local_tourism_dividend.html",
+      "textFile": "local_tourism_dividend.txt",
+      "title": "ACT policy: local tourism dividend",
+      "sourceUrl": "https://www.act.org.nz/local_tourism_dividend",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "no-votes-for-unelected-reps.html",
+      "textFile": "no-votes-for-unelected-reps.txt",
+      "title": "ACT policy: no votes for unelected reps",
+      "sourceUrl": "https://www.act.org.nz/no-votes-for-unelected-reps",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "one-law-for-all.html",
+      "textFile": "one-law-for-all.txt",
+      "title": "ACT policy: one law for all",
+      "sourceUrl": "https://www.act.org.nz/one-law-for-all",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "open-the-backcountry.html",
+      "textFile": "open-the-backcountry.txt",
+      "title": "ACT policy: open the backcountry",
+      "sourceUrl": "https://www.act.org.nz/open-the-backcountry",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "paris.html",
+      "textFile": "paris.txt",
+      "title": "ACT policy: paris",
+      "sourceUrl": "https://www.act.org.nz/paris",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "plenty-is-possible.html",
+      "textFile": "plenty-is-possible.txt",
+      "title": "ACT policy: plenty is possible",
+      "sourceUrl": "https://www.act.org.nz/plenty-is-possible",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "professional-free-speech.html",
+      "textFile": "professional-free-speech.txt",
+      "title": "ACT policy: professional free speech",
+      "sourceUrl": "https://www.act.org.nz/professional-free-speech",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "protect-lawful-hunting.html",
+      "textFile": "protect-lawful-hunting.txt",
+      "title": "ACT policy: protect lawful hunting",
+      "sourceUrl": "https://www.act.org.nz/protect-lawful-hunting",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "public-safety.html",
+      "textFile": "public-safety.txt",
+      "title": "ACT policy: public safety",
+      "sourceUrl": "https://www.act.org.nz/public-safety",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "rural-crime.html",
+      "textFile": "rural-crime.txt",
+      "title": "ACT policy: rural crime",
+      "sourceUrl": "https://www.act.org.nz/rural-crime",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "rural-visa.html",
+      "textFile": "rural-visa.txt",
+      "title": "ACT policy: rural visa",
+      "sourceUrl": "https://www.act.org.nz/rural-visa",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "scrap-the-climate-change-commission.html",
+      "textFile": "scrap-the-climate-change-commission.txt",
+      "title": "ACT policy: scrap the climate change commission",
+      "sourceUrl": "https://www.act.org.nz/scrap-the-climate-change-commission",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "stopping-coercion.html",
+      "textFile": "stopping-coercion.txt",
+      "title": "ACT policy: stopping coercion",
+      "sourceUrl": "https://www.act.org.nz/stopping-coercion",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "strengthening-end-of-life-choice.html",
+      "textFile": "strengthening-end-of-life-choice.txt",
+      "title": "ACT policy: strengthening end of life choice",
+      "sourceUrl": "https://www.act.org.nz/strengthening-end-of-life-choice",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "student_services_fee.html",
+      "textFile": "student_services_fee.txt",
+      "title": "ACT policy: student services fee",
+      "sourceUrl": "https://www.act.org.nz/student_services_fee",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "unlocking-new-zealands-digital-economy.html",
+      "textFile": "unlocking-new-zealands-digital-economy.txt",
+      "title": "ACT policy: unlocking new zealands digital economy",
+      "sourceUrl": "https://www.act.org.nz/unlocking-new-zealands-digital-economy",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "welfare.html",
+      "textFile": "welfare.txt",
+      "title": "ACT policy: welfare",
+      "sourceUrl": "https://www.act.org.nz/welfare",
+      "fetchedAt": "2026-09-05"
     }
   ]
 }

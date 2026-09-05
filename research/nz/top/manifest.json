@@ -1,0 +1,104 @@
+{
+  "party": "top",
+  "entries": [
+    {
+      "filename": "10_year_plans_to_strengthen_health_and_education.html",
+      "textFile": "10_year_plans_to_strengthen_health_and_education.txt",
+      "title": "Opportunity (TOP): 10 year plans to strengthen health and education",
+      "sourceUrl": "https://www.opportunity.org.nz/10_year_plans_to_strengthen_health_and_education",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "about.html",
+      "textFile": "about.txt",
+      "title": "Opportunity (TOP): about",
+      "sourceUrl": "https://www.opportunity.org.nz/about",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "abundant-energy.html",
+      "textFile": "abundant-energy.txt",
+      "title": "Opportunity (TOP): abundant energy",
+      "sourceUrl": "https://www.opportunity.org.nz/abundant-energy",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "breakthrough-economy.html",
+      "textFile": "breakthrough-economy.txt",
+      "title": "Opportunity (TOP): breakthrough economy",
+      "sourceUrl": "https://www.opportunity.org.nz/breakthrough-economy",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "clean_up_politics.html",
+      "textFile": "clean_up_politics.txt",
+      "title": "Opportunity (TOP): clean up politics",
+      "sourceUrl": "https://www.opportunity.org.nz/clean_up_politics",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "healthy-oceans.html",
+      "textFile": "healthy-oceans.txt",
+      "title": "Opportunity (TOP): healthy oceans",
+      "sourceUrl": "https://www.opportunity.org.nz/healthy-oceans",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "home.html",
+      "textFile": "home.txt",
+      "title": "Opportunity (TOP): home",
+      "sourceUrl": "https://www.opportunity.org.nz/",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "opportunity_will_defend_climate_change_commission_in_national_led_government.html",
+      "textFile": "opportunity_will_defend_climate_change_commission_in_national_led_government.txt",
+      "title": "Opportunity (TOP): opportunity will defend climate change commission in national led government",
+      "sourceUrl": "https://www.opportunity.org.nz/opportunity_will_defend_climate_change_commission_in_national_led_government",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "party-information.html",
+      "textFile": "party-information.txt",
+      "title": "Opportunity (TOP): party information",
+      "sourceUrl": "https://www.opportunity.org.nz/party-information",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "breakthrough-economy-policy-overview.pdf",
+      "textFile": "breakthrough-economy-policy-overview.txt",
+      "title": "Opportunity (TOP) policy document: breakthrough economy policy overview",
+      "sourceUrl": "https://cdn.opportunity.org.nz/documents/policy/breakthrough-economy-policy-overview.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "Opportunity-Policy---Abundant-Energy.pdf",
+      "textFile": "Opportunity-Policy---Abundant-Energy.txt",
+      "title": "Opportunity (TOP) policy document: Opportunity Policy   Abundant Energy",
+      "sourceUrl": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Abundant%20Energy.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "Opportunity-Policy---Clean-Up-Politics.pdf",
+      "textFile": "Opportunity-Policy---Clean-Up-Politics.txt",
+      "title": "Opportunity (TOP) policy document: Opportunity Policy   Clean Up Politics",
+      "sourceUrl": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Clean%20Up%20Politics.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "oceans-policy.pdf",
+      "textFile": "oceans-policy.txt",
+      "title": "Opportunity (TOP) policy document: oceans policy",
+      "sourceUrl": "https://cdn.opportunity.org.nz/documents/policy/oceans-policy.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "party-information-charter.pdf",
+      "textFile": "party-information-charter.txt",
+      "title": "Opportunity (TOP) policy document: party information charter",
+      "sourceUrl": "https://cdn.opportunity.org.nz/documents/party-information-charter.pdf",
+      "fetchedAt": "2026-09-05"
+    }
+  ],
+  "notes": "top.org.nz redirects to opportunity.org.nz; the party campaigns as 'Opportunity' in 2026."
+}

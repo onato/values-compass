@@ -1,0 +1,83 @@
+{
+  "party": "maori",
+  "entries": [
+    {
+      "filename": "home.html",
+      "title": "Te Pāti Māori: home",
+      "sourceUrl": "https://www.maoriparty.org.nz/",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "policy.html",
+      "textFile": "policy.txt",
+      "title": "Te Pāti Māori: policy",
+      "sourceUrl": "https://www.maoriparty.org.nz/policy",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "about-us.html",
+      "textFile": "about-us.txt",
+      "title": "Te Pāti Māori: about us",
+      "sourceUrl": "https://www.maoriparty.org.nz/about-us",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "permanently_ban_seabed_mining.html",
+      "textFile": "permanently_ban_seabed_mining.txt",
+      "title": "Te Pāti Māori: permanently ban seabed mining",
+      "sourceUrl": "https://www.maoriparty.org.nz/permanently_ban_seabed_mining",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "tax_calculator.html",
+      "textFile": "tax_calculator.txt",
+      "title": "Te Pāti Māori: tax calculator",
+      "sourceUrl": "https://www.maoriparty.org.nz/tax_calculator",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "our-constitution.html",
+      "textFile": "our-constitution.txt",
+      "title": "Te Pāti Māori: our constitution",
+      "sourceUrl": "https://www.maoriparty.org.nz/our-constitution",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "panui.html",
+      "textFile": "panui.txt",
+      "title": "Te Pāti Māori: panui",
+      "sourceUrl": "https://www.maoriparty.org.nz/panui",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "tax_policy_full.html",
+      "textFile": "tax_policy_full.txt",
+      "title": "Te Pāti Māori: Tax policy (full)",
+      "sourceUrl": "https://www.maoriparty.org.nz/tax",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "te_tiriti_entrenchment_policy.html",
+      "textFile": "te_tiriti_entrenchment_policy.txt",
+      "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy",
+      "sourceUrl": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy",
+      "fetchedAt": "2026-09-05",
+      "date": "2026-09-01"
+    },
+    {
+      "filename": "palestine_recognition.html",
+      "textFile": "palestine_recognition.txt",
+      "title": "Te Pāti Māori: Government's refusal to recognise Palestine",
+      "sourceUrl": "https://www.maoriparty.org.nz/te_p_ti_m_ori_government_s_refusal_to_recognise_palestine_entrenches_colonial_double_standards",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "regulatory_standards_bill.html",
+      "textFile": "regulatory_standards_bill.txt",
+      "title": "Te Pāti Māori: on the Regulatory Standards Bill",
+      "sourceUrl": "https://www.maoriparty.org.nz/democracy_denied_te_p_ti_m_ori_slam_govt_for_silencing_m_ori_and_tangata_tiriti_on_the_regulatory_standards_bill",
+      "fetchedAt": "2026-09-05"
+    }
+  ],
+  "notes": "Official site is maoriparty.org.nz. maoriparty.org (no .nz) is an unrelated squatted domain and must not be used."
+}

@@ -7,12 +7,374 @@ var PARTIES_NZ = {
     "assessedAt": "2026-09-05",
     "generatedAt": "2026-09-05",
     "parties": [
+      "act",
       "green",
       "labour",
+      "maori",
       "national"
     ]
   },
   "parties": [
+    {
+      "id": "act",
+      "name": "ACT New Zealand",
+      "short": "ACT",
+      "colour": "#FDE401",
+      "website": "https://www.act.org.nz/",
+      "assessedAt": "2026-09-05",
+      "rubricVersion": "1.0",
+      "status": "draft",
+      "inParliament": true,
+      "notes": "Coalition partner in the 2023-2026 government; its leader is Deputy Prime Minister from May 2025. Scored from its 2026 policy pages (35 items), the ACT Policy Programme in the 2023 coalition agreement, and its recorded party votes on the marker bills, several of which were its own bills.",
+      "dimensions": {
+        "solidarity": {
+          "score": -80,
+          "confidence": "high",
+          "rationale": "ACT's economic page states that 'the Government cannot create wealth itself, because every dollar the Government has is taxed from someone who created it' and that government should provide 'only essential services'. Its 2026 welfare policy titled 'a hand up, not a way of life' would put all health-related benefits through MSD-designated doctors with phased reassessment of existing recipients, and impose electronic money management on anyone on Jobseeker for more than four months; it would collapse 43 departments into 19 and 28 ministers into 18. In coalition it secured benefit sanctions and interest deductibility for landlords. The one spending commitment, lifting medicines funding to Australian parity, is funded from within health growth. Personal responsibility and a minimal state, short of the −100 anchor only because it keeps universal health and education.",
+          "sources": [
+            {
+              "title": "ACT: Economy & Cost of Living",
+              "url": "https://www.act.org.nz/policies/economy",
+              "date": "2026",
+              "archived": "research/nz/act/policies_economy.html",
+              "quote": "Government should be a careful spender, keeping your taxes low, providing only essential services and doing them well"
+            },
+            {
+              "title": "ACT: Welfare as a Hand Up, not a Way of Life",
+              "url": "https://www.act.org.nz/welfare",
+              "date": "2026",
+              "archived": "research/nz/act/welfare.html",
+              "quote": "electronic money management for Jobseeker Support Work Ready recipients who remain on a benefit for more than four months"
+            },
+            {
+              "title": "ACT: A Smaller, More Affordable Government",
+              "url": "https://www.act.org.nz/affordable-government",
+              "date": "2026",
+              "archived": "research/nz/act/affordable-government.html"
+            },
+            {
+              "title": "Coalition Agreement National-ACT 2023, ACT Policy Programme",
+              "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf"
+            }
+          ]
+        },
+        "regulation": {
+          "score": -90,
+          "confidence": "high",
+          "rationale": "Deregulation is ACT's central purpose. It wrote the Regulatory Standards Act and created the Ministry for Regulation, and its 2026 programme adds Innovation Trials that suspend specific regulations for tests, a property-rights-based RMA replacement, fintech and stablecoin deregulation, letting pharmacies do more and removing ownership caps, hunter-led game management in place of DOC, and a consolidated bureaucracy with ministers able to remove chief executives. Its stated principle is that government should make rules only 'when there is no other way to solve a problem'. The few new rules it proposes, such as limiting compulsory school uniform items and licensing security operators, are marginal against this direction.",
+          "sources": [
+            {
+              "title": "ACT: Innovation Trials",
+              "url": "https://www.act.org.nz/innovation-trials",
+              "date": "2026",
+              "archived": "research/nz/act/innovation-trials.html",
+              "quote": "Allow a specific regulation to be set aside for a limited test in one location"
+            },
+            {
+              "title": "ACT: Economy & Cost of Living",
+              "url": "https://www.act.org.nz/policies/economy",
+              "date": "2026",
+              "archived": "research/nz/act/policies_economy.html",
+              "quote": "making rules when there is no other way to solve a problem, and removing red tape when it's no longer needed"
+            },
+            {
+              "title": "ACT: Unlocking New Zealand's Digital Economy",
+              "url": "https://www.act.org.nz/unlocking-new-zealands-digital-economy",
+              "date": "2026",
+              "archived": "research/nz/act/unlocking-new-zealands-digital-economy.html"
+            },
+            {
+              "title": "Hansard: Regulatory Standards Bill, third reading, 13 November 2025",
+              "url": "https://community.scoop.co.nz/2025/11/regulatory-standards-bill-third-reading/",
+              "date": "2025-11-13",
+              "archived": "research/nz/shared/hansard-regulatory-standards-third-reading-scoop.html"
+            },
+            {
+              "title": "Coalition Agreement National-ACT 2023, Regulation",
+              "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+              "quote": "passing the Regulatory Standards Act as soon as practicable"
+            }
+          ]
+        },
+        "liberty": {
+          "score": -15,
+          "confidence": "medium",
+          "rationale": "ACT pulls hard in both directions. For liberty: it would ban professional regulators from disciplining lawful speech, require free-speech policies at funded tertiary providers, add property rights to the Bill of Rights, widen End of Life Choice, defend lawful hunting and firearms ownership, and it opposed hate speech legislation. For order: 'the Government's first job is stopping crime'; it restored Three Strikes and would extend it to burglary with three-year minimums and no parole, deport resident offenders, give licensed security guards powers to demand identity and detain, let teachers use reasonable force to remove disruptive students, put beneficiaries on managed payment cards, and it voted for the Electoral Amendment Act despite the Attorney-General's rights report. Libertarian on speech, property and dying; authoritarian on crime and welfare. A slight net lean to security, because the coercive powers are more concrete than the freedoms.",
+          "sources": [
+            {
+              "title": "ACT: Law & Order",
+              "url": "https://www.act.org.nz/policies/law-and-order",
+              "date": "2026",
+              "archived": "research/nz/act/policies_law-and-order.html",
+              "quote": "The Government's first job is stopping crime."
+            },
+            {
+              "title": "ACT: Three Strikes for Burglary",
+              "url": "https://www.act.org.nz/burglary",
+              "date": "2026",
+              "archived": "research/nz/act/burglary.html"
+            },
+            {
+              "title": "ACT: Keeping Public Spaces Safe",
+              "url": "https://www.act.org.nz/public-safety",
+              "date": "2026",
+              "archived": "research/nz/act/public-safety.html",
+              "quote": "detain them until Police arrive if they refuse and won't leave"
+            },
+            {
+              "title": "ACT: Free Speech for Regulated Professionals",
+              "url": "https://www.act.org.nz/professional-free-speech",
+              "date": "2026",
+              "archived": "research/nz/act/professional-free-speech.html"
+            },
+            {
+              "title": "ACT: Strengthening End of Life Choice",
+              "url": "https://www.act.org.nz/strengthening-end-of-life-choice",
+              "date": "2026",
+              "archived": "research/nz/act/strengthening-end-of-life-choice.html"
+            },
+            {
+              "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025",
+              "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm",
+              "date": "2025-12-16",
+              "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html"
+            }
+          ]
+        },
+        "tradition": {
+          "score": -20,
+          "confidence": "medium",
+          "rationale": "In law ACT is socially liberal: End of Life Choice was its member's bill and it would widen eligibility, it voted for the conversion practices ban, and it treats moral questions as matters of individual choice. Its cultural rhetoric points the other way, appealing to 'Kiwis who are proud of our settler heritage', promising to 'restore balance' to the histories curriculum and to remove 'ideology' from schools, and casting Treaty-based arrangements as departures from equal citizenship. Liberal on personal morality, conservative on national identity, which nets to a mild progress lean.",
+          "sources": [
+            {
+              "title": "ACT: Strengthening End of Life Choice",
+              "url": "https://www.act.org.nz/strengthening-end-of-life-choice",
+              "date": "2026",
+              "archived": "research/nz/act/strengthening-end-of-life-choice.html",
+              "quote": "A terminally ill person suffering unbearably should have the final say over how and when they die."
+            },
+            {
+              "title": "ACT: Deport Serious Offenders (six-point immigration plan)",
+              "url": "https://www.act.org.nz/deport",
+              "date": "2026",
+              "archived": "research/nz/act/deport.html",
+              "quote": "Kiwis who are proud of our settler heritage are asking themselves why something doesn't quite feel right with immigration"
+            },
+            {
+              "title": "Coalition Agreement National-ACT 2023, Education",
+              "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+              "quote": "Restore balance to the Aotearoa New Zealand's Histories curriculum"
+            },
+            {
+              "title": "RNZ: Bill to ban conversion practices passes third reading",
+              "url": "https://www.rnz.co.nz/news/political/461597/bill-to-ban-conversion-practices-passes-third-reading",
+              "date": "2022-02-15",
+              "archived": "research/nz/shared/rnz-conversion-practices-third-reading-2022.html"
+            }
+          ]
+        },
+        "institutions": {
+          "score": -60,
+          "confidence": "high",
+          "rationale": "ACT's constitutional programme asserts parliamentary sovereignty and elected majorities over courts and independent bodies: 'stop courts using broad Treaty interpretations', enshrine that 'Parliament makes the law' in the Constitution Act, abolish the Climate Change Commission as an independent Crown entity, let ministers appoint and remove departmental chief executives, strip voting rights from unelected council appointees, restore referendums on Māori wards, and put Treaty principles to a referendum through the Treaty Principles Bill, which only ACT voted for at its second reading. It frames independent expert bodies as bureaucracies that 'recommend policies that harm the country'. The Regulatory Standards Act does create a rules-based check on regulation, and ACT would protect the operational independence of Police, NZSIS and NZDF, but the weight is clearly on popular mandate over institutional constraint.",
+          "sources": [
+            {
+              "title": "ACT: One Law for All. One Future Together.",
+              "url": "https://www.act.org.nz/one-law-for-all",
+              "date": "2026",
+              "archived": "research/nz/act/one-law-for-all.html",
+              "quote": "Stop courts using broad Treaty interpretations to impose obligations Parliament never actually legislated"
+            },
+            {
+              "title": "ACT: Scrap the Climate Change Commission",
+              "url": "https://www.act.org.nz/scrap-the-climate-change-commission",
+              "date": "2026",
+              "archived": "research/nz/act/scrap-the-climate-change-commission.html",
+              "quote": "Abolish the Climate Change Commission as an independent Crown entity"
+            },
+            {
+              "title": "ACT: A Smaller, More Affordable Government",
+              "url": "https://www.act.org.nz/affordable-government",
+              "date": "2026",
+              "archived": "research/nz/act/affordable-government.html",
+              "quote": "Chief executives could be removed by Ministers for specified reasons such as non-performance or policy misalignment"
+            },
+            {
+              "title": "ACT: No Votes for Unelected Reps",
+              "url": "https://www.act.org.nz/no-votes-for-unelected-reps",
+              "date": "2026",
+              "archived": "research/nz/act/no-votes-for-unelected-reps.html"
+            },
+            {
+              "title": "Principles of the Treaty of Waitangi Bill, second reading (Hansard, 10 April 2025)",
+              "url": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/",
+              "date": "2025-04-10",
+              "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html",
+              "quote": "Ayes 11 ACT New Zealand 11."
+            }
+          ]
+        },
+        "cosmopolitan": {
+          "score": -60,
+          "confidence": "high",
+          "rationale": "ACT's 'one law for all' programme rejects Treaty partnership in favour of equal citizenship, ending race-based public service provisions and university support, and it authored the Treaty Principles Bill. Its immigration plan says the system should welcome people 'only if they share values of tolerance, freedom and democracy', would deport resident offenders regardless of time in the country, expire skill categories annually and charge temporary workers a $6-a-day infrastructure surcharge; it would leave the Paris Agreement if it cannot accommodate New Zealand's targets. Against that, ACT states plainly that 'New Zealand needs immigration', proposes a rural workforce visa with a residence pathway and liberalised skilled-migrant rules in coalition. Open to migrants as workers, closed to group rights and international constraints: a clear national lean.",
+          "sources": [
+            {
+              "title": "ACT: One Public Service for All",
+              "url": "https://www.act.org.nz/equal-service",
+              "date": "2026",
+              "archived": "research/nz/act/equal-service.html",
+              "quote": "one public service with one standard for everyone"
+            },
+            {
+              "title": "ACT: Deport Serious Offenders (six-point immigration plan)",
+              "url": "https://www.act.org.nz/deport",
+              "date": "2026",
+              "archived": "research/nz/act/deport.html",
+              "quote": "The system should welcome people, but only if they share values of tolerance, freedom and democracy"
+            },
+            {
+              "title": "ACT: A Fair Contribution for Infrastructure",
+              "url": "https://www.act.org.nz/fair-contribution",
+              "date": "2026",
+              "archived": "research/nz/act/fair-contribution.html",
+              "quote": "New Zealand needs immigration."
+            },
+            {
+              "title": "ACT: Paris Needs to Change",
+              "url": "https://www.act.org.nz/paris",
+              "date": "2026",
+              "archived": "research/nz/act/paris.html"
+            },
+            {
+              "title": "ACT: A Rural Workforce Visa",
+              "url": "https://www.act.org.nz/rural-visa",
+              "date": "2026",
+              "archived": "research/nz/act/rural-visa.html"
+            }
+          ]
+        },
+        "environment": {
+          "score": -85,
+          "confidence": "high",
+          "rationale": "ACT would abolish the Climate Change Commission, leave the Paris Agreement unless its targets change, keep agriculture out of the Emissions Trading Scheme and oppose any methane price; in coalition it secured the repeal of the offshore oil and gas exploration ban, a Crown Minerals Act 'promoting the use of Crown minerals', an end to new Significant Natural Areas and the rebalancing of freshwater rules towards 'all water users'. Its rural policy would open conservation land to grazing and its conservation policy hands game management to hunters, describing its approach as 'practical environmentalism'. It describes emissions targets as making 'the economy 2.2 per cent smaller'. Growth and production first, with environmental rules treated as costs.",
+          "sources": [
+            {
+              "title": "ACT: Scrap the Climate Change Commission",
+              "url": "https://www.act.org.nz/scrap-the-climate-change-commission",
+              "date": "2026",
+              "archived": "research/nz/act/scrap-the-climate-change-commission.html"
+            },
+            {
+              "title": "ACT: Paris Needs to Change",
+              "url": "https://www.act.org.nz/paris",
+              "date": "2026",
+              "archived": "research/nz/act/paris.html",
+              "quote": "If the Paris Agreement cannot accommodate targets that reflect the real warming impact of New Zealand's emissions, then New Zealand should leave it."
+            },
+            {
+              "title": "ACT: Grazing to Cut Pests and Fire Risk",
+              "url": "https://www.act.org.nz/grazing",
+              "date": "2026",
+              "archived": "research/nz/act/grazing.html"
+            },
+            {
+              "title": "Coalition Agreement National-ACT 2023, Natural Resources",
+              "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+              "quote": "Repeal the ban on offshore oil and gas exploration."
+            }
+          ]
+        },
+        "diplomacy": {
+          "score": -40,
+          "confidence": "medium",
+          "rationale": "ACT publishes no foreign or defence policy of its own for 2026. As a coalition partner it shared in the 2025 Defence Capability Plan, $12 billion over four years and a path above 2 per cent of GDP, and its immigration policy frames New Zealand around shared 'values of tolerance, freedom and democracy' with like-minded partners. Its coalition agreement protects the operational independence of NZDF and NZSIS while cutting elsewhere. Supportive of the strength-oriented consensus without campaigning on it, so a moderate strength lean on thin party-specific evidence.",
+          "sources": [
+            {
+              "title": "Ministry of Defence: Defence Capability Plan released",
+              "url": "https://www.defence.govt.nz/news/defence-capability-plan-released/",
+              "date": "2025-04-07",
+              "archived": "research/nz/shared/mod-defence-capability-plan-2025.html"
+            },
+            {
+              "title": "ACT: A Smaller, More Affordable Government",
+              "url": "https://www.act.org.nz/affordable-government",
+              "date": "2026",
+              "archived": "research/nz/act/affordable-government.html",
+              "quote": "Operational independence would be protected by law for agencies that need it, such as Police, NZSIS, and NZDF."
+            }
+          ]
+        },
+        "local": {
+          "score": 15,
+          "confidence": "medium",
+          "rationale": "ACT's localism runs through incentives: a Local Tourism Dividend paying councils $1 per guest night with no application, sharing GST on new housing with councils, making medium-density rules optional for councils, and letting hunting groups rather than 'Wellington' manage game and backcountry. It also constrains councils: removing appointees' votes, ring-fencing road maintenance in the national fund so councils cannot 'raid' it for street redesigns, national rules on school uniforms and buses, and a preference for property rights over local planning. Devolution of revenue and delivery to communities, alongside central limits on what councils may decide, gives a slight local lean.",
+          "sources": [
+            {
+              "title": "ACT: Local Tourism Dividend",
+              "url": "https://www.act.org.nz/local_tourism_dividend",
+              "date": "2026",
+              "archived": "research/nz/act/local_tourism_dividend.html",
+              "quote": "when councils help enable economic activity that generates revenue for central government, they should share in the benefits"
+            },
+            {
+              "title": "ACT: Hunter-Led Game Management",
+              "url": "https://www.act.org.nz/game-management",
+              "date": "2026",
+              "archived": "research/nz/act/game-management.html"
+            },
+            {
+              "title": "ACT: Keep New Zealand Moving",
+              "url": "https://www.act.org.nz/keep-new-zealand-moving",
+              "date": "2026",
+              "archived": "research/nz/act/keep-new-zealand-moving.html"
+            },
+            {
+              "title": "Coalition Agreement National-ACT 2023, Infrastructure and Housing",
+              "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+              "quote": "Legislate to make the MDRS optional for councils"
+            }
+          ]
+        },
+        "change": {
+          "score": 65,
+          "confidence": "high",
+          "rationale": "ACT proposes structural change at pace: collapsing 43 departments into 19 and 28 ministers into 18, rewriting the constitutional relationship between Parliament, courts and the Treaty, abolishing the Climate Change Commission, potentially leaving Paris, replacing the RMA with a property-rights system, and mandatory reassessment of existing health-benefit recipients. In government it drove the Regulatory Standards Act and the Treaty Principles Bill against broad opposition. The direction is towards a smaller state, but the appetite for disruption to get there is high.",
+          "sources": [
+            {
+              "title": "ACT: A Smaller, More Affordable Government",
+              "url": "https://www.act.org.nz/affordable-government",
+              "date": "2026",
+              "archived": "research/nz/act/affordable-government.html",
+              "quote": "The 43 departments would be consolidated into 19 coherent departments."
+            },
+            {
+              "title": "ACT: One Law for All. One Future Together.",
+              "url": "https://www.act.org.nz/one-law-for-all",
+              "date": "2026",
+              "archived": "research/nz/act/one-law-for-all.html"
+            },
+            {
+              "title": "ACT: Welfare as a Hand Up, not a Way of Life",
+              "url": "https://www.act.org.nz/welfare",
+              "date": "2026",
+              "archived": "research/nz/act/welfare.html",
+              "quote": "Existing Jobseeker Support – Health Condition or Disability and Supported Living Payment recipients will be reassessed against the new criteria on a phased basis."
+            }
+          ]
+        }
+      }
+    },
     {
       "id": "green",
       "name": "Green Party of Aotearoa New Zealand",
@@ -646,6 +1008,287 @@ var PARTIES_NZ = {
               "url": "https://www.labour.org.nz/news/speech-labour-party-congress-2026-chris-hipkins/",
               "date": "2026-07",
               "archived": "research/nz/labour/speech-congress-2026-hipkins.html"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "maori",
+      "name": "Te Pāti Māori",
+      "short": "Te Pāti Māori",
+      "colour": "#B2001A",
+      "website": "https://www.maoriparty.org.nz/",
+      "assessedAt": "2026-09-05",
+      "rubricVersion": "1.0",
+      "status": "draft",
+      "inParliament": true,
+      "notes": "Opposition party 2023-2026, contesting the seven Māori electorates and campaigning for the candidate vote only in 2026. Scored from its 2026 policy page (17 policy areas), the Te Tiriti Entrenchment Policy launched 1 September 2026, its statements on Palestine and the Regulatory Standards Bill, and its recorded party votes. Its full tax policy is hosted on Google Drive and was not archived; the tax summary on its site is used. The official site is maoriparty.org.nz; maoriparty.org is an unrelated squatted domain.",
+      "dimensions": {
+        "solidarity": {
+          "score": 85,
+          "confidence": "high",
+          "rationale": "The party frames the economy as 'rigged' to protect the wealthy while whānau go without, and would 'make sure the wealthiest pay their fair share' to fund housing, health, education and whānau support, 'lift incomes so people can live with dignity', 'strengthen welfare so whānau aren't punished for being poor', build public and affordable homes, stop speculation and land-banking, and its tax calculator promises a kai credit and lower PAYE for low earners. It opposed the 2025 pay equity changes as 'repression' of working women. Collective provision and redistribution are core purpose; the detail of the tax settings is not published on the site, which is the only reason it sits below the top anchor.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Policy, Tax",
+              "url": "https://www.maoriparty.org.nz/tax",
+              "date": "2026",
+              "archived": "research/nz/maori/tax_policy_full.html",
+              "quote": "A country that protects the wealthy while whānau go without is not fair, it is rigged."
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Cost of living",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Strengthen welfare so whānau aren't punished for being poor."
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Housing",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Stop speculation and land-banking (including action on vacant properties)."
+            },
+            {
+              "title": "Te Pāti Māori: Govt's Pay Bill entrenches discrimination against women",
+              "url": "https://www.maoriparty.org.nz/_govt_s_pay_bill_entrenches_discrimination_against_women_kemp",
+              "date": "2025",
+              "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html"
+            }
+          ]
+        },
+        "regulation": {
+          "score": 60,
+          "confidence": "medium",
+          "rationale": "Te Pāti Māori would 'break corporate control' of food by supporting Māori-owned supermarkets and protecting local sellers, reject genetically engineered foods, act against vacant properties and land-banking, assert Māori authority over freshwater so 'decisions are not made without Māori consent', and build Māori-led institutions and funds. It voted against the Regulatory Standards Act and called it 'one of the most unconstitutional bills ever put before this House'. The programme is interventionist, though its instrument is Māori-led ownership and authority rather than central regulation, and it publishes little on general business regulation.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Policy, Kai Sovereignty",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Break corporate control by supporting Māori-owned supermarkets and protecting local kai sellers."
+            },
+            {
+              "title": "Te Pāti Māori: Democracy Denied, on the Regulatory Standards Bill",
+              "url": "https://www.maoriparty.org.nz/democracy_denied_te_p_ti_m_ori_slam_govt_for_silencing_m_ori_and_tangata_tiriti_on_the_regulatory_standards_bill",
+              "date": "2025",
+              "archived": "research/nz/maori/regulatory_standards_bill.html"
+            },
+            {
+              "title": "Hansard: Regulatory Standards Bill, third reading, 13 November 2025",
+              "url": "https://community.scoop.co.nz/2025/11/regulatory-standards-bill-third-reading/",
+              "date": "2025-11-13",
+              "archived": "research/nz/shared/hansard-regulatory-standards-third-reading-scoop.html"
+            }
+          ]
+        },
+        "liberty": {
+          "score": 45,
+          "confidence": "medium",
+          "rationale": "Its justice policy would 'reform laws that criminalise poverty and survival', 'move away from mass imprisonment', end the removal of Māori children by the state and restore whānau authority, and it voted against the Electoral Amendment Act that ended same-day enrolment and disenfranchised prisoners. Its emphasis is on freedom from state coercion for Māori communities rather than on civil liberties in general, and it has not published positions on speech, privacy or policing powers, so a clear but bounded liberty lean.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Policy, Justice",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Reform laws that criminalise poverty and survival. Move away from mass imprisonment and toward long-term transformation."
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Mokopuna Māori",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "End the pipeline that removes Māori children from their people."
+            },
+            {
+              "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025",
+              "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm",
+              "date": "2025-12-16",
+              "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html"
+            }
+          ]
+        },
+        "tradition": {
+          "score": -40,
+          "confidence": "medium",
+          "rationale": "This dimension is awkward for Te Pāti Māori, which is at once a party of tradition and a party of change. It seeks to revive and protect tikanga, te reo, whakapapa and kaupapa tuku iho as the foundation of public life, which is preservation of an inherited moral order. But the order it seeks to preserve is not the established one: it demands constitutional transformation by 2040, protects the 'wellbeing, safety, and dignity of takatāpui Māori' with inclusive public services, opposed the government's pay-equity changes, and frames the current system as one 'built to exclude us'. Judged against the dimension's poles, preserving the established national settlement versus changing exclusionary traditions, it lands clearly on change, with the caveat that its own traditions are what it would replace them with.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Policy, Takatāpui",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Protect the wellbeing, safety, and dignity of takatāpui Māori."
+            },
+            {
+              "title": "Te Pāti Māori: About us, our kaupapa",
+              "url": "https://www.maoriparty.org.nz/about-us",
+              "date": "2026",
+              "archived": "research/nz/maori/about-us.html",
+              "quote": "our kaupapa - which express the values handed down to us by our ancestors guide us in all that we do"
+            },
+            {
+              "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy",
+              "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy",
+              "date": "2026-09-01",
+              "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html",
+              "quote": "set 2040 as the target for constitutional transformation in Aotearoa"
+            }
+          ]
+        },
+        "institutions": {
+          "score": -10,
+          "confidence": "low",
+          "rationale": "Te Pāti Māori would create new binding institutions, an independent Te Tiriti Commission with compliance orders and a Waitangi Tribunal whose recommendations bind the Crown, and it voted against the Treaty Principles Bill, the Regulatory Standards Act and the Electoral Amendment Act. Yet its posture towards the existing order is insurgent: the system is 'rigged' and 'built to exclude us', Parliament passed 'the most dangerous bill in Aotearoa's parliamentary history', and it calls whānau to 'flood the system' and 'let them choke on the very democracy they're trying to dismantle'. It trusts institutions it would build for Māori and distrusts the ones that exist. Near the centre, with low confidence because the dimension's poles map poorly onto an Indigenous sovereignty movement.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy",
+              "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy",
+              "date": "2026-09-01",
+              "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html",
+              "quote": "make Waitangi Tribunal recommendations binding on the Crown"
+            },
+            {
+              "title": "Te Pāti Māori: Democracy Denied, on the Regulatory Standards Bill",
+              "url": "https://www.maoriparty.org.nz/democracy_denied_te_p_ti_m_ori_slam_govt_for_silencing_m_ori_and_tangata_tiriti_on_the_regulatory_standards_bill",
+              "date": "2025",
+              "archived": "research/nz/maori/regulatory_standards_bill.html",
+              "quote": "Flood the system. Overwhelm it with our voices."
+            },
+            {
+              "title": "Principles of the Treaty of Waitangi Bill, second reading (Hansard, 10 April 2025)",
+              "url": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/",
+              "date": "2025-04-10",
+              "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html"
+            }
+          ]
+        },
+        "cosmopolitan": {
+          "score": 55,
+          "confidence": "medium",
+          "rationale": "The party stands 'unequivocally with the people of Palestine', whose 'struggle for freedom is our struggle', demands recognition without preconditions, would implement the UN Declaration on the Rights of Indigenous Peoples within 100 days, and grounds foreign policy in 'Pacific and Indigenous relationships' and global human rights. Domestically it makes Te Tiriti partnership the constitutional foundation. Its solidarity runs to Indigenous and colonised peoples specifically, and its programme is silent on immigration, so the cosmopolitan lean is clear but framed through mana motuhake rather than open borders.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Government's refusal to recognise Palestine entrenches colonial double standards",
+              "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_government_s_refusal_to_recognise_palestine_entrenches_colonial_double_standards",
+              "date": "2025",
+              "archived": "research/nz/maori/palestine_recognition.html",
+              "quote": "Their struggle for freedom is our struggle. Their liberation is tied to our own."
+            },
+            {
+              "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy",
+              "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy",
+              "date": "2026-09-01",
+              "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html",
+              "quote": "restore and resource a national action plan to implement the United Nations Declaration on the Rights of Indigenous Peoples within the first 100 days"
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Military neutrality",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Reset foreign policy to be independent, grounded in Māori values, and centred on Pacific and Indigenous relationships."
+            }
+          ]
+        },
+        "environment": {
+          "score": 80,
+          "confidence": "high",
+          "rationale": "Its climate policy would 'protect whenua and moana from extractive industries (including banning seabed mining)', it sponsors a member's bill for a permanent seabed mining ban, rejects genetically engineered foods, would assert Māori authority over freshwater and 'stop decisions being made without Māori consent', and describes whenua, awa and moana as 'not resources to be exploited'. Its MPs opposed fast-track seabed mining approvals and criticised delays to Waikato River protections. Protection of the natural world is treated as an inherited obligation, with less emphasis on emissions targets than the Greens, which keeps it below their score.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Policy, Climate",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Protect whenua and moana from extractive industries (including banning seabed mining)."
+            },
+            {
+              "title": "Te Pāti Māori: Permanently ban seabed mining in New Zealand waters",
+              "url": "https://www.maoriparty.org.nz/permanently_ban_seabed_mining",
+              "date": "2026",
+              "archived": "research/nz/maori/permanently_ban_seabed_mining.html"
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Freshwater",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Stop decisions being made without Māori consent."
+            }
+          ]
+        },
+        "diplomacy": {
+          "score": 85,
+          "confidence": "high",
+          "rationale": "Te Pāti Māori would 'declare Aotearoa a militarily neutral nation', 'review and withdraw from military alignments that undermine sovereignty', refocus the Defence Force on protection, disaster response and Pacific support, and 'hold war criminals to account'; it opposes the government's $13 billion defence increase, contrasting it with unpaid pay equity claims. Neutrality is described as 'mana motuhake in action'. Diplomacy and disarmament are unambiguous.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Policy, Military neutrality",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Declare Aotearoa a militarily neutral nation."
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Military neutrality",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Review and withdraw from military alignments that undermine sovereignty."
+            }
+          ]
+        },
+        "local": {
+          "score": 75,
+          "confidence": "high",
+          "rationale": "Devolution of power is the party's founding purpose, mana motuhake: 'power must return to where it belongs: with tangata whenua, hapū, iwi, whānau, and our people'. It would build Māori-led authorities for health, education, justice and disability services, restore whānau authority over children, devolve the constitutional conversation to iwi and hapū through a $220 million Mātike Mai Fund, and progress 'land back'. The decentralisation is to hapū and iwi rather than to councils, and it would also create national bodies such as a Te Tiriti Commission, but the direction away from central Crown control is strong and consistent.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Policy, Mana Motuhake",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Mana motuhake means power must return to where it belongs: with tangata whenua, hapū, iwi, whānau, and our people."
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Health and Education",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Re-build and strengthen Māori-led health authority and solutions."
+            },
+            {
+              "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy",
+              "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy",
+              "date": "2026-09-01",
+              "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html",
+              "quote": "establish a $220 million Mātike Mai Fund over four years to independently resource Māori-led constitutional transformation"
+            }
+          ]
+        },
+        "change": {
+          "score": 90,
+          "confidence": "high",
+          "rationale": "The party's stated aim is transformation, not reform: 'Te Tiriti-based constitutional transformation' with 2040 as the target date, binding Waitangi Tribunal recommendations, a new Te Tiriti Commission, Māori-led authorities across the social sector, military neutrality and withdrawal from alliances, and an end to 'the machinery that criminalises poverty'. It says that without constitutional transformation 'every gain our people make can be undone by the next government'. Fundamental, system-level change is the whole point.",
+          "sources": [
+            {
+              "title": "Te Pāti Māori: Policy, Mana Motuhake",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Without constitutional transformation, every gain our people make can be undone by the next government."
+            },
+            {
+              "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy",
+              "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy",
+              "date": "2026-09-01",
+              "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html",
+              "quote": "a major constitutional reform package that will make Crown obligations arising from Te Tiriti legally enforceable"
             }
           ]
         }

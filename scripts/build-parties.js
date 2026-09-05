@@ -36,7 +36,7 @@ function validate(party, file) {
         if (!s.title) err(`${id}: source ${i} has no title`);
         if (!s.url && !s.archived) err(`${id}: source ${i} needs a url or an archived path`);
         if (s.archived && !fs.existsSync(path.join(ROOT, s.archived))) err(`${id}: archived file not found: ${s.archived}`);
-        if (s.date && !/^\d{4}-\d{2}(-\d{2})?$/.test(s.date)) err(`${id}: source ${i} date must be YYYY-MM or YYYY-MM-DD`);
+        if (s.date && !/^\d{4}(-\d{2}(-\d{2})?)?$/.test(s.date)) err(`${id}: source ${i} date must be YYYY, YYYY-MM or YYYY-MM-DD`);
       });
     }
   });

@@ -1,0 +1,113 @@
+{
+  "id": "maori",
+  "name": "Te Pāti Māori",
+  "short": "Te Pāti Māori",
+  "colour": "#B2001A",
+  "website": "https://www.maoriparty.org.nz/",
+  "assessedAt": "2026-09-05",
+  "rubricVersion": "1.0",
+  "status": "draft",
+  "inParliament": true,
+  "notes": "Opposition party 2023-2026, contesting the seven Māori electorates and campaigning for the candidate vote only in 2026. Scored from its 2026 policy page (17 policy areas), the Te Tiriti Entrenchment Policy launched 1 September 2026, its statements on Palestine and the Regulatory Standards Bill, and its recorded party votes. Its full tax policy is hosted on Google Drive and was not archived; the tax summary on its site is used. The official site is maoriparty.org.nz; maoriparty.org is an unrelated squatted domain.",
+  "dimensions": {
+    "solidarity": {
+      "score": 85,
+      "confidence": "high",
+      "rationale": "The party frames the economy as 'rigged' to protect the wealthy while whānau go without, and would 'make sure the wealthiest pay their fair share' to fund housing, health, education and whānau support, 'lift incomes so people can live with dignity', 'strengthen welfare so whānau aren't punished for being poor', build public and affordable homes, stop speculation and land-banking, and its tax calculator promises a kai credit and lower PAYE for low earners. It opposed the 2025 pay equity changes as 'repression' of working women. Collective provision and redistribution are core purpose; the detail of the tax settings is not published on the site, which is the only reason it sits below the top anchor.",
+      "sources": [
+        { "title": "Te Pāti Māori: Policy, Tax", "url": "https://www.maoriparty.org.nz/tax", "date": "2026", "archived": "research/nz/maori/tax_policy_full.html", "quote": "A country that protects the wealthy while whānau go without is not fair, it is rigged." },
+        { "title": "Te Pāti Māori: Policy, Cost of living", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Strengthen welfare so whānau aren't punished for being poor." },
+        { "title": "Te Pāti Māori: Policy, Housing", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Stop speculation and land-banking (including action on vacant properties)." },
+        { "title": "Te Pāti Māori: Govt's Pay Bill entrenches discrimination against women", "url": "https://www.maoriparty.org.nz/_govt_s_pay_bill_entrenches_discrimination_against_women_kemp", "date": "2025", "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html" }
+      ]
+    },
+    "regulation": {
+      "score": 60,
+      "confidence": "medium",
+      "rationale": "Te Pāti Māori would 'break corporate control' of food by supporting Māori-owned supermarkets and protecting local sellers, reject genetically engineered foods, act against vacant properties and land-banking, assert Māori authority over freshwater so 'decisions are not made without Māori consent', and build Māori-led institutions and funds. It voted against the Regulatory Standards Act and called it 'one of the most unconstitutional bills ever put before this House'. The programme is interventionist, though its instrument is Māori-led ownership and authority rather than central regulation, and it publishes little on general business regulation.",
+      "sources": [
+        { "title": "Te Pāti Māori: Policy, Kai Sovereignty", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Break corporate control by supporting Māori-owned supermarkets and protecting local kai sellers." },
+        { "title": "Te Pāti Māori: Democracy Denied, on the Regulatory Standards Bill", "url": "https://www.maoriparty.org.nz/democracy_denied_te_p_ti_m_ori_slam_govt_for_silencing_m_ori_and_tangata_tiriti_on_the_regulatory_standards_bill", "date": "2025", "archived": "research/nz/maori/regulatory_standards_bill.html" },
+        { "title": "Hansard: Regulatory Standards Bill, third reading, 13 November 2025", "url": "https://community.scoop.co.nz/2025/11/regulatory-standards-bill-third-reading/", "date": "2025-11-13", "archived": "research/nz/shared/hansard-regulatory-standards-third-reading-scoop.html" }
+      ]
+    },
+    "liberty": {
+      "score": 45,
+      "confidence": "medium",
+      "rationale": "Its justice policy would 'reform laws that criminalise poverty and survival', 'move away from mass imprisonment', end the removal of Māori children by the state and restore whānau authority, and it voted against the Electoral Amendment Act that ended same-day enrolment and disenfranchised prisoners. Its emphasis is on freedom from state coercion for Māori communities rather than on civil liberties in general, and it has not published positions on speech, privacy or policing powers, so a clear but bounded liberty lean.",
+      "sources": [
+        { "title": "Te Pāti Māori: Policy, Justice", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Reform laws that criminalise poverty and survival. Move away from mass imprisonment and toward long-term transformation." },
+        { "title": "Te Pāti Māori: Policy, Mokopuna Māori", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "End the pipeline that removes Māori children from their people." },
+        { "title": "Hansard: Electoral Amendment Bill, third reading, 16 December 2025", "url": "https://www.scoop.co.nz/stories/PA2512/S00185/electoral-amendment-bill-third-reading.htm", "date": "2025-12-16", "archived": "research/nz/shared/hansard-electoral-amendment-third-reading-scoop.html" }
+      ]
+    },
+    "tradition": {
+      "score": -40,
+      "confidence": "medium",
+      "rationale": "This dimension is awkward for Te Pāti Māori, which is at once a party of tradition and a party of change. It seeks to revive and protect tikanga, te reo, whakapapa and kaupapa tuku iho as the foundation of public life, which is preservation of an inherited moral order. But the order it seeks to preserve is not the established one: it demands constitutional transformation by 2040, protects the 'wellbeing, safety, and dignity of takatāpui Māori' with inclusive public services, opposed the government's pay-equity changes, and frames the current system as one 'built to exclude us'. Judged against the dimension's poles, preserving the established national settlement versus changing exclusionary traditions, it lands clearly on change, with the caveat that its own traditions are what it would replace them with.",
+      "sources": [
+        { "title": "Te Pāti Māori: Policy, Takatāpui", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Protect the wellbeing, safety, and dignity of takatāpui Māori." },
+        { "title": "Te Pāti Māori: About us, our kaupapa", "url": "https://www.maoriparty.org.nz/about-us", "date": "2026", "archived": "research/nz/maori/about-us.html", "quote": "our kaupapa - which express the values handed down to us by our ancestors guide us in all that we do" },
+        { "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy", "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy", "date": "2026-09-01", "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html", "quote": "set 2040 as the target for constitutional transformation in Aotearoa" }
+      ]
+    },
+    "institutions": {
+      "score": -10,
+      "confidence": "low",
+      "rationale": "Te Pāti Māori would create new binding institutions, an independent Te Tiriti Commission with compliance orders and a Waitangi Tribunal whose recommendations bind the Crown, and it voted against the Treaty Principles Bill, the Regulatory Standards Act and the Electoral Amendment Act. Yet its posture towards the existing order is insurgent: the system is 'rigged' and 'built to exclude us', Parliament passed 'the most dangerous bill in Aotearoa's parliamentary history', and it calls whānau to 'flood the system' and 'let them choke on the very democracy they're trying to dismantle'. It trusts institutions it would build for Māori and distrusts the ones that exist. Near the centre, with low confidence because the dimension's poles map poorly onto an Indigenous sovereignty movement.",
+      "sources": [
+        { "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy", "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy", "date": "2026-09-01", "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html", "quote": "make Waitangi Tribunal recommendations binding on the Crown" },
+        { "title": "Te Pāti Māori: Democracy Denied, on the Regulatory Standards Bill", "url": "https://www.maoriparty.org.nz/democracy_denied_te_p_ti_m_ori_slam_govt_for_silencing_m_ori_and_tangata_tiriti_on_the_regulatory_standards_bill", "date": "2025", "archived": "research/nz/maori/regulatory_standards_bill.html", "quote": "Flood the system. Overwhelm it with our voices." },
+        { "title": "Principles of the Treaty of Waitangi Bill, second reading (Hansard, 10 April 2025)", "url": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/", "date": "2025-04-10", "archived": "research/nz/shared/hansard-treaty-principles-second-reading-scoop.html" }
+      ]
+    },
+    "cosmopolitan": {
+      "score": 55,
+      "confidence": "medium",
+      "rationale": "The party stands 'unequivocally with the people of Palestine', whose 'struggle for freedom is our struggle', demands recognition without preconditions, would implement the UN Declaration on the Rights of Indigenous Peoples within 100 days, and grounds foreign policy in 'Pacific and Indigenous relationships' and global human rights. Domestically it makes Te Tiriti partnership the constitutional foundation. Its solidarity runs to Indigenous and colonised peoples specifically, and its programme is silent on immigration, so the cosmopolitan lean is clear but framed through mana motuhake rather than open borders.",
+      "sources": [
+        { "title": "Te Pāti Māori: Government's refusal to recognise Palestine entrenches colonial double standards", "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_government_s_refusal_to_recognise_palestine_entrenches_colonial_double_standards", "date": "2025", "archived": "research/nz/maori/palestine_recognition.html", "quote": "Their struggle for freedom is our struggle. Their liberation is tied to our own." },
+        { "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy", "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy", "date": "2026-09-01", "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html", "quote": "restore and resource a national action plan to implement the United Nations Declaration on the Rights of Indigenous Peoples within the first 100 days" },
+        { "title": "Te Pāti Māori: Policy, Military neutrality", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Reset foreign policy to be independent, grounded in Māori values, and centred on Pacific and Indigenous relationships." }
+      ]
+    },
+    "environment": {
+      "score": 80,
+      "confidence": "high",
+      "rationale": "Its climate policy would 'protect whenua and moana from extractive industries (including banning seabed mining)', it sponsors a member's bill for a permanent seabed mining ban, rejects genetically engineered foods, would assert Māori authority over freshwater and 'stop decisions being made without Māori consent', and describes whenua, awa and moana as 'not resources to be exploited'. Its MPs opposed fast-track seabed mining approvals and criticised delays to Waikato River protections. Protection of the natural world is treated as an inherited obligation, with less emphasis on emissions targets than the Greens, which keeps it below their score.",
+      "sources": [
+        { "title": "Te Pāti Māori: Policy, Climate", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Protect whenua and moana from extractive industries (including banning seabed mining)." },
+        { "title": "Te Pāti Māori: Permanently ban seabed mining in New Zealand waters", "url": "https://www.maoriparty.org.nz/permanently_ban_seabed_mining", "date": "2026", "archived": "research/nz/maori/permanently_ban_seabed_mining.html" },
+        { "title": "Te Pāti Māori: Policy, Freshwater", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Stop decisions being made without Māori consent." }
+      ]
+    },
+    "diplomacy": {
+      "score": 85,
+      "confidence": "high",
+      "rationale": "Te Pāti Māori would 'declare Aotearoa a militarily neutral nation', 'review and withdraw from military alignments that undermine sovereignty', refocus the Defence Force on protection, disaster response and Pacific support, and 'hold war criminals to account'; it opposes the government's $13 billion defence increase, contrasting it with unpaid pay equity claims. Neutrality is described as 'mana motuhake in action'. Diplomacy and disarmament are unambiguous.",
+      "sources": [
+        { "title": "Te Pāti Māori: Policy, Military neutrality", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Declare Aotearoa a militarily neutral nation." },
+        { "title": "Te Pāti Māori: Policy, Military neutrality", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Review and withdraw from military alignments that undermine sovereignty." }
+      ]
+    },
+    "local": {
+      "score": 75,
+      "confidence": "high",
+      "rationale": "Devolution of power is the party's founding purpose, mana motuhake: 'power must return to where it belongs: with tangata whenua, hapū, iwi, whānau, and our people'. It would build Māori-led authorities for health, education, justice and disability services, restore whānau authority over children, devolve the constitutional conversation to iwi and hapū through a $220 million Mātike Mai Fund, and progress 'land back'. The decentralisation is to hapū and iwi rather than to councils, and it would also create national bodies such as a Te Tiriti Commission, but the direction away from central Crown control is strong and consistent.",
+      "sources": [
+        { "title": "Te Pāti Māori: Policy, Mana Motuhake", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Mana motuhake means power must return to where it belongs: with tangata whenua, hapū, iwi, whānau, and our people." },
+        { "title": "Te Pāti Māori: Policy, Health and Education", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Re-build and strengthen Māori-led health authority and solutions." },
+        { "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy", "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy", "date": "2026-09-01", "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html", "quote": "establish a $220 million Mātike Mai Fund over four years to independently resource Māori-led constitutional transformation" }
+      ]
+    },
+    "change": {
+      "score": 90,
+      "confidence": "high",
+      "rationale": "The party's stated aim is transformation, not reform: 'Te Tiriti-based constitutional transformation' with 2040 as the target date, binding Waitangi Tribunal recommendations, a new Te Tiriti Commission, Māori-led authorities across the social sector, military neutrality and withdrawal from alliances, and an end to 'the machinery that criminalises poverty'. It says that without constitutional transformation 'every gain our people make can be undone by the next government'. Fundamental, system-level change is the whole point.",
+      "sources": [
+        { "title": "Te Pāti Māori: Policy, Mana Motuhake", "url": "https://www.maoriparty.org.nz/policy", "date": "2026", "archived": "research/nz/maori/policy.html", "quote": "Without constitutional transformation, every gain our people make can be undone by the next government." },
+        { "title": "Te Pāti Māori: Launches Te Tiriti Entrenchment Policy", "url": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy", "date": "2026-09-01", "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html", "quote": "a major constitutional reform package that will make Crown obligations arising from Te Tiriti legally enforceable" }
+      ]
+    }
+  }
+}
