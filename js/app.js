@@ -180,10 +180,16 @@
         });
         choices.appendChild(b);
       });
+      var scored = Scoring.scoreDimension(d, ITEMS, state.answers);
+      var body = el("div", { class: "dim-detail" });
+      body.appendChild(el("p", { html: "<b>" + d.poles[0] + "</b>: " + cap(d.describe[0]) + "." }));
+      body.appendChild(el("p", { html: "<b>" + d.poles[1] + "</b>: " + cap(d.describe[1]) + "." }));
+      if (scored) body.appendChild(el("p", { class: "you-lean", text: "Your answers: " + fmtLean(scored.score, d) + (scored.strength === "balanced" ? "" : " (" + scored.strength + ")") + (scored.consistency === "mixed" ? ", mixed" : "") + "." }));
+      var more = el("details", { class: "dim-more" }, [el("summary", { text: "What this means" }), body]);
       list.appendChild(el("div", { class: "importance-row", "data-dim": d.id }, [
         el("span", { class: "dim-name", text: d.poles[0] + " vs. " + d.poles[1] }),
         choices,
-        el("span", { class: "dim-blurb", text: d.blurb })
+        el("div", { class: "dim-under" }, [el("span", { class: "dim-blurb", text: d.blurb }), more])
       ]));
     });
     $("other-concerns").value = state.otherConcerns || "";
