@@ -98,8 +98,8 @@ var DIMENSIONS = [
     id: "animals",
     poles: ["Animal welfare", "Human use"],
     describe: [
-      "animals' own interests limiting how we farm, hunt, test and use them, even at economic cost",
-      "animals as resources managed for human benefit, with welfare rules kept practical for producers"
+      "giving animals' own interests real weight, so that how we farm, hunt, test and use them is limited even when that costs money",
+      "treating animals as resources for human benefit, with welfare rules kept practical for farmers and businesses"
     ],
     blurb: "Animals' interests vs. animals as resources"
   },
