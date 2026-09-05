@@ -180,7 +180,7 @@
         });
         choices.appendChild(b);
       });
-      list.appendChild(el("div", { class: "importance-row" }, [
+      list.appendChild(el("div", { class: "importance-row", "data-dim": d.id }, [
         el("span", { class: "dim-name", text: d.poles[0] + " vs. " + d.poles[1] }),
         choices,
         el("span", { class: "dim-blurb", text: d.blurb })
@@ -482,16 +482,12 @@
   function importancePill(d, s) {
     var level = s.importance || "normal";
     var pill = el("button", { type: "button", class: "badge importance-" + level,
-      title: "How much this dimension counts in matching. Click to change.", text: IMPORTANCE_LABEL[level] });
+      title: "How much this dimension counts in matching. Click to change it.", text: IMPORTANCE_LABEL[level] });
     pill.addEventListener("click", function (e) {
       e.preventDefault(); e.stopPropagation();
-      var order = ["low", "normal", "high"];
-      state.importance[d.id] = order[(order.indexOf(level) + 1) % order.length];
-      state.importanceAsked = true;
-      save();
-      var open = [].map.call(document.querySelectorAll("#chart .row-dim[open]"), function (r) { return r.dataset.dim; });
-      finish();
-      open.forEach(function (id) { var r = document.querySelector('#chart .row-dim[data-dim="' + id + '"]'); if (r) r.open = true; });
+      showImportance();
+      var row = document.querySelector('.importance-row[data-dim="' + d.id + '"]');
+      if (row) { row.scrollIntoView({ block: "center" }); row.classList.add("highlight"); var b = row.querySelector('button[aria-checked="true"]'); if (b) b.focus(); }
     });
     return pill;
   }
