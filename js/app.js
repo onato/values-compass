@@ -172,9 +172,10 @@
     DIMENSIONS.forEach(function (d) {
       var ul = el("ul");
       ITEMS.filter(function (it) { return it.dim === d.id; }).forEach(function (it) {
+        var pole = it.key > 0 ? d.poles[0] : d.poles[1];
         ul.appendChild(el("li", null, [
-          el("span", { class: "k", text: it.key > 0 ? "+" : "−" }),
-          el("span", { text: it.text })
+          el("span", { text: it.text }),
+          el("span", { class: "k", text: "agreeing counts towards " + pole + (it.key > 0 ? "" : " (reverse-keyed)") })
         ]));
       });
       groups.appendChild(el("div", { class: "item-group" }, [
@@ -183,6 +184,46 @@
     });
   }
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+  // Two lines in the methodology are computed from the party and electorate
+  // data, which is rendered with the results. Either can now run before or
+  // after the prose fragment arrives, so the text is cached and written
+  // whenever both halves exist.
+  var methodStats = { parties: "", electorates: "" };
+  function renderMethodStats() {
+    Object.keys(methodStats).forEach(function (k) {
+      var node = $("method-" + k);
+      if (node && methodStats[k]) node.textContent = methodStats[k];
+    });
+  }
+
+  // The methodology prose lives in its own file so a build step can read it as
+  // the single source for the narration, and so CI can tell when it changed.
+  // Everything renderMethod fills in is inside that fragment, so it can only run
+  // once the fetch has landed.
+  function loadMethod() {
+    var host = $("method-prose");
+    if (!host) return;
+    fetch(host.getAttribute("data-src"), { cache: "no-cache" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(function (html) {
+        host.innerHTML = html;
+        renderMethod();
+        renderMethodStats();
+      })
+      .catch(function (err) {
+        // Opened from file://, fetch of a local file is blocked. Say so rather
+        // than leaving "Loading…" on screen forever.
+        var note = $("method-loading");
+        if (note) {
+          note.textContent = "The methodology could not be loaded (" + err.message +
+            "). Serve the folder over http rather than opening the file directly.";
+        }
+      });
+  }
 
   // ---------- questionnaire ----------
   function renderQuestion() {
@@ -436,8 +477,9 @@
     } else {
       $("party-discriminators").textContent = "Once more parties are scored, this line will say which dimensions actually separate them.";
     }
-    $("method-parties").textContent = "Currently scored: " + parties.map(function (p) { return p.short; }).join(", ") +
+    methodStats.parties = "Currently scored: " + parties.map(function (p) { return p.short; }).join(", ") +
       ". Latest assessment " + meta.assessedAt + ", rubric v" + meta.rubricVersion + ".";
+    renderMethodStats();
   }
 
   // ---------- electorates ----------
@@ -463,7 +505,8 @@
       });
     }
     renderCandidates(profile, sel.value);
-    $("method-electorates").textContent = "Electorates researched so far: " + ELECTORATES_NZ.electorates.map(function (e) { return e.name + " (" + e.candidates.length + " candidates, assessed " + e.assessedAt + ")"; }).join("; ") + ".";
+    methodStats.electorates = "Electorates researched so far: " + ELECTORATES_NZ.electorates.map(function (e) { return e.name + " (" + e.candidates.length + " candidates, assessed " + e.assessedAt + ")"; }).join("; ") + ".";
+    renderMethodStats();
   }
   function selectedElectorate() {
     if (!electoratesAvailable()) return null;
@@ -765,7 +808,7 @@
   });
 
   renderIntro();
-  renderMethod();
+  loadMethod();
   var linkCode = location.hash.indexOf("#r=") === 0 ? decodeURIComponent(location.hash.slice(3)) : null;
   if (!(linkCode && openCode(linkCode, "link"))) show("screen-intro");
 })();
