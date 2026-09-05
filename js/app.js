@@ -641,6 +641,7 @@
     show("screen-quiz"); renderQuestion();
   }
   $("btn-sample").addEventListener("click", showSample);
+  $("btn-sample-2").addEventListener("click", showSample);
   $("btn-sample-start").addEventListener("click", startQuestionnaire);
   $("btn-start").addEventListener("click", function () {
     if (answeredCount() > 0 && !confirm("Start over and discard your current answers?")) return;
