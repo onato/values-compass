@@ -1,0 +1,5 @@
+# Personal answer data. The Pages workflow publishes the whole repo root, so
+# anything committed here is served publicly.
+answers.json
+results.json
+values-profile-*.json
