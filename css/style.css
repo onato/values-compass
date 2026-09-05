@@ -336,3 +336,24 @@ button.primary.large { padding: 14px 24px; font-size: 1.05rem; }
 .sources-table td small, .archive-list small { color: var(--text-3); }
 .archive-list { padding-left: 18px; margin: 0 0 12px; display: grid; gap: 8px; font-size: 0.92rem; }
 .archive-list .badge { margin-left: 6px; }
+
+/* Narration: the methodology read aloud, highlighting the current sentence. */
+.narration { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 20px 0 4px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.narration button { display: inline-flex; align-items: center; gap: 8px; }
+/* A play triangle that becomes a pause bar pair while the audio runs. */
+.narrate-icon { width: 0; height: 0; border-style: solid; border-width: 6px 0 6px 10px; border-color: transparent transparent transparent currentColor; }
+.narration.playing .narrate-icon { width: 8px; height: 12px; border: none; background: linear-gradient(currentColor, currentColor) left/3px 100% no-repeat, linear-gradient(currentColor, currentColor) right/3px 100% no-repeat; }
+.narrate-time { color: var(--text-3); font-variant-numeric: tabular-nums; font-size: 0.85rem; }
+#btn-narrate-follow[aria-pressed="false"] { color: var(--text-3); }
+
+/* Sentences are wrapped by scripts/narrate.py. Only the clickable affordance
+   and the highlight are styled; the spans are otherwise invisible. */
+.narratable { cursor: pointer; border-radius: 3px; transition: background-color 120ms ease; }
+.narratable:hover { background: var(--mid); }
+.narratable.speaking { background: color-mix(in srgb, var(--accent) 18%, transparent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 18%, transparent); }
+@supports not (background: color-mix(in srgb, red 50%, transparent)) {
+  .narratable.speaking { background: var(--mid); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .narratable { transition: none; }
+}

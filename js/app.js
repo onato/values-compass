@@ -185,6 +185,118 @@
   }
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
+  // ---------- narration ----------
+  // scripts/narrate.py writes audio/methodology.mp3 and a timing sidecar in the
+  // same pass, and wraps every narrated sentence in the source fragment as
+  // <span data-s="N">. Highlighting is therefore a lookup by index, with no
+  // alignment guesswork: entry N of the timing file is span N on the page.
+  //
+  // The player only appears if both the timing file and the spans are present,
+  // so a checkout whose audio has not been built yet simply shows the prose.
+  function setupNarration() {
+    var box = $("narration"), audio = $("narrate-audio");
+    if (!box || !audio) return;
+    var spans = [].slice.call(document.querySelectorAll("#method-prose [data-s]"));
+    if (!spans.length) return;
+
+    fetch("audio/methodology.json", { cache: "no-cache" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (timing) {
+        if (!timing || !timing.sentences || !timing.sentences.length) return;
+        // A stale sidecar (prose edited, audio not rebuilt) would highlight the
+        // wrong sentences, which is worse than not offering the player at all.
+        if (timing.sentences.length !== spans.length) return;
+        wireNarration(box, audio, spans, timing);
+      })
+      .catch(function () { /* no audio built: leave the player hidden */ });
+  }
+
+  function wireNarration(box, audio, spans, timing) {
+    var starts = timing.sentences.map(function (s) { return s.t; });
+    var btn = $("btn-narrate"), label = $("narrate-label");
+    var follow = $("btn-narrate-follow"), clock = $("narrate-time");
+    var current = -1, following = true;
+
+    box.hidden = false;
+    clock.textContent = clockText(0, timing.duration);
+
+    // Binary search rather than a scan: timeupdate fires ~4x a second and the
+    // list is already sorted by start time.
+    function indexAt(t) {
+      var lo = 0, hi = starts.length - 1, best = 0;
+      while (lo <= hi) {
+        var mid = (lo + hi) >> 1;
+        if (starts[mid] <= t) { best = mid; lo = mid + 1; } else { hi = mid - 1; }
+      }
+      return best;
+    }
+
+    function highlight(i) {
+      if (i === current) return;
+      if (spans[current]) spans[current].classList.remove("speaking");
+      current = i;
+      var node = spans[i];
+      if (!node) return;
+      node.classList.add("speaking");
+      if (following) {
+        var box2 = node.getBoundingClientRect();
+        // Only scroll when the sentence has drifted out of the comfortable
+        // middle of the viewport, so the page is not jerking on every sentence.
+        if (box2.top < 80 || box2.bottom > window.innerHeight - 80) {
+          node.scrollIntoView({ block: "center", behavior: "smooth" });
+        }
+      }
+    }
+
+    audio.addEventListener("timeupdate", function () {
+      highlight(indexAt(audio.currentTime));
+      clock.textContent = clockText(audio.currentTime, timing.duration);
+    });
+    audio.addEventListener("play", function () {
+      btn.setAttribute("aria-pressed", "true");
+      box.classList.add("playing");
+      label.textContent = "Pause";
+    });
+    audio.addEventListener("pause", function () {
+      btn.setAttribute("aria-pressed", "false");
+      box.classList.remove("playing");
+      label.textContent = "Resume";
+    });
+    audio.addEventListener("ended", function () {
+      label.textContent = "Listen to the methodology";
+      if (spans[current]) spans[current].classList.remove("speaking");
+      current = -1;
+    });
+
+    btn.addEventListener("click", function () {
+      if (audio.paused) { audio.play().catch(function () {}); } else { audio.pause(); }
+    });
+
+    follow.addEventListener("click", function () {
+      following = !following;
+      follow.setAttribute("aria-pressed", following ? "true" : "false");
+      follow.textContent = following ? "Follow along" : "Don't follow";
+    });
+
+    // Click any sentence to hear it — the same mapping used in reverse.
+    spans.forEach(function (span, i) {
+      span.classList.add("narratable");
+      span.addEventListener("click", function () {
+        audio.currentTime = starts[i];
+        highlight(i);
+        if (audio.paused) audio.play().catch(function () {});
+      });
+    });
+  }
+
+  function clockText(at, total) {
+    return mmss(at) + " / " + mmss(total);
+  }
+  function mmss(s) {
+    s = Math.max(0, Math.floor(s || 0));
+    return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2);
+  }
+
   // Two lines in the methodology are computed from the party and electorate
   // data, which is rendered with the results. Either can now run before or
   // after the prose fragment arrives, so the text is cached and written
@@ -213,6 +325,7 @@
         host.innerHTML = html;
         renderMethod();
         renderMethodStats();
+        setupNarration();
       })
       .catch(function (err) {
         // Opened from file://, fetch of a local file is blocked. Say so rather

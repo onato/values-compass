@@ -28,8 +28,10 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
+import os
 import re
 import subprocess
 import sys
@@ -52,7 +54,11 @@ HEADING_PAUSE = 0.9
 PARAGRAPH_PAUSE = 0.6
 SENTENCE_PAUSE = 0.15
 
-PIPER_VOICE = "en_GB-alba-medium"
+PIPER_VOICE = os.environ.get("PIPER_VOICE", "en_GB-alba-medium")
+# The voice is a 63 MB ONNX model. It is cached outside the repo so it never
+# risks being committed, and CI restores it from the actions cache.
+VOICE_DIR = Path(os.environ.get(
+    "PIPER_VOICE_DIR", Path.home() / ".cache" / "piper-voices"))
 
 # Everything after this heading is reference material — the twelve dimension
 # definitions and all sixty statements — which is generated into the page by
@@ -175,6 +181,18 @@ def speakable(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def spoken_hash(sentences: list[dict]) -> str:
+    """Fingerprint of the narration input: the spoken text and the voice.
+
+    Deliberately not a hash of methodology.html. Reformatting the markup,
+    fixing a link or editing the statements appendix changes the file but not
+    a word of what is read aloud, and should not trigger a rebuild. Changing
+    the voice should.
+    """
+    payload = "\n".join(s["spoken"] for s in sentences) + f"\n{PIPER_VOICE}\n"
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+
+
 def synthesize_piper(sentences: list[str]) -> tuple[list[bytes], int]:
     """One PCM buffer per sentence, plus the rate Piper produced them at.
 
@@ -204,7 +222,7 @@ for pcm in out:
     w.write(pcm)
 '''
     result = subprocess.run(
-        [sys.executable, "-c", helper, PIPER_VOICE],
+        [sys.executable, "-c", helper, str(VOICE_DIR / PIPER_VOICE)],
         input=json.dumps(sentences).encode(), capture_output=True,
     )
     if result.returncode != 0 or not result.stdout:
@@ -257,6 +275,18 @@ def check_tools(engine_needed: bool) -> None:
             raise SystemExit(f"{tool} is required but not available")
 
 
+def ensure_voice() -> None:
+    """Fetch the ONNX voice into the cache if it is not already there."""
+    if (VOICE_DIR / f"{PIPER_VOICE}.onnx").exists():
+        return
+    VOICE_DIR.mkdir(parents=True, exist_ok=True)
+    print(f"downloading piper voice {PIPER_VOICE} into {VOICE_DIR}…")
+    subprocess.run(
+        [sys.executable, "-m", "piper.download_voices", PIPER_VOICE],
+        cwd=VOICE_DIR, check=True,
+    )
+
+
 def wrap_source(source: str, blocks: list[dict], sentences: list[dict]) -> str:
     """Splice <span data-s="N"> around every sentence in the source file.
 
@@ -297,6 +327,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true",
                     help="print what would be spoken, make no audio")
+    ap.add_argument("--check", action="store_true",
+                    help="exit 1 if the built audio does not match the prose")
     args = ap.parse_args()
 
     source = SOURCE.read_text(encoding="utf-8")
@@ -320,6 +352,21 @@ def main() -> int:
                 "tag": block["tag"], "text": text, "spoken": speakable(text),
             })
 
+    if args.check:
+        want = spoken_hash(sentences)
+        if not MP3.exists() or not TIMING.exists():
+            print("narration has not been built")
+            return 1
+        try:
+            have = json.loads(TIMING.read_text(encoding="utf-8")).get("hash")
+        except (OSError, ValueError):
+            have = None
+        if have != want:
+            print(f"narration is stale (built {have}, prose is {want})")
+            return 1
+        print(f"narration is up to date ({want})")
+        return 0
+
     if args.dry_run:
         for s in sentences:
             print(f'{s["index"]:>4}  {s["tag"]:<3}  {s["spoken"]}')
@@ -329,6 +376,7 @@ def main() -> int:
         return 0
 
     check_tools(True)
+    ensure_voice()
     chunks, rate = synthesize_piper([s["spoken"] for s in sentences])
     if len(chunks) != len(sentences):
         raise SystemExit(f"piper returned {len(chunks)} chunks for {len(sentences)} sentences")
@@ -359,6 +407,10 @@ def main() -> int:
     TIMING.write_text(json.dumps({
         "duration": duration,
         "voice": PIPER_VOICE,
+        # Fingerprint of exactly what was spoken. Git checkouts do not preserve
+        # mtimes, so freshness in CI is decided by comparing this with the hash
+        # of the current prose (see --check), never by file timestamps.
+        "hash": spoken_hash(sentences),
         "sentences": timing,
     }, indent=1) + "\n", encoding="utf-8")
 

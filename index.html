@@ -61,6 +61,16 @@
         <ol id="dim-list"></ol>
       </details>
 
+      <div class="narration" id="narration" hidden>
+        <button type="button" id="btn-narrate" class="secondary" aria-pressed="false">
+          <span class="narrate-icon" aria-hidden="true"></span>
+          <span id="narrate-label">Listen to the methodology</span>
+        </button>
+        <span class="narrate-time" id="narrate-time"></span>
+        <button type="button" id="btn-narrate-follow" class="link" aria-pressed="true"
+                title="Scroll the page to keep the sentence being read in view">Follow along</button>
+        <audio id="narrate-audio" preload="none" src="audio/methodology.mp3"></audio>
+      </div>
       <div class="method prose" id="method-prose" data-src="methodology.html">
         <p class="help" id="method-loading">Loading the methodology…</p>
       </div>
