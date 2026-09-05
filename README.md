@@ -15,10 +15,21 @@ python3 -m http.server 8080
 
 Everything stays in the browser. Progress and results are saved to `localStorage` so a closed tab can resume.
 
+## Party alignment (New Zealand)
+
+After the questionnaire, the results page ranks the New Zealand parties in Parliament, plus Opportunity (TOP), by how closely each sits to the person's profile on the same ten dimensions. Every party score shows its rationale, confidence and dated sources.
+
+- `docs/party-scoring-rubric.md` is the rule that turns evidence into a score. Read it before changing a number.
+- `data/nz/parties/<party>.json` holds one party's ten scores with rationale and sources.
+- `research/nz/` archives every document the scores rest on, with a `manifest.json` per folder recording the URL and fetch date.
+- `node scripts/build-parties.js` validates the party files and regenerates `data/nz/parties.js`, which the page loads. Run it after editing any party file; `--check` only validates.
+- `js/matching.js` computes the weighted distance and alignment percentage; the method is described on the Methodology tab.
+
 ## Tests
 
 ```sh
 node --test
+node scripts/build-parties.js --check
 ```
 
 Tests cover reverse keying, the score range, strength thresholds, the mixed-views flag, priority ordering, the shuffle invariant, and the prompt export.
@@ -44,6 +55,13 @@ index.html          screens: intro, questionnaire, results, methodology
 css/style.css       layout and result bars, light and dark
 js/data.js          dimensions and items
 js/scoring.js       pure scoring, summary, shuffle and prompt functions
-js/app.js           UI state, localStorage, copy and download
+js/matching.js      party matching: weights, distance, alignment, drivers
+js/app.js           UI state, localStorage, copy and download, party section
+data/nz/parties/    one JSON per party (scores, rationale, sources)
+data/nz/parties.js  generated from the JSON files by scripts/build-parties.js
+docs/party-scoring-rubric.md
+research/nz/        archived source documents and manifests
+scripts/build-parties.js
 test/scoring.test.js
+test/matching.test.js
 ```

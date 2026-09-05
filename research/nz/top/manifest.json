@@ -98,6 +98,34 @@
       "title": "Opportunity (TOP) policy document: party information charter",
       "sourceUrl": "https://cdn.opportunity.org.nz/documents/party-information-charter.pdf",
       "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "tax-reset.html",
+      "textFile": "tax-reset.txt",
+      "title": "Opportunity (TOP): tax reset",
+      "sourceUrl": "https://www.opportunity.org.nz/tax-reset",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "tax-reset-basic.html",
+      "textFile": "tax-reset-basic.txt",
+      "title": "Opportunity (TOP): tax reset basic",
+      "sourceUrl": "https://www.opportunity.org.nz/tax-reset-basic",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "Opportunity-Policy---Tax-Reset-Transition-Plan.pdf",
+      "textFile": "Opportunity-Policy---Tax-Reset-Transition-Plan.txt",
+      "title": "Opportunity (TOP) policy document: Opportunity Policy   Tax Reset Transition Plan",
+      "sourceUrl": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset%20Transition%20Plan.pdf",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "Opportunity-Policy---Tax-Reset.pdf",
+      "textFile": "Opportunity-Policy---Tax-Reset.txt",
+      "title": "Opportunity (TOP) policy document: Opportunity Policy   Tax Reset",
+      "sourceUrl": "https://cdn.opportunity.org.nz/documents/policy/Opportunity%20Policy%20-%20Tax%20Reset.pdf",
+      "fetchedAt": "2026-09-05"
     }
   ],
   "notes": "top.org.nz redirects to opportunity.org.nz; the party campaigns as 'Opportunity' in 2026."
