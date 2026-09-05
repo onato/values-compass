@@ -185,11 +185,10 @@
       body.appendChild(el("p", { html: "<b>" + d.poles[0] + "</b>: " + cap(d.describe[0]) + "." }));
       body.appendChild(el("p", { html: "<b>" + d.poles[1] + "</b>: " + cap(d.describe[1]) + "." }));
       if (scored) body.appendChild(el("p", { class: "you-lean", text: "Your answers: " + fmtLean(scored.score, d) + (scored.strength === "balanced" ? "" : " (" + scored.strength + ")") + (scored.consistency === "mixed" ? ", mixed" : "") + "." }));
-      var more = el("details", { class: "dim-more" }, [el("summary", { title: "Show what each pole means and where your answers put you", text: d.blurb }), body]);
       list.appendChild(el("div", { class: "importance-row", "data-dim": d.id }, [
         el("span", { class: "dim-name", text: d.poles[0] + " vs. " + d.poles[1] }),
         choices,
-        more
+        body
       ]));
     });
     $("other-concerns").value = state.otherConcerns || "";
