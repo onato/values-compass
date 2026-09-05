@@ -14,6 +14,11 @@ test("party files validate and the generated parties.js is in sync", () => {
   assert.match(out, /^OK:/);
 });
 
+test("sources.html is in sync with the catalogue and manifests", () => {
+  const out = execFileSync("node", [path.join(ROOT, "scripts", "build-sources.js"), "--check"], { encoding: "utf8" });
+  assert.match(out, /^OK:/);
+});
+
 test("electorate files validate and the generated electorates.js is in sync", () => {
   const out = execFileSync("node", [path.join(ROOT, "scripts", "build-electorates.js"), "--check"], { encoding: "utf8" });
   assert.match(out, /^OK:/);

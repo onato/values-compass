@@ -133,7 +133,7 @@ test("prompt carries the readable profile, dimensions and placeholders, and no J
   assert.ok(txt.includes(p.summary));
   assert.ok(!txt.includes("```"), "no JSON block in the prompt");
   assert.ok(!/[+−-]\d{1,3}\b/.test(txt.split("## The twelve dimensions")[0].split("## My values profile")[1]), "profile lines carry no signed numbers");
-  assert.match(txt, /50 towards Solidarity/);
+  assert.match(txt, /Solidarity vs\. Self-reliance: balanced \(slightly towards Solidarity\)/);
 });
 
 test("prompt uses supplied country and election", () => {

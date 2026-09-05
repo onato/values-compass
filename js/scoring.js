@@ -207,9 +207,12 @@ var Scoring = (function () {
     var profileLines = profile.priorities.map(function (id) {
       var s = profile.dimensions.filter(function (x) { return x.id === id; })[0];
       var d = byId[id];
-      var where = s.score > 0 ? s.score + " towards " + d.poles[0] : s.score < 0 ? (-s.score) + " towards " + d.poles[1] : "balanced";
+      var pole = s.score > 0 ? d.poles[0] : d.poles[1];
+      var where = s.strength === "balanced"
+        ? "balanced" + (s.score !== 0 ? " (slightly towards " + pole + ")" : "")
+        : Math.abs(s.score) + " towards " + pole;
       var notes = [];
-      if (s.score !== 0) notes.push(s.strength);
+      if (s.strength !== "balanced") notes.push(s.strength);
       if (s.consistency === "mixed") notes.push("my answers were mixed, so treat this as less certain");
       if (s.importance === "high") notes.push("matters a lot to my vote");
       if (s.importance === "low") notes.push("matters less to my vote");
