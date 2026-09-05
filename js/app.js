@@ -249,16 +249,38 @@
     });
     audio.addEventListener("play", function () {
       btn.setAttribute("aria-pressed", "true");
-      box.classList.add("playing");
+      box.classList.add("playing", "active");
       label.textContent = "Pause";
+      watchPinning();
     });
     audio.addEventListener("pause", function () {
       btn.setAttribute("aria-pressed", "false");
       box.classList.remove("playing");
       label.textContent = "Resume";
     });
+
+    // The player is position: sticky from first play until the narration ends
+    // (see .narration.active), so pause, resume and the follow-along toggle
+    // stay reachable however far the page has followed the reader. A sticky
+    // element is pinned exactly when its top edge sits at the sticky offset;
+    // with the observer's root inset one pixel more than that, the box stops
+    // being fully visible the moment it pins. Only the shadow depends on this,
+    // so a browser without the API still pins, just without one. Built on
+    // first play because the offset only exists once the sticky style applies.
+    var pinWatcher = null;
+    function watchPinning() {
+      if (pinWatcher || !window.IntersectionObserver) return;
+      var offset = parseInt(getComputedStyle(box).top, 10) || 0;
+      pinWatcher = new IntersectionObserver(function (entries) {
+        var e = entries[0];
+        box.classList.toggle("stuck", box.classList.contains("active") &&
+          e.intersectionRatio < 1 && e.boundingClientRect.top <= offset + 1);
+      }, { threshold: [1], rootMargin: "-" + (offset + 1) + "px 0px 0px 0px" });
+      pinWatcher.observe(box);
+    }
     audio.addEventListener("ended", function () {
       label.textContent = "Listen to the methodology";
+      box.classList.remove("active", "stuck");
       if (spans[current]) spans[current].classList.remove("speaking");
       current = -1;
     });

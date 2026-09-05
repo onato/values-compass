@@ -339,6 +339,12 @@ button.primary.large { padding: 14px 24px; font-size: 1.05rem; }
 .narration.playing .narrate-icon { width: 8px; height: 12px; border: none; background: linear-gradient(currentColor, currentColor) left/3px 100% no-repeat, linear-gradient(currentColor, currentColor) right/3px 100% no-repeat; }
 .narrate-time { color: var(--text-3); font-variant-numeric: tabular-nums; font-size: 0.85rem; }
 #btn-narrate-follow[aria-pressed="false"] { color: var(--text-3); }
+/* While the audio runs the page keeps scrolling to the current sentence, so
+   from first play until the narration ends the player pins to the top of the
+   viewport rather than scrolling away with the controls that pause it, stop
+   the following, or resume it. The shadow appears only once it has detached. */
+.narration.active { position: sticky; top: 8px; z-index: 5; }
+.narration.active.stuck { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); }
 
 /* Sentences are wrapped by scripts/narrate.py. Only the clickable affordance
    and the highlight are styled; the spans are otherwise invisible. */
