@@ -3,3 +3,7 @@
 answers.json
 results.json
 values-profile-*.json
+
+# OS and tooling
+.DS_Store
+node_modules/

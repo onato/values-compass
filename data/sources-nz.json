@@ -1,0 +1,1465 @@
+{
+  "version": "1.1",
+  "jurisdiction": "New Zealand",
+  "election": "General election, 7 November 2026",
+  "compiledAt": "2026-09-05",
+  "purpose": "Independent, non-advocacy sources a research agent can trawl for evidence of how New Zealand parties and candidates align with the ten value dimensions. Supplies the concrete source hierarchy for step 1.3 of the generated research prompt.",
+  "neutralityStandard": {
+    "include": [
+      "Official government, parliamentary, electoral-commission and national-statistics records",
+      "Peer-reviewed academic party-position datasets",
+      "Non-partisan civic tech that republishes official records without editorialising",
+      "Party-published manifestos, policy pages and costings, admitted only as evidence of that party's own stated positions, never as evidence about another party"
+    ],
+    "exclude": [
+      "Advocacy-group scorecards and ratings",
+      "Mission-driven think tanks",
+      "Commercial aggregators and opinion media"
+    ],
+    "note": "Inclusion is judged on the source's relationship to the record, not on whether its findings are congenial. Sources that apply an editorial or simplifying layer are marked editorialised:true and should be treated as leads, not evidence.",
+    "contextException": "Polling and electoral-mechanics sources are held to a lower bar (published methodology and disclosed sponsor) and live under contextSources. They are not evidence of values; they serve the electoral-context step of the research prompt."
+  },
+  "keyDates": {
+    "writDay": "2026-10-04",
+    "nominationsClose": "2026-10-08T12:00:00+13:00",
+    "prefuDue": "2026-09-29",
+    "electionDay": "2026-11-07",
+    "note": "Official candidate and party lists do not exist until nominations close. Candidate-level research is not possible before 8 October 2026."
+  },
+  "structuralLimits": [
+    {
+      "id": "party-vote-opacity",
+      "severity": "high",
+      "summary": "Since 1996 most divisions in the New Zealand House are party votes, which record only the party name and the number of votes cast for it. Individual MPs are named only when they vote against their party.",
+      "consequence": "Individual candidate positions are recoverable from voting records only on conscience (personal) votes and split-party votes. Conscience votes historically cluster on the tradition and liberty dimensions (End of Life Choice 2019, Abortion Legislation 2020, marriage equality 2013, anti-smacking 2007, alcohol and cannabis). For the other eight dimensions, candidate-level evidence must come from members' bills submitted to the ballot, maiden and selection speeches, and select-committee questioning.",
+      "evidence": "Parliamentary Practice in New Zealand, chapter 17.",
+      "partyLevelNote": "This limit cuts the other way for party-level scoring. A party vote is by definition a party position, recorded on the official record for every contested stage and amendment since 1996, and Hansard prints the breakdown by party at each division. Party positions on every division are therefore recoverable; only individual candidate positions are opaque."
+    },
+    {
+      "id": "no-votes-api",
+      "severity": "high",
+      "summary": "There is no official database or public API of New Zealand parliamentary votes.",
+      "consequence": "Vote evidence must be read from the Journals of the House and Hansard. Standing data.govt.nz dataset requests #57 and #849 for this data remain unfulfilled. This is why no TheyWorkForYou equivalent has taken hold in New Zealand."
+    },
+    {
+      "id": "redistribution-restrictions",
+      "severity": "medium",
+      "summary": "Several high-value academic datasets forbid redistribution.",
+      "consequence": "Derived analytical outputs (fitted scores, means, graphs) may be published with attribution; the underlying data may not. Any agent output should cite and quantify, not reproduce datasets."
+    }
+  ],
+  "accessTraps": [
+    {
+      "id": "radware-200",
+      "severity": "high",
+      "hosts": [
+        "www.parliament.nz",
+        "hansard.parliament.nz"
+      ],
+      "symptom": "Returns HTTP 200 with a Radware bot-check page instead of content. Status-code checks pass while ingesting junk.",
+      "workaround": "Use www3.parliament.nz, which serves the same content unblocked. Always assert on page content, never on status code alone."
+    },
+    {
+      "id": "cloudflare-403",
+      "severity": "high",
+      "hosts": [
+        "treasury.govt.nz",
+        "budget.govt.nz",
+        "dpmc.govt.nz"
+      ],
+      "symptom": "HTML pages return 403 behind a Cloudflare managed JS challenge. Header spoofing does not work.",
+      "workaround": "Fetch static asset paths directly (/sites/default/files/..., /budget/excel/...), which bypass the challenge entirely. Resolve asset URLs from a real index or the Wayback CDX API."
+    },
+    {
+      "id": "incapsula",
+      "severity": "medium",
+      "hosts": [
+        "data.govt.nz",
+        "natlib.govt.nz",
+        "stats.govt.nz",
+        "elections.nz"
+      ],
+      "symptom": "HTML subpages blocked by Imperva/Incapsula.",
+      "workaround": "APIs and /assets/*.pdf paths work normally."
+    },
+    {
+      "id": "blazor-spa",
+      "severity": "medium",
+      "hosts": [
+        "hansard.parliament.nz",
+        "bills.parliament.nz",
+        "questions.parliament.nz",
+        "petitions.parliament.nz",
+        "selectcommittees.parliament.nz"
+      ],
+      "symptom": "Blazor WebAssembly single-page apps. A plain fetch returns an empty shell.",
+      "workaround": "Requires browser automation. Some servers prerender headings into the initial HTML, so partial text may be extractable."
+    },
+    {
+      "id": "encoding",
+      "severity": "low",
+      "hosts": [
+        "publicservice.govt.nz",
+        "treasury.govt.nz"
+      ],
+      "symptom": "Public Service Commission OIA CSV is cp1252, not UTF-8, so macrons arrive as mojibake. Treasury Estimates CSVs need UTF-8/65001 or te reo macrons corrupt.",
+      "workaround": "Set the encoding explicitly when parsing."
+    },
+    {
+      "id": "nsw-hansard-confusion",
+      "severity": "medium",
+      "hosts": [
+        "*"
+      ],
+      "symptom": "Searches for a New Zealand Hansard API surface a result describing an API covering 1991-present in XML under CC-BY. That is the New South Wales (Australia) Parliament.",
+      "workaround": "There is no New Zealand Hansard API. Do not act on that result."
+    }
+  ],
+  "sources": [
+    {
+      "id": "party-policy-pages",
+      "name": "Party manifestos, policy pages and costed fiscal plans (primary)",
+      "urls": {
+        "Labour": "https://www.labour.org.nz/policy",
+        "National": "https://www.national.org.nz/",
+        "Green": "https://www.greens.org.nz/policy",
+        "ACT": "https://www.act.org.nz/policies",
+        "NZ First": "https://www.nzfirst.nz/",
+        "Te Pāti Māori": "https://www.maoriparty.org/",
+        "TOP": "https://www.top.org.nz/"
+      },
+      "tier": "party-published",
+      "category": "manifestos",
+      "evidences": "What each party commits to, in its own words, and where it publishes one, how it says it will pay for it.",
+      "nzCoverage": "All parliamentary parties and most registered parties publish a policy page; full manifestos and costed plans typically appear in the last eight weeks of a campaign.",
+      "coverageYears": "Current campaign; earlier versions via the NZ Web Archive.",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Party copyright; quotation for analysis and criticism.",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "The research prompt puts the current manifesto first in its source hierarchy, but this catalogue previously listed only archived copies. The live page is the record the party is accountable for. Costed fiscal plans, where published, are the sharpest single test of the solidarity and regulation dimensions because they show what the party would actually trade.",
+      "gotchas": [
+        "Advocacy by definition: evidence of stated position, never of record. Pair with legislation, party votes and Treasury documents for the record.",
+        "Pages are rewritten during campaigns. Record the access date and take a NZ Web Archive or Wayback snapshot.",
+        "URLs above are the expected policy pages; exact paths UNVERIFIED and change each campaign.",
+        "Smaller parties often publish only a few paragraphs; say so rather than scoring on thin text, as the prompt requires."
+      ]
+    },
+    {
+      "id": "gps",
+      "name": "Global Party Survey",
+      "url": "https://www.globalpartysurvey.org/",
+      "tier": "academic",
+      "category": "expert-survey",
+      "evidences": "Expert placements of parties on ideology, populism, and issue dimensions.",
+      "nzCoverage": "Five parties (ACT, Greens, NZ First, Labour, National), 12 experts each, 0-10 scales. Verified present in the data.",
+      "coverageYears": "2019 (2023 wave fielded; public NZ release UNCONFIRMED)",
+      "dimensions": [
+        "regulation",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "solidarity",
+        "environment"
+      ],
+      "dimensionMapping": {
+        "regulation": "V4 economic left-right",
+        "tradition": "V6 social liberalism",
+        "institutions": "V8 populist rhetoric",
+        "cosmopolitan": "V10 immigration, V13 nationalism",
+        "solidarity": "V11 spending vs. tax",
+        "environment": "V12 environment"
+      },
+      "machineReadable": "bulk-download",
+      "licence": "CC0",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "gotchas": [
+        "2019 snapshot predates Te Pati Maori's revival and the 2023 realignment.",
+        "Only five parties covered; 12 experts per party is a thin panel.",
+        "Silent on liberty, local, change and diplomacy."
+      ]
+    },
+    {
+      "id": "marpor",
+      "name": "Manifesto Project (MARPOR/CMP)",
+      "url": "https://manifesto-project.wzb.eu/",
+      "tier": "academic",
+      "category": "coded-manifestos",
+      "evidences": "Sentence-by-sentence hand-coding of election manifestos onto policy categories.",
+      "nzCoverage": "Country code 558, coded from 1946. Party IDs: Labour 64320, National 64620, Greens 64110, ACT 64420, NZ First 64621, Maori 64901.",
+      "coverageYears": "1946-2023 (release 2026a; inclusion of 2023 UNVERIFIED)",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "dimensionMapping": {
+        "note": "Use per-category codes (per101-per706), which map far more finely to the ten dimensions than the crude composite rile index. Categories cover welfare, market regulation, traditional morality, internationalism, environment, military and decentralisation."
+      },
+      "machineReadable": "api",
+      "apiBase": "https://manifesto-project.wzb.eu/api/v1/",
+      "apiNotes": "Endpoints include get_core, get_parties, texts_and_annotations (sentence-level codes with optional English translation), get_core_codebook. Free registration for an API key. R package manifestoR available.",
+      "licence": "Free for research with registration and citation; redistribution forbidden without written authorisation.",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "high",
+      "gotchas": [
+        "The anti-growth category was not used for New Zealand until 1981, so pre-1981 environment scores are artefactually zero.",
+        "Measures manifesto emphasis (how much a party talks about something), not position. Salience is not the same as direction."
+      ]
+    },
+    {
+      "id": "cses",
+      "name": "Comparative Study of Electoral Systems",
+      "url": "https://cses.org/",
+      "tier": "academic",
+      "category": "expert-survey",
+      "evidences": "Expert and collaborator placements of parties, plus voter survey data.",
+      "nzCoverage": "Modules including 2017 and 2020. The New Zealand CSES module is the New Zealand Election Study (Vowles, Greaves).",
+      "coverageYears": "1996-2020",
+      "dimensions": [
+        "regulation",
+        "institutions"
+      ],
+      "dimensionMapping": {
+        "regulation": "E5018 collaborator left-right placement",
+        "institutions": "E5020 populism scale",
+        "note": "E5019 provides an alternative dimension."
+      },
+      "machineReadable": "bulk-download",
+      "licence": "Free with registration",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Its New Zealand party ID crosswalk is the join key across MARPOR, ParlGov and Party Facts. It also states explicitly that CHES identifiers are unavailable for New Zealand.",
+      "gotchas": []
+    },
+    {
+      "id": "vparty",
+      "name": "V-Party (V-Dem)",
+      "url": "https://www.v-dem.net/data/v-party-dataset/",
+      "tier": "academic",
+      "category": "expert-survey",
+      "evidences": "Party-level indicators on populism, illiberalism and party organisation.",
+      "nzCoverage": "16 New Zealand parties.",
+      "coverageYears": "to 2019 (v2)",
+      "dimensions": [
+        "institutions",
+        "tradition"
+      ],
+      "machineReadable": "bulk-download",
+      "licence": "Free download",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "medium",
+      "gotchas": [
+        "Broader party coverage than GPS but fewer value dimensions."
+      ]
+    },
+    {
+      "id": "parlgov",
+      "name": "ParlGov",
+      "url": "https://www.parlgov.org/",
+      "tier": "academic",
+      "category": "structural",
+      "evidences": "Parties, elections, cabinets and their composition.",
+      "nzCoverage": "Listed.",
+      "coverageYears": "to 2023",
+      "dimensions": [
+        "institutions"
+      ],
+      "machineReadable": "bulk-download",
+      "licence": "Open (CSV/SQLite)",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "Structural context: who governed with whom, and when. Useful for assessing governing record.",
+      "gotchas": [
+        "Project creator retired in October 2024; ongoing maintenance uncertain."
+      ]
+    },
+    {
+      "id": "nzes",
+      "name": "New Zealand Election Study",
+      "url": "https://www.nzes.net/",
+      "tier": "academic",
+      "category": "voter-survey",
+      "evidences": "Voter values, vote choice, and voters' perceptions of where parties stand.",
+      "nzCoverage": "12 elections 1990-2023, plus historical data to 1905.",
+      "coverageYears": "1990-2023",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "tradition",
+        "cosmopolitan",
+        "environment"
+      ],
+      "machineReadable": "bulk-download",
+      "licence": "Free but restrictive: bars use for commercial or financial gain without written permission, and bars transmitting the data in part or whole to third parties. DOI 10.26193/HHMEUZ (2023).",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Validation evidence. Measures voter values, not party positions, so it corroborates rather than supplies party scores.",
+      "gotchas": [
+        "The domain is nzes.net, not nzes.org.",
+        "Hosted on ADA Dataverse behind bot protection; expect manual download.",
+        "Carries Maori Data Sovereignty obligations (Te Mana Raraunga) that should be honoured."
+      ]
+    },
+    {
+      "id": "hansard",
+      "name": "Hansard (parliamentary debates)",
+      "url": "https://www.parliament.nz/en/pb/hansard-debates/",
+      "altUrl": "https://www3.parliament.nz/en/pb/hansard-debates/historical-hansard/",
+      "tier": "official",
+      "category": "parliamentary-record",
+      "evidences": "Floor speeches, ministerial statements, question time, and debate at every bill stage. The only source that gives reasoning rather than just outcomes.",
+      "nzCoverage": "Complete.",
+      "coverageYears": "1854-present; web-searchable 2003-present. 723 volumes digitised 1869-1985.",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "No copyright. Copyright Act 1994 s 27(1) lists New Zealand Parliamentary Debates among works in which no copyright exists, alongside Bills, Acts and select committee reports. Verify the current wording of s 27(1).",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Primary source for candidate-level evidence: maiden speeches, selection speeches, and members' bill first readings reveal individual priorities independent of party.",
+      "gotchas": [
+        "Bot-blocked and a Blazor SPA. Use www3.parliament.nz and browser automation.",
+        "No API and no bulk download.",
+        "Historic scans are reachable via the Internet Archive advancedsearch JSON API and HathiTrust; OCR quality varies.",
+        "Permalink pattern UNVERIFIED."
+      ]
+    },
+    {
+      "id": "legislation-api",
+      "name": "New Zealand Legislation API",
+      "url": "https://api.legislation.govt.nz/v0/",
+      "tier": "official",
+      "category": "legislation",
+      "evidences": "Acts, all bill types including members' bills, Amendment Papers (formerly SOPs), and explanatory notes. Each bill stage is a separate version, so first reading can be diffed against as-passed.",
+      "nzCoverage": "Complete.",
+      "coverageYears": "Current and historical; PDF_original_scan for pre-2008 Acts.",
+      "dimensions": [
+        "regulation",
+        "liberty",
+        "environment",
+        "solidarity",
+        "tradition"
+      ],
+      "machineReadable": "api",
+      "apiNotes": "Endpoints works/, works/{id}/versions/, versions/{id}/, plus RSS search. Free API key by email to contact@pco.govt.nz. 10,000 requests/day, burst 2,000/IP/5min. Formats HTML, PDF, XML. Still v0 beta.",
+      "licence": "New Zealand legislation has no copyright at all (Copyright Act 1994 s 27), covering Bills, Acts, regulations, bylaws and commission-of-inquiry reports. Other site content is Crown copyright CC BY.",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "The best machine-readable source in this catalogue. The General Policy Statement in each bill's explanatory note is a concise statement of purpose with high signal per token.",
+      "gotchas": [
+        "API key required; request early as it gates this source.",
+        "Whole-act HTML (/whole.html) parses reliably; individual section IDs sometimes return a contents listing instead."
+      ]
+    },
+    {
+      "id": "ras",
+      "name": "Regulatory Analysis Summaries (formerly Regulatory Impact Statements)",
+      "url": "https://www.regulation.govt.nz/publications-and-resources/regulatory-analysis-summaries/",
+      "tier": "official",
+      "category": "policy-analysis",
+      "evidences": "Explicit problem definition, options considered, cost-benefit analysis, and frank statements about constraints imposed by Ministers.",
+      "nzCoverage": "Approximately 2,000 documents, 167 pages, ?page=N pagination works, robots.txt permits crawling.",
+      "coverageYears": "Regime dates from 2001; practical online coverage approximately 2010s-present. Earliest register date UNVERIFIED.",
+      "dimensions": [
+        "regulation",
+        "environment",
+        "liberty"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "CC BY 4.0 under NZGOAL",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Outstanding for the regulation dimension. Shows what a government was actually willing to trade away, in its own analysts' words.",
+      "gotchas": [
+        "Renamed twice: search RIS, RAS, and the new companion Consistency Accountability Statements.",
+        "Function moved from Treasury to the Ministry for Regulation on 1 May 2024; renamed 1 July 2026 under Cabinet Circular CO (26) 2.",
+        "Individual documents are PDFs."
+      ]
+    },
+    {
+      "id": "select-committees",
+      "name": "Select committee submissions, advice and reports",
+      "url": "https://www3.parliament.nz/en/pb/sc/submissions-and-advice/",
+      "tier": "official",
+      "category": "parliamentary-record",
+      "evidences": "Departmental advice, committee reports, annual reviews of departmental performance, and minority/dissenting views.",
+      "nzCoverage": "Papers Presented covers August 2002-present (47th-54th Parliaments).",
+      "coverageYears": "2002-present",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Committee reports: no copyright under Copyright Act 1994 s 27(1) (verify wording). Submissions remain the submitter's copyright; departmental advice is Crown copyright, CC BY 4.0 under NZGOAL expected.",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Minority and dissenting reports are often the clearest single statement of an opposition party's position on a bill. Committee questioning is a route to individual MP views.",
+      "gotchas": [
+        "Public submissions are themselves advocacy. Use them as evidence of who argued what to whom, never as neutral testimony.",
+        "Submissions are PDFs; no API."
+      ]
+    },
+    {
+      "id": "treasury",
+      "name": "Treasury fiscal documents (BPS, BEFU, FSR, HYEFU, PREFU)",
+      "url": "https://www.treasury.govt.nz/publications",
+      "tier": "official",
+      "category": "fiscal",
+      "evidences": "What a government actually spent and prioritised, versus what it said it would.",
+      "nzCoverage": "Complete, statutory.",
+      "coverageYears": "Fiscal time series 1972-2025; document series under the Public Finance Act 1989.",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "environment",
+        "local",
+        "change"
+      ],
+      "machineReadable": "bulk-download",
+      "licence": "CC BY 4.0 (confirmed via CKAN API license_id)",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Public Finance Act s 26I requires every Fiscal Strategy Report to assess fiscal performance in the period since the most recent substantial change in the political party composition of the administration. That is a statutorily mandated, explicitly party-attributed, annually published performance assessment. The statutory cycle (BPS by 31 March, BEFU+FSR with the Budget, HYEFU 1 Nov-31 Dec, PREFU in election years) is dated and comparable, so a missing document is itself a finding.",
+      "gotchas": [
+        "Never fetch HTML (403 behind Cloudflare). Fetch assets directly.",
+        "Do NOT build a URL generator: BEFU 2025 is befu25-v2.pdf, FSR 2026 is b26-fsr.pdf, BEFU 2019 is under 2019-06/. Resolve from a real index or Wayback CDX.",
+        "budget.govt.nz holds only the current year; historical data comes from treasury.govt.nz/sites/default/files/.",
+        "PREFU 2026 was not published as at 5 September 2026; due 29 September 2026 (PFA s 26T: not earlier than 35 nor later than 25 working days before polling day)."
+      ]
+    },
+    {
+      "id": "cabinet-papers",
+      "name": "Proactively released Cabinet papers",
+      "url": "https://www.treasury.govt.nz/publications/budgets/budget-information-releases",
+      "tier": "official",
+      "category": "executive-record",
+      "evidences": "The advice and Cabinet decisions behind policy and Budget choices.",
+      "nzCoverage": "Papers lodged from 1 January 2019.",
+      "coverageYears": "2019-present (Budget information releases 2005-2025)",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "change",
+        "environment"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "CC BY 4.0 under NZGOAL expected",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "Basis is Cabinet Office Circular CO (23) 4: release within 30 business days of final Cabinet decisions. Every Cabinet paper carries a mandatory Proactive Release section, a useful structured field.",
+      "gotchas": [
+        "No central index. Agency seed list at publicservice.govt.nz/assets/DirectoryFile/OIA-proactive-release-addresses-Dec-2022.xlsx lists only agencies using a centralised model. Seed, not census.",
+        "Basis is a Cabinet circular, not statute; excludes Appointments and Honours.",
+        "Release clock excludes Christmas to 20 January."
+      ]
+    },
+    {
+      "id": "elections-donations",
+      "name": "Electoral Commission party donations and loans returns",
+      "url": "https://elections.nz/",
+      "urlPattern": "https://elections.nz/assets/Annual-Returns/{YEAR}/{Party}-Annual-Return-{YEAR}.pdf",
+      "tier": "official",
+      "category": "electoral",
+      "evidences": "Who funds each party. The single best evidence of a party's funding base.",
+      "nzCoverage": "All registered parties.",
+      "coverageYears": "Annual returns due 30 April each year.",
+      "dimensions": [],
+      "machineReadable": "pdf-only",
+      "licence": "Crown copyright; reuse permitted, though the site footer asserts All Rights Reserved.",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Thresholds: donors over $5,000 named; single donations over $20,000 disclosed within 20 working days; overseas donations over $50 disclosed.",
+      "gotchas": [
+        "Funding base is context, not a value position. Do not impute a dimension score from who donates; the research prompt forbids inferring positions from reputation and the same applies to donors. Use it for the probity and conflicts section the prompt asks to keep separate from values.",
+        "Scanned PDFs of filed forms. Expect OCR work, inconsistent layouts, and donor names needing entity resolution.",
+        "No machine-readable donations dataset exists (standing data.govt.nz request #863 confirms the gap).",
+        "Asset paths fetch fine even though HTML pages are Incapsula-blocked.",
+        "elections.org.nz now redirects to vote.nz; the data site is elections.nz."
+      ],
+      "role": "context"
+    },
+    {
+      "id": "election-results",
+      "name": "Electoral Commission official results archive",
+      "url": "https://archive.electionresults.govt.nz/",
+      "urlPattern": "https://archive.electionresults.govt.nz/electionresults_{YEAR}/statistics/csv/{party-votes|candidate-votes}-by-voting-place-{N}.csv",
+      "tier": "official",
+      "category": "electoral",
+      "evidences": "Party and candidate votes by electorate and voting place.",
+      "nzCoverage": "Complete.",
+      "coverageYears": "approximately 1996-present",
+      "dimensions": [],
+      "machineReadable": "bulk-download",
+      "licence": "Crown copyright; reuse permitted.",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "Spine for the candidate-vote section: electorate boundaries, past margins, and where each party's vote is concentrated. R packages nzelect (to 2014) and scgElectionsNZ (1996-2023) wrap this conveniently.",
+      "gotchas": [
+        "Where a party's votes come from does not evidence its position on decentralisation; previously mapped to the local dimension, now unmapped.",
+        "CSV URL patterns UNVERIFIED: returned 403 from the research network, confirmed only via search indexing."
+      ],
+      "role": "structural"
+    },
+    {
+      "id": "party-register",
+      "name": "Register of political parties, constitutions and rules",
+      "url": "https://elections.nz/democracy-in-nz/political-parties-in-new-zealand/",
+      "tier": "official",
+      "category": "electoral",
+      "evidences": "Party registration, constitutions, and candidate-selection procedures.",
+      "nzCoverage": "All registered parties.",
+      "coverageYears": "Current",
+      "dimensions": [
+        "institutions",
+        "local"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Crown copyright",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Registration requires 500 members and a constitution providing for democratic candidate-selection procedures, which is direct evidence of a party's internal democracy.",
+      "gotchas": [
+        "Candidate-selection rules are a minimum statutory requirement, so they discriminate weakly between parties. Treat as a small signal on the institutions dimension."
+      ]
+    },
+    {
+      "id": "pecuniary-interests",
+      "name": "Register of Pecuniary and Other Specified Interests of Members of Parliament",
+      "url": "https://www3.parliament.nz/",
+      "tier": "official",
+      "category": "parliamentary-record",
+      "evidences": "Per-MP financial interests, gifts, and overseas travel.",
+      "nzCoverage": "All sitting MPs.",
+      "coverageYears": "Annual",
+      "dimensions": [],
+      "machineReadable": "pdf-only",
+      "licence": "Crown copyright, parliamentary material",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "One of the few genuinely individual-level official records about sitting MPs.",
+      "gotchas": [
+        "An MP's financial interests are not evidence of their values. Use for conflicts of interest and probity, reported separately from the values match.",
+        "Published as annual PDFs; URL includes a media ID that changes each year."
+      ],
+      "role": "context"
+    },
+    {
+      "id": "nz-web-archive",
+      "name": "New Zealand Web Archive (National Library)",
+      "url": "https://webarchive.natlib.govt.nz/",
+      "tier": "official",
+      "category": "manifestos",
+      "evidences": "Archived snapshots of party websites, candidate sites, and manifestos as published at the time.",
+      "nzCoverage": "The National Library runs selective election harvests: several hundred harvests of political party websites, blogs and related sites scheduled during October and November of election years. Major party sites captured multiple times per year since 2008. Explicitly aims to collect across the political spectrum.",
+      "coverageYears": "1999-present",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Legal deposit; access terms vary by item.",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Solves the manifesto-disappearance problem: party sites are rewritten after elections, but the archive holds what was actually promised. Full-text search covers HTML and PDF/Office documents; searchable by keyword, phrase, URL or hostname. The New Zealand General Elections collection can be selected to scope a search.",
+      "gotchas": [
+        "Incapsula-blocked to scripted fetches; use a real browser.",
+        "Images, audio and video are not indexed.",
+        "In-page search boxes do not work inside archived snapshots.",
+        "Snapshot URL pattern and any API UNVERIFIED."
+      ]
+    },
+    {
+      "id": "on-the-fence",
+      "name": "On the Fence",
+      "url": "https://onthefence.co.nz/",
+      "tier": "civic-tech",
+      "category": "voting-advice",
+      "evidences": "Party self-placements on twelve competing-values questions.",
+      "nzCoverage": "Parties contesting the 2026 election.",
+      "coverageYears": "2026 (earlier editions exist)",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "cosmopolitan",
+        "environment",
+        "local",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Not stated",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Methodologically the most defensible New Zealand voting-advice application and conceptually closest to this instrument. Run by Massey University's Toi Aria with Effect, supported by the Electoral Commission and the McGuinness Institute; questions peer-reviewed by Professor Richard Shaw. Crucially, parties answer the same questions users do, so positions are self-placements rather than third-party imputation. Party responses are shown per question.",
+      "gotchas": [
+        "Published as a web tool, not a dataset.",
+        "Twelve questions cover fewer dimensions than this instrument's ten."
+      ]
+    },
+    {
+      "id": "policy-nz",
+      "name": "Policy.nz",
+      "url": "https://policy.nz/",
+      "tier": "civic-tech",
+      "category": "policy-comparison",
+      "evidences": "Side-by-side party policy statements by topic.",
+      "nzCoverage": "General and local elections.",
+      "coverageYears": "2017-present",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "environment",
+        "local",
+        "cosmopolitan"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Not stated",
+      "redistributable": false,
+      "editorialised": true,
+      "confidence": "medium",
+      "value": "Explicitly non-partisan with a sponsor-independence statement. Useful as an index of where to find each party's policy on a topic.",
+      "gotchas": [
+        "Applies an editorial simplification process to policy statements, so it is not a pure record republisher. Treat as a lead to the primary source, not as evidence.",
+        "Funded by Google News Initiative and, for 2025 local elections, LGNZ and 19 councils.",
+        "Not run by The Spinoff, which has been a publishing partner only.",
+        "No API or bulk download."
+      ]
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "url": "https://query.wikidata.org/",
+      "tier": "civic-tech",
+      "category": "structural",
+      "evidences": "Structured index of MPs, parties, electorates and election results.",
+      "nzCoverage": "Solid: Labour 349 MPs, National 197, and so on.",
+      "coverageYears": "Historical to present",
+      "dimensions": [],
+      "machineReadable": "api",
+      "apiNotes": "SPARQL endpoint, verified working, no rate-limit friction.",
+      "licence": "CC0",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Best tool for enumerating candidates, MPs and party membership, and for resolving names to identities.",
+      "gotchas": [
+        "New Zealand party items lack CMP (P1795) and Party Facts (P6717) external IDs, so use the CSES crosswalk to join to academic datasets rather than expecting Wikidata to do it.",
+        "Carries no position data; use it as a spine, not as evidence."
+      ]
+    },
+    {
+      "id": "psc-oia-stats",
+      "name": "Public Service Commission OIA statistics",
+      "url": "https://www.publicservice.govt.nz/data/oia-statistics",
+      "tier": "official",
+      "category": "transparency",
+      "evidences": "Per-agency Official Information Act compliance: requests handled, timeliness, extensions, transfers, refusals, and Ombudsman complaints.",
+      "nzCoverage": "136 agencies.",
+      "coverageYears": "December 2015 to December 2024 (CSV); per-period XLSX to July-December 2025.",
+      "dimensions": [
+        "institutions"
+      ],
+      "machineReadable": "bulk-download",
+      "licence": "CC BY 4.0 under NZGOAL",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "low",
+      "value": "Evidence of how transparently a government behaved in office, which bears on the institutions dimension.",
+      "gotchas": [
+        "Agency compliance is a weak proxy for a party's values. Attribute to a party only through ministerial decisions about the OIA itself, such as amendments, resourcing or public statements on extensions and refusals.",
+        "CSV is cp1252, not UTF-8; macrons arrive as mojibake.",
+        "Join on OrgID, not agency names.",
+        "Self-reported by agencies; Police and Defence report separately.",
+        "The consolidated CSV lags the XLSX files by about a year; combine both."
+      ]
+    },
+    {
+      "id": "fyi",
+      "name": "FYI.org.nz",
+      "url": "https://fyi.org.nz/",
+      "tier": "civic-tech",
+      "category": "transparency",
+      "evidences": "Official Information Act requests and the responses agencies gave.",
+      "nzCoverage": "4,289 authorities, approximately 34,900 requests.",
+      "coverageYears": "2012-present",
+      "dimensions": [
+        "institutions"
+      ],
+      "machineReadable": "api",
+      "apiNotes": "Alaveteli platform. fyi.org.nz/body/all-authorities.csv verified (618KB). Per-body JSON at /body/{slug}.json gives request and success counts.",
+      "licence": "No stated content licence. Responses are Crown material republished by a third party; reuse terms unresolved.",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "Run by Open New Zealand, volunteer-maintained with donations via The Gift Trust (CC40774). Non-partisan infrastructure that republishes official responses verbatim.",
+      "gotchas": [
+        "Responses take 11-22 seconds, one exceeded 120 seconds. Budget long timeouts.",
+        "Global list and search .json endpoints return HTTP 500."
+      ]
+    },
+    {
+      "id": "beehive",
+      "name": "Beehive.govt.nz (ministerial releases)",
+      "url": "https://www.beehive.govt.nz/rss.xml",
+      "tier": "official",
+      "category": "executive-record",
+      "evidences": "Government announcements and ministerial statements.",
+      "nzCoverage": "Current government.",
+      "coverageYears": "Current term",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "api",
+      "apiNotes": "RSS feed works even though HTML is blocked.",
+      "licence": "CC BY 4.0 under NZGOAL",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "What a governing party chooses to announce, and how it frames it.",
+      "gotchas": [
+        "Reflects the governing parties only; gives no coverage of opposition positions."
+      ]
+    },
+    {
+      "id": "stats-nz",
+      "name": "Stats NZ",
+      "url": "https://www.stats.govt.nz/",
+      "tier": "official",
+      "category": "statistics",
+      "evidences": "Outcome data for grounding factual claims about the state of the country.",
+      "nzCoverage": "Complete.",
+      "coverageYears": "Varies by series.",
+      "dimensions": [
+        "solidarity",
+        "environment",
+        "cosmopolitan"
+      ],
+      "machineReadable": "api",
+      "apiNotes": "SDMX structure API open without a key at api.data.stats.govt.nz/rest/dataflow/all/all/latest. Data queries require a key via portal.apis.stats.govt.nz. Note api.stats.govt.nz is dead (502).",
+      "licence": "CC BY 4.0 under NZGOAL",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "Child poverty statistics are statutory under the Child Poverty Reduction Act 2018, with nine measures reported annually. Directly relevant to the solidarity dimension and to assessing a government's record against a legally mandated target.",
+      "gotchas": [
+        "The Aotearoa Data Explorer has only 911 dataflows and is census-heavy. No CPI, emissions, net migration or household labour force series.",
+        "Those series remain in Infoshare, which is scrape-hostile ASPX.",
+        "NZ.Stat is fully decommissioned.",
+        "Site is JS-rendered; download links are invisible to plain fetches."
+      ]
+    },
+    {
+      "id": "ombudsman",
+      "name": "Office of the Ombudsman case notes and opinions",
+      "url": "https://www.ombudsman.parliament.nz/resources",
+      "tier": "official",
+      "category": "transparency",
+      "evidences": "Findings on agency conduct, particularly OIA compliance.",
+      "nzCoverage": "Approximately 998 case notes, 96 formal opinions; OIA-filtered view 480.",
+      "coverageYears": "1984-August 2026",
+      "dimensions": [
+        "institutions",
+        "liberty"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "NOT CC BY. Personal use with attribution only; the office must be contacted before any other use. An exception to the NZGOAL norm.",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Strong for narrow, well-evidenced claims about a named agency's conduct.",
+      "gotchas": [
+        "Restrictive licence is a real blocker for republishing quotes.",
+        "Heavily selection-biased toward complained-about cases; useless for aggregate claims.",
+        "Facet IDs are opaque integers that may change."
+      ]
+    },
+    {
+      "id": "coalition-agreements",
+      "name": "Coalition agreements 2023 (National–ACT and National–NZ First)",
+      "url": "https://www.beehive.govt.nz/",
+      "tier": "official",
+      "category": "executive-record",
+      "evidences": "Itemised policy commitments each governing party secured or conceded, portfolio allocation, and agreed processes such as the regulatory standards and Treaty principles commitments.",
+      "nzCoverage": "Both agreements, published 24 November 2023.",
+      "coverageYears": "2023-2026 term",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "pdf-only",
+      "licence": "CC BY 4.0 under NZGOAL expected",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "The most explicit statement of what each governing party traded when values conflicted, which is exactly what the dimensions measure. Each commitment can be checked against the legislation API and Beehive releases to separate what was promised from what was delivered.",
+      "gotchas": [
+        "Governing parties only.",
+        "Exact document URLs UNVERIFIED; the agreements are PDFs hosted on beehive.govt.nz and mirrored widely.",
+        "Attribute commitments to the party that demanded them where the text makes that clear; otherwise to the coalition."
+      ]
+    },
+    {
+      "id": "journals-and-divisions",
+      "name": "Journals of the House and recorded party votes",
+      "url": "https://www3.parliament.nz/en/pb/",
+      "tier": "official",
+      "category": "parliamentary-record",
+      "evidences": "The outcome of every division. Party votes record how each party voted at every contested stage and amendment; personal votes name individual MPs.",
+      "nzCoverage": "Complete since the introduction of party votes in 1996.",
+      "coverageYears": "1996-present",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Parliamentary material; no copyright expected under Copyright Act 1994 s 27(1) for the Debates, UNVERIFIED for the Journals.",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "The best evidence of a party's revealed position: a vote costs more than a press release. Hansard prints the breakdown at each division, so a party's stance on every contested bill and amendment can be tabulated with a citation. Especially valuable for the liberty, local, diplomacy and change dimensions, where survey datasets are silent.",
+      "gotchas": [
+        "Blazor SPA and bot-blocked; same workaround as Hansard.",
+        "Abstentions, split votes and MPs voting against their party must be read from the text; there is no structured field.",
+        "Vote against a bill can mean it goes too far or not far enough. Read the second-reading speech before scoring direction.",
+        "See structural limit no-votes-api: no database, no API."
+      ]
+    },
+    {
+      "id": "parliamentary-questions",
+      "name": "Written and oral parliamentary questions",
+      "url": "https://questions.parliament.nz/",
+      "tier": "official",
+      "category": "parliamentary-record",
+      "evidences": "Which topics an MP or party chooses to pursue, and ministers' answers.",
+      "nzCoverage": "Complete for the current and recent Parliaments.",
+      "coverageYears": "2003-present, UNVERIFIED",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Parliamentary material; CC BY 4.0 expected, UNVERIFIED",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "Individual-level evidence that is otherwise scarce: the volume and subject of an MP's written questions is a direct record of their priorities, independent of the party whip. Oral questions show a party's chosen lines of attack.",
+      "gotchas": [
+        "Blazor SPA; browser automation required.",
+        "Salience, not position: a question shows what an MP cares about, not which way they lean. Combine with speeches.",
+        "Only sitting MPs ask questions, so this covers incumbents and list MPs standing again, not new candidates."
+      ]
+    },
+    {
+      "id": "parliamentary-library",
+      "name": "Parliamentary Library research papers and Bills Digests",
+      "url": "https://www3.parliament.nz/en/pb/library-research-papers/",
+      "tier": "official",
+      "category": "policy-analysis",
+      "evidences": "Non-partisan summaries of bills, their background, and the positions parties took at first reading, plus research briefs on policy topics.",
+      "nzCoverage": "Bills Digests for most government bills; research papers by topic.",
+      "coverageYears": "Approximately 2000-present, UNVERIFIED",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "liberty",
+        "tradition",
+        "institutions",
+        "cosmopolitan",
+        "environment",
+        "diplomacy",
+        "local",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Parliamentary material; CC BY 4.0 expected, UNVERIFIED",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "The fastest route from a bill to a cited party position: a Digest explains what a bill does in neutral terms and summarises each party's first-reading stance, so an agent can locate the right Hansard passage without reading the whole debate.",
+      "gotchas": [
+        "Bot-blocked; use www3.parliament.nz.",
+        "Not produced for every bill; members' bill coverage is patchy. UNVERIFIED how complete recent coverage is.",
+        "Summaries of party positions are secondary; cite the Hansard passage they point to."
+      ]
+    },
+    {
+      "id": "bora-reports",
+      "name": "Attorney-General section 7 reports and Ministry of Justice Bill of Rights advice",
+      "url": "https://www.justice.govt.nz/justice-sector-policy/constitutional-issues-and-human-rights/",
+      "tier": "official",
+      "category": "legislation",
+      "evidences": "Official assessment of whether a bill is consistent with the New Zealand Bill of Rights Act 1990, and the Attorney-General's formal report to the House under section 7 where it is not.",
+      "nzCoverage": "Advice published for government bills since 2003; section 7 reports since 1990. UNVERIFIED.",
+      "coverageYears": "1990-present",
+      "dimensions": [
+        "liberty",
+        "institutions"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Crown copyright, CC BY 4.0 under NZGOAL expected",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "The most direct official evidence for the liberty dimension, which the survey datasets do not cover: which parties introduced or voted for bills formally reported as limiting rights, and which opposed them. Section 7 reports are rare, so each one is high-signal. Pair with the party vote on the bill.",
+      "gotchas": [
+        "A consistency finding is not an endorsement; only inconsistency findings carry strong signal.",
+        "Advice on members' bills is published only once they are drawn from the ballot. UNVERIFIED.",
+        "Exact URL of the compliance-reports index UNVERIFIED."
+      ]
+    },
+    {
+      "id": "pce",
+      "name": "Parliamentary Commissioner for the Environment",
+      "url": "https://pce.parliament.nz/",
+      "tier": "official",
+      "category": "policy-analysis",
+      "evidences": "Independent statutory reviews of environmental policy, legislation and the government's environmental performance, by an officer of Parliament.",
+      "nzCoverage": "Complete for the office's own publications.",
+      "coverageYears": "1987-present",
+      "dimensions": [
+        "environment",
+        "change"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "CC BY 4.0 expected, UNVERIFIED",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Same constitutional standing as the Ombudsman, which the catalogue already includes: independent of the government of the day and reporting to Parliament. Its submissions on bills such as the resource management replacements are dated, official assessments of what a policy does to the environment.",
+      "gotchas": [
+        "Assesses policy, not parties; attribute through the responsible minister and the party vote on the bill.",
+        "Reports are PDFs; no API."
+      ]
+    },
+    {
+      "id": "oag",
+      "name": "Controller and Auditor-General",
+      "url": "https://oag.parliament.nz/",
+      "tier": "official",
+      "category": "transparency",
+      "evidences": "Performance audits of government programmes and delivery, and probity inquiries into procurement, conflicts of interest and use of public money.",
+      "nzCoverage": "Complete for the office's own publications.",
+      "coverageYears": "2000s-present online",
+      "dimensions": [
+        "institutions"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "CC BY 4.0 expected, UNVERIFIED",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Independent evidence of whether a government delivered what it funded and conducted itself properly. This feeds the competence and probity section the prompt asks to report separately from values, and the institutions dimension where a party's response to audit findings is on the record.",
+      "gotchas": [
+        "Audits agencies and programmes, not parties.",
+        "Reports are PDFs; no API."
+      ]
+    },
+    {
+      "id": "ccc",
+      "name": "Climate Change Commission (He Pou a Rangi) monitoring reports and advice",
+      "url": "https://www.climatecommission.govt.nz/",
+      "tier": "official",
+      "category": "policy-analysis",
+      "evidences": "Statutory annual monitoring of progress against emissions budgets and the 2050 target under the Climate Change Response Act 2002, and advice on emissions reduction plans and budgets.",
+      "nzCoverage": "Complete since the Commission was established in 2019.",
+      "coverageYears": "2021-present",
+      "dimensions": [
+        "environment"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "CC BY 4.0 under NZGOAL expected",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "The reference point for the environment dimension: a legislated target, a statutory assessor, and an annual dated judgement of whether current policy will meet it. Because it assesses the direction of specific policies, findings can be attributed to the parties that made them.",
+      "gotchas": [
+        "An independent Crown entity with a statutory mandate, not an advocacy group, but some parties contest its role. Cite its findings as the Commission's findings.",
+        "Reports are PDFs."
+      ]
+    },
+    {
+      "id": "environmental-reporting",
+      "name": "Environmental reporting and the Greenhouse Gas Inventory (Ministry for the Environment and Stats NZ)",
+      "url": "https://environment.govt.nz/publications/",
+      "tier": "official",
+      "category": "statistics",
+      "evidences": "Outcome data on emissions, freshwater, biodiversity, air and land under the Environmental Reporting Act 2015, plus the annual greenhouse gas inventory submitted under the UNFCCC.",
+      "nzCoverage": "Complete.",
+      "coverageYears": "Inventory 1990-present; Environmental Reporting Act series 2015-present",
+      "dimensions": [
+        "environment"
+      ],
+      "machineReadable": "bulk-download",
+      "licence": "CC BY 4.0 under NZGOAL",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Grounds factual claims about environmental outcomes over a government's term, the way Stats NZ child poverty measures ground the solidarity dimension.",
+      "gotchas": [
+        "Inventory data lags by roughly 15 months, so a term's final year is never in the record before the election.",
+        "Outcomes have many causes; attribute to policy with care and prefer the Climate Change Commission's attribution where it exists."
+      ]
+    },
+    {
+      "id": "defence-foreign-policy",
+      "name": "Defence and foreign policy statements (Ministry of Defence, MFAT, Foreign Affairs, Defence and Trade Committee)",
+      "url": "https://www.defence.govt.nz/publications/",
+      "tier": "official",
+      "category": "executive-record",
+      "evidences": "Defence Policy and Strategy Statement 2023, Defence Capability Plan 2025, foreign policy speeches, treaty examination reports, and the committee's estimates and annual review hearings.",
+      "nzCoverage": "Governing parties' posture in full; opposition positions through committee minority views and Hansard.",
+      "coverageYears": "Current term",
+      "dimensions": [
+        "diplomacy",
+        "cosmopolitan"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "CC BY 4.0 under NZGOAL expected",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "Diplomacy is the thinnest dimension in this catalogue. These documents state the governing parties' security posture and spending trajectory; opposition positions come from party votes on defence appropriations, committee minority views, and party responses to the capability plan, all of which are on the record.",
+      "gotchas": [
+        "Governing parties only, apart from the committee material.",
+        "Document titles and URLs UNVERIFIED.",
+        "Defence spending as a share of GDP is a cleaner comparator across parties than rhetoric; parties that state a target are scoreable, parties that do not should get low confidence."
+      ]
+    },
+    {
+      "id": "government-targets",
+      "name": "Government Targets quarterly reporting (Department of the Prime Minister and Cabinet)",
+      "url": "https://www.dpmc.govt.nz/our-programmes/government-targets",
+      "tier": "official",
+      "category": "executive-record",
+      "evidences": "Quarterly progress against the nine targets the 2023-2026 government set itself across health, education, crime, welfare, housing and emissions.",
+      "nzCoverage": "Current term.",
+      "coverageYears": "2024-present",
+      "dimensions": [
+        "solidarity",
+        "environment"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "CC BY 4.0 under NZGOAL",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "What the governing parties chose to be measured on, and whether they delivered. Feeds the record-versus-programme comparison the prompt asks for. The choice of targets is itself a value signal, and so is the absence of a target on a dimension.",
+      "gotchas": [
+        "dpmc.govt.nz is Cloudflare-blocked; fetch asset paths directly.",
+        "Self-set and self-reported. Cross-check against Stats NZ, the Ministry of Health and the Climate Change Commission.",
+        "URL UNVERIFIED."
+      ]
+    },
+    {
+      "id": "waitangi-tribunal",
+      "name": "Waitangi Tribunal reports",
+      "url": "https://www.waitangitribunal.govt.nz/",
+      "tier": "official",
+      "category": "policy-analysis",
+      "evidences": "Findings of a standing commission of inquiry on whether Crown policy and legislation are consistent with the principles of the Treaty of Waitangi, including urgent inquiries into current bills.",
+      "nzCoverage": "Complete for the Tribunal's own reports.",
+      "coverageYears": "1975-present",
+      "dimensions": [
+        "institutions",
+        "cosmopolitan",
+        "local"
+      ],
+      "machineReadable": "scrape-only",
+      "licence": "Commission-of-inquiry reports have no copyright under Copyright Act 1994 s 27 (as the legislation-api entry already notes).",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "Urgent inquiries into government bills produce dated, official findings about how a governing party weighed Treaty obligations against other goals, and the parties' responses to those findings are on the Hansard record.",
+      "gotchas": [
+        "Findings are recommendatory and politically contested. Cite them as the Tribunal's findings, not as settled fact, and record each party's stated response.",
+        "Assesses the Crown, so attribute to parties through the responsible ministers and the party votes."
+      ]
+    },
+    {
+      "id": "candidate-lists",
+      "name": "Nominated candidates and party lists (Electoral Commission)",
+      "url": "https://elections.nz/",
+      "tier": "official",
+      "category": "electoral",
+      "evidences": "The official ballot: electorate candidates by electorate, and party list rankings.",
+      "nzCoverage": "All nominated candidates and registered party lists, once nominations close.",
+      "coverageYears": "Per election",
+      "dimensions": [],
+      "role": "structural",
+      "machineReadable": "scrape-only",
+      "licence": "Crown copyright; reuse permitted.",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "high",
+      "value": "The authoritative enumeration for step 1.1 of the research prompt. Party list rankings are also a small signal of what a party values in its people, for example whether its top-ranked candidates are ministers, activists or sector representatives.",
+      "gotchas": [
+        "Does not exist before nominations close on 8 October 2026; party-announced candidates before then are provisional.",
+        "URL pattern UNVERIFIED; 2023 lists were published on elections.nz. HTML is Incapsula-blocked, assets are not."
+      ]
+    },
+    {
+      "id": "ccs",
+      "name": "Comparative Candidates Survey (New Zealand module)",
+      "url": "https://www.comparativecandidates.org/",
+      "tier": "academic",
+      "category": "candidate-survey",
+      "evidences": "Candidate self-placements on left-right and issue positions, plus campaign behaviour, collected after each election.",
+      "nzCoverage": "New Zealand has participated through the New Zealand Election Study team. Waves and years UNVERIFIED.",
+      "coverageYears": "UNVERIFIED",
+      "dimensions": [
+        "solidarity",
+        "regulation",
+        "tradition",
+        "cosmopolitan",
+        "environment"
+      ],
+      "machineReadable": "bulk-download",
+      "licence": "Free with registration; embargo periods apply. UNVERIFIED.",
+      "redistributable": false,
+      "editorialised": false,
+      "confidence": "low",
+      "value": "If recent waves include New Zealand, this is the only systematic candidate-level self-placement data, and it partly fills the gap described in the party-vote-opacity limit for candidates who have stood before.",
+      "gotchas": [
+        "Post-election survey, so it covers previous candidacies, not the 2026 ballot.",
+        "Response rates are modest and skew towards minor-party candidates. UNVERIFIED for New Zealand.",
+        "Verify coverage before relying on it; drop from the catalogue if New Zealand is absent from the last two waves."
+      ]
+    },
+    {
+      "id": "party-facts",
+      "name": "Party Facts",
+      "url": "https://partyfacts.herokuapp.com/",
+      "tier": "academic",
+      "category": "structural",
+      "evidences": "Crosswalk of party identifiers across MARPOR, ParlGov, CSES, V-Party, Wikipedia and others.",
+      "nzCoverage": "Major and most minor New Zealand parties. UNVERIFIED for parties registered since 2020.",
+      "coverageYears": "Historical to present",
+      "dimensions": [],
+      "role": "structural",
+      "machineReadable": "bulk-download",
+      "licence": "CC BY-SA 4.0, UNVERIFIED",
+      "redistributable": true,
+      "editorialised": false,
+      "confidence": "medium",
+      "value": "Complements the CSES crosswalk. Use it to join the academic datasets to each other and to Wikidata, which the wikidata entry notes lacks these IDs.",
+      "gotchas": [
+        "Minor parties may be missing or merged with predecessors; check before joining."
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Chapel Hill Expert Survey (CHES)",
+      "url": "https://www.chesdata.eu/",
+      "reason": "Europe-only; New Zealand is not covered. The 2024 wave covers 31 countries: all EU member states except Luxembourg, plus Iceland, Norway, Switzerland, Turkey and the United Kingdom. Independently confirmed by CSES's own party crosswalk, which states that CHES identifiers are unavailable for New Zealand.",
+      "verified": true
+    },
+    {
+      "name": "PopuList",
+      "reason": "Europe-only (31 countries). New Zealand out of scope.",
+      "verified": true
+    },
+    {
+      "name": "Vote Compass New Zealand",
+      "reason": "Methodologically serious (TVNZ with Vox Pop Labs and university academics, 182,682 respondents in 2023) but the party-position matrix is not published, and the data was not made publicly available. Reputable but a dead end as a data source.",
+      "verified": true
+    },
+    {
+      "name": "theyworkforyou.co.nz",
+      "reason": "No live New Zealand equivalent of TheyWorkForYou exists; the domain appears squatted. Returned 403 and could not be independently confirmed. Treat as not-a-source either way.",
+      "verified": false
+    },
+    {
+      "name": "WhichParty NZ",
+      "reason": "Claims seven parties across 33 questions with written justifications and sources, but the operator is anonymous and the site blocks automated access. Cannot be verified as independent.",
+      "verified": false
+    },
+    {
+      "name": "voted.nz",
+      "reason": "CC-BY 4.0 and explicitly non-partisan, but covers only the 50th-52nd Parliaments and explicitly excludes party votes. Effectively stale; no API.",
+      "verified": true
+    },
+    {
+      "name": "Knowledge Basket",
+      "reason": "Holds Hansard from September 1987 but is commercial and subscription-gated.",
+      "verified": true
+    },
+    {
+      "name": "Figure.NZ",
+      "reason": "Live and non-advocacy, but a re-presenter of other agencies' data. Cite the upstream source instead.",
+      "verified": true
+    },
+    {
+      "name": "Democracy Project (Bryce Edwards), PublicData NZ, MyElectorate, PartyMap",
+      "reason": "Advocacy or commercial aggregators. Excluded by the neutrality standard.",
+      "verified": true
+    },
+    {
+      "name": "historical-new-zealand-hansard.com, opengovernment.org.nz, open.nz, nzdotstat.stats.govt.nz",
+      "reason": "Dead. DNS failure or decommissioned.",
+      "verified": true
+    }
+  ],
+  "dimensionCoverage": {
+    "note": "Which sources bear most directly on each dimension. Dimensions with thin coverage need the most careful sourcing.",
+    "solidarity": [
+      "gps",
+      "marpor",
+      "treasury",
+      "stats-nz",
+      "select-committees",
+      "party-policy-pages",
+      "coalition-agreements",
+      "journals-and-divisions",
+      "government-targets"
+    ],
+    "regulation": [
+      "gps",
+      "marpor",
+      "cses",
+      "ras",
+      "legislation-api",
+      "treasury",
+      "party-policy-pages",
+      "coalition-agreements",
+      "journals-and-divisions",
+      "parliamentary-library"
+    ],
+    "liberty": [
+      "marpor",
+      "legislation-api",
+      "hansard",
+      "ras",
+      "ombudsman",
+      "bora-reports",
+      "journals-and-divisions",
+      "party-policy-pages",
+      "coalition-agreements",
+      "parliamentary-library"
+    ],
+    "tradition": [
+      "gps",
+      "marpor",
+      "vparty",
+      "hansard",
+      "legislation-api",
+      "journals-and-divisions",
+      "party-policy-pages",
+      "coalition-agreements"
+    ],
+    "institutions": [
+      "gps",
+      "cses",
+      "vparty",
+      "psc-oia-stats",
+      "party-register",
+      "bora-reports",
+      "waitangi-tribunal",
+      "oag",
+      "coalition-agreements",
+      "journals-and-divisions"
+    ],
+    "cosmopolitan": [
+      "gps",
+      "marpor",
+      "hansard",
+      "party-policy-pages",
+      "coalition-agreements",
+      "journals-and-divisions",
+      "waitangi-tribunal",
+      "defence-foreign-policy"
+    ],
+    "environment": [
+      "gps",
+      "marpor",
+      "ras",
+      "treasury",
+      "legislation-api",
+      "ccc",
+      "pce",
+      "environmental-reporting",
+      "party-policy-pages",
+      "coalition-agreements",
+      "journals-and-divisions"
+    ],
+    "diplomacy": [
+      "marpor",
+      "hansard",
+      "select-committees",
+      "defence-foreign-policy",
+      "journals-and-divisions",
+      "party-policy-pages",
+      "coalition-agreements"
+    ],
+    "local": [
+      "marpor",
+      "treasury",
+      "party-register",
+      "journals-and-divisions",
+      "party-policy-pages",
+      "coalition-agreements",
+      "waitangi-tribunal"
+    ],
+    "change": [
+      "marpor",
+      "treasury",
+      "hansard",
+      "cabinet-papers",
+      "journals-and-divisions",
+      "party-policy-pages",
+      "coalition-agreements",
+      "pce"
+    ],
+    "thinnest": [
+      "diplomacy",
+      "local",
+      "change"
+    ],
+    "thinnestNote": "No survey dataset covers diplomacy, liberty, local or change for New Zealand. For those, the primary recourse is now recorded party votes and second-reading speeches on the marker bills for each dimension, the party's own manifesto, and the coalition agreements, with MARPOR per-category codes as the academic cross-check. Diplomacy stays thinnest because most defence and foreign policy is set by the executive without a division."
+  },
+  "reviewedAt": "2026-09-05",
+  "contextSources": {
+    "note": "Not evidence of values. Needed for the electoral-context step of the research prompt (how the vote works, polling, likely coalitions, wasted-vote risk). Admitted on a lower bar than the sources list: published methodology and disclosed sponsor.",
+    "sources": [
+      {
+        "id": "mmp-mechanics",
+        "name": "Electoral Commission: how MMP works",
+        "url": "https://elections.nz/democracy-in-nz/what-is-new-zealands-system-of-government/what-is-mmp/",
+        "evidences": "The 5% party-vote threshold and the one-electorate-seat alternative, Sainte-Laguë allocation, overhang seats, and the distinction between the party vote and the electorate vote.",
+        "value": "Authoritative basis for telling the person what each of their two votes can and cannot change. URL UNVERIFIED."
+      },
+      {
+        "id": "ranz-polling-code",
+        "name": "Research Association New Zealand Political Polling Code",
+        "url": "https://www.researchassociation.org.nz/",
+        "evidences": "The disclosure standard a published poll should meet: sponsor, fieldwork dates, sample, method, weighting and margin of error.",
+        "value": "Use it to decide which polls to admit and what to demand of each citation. Membership is a quality flag, not a guarantee; a pollster's departure from the association is worth noting but is not itself evidence of bias."
+      },
+      {
+        "id": "published-polls",
+        "name": "Published political polls (1News–Verian, RNZ–Reid Research, Taxpayers' Union–Curia, Roy Morgan, Talbot Mills, others)",
+        "evidences": "Party-vote intention and preferred prime minister over time.",
+        "value": "Cite each poll individually with fieldwork dates, sample size and sponsor. Sponsor is a disclosure requirement and a bias flag, not a reason to exclude.",
+        "gotchas": [
+          "Margins of error of roughly ±3 points at the headline level are much larger for parties near the 5% threshold, which is where the strategic questions live.",
+          "Poll aggregators and seat projections apply their own models; cite the underlying polls and treat projections as projections."
+        ]
+      },
+      {
+        "id": "wikipedia-polling",
+        "name": "Wikipedia: Opinion polling for the 2026 New Zealand general election",
+        "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_New_Zealand_general_election",
+        "licence": "CC BY-SA 4.0",
+        "evidences": "Running table of published polls with fieldwork dates, sample sizes and a link to each source.",
+        "value": "The most complete public index of published polls. Use it to find polls, then cite the poll itself. Page title UNVERIFIED."
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "version": "1.1",
+      "date": "2026-09-05",
+      "summary": "Review pass. Added party-published manifestos as a primary tier; added coalition agreements, recorded party votes, parliamentary questions, Parliamentary Library digests, Bill of Rights section 7 reports, PCE, Auditor-General, Climate Change Commission, environmental reporting, defence and foreign policy statements, Government Targets, Waitangi Tribunal, candidate lists, Comparative Candidates Survey (low confidence, unverified), and Party Facts. Demoted donations, pecuniary interests and election results from value evidence to context or structure; lowered PSC OIA statistics to low confidence. Corrected Hansard and select committee report licences to Copyright Act 1994 s 27. Added a contextSources section for MMP mechanics and polling. Rebuilt dimensionCoverage."
+    }
+  ]
+}
