@@ -4,7 +4,7 @@
   "short": "Labour",
   "colour": "#D82A20",
   "website": "https://www.labour.org.nz/",
-  "assessedAt": "2026-09-05",
+  "assessedAt": "2026-09-06",
   "rubricVersion": "1.0",
   "status": "draft",
   "inParliament": true,
@@ -293,6 +293,47 @@
           "url": "https://www.labour.org.nz/news/speech-labour-party-congress-2026-chris-hipkins/",
           "date": "2026-07",
           "archived": "research/nz/labour/speech-congress-2026-hipkins.html"
+        }
+      ]
+    },
+    "animals": {
+      "score": 55,
+      "confidence": "medium",
+      "rationale": "In government Labour legislated the world's first complete ban on livestock exports by sea, in force from April 2023, and in opposition it voted for the greyhound racing ban. It has published no 2026 animal welfare policy and did not campaign against the coalition's planned repeal in its own material, so the score rests on record rather than programme.",
+      "sources": [
+        {
+          "title": "Animal Welfare Amendment Act 2022 (livestock exports by sea prohibited after 30 April 2023)",
+          "url": "https://www.legislation.govt.nz/act/public/1999/142/en/latest/LMS539976",
+          "date": "2022-09-30",
+          "archived": "research/nz/shared/animal-welfare-act-live-export-provision.html"
+        },
+        {
+          "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+          "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+          "date": "2026-04-02",
+          "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+          "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+        }
+      ]
+    },
+    "drugs": {
+      "score": 35,
+      "confidence": "medium",
+      "rationale": "Labour's stated approach is to treat 'cannabis possession and use as a health matter rather than criminal matter': in government it affirmed police discretion not to prosecute possession, licensed drug checking and widened naloxone access. It has also said it will honour the 2020 referendum and not decriminalise or legalise, and it commits to 'stopping drug crime'. Health-based at the margins, no reform of the law itself, and no 2026 policy.",
+      "sources": [
+        {
+          "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+          "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+          "date": "2022",
+          "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+          "quote": "treat cannabis possession and use as a health matter rather than criminal matter"
+        },
+        {
+          "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+          "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+          "date": "2022",
+          "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+          "quote": "we have not thought it would be appropriate to change the legal status of cannabis or to decriminalise or legalise any other illicit drug at this time"
         }
       ]
     }

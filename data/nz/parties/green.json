@@ -4,7 +4,7 @@
   "short": "Green",
   "colour": "#098137",
   "website": "https://www.greens.org.nz/",
-  "assessedAt": "2026-09-05",
+  "assessedAt": "2026-09-06",
   "rubricVersion": "1.0",
   "status": "draft",
   "inParliament": true,
@@ -333,6 +333,68 @@
           "date": "2026-08",
           "archived": "research/nz/green/manifesto-2026-full.pdf",
           "quote": "constitutional transformation that upholds He Whakaputanga and Te Tiriti o Waitangi as our founding constitutional documents"
+        }
+      ]
+    },
+    "animals": {
+      "score": 90,
+      "confidence": "high",
+      "rationale": "Animals are treated as beings with interests: a new Commissioner for Animals and an independent ministry, stronger codes for farmed animals, phasing out debeaking, intensive winter grazing, factory farming, farrowing crates and rodeo, import standards to match domestic welfare rules, and retaining the live export ban while extending it to air exports. The party voted for the greyhound racing ban and campaigned against the live export repeal. Just short of the top anchor because it stops at regulating farming rather than questioning animal use itself.",
+      "sources": [
+        {
+          "title": "Green Party Manifesto 2026: Welfare of animals (p. 41)",
+          "url": "https://www.greens.org.nz/manifesto_2026",
+          "date": "2026-08",
+          "archived": "research/nz/green/manifesto-2026-full.pdf",
+          "quote": "Phase out harmful activities including debeaking of hens, intensive winter grazing, factory farming, octopus farming, farrowing crates and rodeo"
+        },
+        {
+          "title": "Green Party Manifesto 2026: Welfare of animals (p. 41)",
+          "url": "https://www.greens.org.nz/manifesto_2026",
+          "date": "2026-08",
+          "archived": "research/nz/green/manifesto-2026-full.pdf",
+          "quote": "Create a new Commissioner for Animals to independently monitor and advocate for the rights of animals"
+        },
+        {
+          "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+          "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+          "date": "2026-04-02",
+          "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+          "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+        },
+        {
+          "title": "Green Party: Cancellation of live exports a win for animals",
+          "url": "https://www.greens.org.nz/cancellation_of_live_exports_a_win_for_animals",
+          "date": "2026-03-13",
+          "archived": "research/nz/shared/greens-cancellation-live-exports-win.html"
+        }
+      ]
+    },
+    "drugs": {
+      "score": 90,
+      "confidence": "high",
+      "rationale": "The manifesto would repeal and replace the Misuse of Drugs Act with an approach that 'treats drug use as a health issue and provides for regulated access to cannabis for personal use', fund harm reduction and supervised consumption spaces, pass Good Samaritan laws, license psychedelic treatment and recognise native psilocybin as taonga. Its leader says 'after 50 years of the war on drugs, it's clear the drugs are winning'. Harm reduction is the defining approach; it retains stronger controls on vaping and alcohol advertising.",
+      "sources": [
+        {
+          "title": "Green Party Manifesto 2026: Drug law reform (p. 14)",
+          "url": "https://www.greens.org.nz/manifesto_2026",
+          "date": "2026-08",
+          "archived": "research/nz/green/manifesto-2026-full.pdf",
+          "quote": "provides for regulated access to cannabis for personal use"
+        },
+        {
+          "title": "Green Party Manifesto 2026: Drug law reform (p. 14)",
+          "url": "https://www.greens.org.nz/manifesto_2026",
+          "date": "2026-08",
+          "archived": "research/nz/green/manifesto-2026-full.pdf",
+          "quote": "Enable a licensing system for psychedelic treatment"
+        },
+        {
+          "title": "Green Party: Greens renew call for evidence-based cannabis regulation",
+          "url": "https://www.greens.org.nz/greens_renew_call_for_evidence_based_cannabis_regulation",
+          "date": "2025-10-29",
+          "archived": "research/nz/shared/greens-renew-call-cannabis-regulation-2026.html",
+          "quote": "After 50 years of the war on drugs, it's clear the drugs are winning."
         }
       ]
     }

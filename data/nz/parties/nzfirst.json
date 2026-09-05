@@ -4,7 +4,7 @@
   "short": "NZ First",
   "colour": "#000000",
   "website": "https://www.nzfirst.nz/",
-  "assessedAt": "2026-09-05",
+  "assessedAt": "2026-09-06",
   "rubricVersion": "1.0",
   "status": "draft",
   "inParliament": true,
@@ -327,6 +327,56 @@
         }
       ],
       "mixed": true
+    },
+    "animals": {
+      "score": -10,
+      "confidence": "medium",
+      "rationale": "Its leader, as Racing Minister, carried the greyhound racing ban through Parliament, a major welfare measure. In the same term NZ First's coalition agreement committed to reversing the live export ban and reforming the animal welfare advisory committee, and its rural policy treats livestock as an export industry to be maximised. Welfare when it aligns with public sentiment, production otherwise, netting close to the midpoint.",
+      "sources": [
+        {
+          "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+          "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+          "date": "2026-04-02",
+          "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+          "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Primary Sector",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "Reverse the recent ban on live animal exports while ensuring the highest standards of animal welfare."
+        },
+        {
+          "title": "RNZ: Government backtracks on live animal export plans",
+          "url": "https://www.rnz.co.nz/news/political/589197/government-backtracks-on-live-animal-export-plans",
+          "date": "2026-03-11",
+          "archived": "research/nz/shared/rnz-government-backtracks-live-exports-2026.html",
+          "quote": "Hoggard told 1 News he could not get Cabinet agreement on overturning the ban, which formed part of coalition agreements with both ACT and NZ First."
+        }
+      ],
+      "mixed": true
+    },
+    "drugs": {
+      "score": -40,
+      "confidence": "low",
+      "rationale": "NZ First did not answer the Otago Daily Times' questions on drug reform and has no published drug policy. In coalition it drove tighter vaping regulation, a ban on disposable vapes and higher penalties for sales to minors, and its law-and-order programme is enforcement-led. Prohibitionist by disposition, on thin direct evidence.",
+      "sources": [
+        {
+          "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+          "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+          "date": "2022",
+          "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+          "quote": "Only New Zealand First did not respond."
+        },
+        {
+          "title": "Coalition Agreement National-NZ First 2023, Health",
+          "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+          "quote": "Reform the regulation of vaping, smokeless tobacco and oral nicotine products while banning disposable vaping products and increasing penalties for illegal sales to those under 18."
+        }
+      ]
     }
   }
 }

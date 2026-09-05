@@ -315,7 +315,7 @@
       var summary = el("summary", null, [
         el("span", { class: "rank", text: r.rank + "." }),
         el("span", { class: "party-name" }, [sw, el("span", { text: party.name })]),
-        el("span", { class: "align", html: r.adjusted + "% aligned<small>confidence " + r.confidence + (r.scoredDimensions < 10 ? ", " + r.scoredDimensions + " of 10 scored (" + r.alignment + "% on those)" : "") + "</small>" }),
+        el("span", { class: "align", html: r.adjusted + "% aligned<small>confidence " + r.confidence + (r.scoredDimensions < DIMENSIONS.length ? ", " + r.scoredDimensions + " of " + DIMENSIONS.length + " scored (" + r.alignment + "% on those)" : "") + "</small>" }),
         drivers
       ]);
       var cells = el("div", { class: "cells" });
@@ -403,8 +403,8 @@
         el("span", { class: "rank", text: r.rank + "." }),
         el("span", { class: "party-name" }, [sw, el("span", { html: cand.name + " <small>" + cand.partyName + "</small>" })]),
         el("span", { class: "align", html: (r.scoredDimensions ? r.adjusted + "% aligned" : "not scored") + "<small>" +
-          (r.scoredDimensions ? "confidence " + r.confidence + ", " : "") + r.scoredDimensions + " of 10 scored" +
-          (r.scoredDimensions && r.scoredDimensions < 10 ? " (" + r.alignment + "% on those)" : "") + ", " + own + " from own statements</small>" }),
+          (r.scoredDimensions ? "confidence " + r.confidence + ", " : "") + r.scoredDimensions + " of " + DIMENSIONS.length + " scored" +
+          (r.scoredDimensions && r.scoredDimensions < DIMENSIONS.length ? " (" + r.alignment + "% on those)" : "") + ", " + own + " from own statements</small>" }),
         drivers,
         el("div", { class: "bio", text: cand.bio })
       ]);

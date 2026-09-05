@@ -4,7 +4,7 @@
   "short": "National",
   "colour": "#00529F",
   "website": "https://www.national.org.nz/",
-  "assessedAt": "2026-09-05",
+  "assessedAt": "2026-09-06",
   "rubricVersion": "1.0",
   "status": "draft",
   "inParliament": true,
@@ -348,6 +348,68 @@
           "date": "2023-11-24",
           "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
           "quote": "The Government will form a jointly agreed 100 day plan based on the Parties' priorities."
+        }
+      ]
+    },
+    "animals": {
+      "score": -30,
+      "confidence": "medium",
+      "rationale": "National agreed in both coalition agreements to reverse the live export ban and to reform the National Animal Welfare Advisory Committee, but its Cabinet would not let the repeal proceed in March 2026, and it voted for the greyhound racing ban. Its 2026 hunting and fishing policy would recognise 'valued introduced species in law' so they are 'not treated as pests by default', with hunter-led management of game herds. Animals are framed as a managed resource, with limits set by public opinion rather than principle.",
+      "sources": [
+        {
+          "title": "Coalition Agreement National-ACT 2023, Agriculture",
+          "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+          "quote": "Reverse the recent ban on live animal exports while ensuring the highest standards of animal welfare."
+        },
+        {
+          "title": "RNZ: Government backtracks on live animal export plans",
+          "url": "https://www.rnz.co.nz/news/political/589197/government-backtracks-on-live-animal-export-plans",
+          "date": "2026-03-11",
+          "archived": "research/nz/shared/rnz-government-backtracks-live-exports-2026.html",
+          "quote": "Hoggard told 1 News he could not get Cabinet agreement on overturning the ban, which formed part of coalition agreements with both ACT and NZ First."
+        },
+        {
+          "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+          "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+          "date": "2026-04-02",
+          "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+          "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+        },
+        {
+          "title": "National: Our Plan for Hunting and Fishing",
+          "url": "https://www.national.org.nz/policies/hunting-and-fishing",
+          "date": "2026",
+          "archived": "research/nz/national/policies_hunting-and-fishing.html",
+          "quote": "They will not be treated as pests by default simply because they were introduced."
+        }
+      ],
+      "mixed": true
+    },
+    "drugs": {
+      "score": -45,
+      "confidence": "medium",
+      "rationale": "National 'does not support the legalisation of drugs' and says 'we need to crack down on the suppliers of illegal drugs'; its leader said in 2022 he would not consider decriminalising cannabis and that his views have not changed. Under its government Medsafe granted the first psilocybin and MDMA prescribing approvals and pseudoephedrine returned to pharmacies, all driven by its ACT associate minister, which National accepted rather than initiated. Enforcement-first with tightly controlled medical use.",
+      "sources": [
+        {
+          "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+          "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+          "date": "2022",
+          "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+          "quote": "National does not support the legalisation of drugs and New Zealanders opposed legalising cannabis in the 2020 referendum."
+        },
+        {
+          "title": "1News: National won't decriminalise cannabis if elected, Luxon",
+          "url": "https://www.1news.co.nz/2022/10/07/national-wont-decriminalise-cannabis-if-elected-luxon/",
+          "date": "2022-10-07",
+          "archived": "research/nz/shared/1news-luxon-wont-decriminalise-cannabis-2022.html"
+        },
+        {
+          "title": "RNZ: Party drug MDMA gets official approval as PTSD treatment",
+          "url": "https://www.rnz.co.nz/news/health/1256159/party-drug-mdma-gets-official-approval-as-ptsd-treatment",
+          "date": "2026-09-04",
+          "archived": "research/nz/shared/rnz-mdma-ptsd-approval-2026.html"
         }
       ]
     }

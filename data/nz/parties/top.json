@@ -4,7 +4,7 @@
   "short": "Opportunity",
   "colour": "#0B8B8C",
   "website": "https://www.opportunity.org.nz/",
-  "assessedAt": "2026-09-05",
+  "assessedAt": "2026-09-06",
   "rubricVersion": "1.0",
   "status": "draft",
   "inParliament": false,
@@ -260,6 +260,33 @@
           "date": "2026-05",
           "archived": "research/nz/top/Opportunity-Policy---Tax-Reset-Transition-Plan.pdf",
           "quote": "Careful implementation would take a full decade."
+        }
+      ]
+    },
+    "animals": {
+      "score": null,
+      "confidence": "low",
+      "rationale": "Opportunity has no animal welfare policy. Its oceans policy sets bycatch limits and mandates cameras on fishing vessels for ecosystem and stock reasons, which is conservation rather than welfare, and it has no parliamentary record. Left unscored.",
+      "sources": []
+    },
+    "drugs": {
+      "score": 75,
+      "confidence": "high",
+      "rationale": "Opportunity 'supports the legalisation of cannabis and the decriminalisation of possession of small quantities (not the sale or manufacture) of other drugs', framing drugs as 'a harms-based approach' in place of 'the outdated war on drugs'; its 2026 platform would 'open and regulate sectors like cannabis' and decriminalise drug possession while expanding drug and mental health courts. Harm reduction as policy, short of the top anchor because it keeps supply of harder drugs illegal.",
+      "sources": [
+        {
+          "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+          "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+          "date": "2022",
+          "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+          "quote": "We support the legalisation of cannabis and the decriminalisation of possession of small quantities (not the sale or manufacture) of other drugs."
+        },
+        {
+          "title": "RNZ: Explainer, what is the Opportunity Party and what are its policies?",
+          "url": "https://www.rnz.co.nz/news/politics/642464/explainer-what-is-the-opportunity-party-and-what-are-its-policies",
+          "date": "2026",
+          "archived": "research/nz/shared/rnz-explainer-opportunity-party-2026.html",
+          "quote": "call to open and regulate sectors like cannabis"
         }
       ]
     }

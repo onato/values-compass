@@ -127,6 +127,111 @@
       "sourceUrl": "https://www.rnz.co.nz/news/political/579493/winston-peters-vows-to-repeal-regulatory-standards-bill-david-seymour-hits-back",
       "fetchedAt": "2026-09-05",
       "notes": "Media report of NZ First leader's stated position after voting for the bill; lead, not primary record."
+    },
+    {
+      "filename": "rnz-mdma-ptsd-approval-2026.html",
+      "textFile": "rnz-mdma-ptsd-approval-2026.txt",
+      "title": "RNZ: Party drug MDMA gets official approval as PTSD treatment",
+      "sourceUrl": "https://www.rnz.co.nz/news/health/1256159/party-drug-mdma-gets-official-approval-as-ptsd-treatment",
+      "fetchedAt": "2026-09-05",
+      "kind": "media"
+    },
+    {
+      "filename": "hansard-greyhound-racing-closure-third-reading-scoop.html",
+      "textFile": "hansard-greyhound-racing-closure-third-reading-scoop.txt",
+      "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026 (Scoop republication)",
+      "sourceUrl": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+      "fetchedAt": "2026-09-05",
+      "kind": "official"
+    },
+    {
+      "filename": "act-withdraws-support-greyhound-bill-2026.html",
+      "textFile": "act-withdraws-support-greyhound-bill-2026.txt",
+      "title": "ACT: ACT withdraws support for greyhound racing bill after Parliament rejects fixes (release via Scoop)",
+      "sourceUrl": "https://community.scoop.co.nz/2026/03/act-withdraws-support-for-greyhound-racing-bill-after-parliament-rejects-fixes/",
+      "fetchedAt": "2026-09-05",
+      "kind": "party"
+    },
+    {
+      "filename": "herald-hoggard-live-export-reversal.html",
+      "textFile": "herald-hoggard-live-export-reversal.txt",
+      "title": "NZ Herald: Minister says livestock export ban reversal should be law before next election",
+      "sourceUrl": "https://www.nzherald.co.nz/the-country/news/minister-says-livestock-export-ban-reversal-should-be-law-before-next-election/LQNHNNF4QBBSFH3DIA6PCQYXFE/",
+      "fetchedAt": "2026-09-05",
+      "kind": "media"
+    },
+    {
+      "filename": "greens-cancellation-live-exports-win.html",
+      "textFile": "greens-cancellation-live-exports-win.txt",
+      "title": "Green Party: Cancellation of live exports a win for animals",
+      "sourceUrl": "https://www.greens.org.nz/cancellation_of_live_exports_a_win_for_animals",
+      "fetchedAt": "2026-09-05",
+      "kind": "party"
+    },
+    {
+      "filename": "wikipedia-2020-cannabis-referendum.html",
+      "textFile": "wikipedia-2020-cannabis-referendum.txt",
+      "title": "Wikipedia: 2020 New Zealand cannabis referendum (party positions)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/2020_New_Zealand_cannabis_referendum",
+      "fetchedAt": "2026-09-05",
+      "kind": "reference"
+    },
+    {
+      "filename": "rnz-explainer-opportunity-party-2026.html",
+      "textFile": "rnz-explainer-opportunity-party-2026.txt",
+      "title": "RNZ: Explainer, what is the Opportunity Party and what are its policies?",
+      "sourceUrl": "https://www.rnz.co.nz/news/politics/642464/explainer-what-is-the-opportunity-party-and-what-are-its-policies",
+      "fetchedAt": "2026-09-05",
+      "kind": "media"
+    },
+    {
+      "filename": "odt-where-parties-stand-drugs.html",
+      "textFile": "odt-where-parties-stand-drugs.txt",
+      "title": "Otago Daily Times: Where political parties stand on drugs",
+      "sourceUrl": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+      "fetchedAt": "2026-09-05",
+      "kind": "media"
+    },
+    {
+      "filename": "animal-welfare-act-live-export-provision.html",
+      "textFile": "animal-welfare-act-live-export-provision.txt",
+      "title": "Animal Welfare Act 1999, provision inserted by the Animal Welfare Amendment Act 2022: export of livestock by sea prohibited after 30 April 2023",
+      "sourceUrl": "https://www.legislation.govt.nz/act/public/1999/142/en/latest/LMS539976",
+      "fetchedAt": "2026-09-05",
+      "kind": "official"
+    },
+    {
+      "filename": "rnz-psilocybin-approval-2025.html",
+      "textFile": "rnz-psilocybin-approval-2025.txt",
+      "title": "RNZ: Psychiatrist hopes 'magic mushroom' treatment will be more widely available (psilocybin approval, June 2025)",
+      "sourceUrl": "https://www.rnz.co.nz/news/national/564556/psychiatrist-hopes-magic-mushroom-treatment-will-be-more-widely-available",
+      "fetchedAt": "2026-09-05",
+      "kind": "media"
+    },
+    {
+      "filename": "greens-renew-call-cannabis-regulation-2026.html",
+      "textFile": "greens-renew-call-cannabis-regulation-2026.txt",
+      "title": "Green Party: Greens renew call for evidence-based cannabis regulation (29 October 2025)",
+      "sourceUrl": "https://www.greens.org.nz/greens_renew_call_for_evidence_based_cannabis_regulation",
+      "fetchedAt": "2026-09-05",
+      "kind": "party",
+      "date": "2025-10-29"
+    },
+    {
+      "filename": "rnz-government-backtracks-live-exports-2026.html",
+      "textFile": "rnz-government-backtracks-live-exports-2026.txt",
+      "title": "RNZ: Government backtracks on live animal export plans",
+      "sourceUrl": "https://www.rnz.co.nz/news/political/589197/government-backtracks-on-live-animal-export-plans",
+      "fetchedAt": "2026-09-05",
+      "kind": "media"
+    },
+    {
+      "filename": "1news-luxon-wont-decriminalise-cannabis-2022.html",
+      "textFile": "1news-luxon-wont-decriminalise-cannabis-2022.txt",
+      "title": "1News: National won't decriminalise cannabis if elected, Luxon (October 2022)",
+      "sourceUrl": "https://www.1news.co.nz/2022/10/07/national-wont-decriminalise-cannabis-if-elected-luxon/",
+      "fetchedAt": "2026-09-05",
+      "kind": "media"
     }
   ]
 }

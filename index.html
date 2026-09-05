@@ -18,7 +18,7 @@
       <h1>Values Compass</h1>
       <p class="lead">A short self-assessment that maps what you value in public life. The result is a profile you can use to compare political parties and candidates against your own values, rather than against slogans.</p>
       <ul class="facts">
-        <li><strong>50 statements</strong>, about 10 minutes.</li>
+        <li><strong>60 statements</strong>, about 12 minutes.</li>
         <li>Answer on a five-point scale from <em>strongly disagree</em> to <em>strongly agree</em>. Go with your first reaction.</li>
         <li>There are no right answers. The statements are about principles, not any particular country or party.</li>
         <li>Everything stays in your browser. Nothing is sent anywhere.</li>
@@ -36,10 +36,10 @@
 
     <!-- Questionnaire -->
     <section id="screen-quiz" class="screen" hidden>
-      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0">
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="60" aria-valuenow="0">
         <div class="progress-fill" id="progress-fill"></div>
       </div>
-      <p class="counter"><span id="q-index">1</span> of <span id="q-total">50</span></p>
+      <p class="counter"><span id="q-index">1</span> of <span id="q-total">60</span></p>
       <p class="statement" id="statement"></p>
       <div class="likert" id="likert" role="radiogroup" aria-label="Your answer"></div>
       <p class="hint">Keys 1 to 5 also work. <span id="hint-back"></span></p>
@@ -52,11 +52,11 @@
     <!-- Importance and other concerns -->
     <section id="screen-importance" class="screen" hidden>
       <h1>Nearly done</h1>
-      <p class="lead">Two optional questions that sharpen the match. How strongly you lean on a dimension is not the same as how much it decides your vote, so say which dimensions matter most. Then add anything that matters to you that the ten dimensions do not cover.</p>
+      <p class="lead">Two optional questions that sharpen the match. How strongly you lean on a dimension is not the same as how much it decides your vote, so say which dimensions matter most. Then add anything that matters to you that the twelve dimensions do not cover.</p>
       <h2>How much does each dimension matter to your vote?</h2>
       <div id="importance-list" class="importance-list"></div>
       <h2>Anything else that matters to your vote?</h2>
-      <p class="help">Issues, principles or concerns outside the ten dimensions. They go into your summary and into the research prompt, so an agent researches them too. Leave blank if nothing comes to mind.</p>
+      <p class="help">Issues, principles or concerns outside the twelve dimensions. They go into your summary and into the research prompt, so an agent researches them too. Leave blank if nothing comes to mind.</p>
       <textarea id="other-concerns" rows="4" placeholder="For example: animal welfare, housing supply, drug law, competence and honesty in government"></textarea>
       <div class="actions row">
         <button id="btn-importance-done" class="primary">See my results</button>
@@ -90,7 +90,7 @@
         <p class="help" id="party-intro"></p>
         <div id="party-ranking" class="party-ranking"></div>
         <p class="help" id="party-discriminators"></p>
-        <p class="help">Alignment is how close a party sits to your profile across the ten dimensions, weighted by how strongly you lean. Where a party or candidate has no score on a dimension, that dimension counts as unknown and pulls the figure toward 50, so thin evidence cannot look like a strong match. Every score is our reading of the party's programme and record; open a party to see the evidence for each dimension, and read <button class="link inline" id="link-method">how parties are scored</button>. Candidates are not scored; the research prompt below covers them.</p>
+        <p class="help">Alignment is how close a party sits to your profile across the twelve dimensions, weighted by how strongly you lean. Where a party or candidate has no score on a dimension, that dimension counts as unknown and pulls the figure toward 50, so thin evidence cannot look like a strong match. Every score is our reading of the party's programme and record; open a party to see the evidence for each dimension, and read <button class="link inline" id="link-method">how parties are scored</button>. Candidates are not scored; the research prompt below covers them.</p>
       </section>
 
       <section id="electorate-section" class="party-section" hidden>
@@ -104,7 +104,7 @@
       </section>
 
       <h2>Get your own analysis</h2>
-      <p class="help">The research prompt below asks an AI agent of your choice to research the parties and candidates on your ballot, score them on the same ten dimensions, and rank them against your profile with sources. You run it yourself, so you do not have to trust our analysis. Check the country and election, and add your electorate if you know it.</p>
+      <p class="help">The research prompt below asks an AI agent of your choice to research the parties and candidates on your ballot, score them on the same twelve dimensions, and rank them against your profile with sources. You run it yourself, so you do not have to trust our analysis. Check the country and election, and add your electorate if you know it.</p>
       <div class="context">
         <label>Country <input id="ctx-country" type="text" placeholder="Country" autocomplete="country-name"></label>
         <label>Election <input id="ctx-election" type="text" placeholder="Election, and your electorate if you know it"></label>
@@ -136,7 +136,7 @@
       <p>Most voting-advice tools ask about policies: should tax X go up, should law Y be repealed. Answers to those questions shift with the news cycle and depend on knowing the local debate. This questionnaire instead asks about <em>values</em>: the principles a person falls back on when policies conflict. Values are more stable, apply in any country, and are what a party programme ultimately expresses. The profile it produces is meant to be handed to a separate matching step, together with the local parties and candidates, rather than to name a party itself.</p>
 
       <h2>The value model</h2>
-      <p>The instrument measures ten bipolar dimensions. Each has two poles and a score between them; neither pole is treated as better. The set draws on two established frameworks in psychology, Schwartz's theory of basic human values (for example openness to change versus conservation, and self-transcendence versus self-enhancement) and Moral Foundations Theory (care, fairness, loyalty, authority, sanctity, liberty), and on the axes political science uses to place parties: the economic left-right axis and the cultural axis often labelled GAL-TAN (green, alternative, libertarian versus traditional, authoritarian, nationalist).</p>
+      <p>The instrument measures twelve bipolar dimensions. Each has two poles and a score between them; neither pole is treated as better. The set draws on two established frameworks in psychology, Schwartz's theory of basic human values (for example openness to change versus conservation, and self-transcendence versus self-enhancement) and Moral Foundations Theory (care, fairness, loyalty, authority, sanctity, liberty), and on the axes political science uses to place parties: the economic left-right axis and the cultural axis often labelled GAL-TAN (green, alternative, libertarian versus traditional, authoritarian, nationalist).</p>
       <p>Dimensions were chosen for three properties: they separate parties in practice, they can be phrased as principles rather than policies, and together they capture more than a single left-right line. Combinations matter more than any one axis. Someone who favours markets <em>and</em> solidarity sits in a different place from someone who favours markets <em>and</em> self-reliance, and multi-party systems have parties for both.</p>
       <ol id="method-dims" class="dim-defs"></ol>
 
@@ -167,7 +167,7 @@
         </tbody>
       </table>
       <p><strong>Consistency.</strong> The standard deviation of the five keyed values shows whether the person answered the dimension coherently. A deviation above 1.2 means they agreed with statements from both poles, and the dimension is marked <em>mixed</em>. A mixed score is still reported but should carry less weight in matching.</p>
-      <p><strong>Importance.</strong> How far you lean is not the same as how much a dimension decides your vote, so after the statements you can mark each dimension as mattering less, mattering, or mattering a lot. That multiplies the dimension's weight by 0.5, 1 or 1.5 in the priority order and in matching. Left unanswered, every dimension matters equally and strength of leaning alone sets the order. You can also name concerns outside the ten dimensions; they go into your summary and the research prompt, and are never folded into a score.</p>
+      <p><strong>Importance.</strong> How far you lean is not the same as how much a dimension decides your vote, so after the statements you can mark each dimension as mattering less, mattering, or mattering a lot. That multiplies the dimension's weight by 0.5, 1 or 1.5 in the priority order and in matching. Left unanswered, every dimension matters equally and strength of leaning alone sets the order. You can also name concerns outside the twelve dimensions; they go into your summary and the research prompt, and are never folded into a score.</p>
       <p><strong>Priorities.</strong> Dimensions are ordered by distance from the midpoint multiplied by importance, so the order doubles as the weighting used in matching.</p>
 
       <h2>Reading the profile</h2>
@@ -183,7 +183,7 @@
       </ul>
 
       <h2>How parties are scored</h2>
-      <p>The results page compares your profile with the New Zealand parties in Parliament, plus TOP, scored on the same ten dimensions. The scores are our assessment, made by reading each party's current policy pages and manifesto, the 2023 coalition agreements, recorded party votes and second-reading speeches on marker bills, the governing record, and statutory assessments such as the Climate Change Commission's monitoring reports and the Attorney-General's Bill of Rights reports. Expert datasets such as the Global Party Survey and the Manifesto Project are used only as cross-checks, because they predate the current term.</p>
+      <p>The results page compares your profile with the New Zealand parties in Parliament, plus TOP, scored on the same twelve dimensions. The scores are our assessment, made by reading each party's current policy pages and manifesto, the 2023 coalition agreements, recorded party votes and second-reading speeches on marker bills, the governing record, and statutory assessments such as the Climate Change Commission's monitoring reports and the Attorney-General's Bill of Rights reports. Expert datasets such as the Global Party Survey and the Manifesto Project are used only as cross-checks, because they predate the current term.</p>
       <p>Each party's score on each dimension answers one question: if this party governed alone, which way would it pull, and how hard? Programme comes first and record second; where they diverge we score the programme and say so. Anchors keep parties comparable: ±100 means the pole is a defining purpose of the party, ±60 a clear and consistent direction, ±30 a lean, 0 balanced or silent. Each score carries a confidence: <em>high</em> when programme and record agree across at least two source types, <em>medium</em> when one strong source or several thinner ones point the same way, <em>low</em> when evidence is thin, vague or contradictory. A party with no discernible position gets no score rather than a forced one.</p>
       <p>Matching is a weighted distance. Each dimension is weighted by how strongly you lean on it, with a small floor so a balanced profile still produces a ranking, and halved where your answers were mixed. Alignment is 100 minus that distance as a share of the maximum possible, so 100 per cent means a party sits exactly where you do on every dimension you care about. Where a party or candidate has no score on some dimensions, those count as unknown: the headline figure is pulled toward 50 in proportion to the weight you put on them, and the figure over the scored dimensions alone is shown beside it.</p>
       <p>Every cell on the results page shows its rationale, confidence and dated sources, and the source documents are archived in the project repository so the scores can be re-checked when parties publish new material. If you disagree with a score, the research prompt gives you an independent route: hand it to an agent of your choice and compare. Coalition commitments demanded by one party are attributed to that party in the rationale; they count for the lead party only where it adopted them as government policy. Where a party's evidence pulls in both directions on a dimension, for example liberal on speech but hard on crime, the cell is marked as a split position: the score still stands as the net direction, but it counts as less certain in matching and the rationale explains both pulls.</p>

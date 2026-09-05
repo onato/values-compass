@@ -1,7 +1,7 @@
 # Data sources for the matching step
 
 `sources-nz.json` is a catalogue of independent, non-advocacy sources a research agent can trawl for
-evidence of how New Zealand parties and candidates align with the ten value dimensions.
+evidence of how New Zealand parties and candidates align with the twelve value dimensions.
 
 It exists because the matching prompt generated on the results page asks an agent to research party
 positions and cite its evidence. Without a source list, an agent falls back on whatever it happens to
@@ -38,7 +38,7 @@ parliamentary votes API. Individual positions are therefore recoverable from vot
 conscience votes and split-party votes, and conscience votes cluster almost entirely on the
 `tradition` and `liberty` dimensions. For the other eight, candidate-level evidence has to come from
 members' bills submitted to the ballot, maiden and selection speeches, and select-committee
-questioning. An agent that reports confident candidate scores across all ten dimensions from voting
+questioning. An agent that reports confident candidate scores across all twelve dimensions from voting
 records alone is fabricating.
 
 **Some sources cannot be redistributed.** NZES and the Manifesto Project both forbid passing their

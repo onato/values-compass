@@ -9,9 +9,9 @@ function answerAll(fn) {
   return a;
 }
 
-test("data: 10 dimensions, 5 items each, at least 2 reverse-keyed", () => {
-  assert.equal(DIMENSIONS.length, 10);
-  assert.equal(ITEMS.length, 50);
+test("data: 12 dimensions, 5 items each, at least 2 reverse-keyed", () => {
+  assert.equal(DIMENSIONS.length, 12);
+  assert.equal(ITEMS.length, 60);
   for (const d of DIMENSIONS) {
     const its = ITEMS.filter((i) => i.dim === d.id);
     assert.equal(its.length, 5, d.id);

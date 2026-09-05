@@ -25,7 +25,7 @@ test("electorate files validate and the generated electorates.js is in sync", ()
   }
 });
 
-test("every party has all ten dimensions with sources for scored cells", () => {
+test("every party has every dimension with sources for scored cells", () => {
   assert.ok(PARTIES.parties.length >= 1);
   for (const p of PARTIES.parties) {
     for (const id of DIM_IDS) {

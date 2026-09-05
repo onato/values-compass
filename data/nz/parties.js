@@ -4,7 +4,7 @@ var PARTIES_NZ = {
     "jurisdiction": "New Zealand",
     "election": "General election, 7 November 2026",
     "rubricVersion": "1.0",
-    "assessedAt": "2026-09-05",
+    "assessedAt": "2026-09-06",
     "generatedAt": "2026-09-05",
     "parties": [
       "act",
@@ -23,7 +23,7 @@ var PARTIES_NZ = {
       "short": "ACT",
       "colour": "#FDE401",
       "website": "https://www.act.org.nz/",
-      "assessedAt": "2026-09-05",
+      "assessedAt": "2026-09-06",
       "rubricVersion": "1.0",
       "status": "draft",
       "inParliament": true,
@@ -376,6 +376,76 @@ var PARTIES_NZ = {
               "quote": "Existing Jobseeker Support – Health Condition or Disability and Supported Living Payment recipients will be reassessed against the new criteria on a phased basis."
             }
           ]
+        },
+        "animals": {
+          "score": -70,
+          "confidence": "high",
+          "rationale": "ACT was the only party to vote against the greyhound racing ban, saying it 'will not support a law that shuts down an entire industry without a fair process'; its minister drove the attempt to reinstate live exports until Cabinet stopped it; it secured reform of the animal welfare advisory committee in coalition; and its hunting policy transfers game management from DOC to hunters and treats game animals as 'valued natural resources to be sustainably managed'. Property rights and producers' interests come first.",
+          "sources": [
+            {
+              "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+              "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+              "date": "2026-04-02",
+              "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+              "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+            },
+            {
+              "title": "ACT: ACT withdraws support for greyhound racing bill after Parliament rejects fixes",
+              "url": "https://community.scoop.co.nz/2026/03/act-withdraws-support-for-greyhound-racing-bill-after-parliament-rejects-fixes/",
+              "date": "2026-03",
+              "archived": "research/nz/shared/act-withdraws-support-greyhound-bill-2026.html",
+              "quote": "we will not support a law that shuts down an entire industry without a fair process"
+            },
+            {
+              "title": "RNZ: Government backtracks on live animal export plans",
+              "url": "https://www.rnz.co.nz/news/political/589197/government-backtracks-on-live-animal-export-plans",
+              "date": "2026-03-11",
+              "archived": "research/nz/shared/rnz-government-backtracks-live-exports-2026.html",
+              "quote": "Hoggard told 1 News he could not get Cabinet agreement on overturning the ban, which formed part of coalition agreements with both ACT and NZ First."
+            },
+            {
+              "title": "ACT: Hunter-Led Game Management",
+              "url": "https://www.act.org.nz/game-management",
+              "date": "2026",
+              "archived": "research/nz/act/game-management.html",
+              "quote": "Recognise game-animal and game-bird species in relevant legislation as valued natural resources to be sustainably managed."
+            }
+          ]
+        },
+        "drugs": {
+          "score": 35,
+          "confidence": "medium",
+          "rationale": "ACT is 'sceptical about prohibition in general' and most of its MPs voted yes in the 2020 referendum, and as Associate Health Minister its leader delivered the first psilocybin approval in 2025, the MDMA approval for PTSD in 2026 and the return of pseudoephedrine, saying 'if a doctor believes psilocybin can help, they should have the opportunity'. It also says it 'must respect the outcome of the referendum' and campaigns hard on enforcement elsewhere. Liberal on therapeutic and personal use, unwilling to legislate change against a referendum.",
+          "sources": [
+            {
+              "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+              "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+              "date": "2022",
+              "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+              "quote": "We are sceptical about prohibition in general and don't believe it has been a successful policy on drugs."
+            },
+            {
+              "title": "RNZ: Psychiatrist hopes 'magic mushroom' treatment will be more widely available (psilocybin approval announced by Seymour)",
+              "url": "https://www.rnz.co.nz/news/national/564556/psychiatrist-hopes-magic-mushroom-treatment-will-be-more-widely-available",
+              "date": "2025-06",
+              "archived": "research/nz/shared/rnz-psilocybin-approval-2025.html",
+              "quote": "Associate Minister of Health David Seymour announced the first approval to prescribe psilocybin"
+            },
+            {
+              "title": "RNZ: Party drug MDMA gets official approval as PTSD treatment",
+              "url": "https://www.rnz.co.nz/news/health/1256159/party-drug-mdma-gets-official-approval-as-ptsd-treatment",
+              "date": "2026-09-04",
+              "archived": "research/nz/shared/rnz-mdma-ptsd-approval-2026.html"
+            },
+            {
+              "title": "Coalition Agreement National-ACT 2023, Agriculture",
+              "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+              "quote": "Allow the sale of cold medication containing pseudoephedrine."
+            }
+          ],
+          "mixed": true
         }
       }
     },
@@ -385,7 +455,7 @@ var PARTIES_NZ = {
       "short": "Green",
       "colour": "#098137",
       "website": "https://www.greens.org.nz/",
-      "assessedAt": "2026-09-05",
+      "assessedAt": "2026-09-06",
       "rubricVersion": "1.0",
       "status": "draft",
       "inParliament": true,
@@ -716,6 +786,68 @@ var PARTIES_NZ = {
               "quote": "constitutional transformation that upholds He Whakaputanga and Te Tiriti o Waitangi as our founding constitutional documents"
             }
           ]
+        },
+        "animals": {
+          "score": 90,
+          "confidence": "high",
+          "rationale": "Animals are treated as beings with interests: a new Commissioner for Animals and an independent ministry, stronger codes for farmed animals, phasing out debeaking, intensive winter grazing, factory farming, farrowing crates and rodeo, import standards to match domestic welfare rules, and retaining the live export ban while extending it to air exports. The party voted for the greyhound racing ban and campaigned against the live export repeal. Just short of the top anchor because it stops at regulating farming rather than questioning animal use itself.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Welfare of animals (p. 41)",
+              "url": "https://www.greens.org.nz/manifesto_2026",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Phase out harmful activities including debeaking of hens, intensive winter grazing, factory farming, octopus farming, farrowing crates and rodeo"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Welfare of animals (p. 41)",
+              "url": "https://www.greens.org.nz/manifesto_2026",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Create a new Commissioner for Animals to independently monitor and advocate for the rights of animals"
+            },
+            {
+              "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+              "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+              "date": "2026-04-02",
+              "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+              "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+            },
+            {
+              "title": "Green Party: Cancellation of live exports a win for animals",
+              "url": "https://www.greens.org.nz/cancellation_of_live_exports_a_win_for_animals",
+              "date": "2026-03-13",
+              "archived": "research/nz/shared/greens-cancellation-live-exports-win.html"
+            }
+          ]
+        },
+        "drugs": {
+          "score": 90,
+          "confidence": "high",
+          "rationale": "The manifesto would repeal and replace the Misuse of Drugs Act with an approach that 'treats drug use as a health issue and provides for regulated access to cannabis for personal use', fund harm reduction and supervised consumption spaces, pass Good Samaritan laws, license psychedelic treatment and recognise native psilocybin as taonga. Its leader says 'after 50 years of the war on drugs, it's clear the drugs are winning'. Harm reduction is the defining approach; it retains stronger controls on vaping and alcohol advertising.",
+          "sources": [
+            {
+              "title": "Green Party Manifesto 2026: Drug law reform (p. 14)",
+              "url": "https://www.greens.org.nz/manifesto_2026",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "provides for regulated access to cannabis for personal use"
+            },
+            {
+              "title": "Green Party Manifesto 2026: Drug law reform (p. 14)",
+              "url": "https://www.greens.org.nz/manifesto_2026",
+              "date": "2026-08",
+              "archived": "research/nz/green/manifesto-2026-full.pdf",
+              "quote": "Enable a licensing system for psychedelic treatment"
+            },
+            {
+              "title": "Green Party: Greens renew call for evidence-based cannabis regulation",
+              "url": "https://www.greens.org.nz/greens_renew_call_for_evidence_based_cannabis_regulation",
+              "date": "2025-10-29",
+              "archived": "research/nz/shared/greens-renew-call-cannabis-regulation-2026.html",
+              "quote": "After 50 years of the war on drugs, it's clear the drugs are winning."
+            }
+          ]
         }
       }
     },
@@ -725,7 +857,7 @@ var PARTIES_NZ = {
       "short": "Labour",
       "colour": "#D82A20",
       "website": "https://www.labour.org.nz/",
-      "assessedAt": "2026-09-05",
+      "assessedAt": "2026-09-06",
       "rubricVersion": "1.0",
       "status": "draft",
       "inParliament": true,
@@ -1016,6 +1148,47 @@ var PARTIES_NZ = {
               "archived": "research/nz/labour/speech-congress-2026-hipkins.html"
             }
           ]
+        },
+        "animals": {
+          "score": 55,
+          "confidence": "medium",
+          "rationale": "In government Labour legislated the world's first complete ban on livestock exports by sea, in force from April 2023, and in opposition it voted for the greyhound racing ban. It has published no 2026 animal welfare policy and did not campaign against the coalition's planned repeal in its own material, so the score rests on record rather than programme.",
+          "sources": [
+            {
+              "title": "Animal Welfare Amendment Act 2022 (livestock exports by sea prohibited after 30 April 2023)",
+              "url": "https://www.legislation.govt.nz/act/public/1999/142/en/latest/LMS539976",
+              "date": "2022-09-30",
+              "archived": "research/nz/shared/animal-welfare-act-live-export-provision.html"
+            },
+            {
+              "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+              "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+              "date": "2026-04-02",
+              "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+              "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+            }
+          ]
+        },
+        "drugs": {
+          "score": 35,
+          "confidence": "medium",
+          "rationale": "Labour's stated approach is to treat 'cannabis possession and use as a health matter rather than criminal matter': in government it affirmed police discretion not to prosecute possession, licensed drug checking and widened naloxone access. It has also said it will honour the 2020 referendum and not decriminalise or legalise, and it commits to 'stopping drug crime'. Health-based at the margins, no reform of the law itself, and no 2026 policy.",
+          "sources": [
+            {
+              "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+              "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+              "date": "2022",
+              "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+              "quote": "treat cannabis possession and use as a health matter rather than criminal matter"
+            },
+            {
+              "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+              "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+              "date": "2022",
+              "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+              "quote": "we have not thought it would be appropriate to change the legal status of cannabis or to decriminalise or legalise any other illicit drug at this time"
+            }
+          ]
         }
       }
     },
@@ -1025,7 +1198,7 @@ var PARTIES_NZ = {
       "short": "Te Pāti Māori",
       "colour": "#B2001A",
       "website": "https://www.maoriparty.org.nz/",
-      "assessedAt": "2026-09-05",
+      "assessedAt": "2026-09-06",
       "rubricVersion": "1.0",
       "status": "draft",
       "inParliament": true,
@@ -1299,6 +1472,48 @@ var PARTIES_NZ = {
               "quote": "a major constitutional reform package that will make Crown obligations arising from Te Tiriti legally enforceable"
             }
           ]
+        },
+        "animals": {
+          "score": 15,
+          "confidence": "low",
+          "rationale": "Te Pāti Māori voted for the greyhound racing ban and its kai sovereignty policy backs 'regenerative Māori agriculture' and rejects genetically engineered food, but it publishes nothing on animal welfare as such. A slight lean inferred from its stance on food systems and one vote.",
+          "sources": [
+            {
+              "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+              "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+              "date": "2026-04-02",
+              "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+              "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Kai Sovereignty",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Invest in community food systems and regenerative Māori agriculture."
+            }
+          ]
+        },
+        "drugs": {
+          "score": 70,
+          "confidence": "medium",
+          "rationale": "Te Pāti Māori supports 'the decriminalisation of drugs and would wipe the slate on all low-level drug convictions', arguing that 41 per cent of low-level drug convictions fall on Māori and that people should 'seek treatment for drug addiction without fear of the law'. Its 2026 justice policy would 'reform laws that criminalise poverty and survival' and move away from mass imprisonment. Decriminalisation and treatment over enforcement; it has not proposed legal regulated sale.",
+          "sources": [
+            {
+              "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+              "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+              "date": "2022",
+              "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+              "quote": "Te Pāti Māori support the decriminalisation of drugs and would wipe the slate on all low-level drug convictions."
+            },
+            {
+              "title": "Te Pāti Māori: Policy, Justice",
+              "url": "https://www.maoriparty.org.nz/policy",
+              "date": "2026",
+              "archived": "research/nz/maori/policy.html",
+              "quote": "Reform laws that criminalise poverty and survival."
+            }
+          ]
         }
       }
     },
@@ -1308,7 +1523,7 @@ var PARTIES_NZ = {
       "short": "National",
       "colour": "#00529F",
       "website": "https://www.national.org.nz/",
-      "assessedAt": "2026-09-05",
+      "assessedAt": "2026-09-06",
       "rubricVersion": "1.0",
       "status": "draft",
       "inParliament": true,
@@ -1654,6 +1869,68 @@ var PARTIES_NZ = {
               "quote": "The Government will form a jointly agreed 100 day plan based on the Parties' priorities."
             }
           ]
+        },
+        "animals": {
+          "score": -30,
+          "confidence": "medium",
+          "rationale": "National agreed in both coalition agreements to reverse the live export ban and to reform the National Animal Welfare Advisory Committee, but its Cabinet would not let the repeal proceed in March 2026, and it voted for the greyhound racing ban. Its 2026 hunting and fishing policy would recognise 'valued introduced species in law' so they are 'not treated as pests by default', with hunter-led management of game herds. Animals are framed as a managed resource, with limits set by public opinion rather than principle.",
+          "sources": [
+            {
+              "title": "Coalition Agreement National-ACT 2023, Agriculture",
+              "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+              "quote": "Reverse the recent ban on live animal exports while ensuring the highest standards of animal welfare."
+            },
+            {
+              "title": "RNZ: Government backtracks on live animal export plans",
+              "url": "https://www.rnz.co.nz/news/political/589197/government-backtracks-on-live-animal-export-plans",
+              "date": "2026-03-11",
+              "archived": "research/nz/shared/rnz-government-backtracks-live-exports-2026.html",
+              "quote": "Hoggard told 1 News he could not get Cabinet agreement on overturning the ban, which formed part of coalition agreements with both ACT and NZ First."
+            },
+            {
+              "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+              "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+              "date": "2026-04-02",
+              "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+              "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+            },
+            {
+              "title": "National: Our Plan for Hunting and Fishing",
+              "url": "https://www.national.org.nz/policies/hunting-and-fishing",
+              "date": "2026",
+              "archived": "research/nz/national/policies_hunting-and-fishing.html",
+              "quote": "They will not be treated as pests by default simply because they were introduced."
+            }
+          ],
+          "mixed": true
+        },
+        "drugs": {
+          "score": -45,
+          "confidence": "medium",
+          "rationale": "National 'does not support the legalisation of drugs' and says 'we need to crack down on the suppliers of illegal drugs'; its leader said in 2022 he would not consider decriminalising cannabis and that his views have not changed. Under its government Medsafe granted the first psilocybin and MDMA prescribing approvals and pseudoephedrine returned to pharmacies, all driven by its ACT associate minister, which National accepted rather than initiated. Enforcement-first with tightly controlled medical use.",
+          "sources": [
+            {
+              "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+              "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+              "date": "2022",
+              "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+              "quote": "National does not support the legalisation of drugs and New Zealanders opposed legalising cannabis in the 2020 referendum."
+            },
+            {
+              "title": "1News: National won't decriminalise cannabis if elected, Luxon",
+              "url": "https://www.1news.co.nz/2022/10/07/national-wont-decriminalise-cannabis-if-elected-luxon/",
+              "date": "2022-10-07",
+              "archived": "research/nz/shared/1news-luxon-wont-decriminalise-cannabis-2022.html"
+            },
+            {
+              "title": "RNZ: Party drug MDMA gets official approval as PTSD treatment",
+              "url": "https://www.rnz.co.nz/news/health/1256159/party-drug-mdma-gets-official-approval-as-ptsd-treatment",
+              "date": "2026-09-04",
+              "archived": "research/nz/shared/rnz-mdma-ptsd-approval-2026.html"
+            }
+          ]
         }
       }
     },
@@ -1663,7 +1940,7 @@ var PARTIES_NZ = {
       "short": "NZ First",
       "colour": "#000000",
       "website": "https://www.nzfirst.nz/",
-      "assessedAt": "2026-09-05",
+      "assessedAt": "2026-09-06",
       "rubricVersion": "1.0",
       "status": "draft",
       "inParliament": true,
@@ -1986,6 +2263,56 @@ var PARTIES_NZ = {
             }
           ],
           "mixed": true
+        },
+        "animals": {
+          "score": -10,
+          "confidence": "medium",
+          "rationale": "Its leader, as Racing Minister, carried the greyhound racing ban through Parliament, a major welfare measure. In the same term NZ First's coalition agreement committed to reversing the live export ban and reforming the animal welfare advisory committee, and its rural policy treats livestock as an export industry to be maximised. Welfare when it aligns with public sentiment, production otherwise, netting close to the midpoint.",
+          "sources": [
+            {
+              "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+              "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+              "date": "2026-04-02",
+              "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+              "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+            },
+            {
+              "title": "Coalition Agreement National-NZ First 2023, Primary Sector",
+              "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+              "quote": "Reverse the recent ban on live animal exports while ensuring the highest standards of animal welfare."
+            },
+            {
+              "title": "RNZ: Government backtracks on live animal export plans",
+              "url": "https://www.rnz.co.nz/news/political/589197/government-backtracks-on-live-animal-export-plans",
+              "date": "2026-03-11",
+              "archived": "research/nz/shared/rnz-government-backtracks-live-exports-2026.html",
+              "quote": "Hoggard told 1 News he could not get Cabinet agreement on overturning the ban, which formed part of coalition agreements with both ACT and NZ First."
+            }
+          ],
+          "mixed": true
+        },
+        "drugs": {
+          "score": -40,
+          "confidence": "low",
+          "rationale": "NZ First did not answer the Otago Daily Times' questions on drug reform and has no published drug policy. In coalition it drove tighter vaping regulation, a ban on disposable vapes and higher penalties for sales to minors, and its law-and-order programme is enforcement-led. Prohibitionist by disposition, on thin direct evidence.",
+          "sources": [
+            {
+              "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+              "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+              "date": "2022",
+              "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+              "quote": "Only New Zealand First did not respond."
+            },
+            {
+              "title": "Coalition Agreement National-NZ First 2023, Health",
+              "url": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+              "date": "2023-11-24",
+              "archived": "research/nz/shared/coalition-agreement-national-nzfirst-2023.pdf",
+              "quote": "Reform the regulation of vaping, smokeless tobacco and oral nicotine products while banning disposable vaping products and increasing penalties for illegal sales to those under 18."
+            }
+          ]
         }
       }
     },
@@ -1995,7 +2322,7 @@ var PARTIES_NZ = {
       "short": "Opportunity",
       "colour": "#0B8B8C",
       "website": "https://www.opportunity.org.nz/",
-      "assessedAt": "2026-09-05",
+      "assessedAt": "2026-09-06",
       "rubricVersion": "1.0",
       "status": "draft",
       "inParliament": false,
@@ -2251,6 +2578,33 @@ var PARTIES_NZ = {
               "date": "2026-05",
               "archived": "research/nz/top/Opportunity-Policy---Tax-Reset-Transition-Plan.pdf",
               "quote": "Careful implementation would take a full decade."
+            }
+          ]
+        },
+        "animals": {
+          "score": null,
+          "confidence": "low",
+          "rationale": "Opportunity has no animal welfare policy. Its oceans policy sets bycatch limits and mandates cameras on fishing vessels for ecosystem and stock reasons, which is conservation rather than welfare, and it has no parliamentary record. Left unscored.",
+          "sources": []
+        },
+        "drugs": {
+          "score": 75,
+          "confidence": "high",
+          "rationale": "Opportunity 'supports the legalisation of cannabis and the decriminalisation of possession of small quantities (not the sale or manufacture) of other drugs', framing drugs as 'a harms-based approach' in place of 'the outdated war on drugs'; its 2026 platform would 'open and regulate sectors like cannabis' and decriminalise drug possession while expanding drug and mental health courts. Harm reduction as policy, short of the top anchor because it keeps supply of harder drugs illegal.",
+          "sources": [
+            {
+              "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+              "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+              "date": "2022",
+              "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+              "quote": "We support the legalisation of cannabis and the decriminalisation of possession of small quantities (not the sale or manufacture) of other drugs."
+            },
+            {
+              "title": "RNZ: Explainer, what is the Opportunity Party and what are its policies?",
+              "url": "https://www.rnz.co.nz/news/politics/642464/explainer-what-is-the-opportunity-party-and-what-are-its-policies",
+              "date": "2026",
+              "archived": "research/nz/shared/rnz-explainer-opportunity-party-2026.html",
+              "quote": "call to open and regulate sectors like cannabis"
             }
           ]
         }

@@ -4,7 +4,7 @@
   "short": "ACT",
   "colour": "#FDE401",
   "website": "https://www.act.org.nz/",
-  "assessedAt": "2026-09-05",
+  "assessedAt": "2026-09-06",
   "rubricVersion": "1.0",
   "status": "draft",
   "inParliament": true,
@@ -357,6 +357,76 @@
           "quote": "Existing Jobseeker Support – Health Condition or Disability and Supported Living Payment recipients will be reassessed against the new criteria on a phased basis."
         }
       ]
+    },
+    "animals": {
+      "score": -70,
+      "confidence": "high",
+      "rationale": "ACT was the only party to vote against the greyhound racing ban, saying it 'will not support a law that shuts down an entire industry without a fair process'; its minister drove the attempt to reinstate live exports until Cabinet stopped it; it secured reform of the animal welfare advisory committee in coalition; and its hunting policy transfers game management from DOC to hunters and treats game animals as 'valued natural resources to be sustainably managed'. Property rights and producers' interests come first.",
+      "sources": [
+        {
+          "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+          "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+          "date": "2026-04-02",
+          "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+          "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+        },
+        {
+          "title": "ACT: ACT withdraws support for greyhound racing bill after Parliament rejects fixes",
+          "url": "https://community.scoop.co.nz/2026/03/act-withdraws-support-for-greyhound-racing-bill-after-parliament-rejects-fixes/",
+          "date": "2026-03",
+          "archived": "research/nz/shared/act-withdraws-support-greyhound-bill-2026.html",
+          "quote": "we will not support a law that shuts down an entire industry without a fair process"
+        },
+        {
+          "title": "RNZ: Government backtracks on live animal export plans",
+          "url": "https://www.rnz.co.nz/news/political/589197/government-backtracks-on-live-animal-export-plans",
+          "date": "2026-03-11",
+          "archived": "research/nz/shared/rnz-government-backtracks-live-exports-2026.html",
+          "quote": "Hoggard told 1 News he could not get Cabinet agreement on overturning the ban, which formed part of coalition agreements with both ACT and NZ First."
+        },
+        {
+          "title": "ACT: Hunter-Led Game Management",
+          "url": "https://www.act.org.nz/game-management",
+          "date": "2026",
+          "archived": "research/nz/act/game-management.html",
+          "quote": "Recognise game-animal and game-bird species in relevant legislation as valued natural resources to be sustainably managed."
+        }
+      ]
+    },
+    "drugs": {
+      "score": 35,
+      "confidence": "medium",
+      "rationale": "ACT is 'sceptical about prohibition in general' and most of its MPs voted yes in the 2020 referendum, and as Associate Health Minister its leader delivered the first psilocybin approval in 2025, the MDMA approval for PTSD in 2026 and the return of pseudoephedrine, saying 'if a doctor believes psilocybin can help, they should have the opportunity'. It also says it 'must respect the outcome of the referendum' and campaigns hard on enforcement elsewhere. Liberal on therapeutic and personal use, unwilling to legislate change against a referendum.",
+      "sources": [
+        {
+          "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+          "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+          "date": "2022",
+          "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+          "quote": "We are sceptical about prohibition in general and don't believe it has been a successful policy on drugs."
+        },
+        {
+          "title": "RNZ: Psychiatrist hopes 'magic mushroom' treatment will be more widely available (psilocybin approval announced by Seymour)",
+          "url": "https://www.rnz.co.nz/news/national/564556/psychiatrist-hopes-magic-mushroom-treatment-will-be-more-widely-available",
+          "date": "2025-06",
+          "archived": "research/nz/shared/rnz-psilocybin-approval-2025.html",
+          "quote": "Associate Minister of Health David Seymour announced the first approval to prescribe psilocybin"
+        },
+        {
+          "title": "RNZ: Party drug MDMA gets official approval as PTSD treatment",
+          "url": "https://www.rnz.co.nz/news/health/1256159/party-drug-mdma-gets-official-approval-as-ptsd-treatment",
+          "date": "2026-09-04",
+          "archived": "research/nz/shared/rnz-mdma-ptsd-approval-2026.html"
+        },
+        {
+          "title": "Coalition Agreement National-ACT 2023, Agriculture",
+          "url": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+          "date": "2023-11-24",
+          "archived": "research/nz/shared/coalition-agreement-national-act-2023.pdf",
+          "quote": "Allow the sale of cold medication containing pseudoephedrine."
+        }
+      ],
+      "mixed": true
     }
   }
 }

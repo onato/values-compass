@@ -93,6 +93,24 @@ var DIMENSIONS = [
       "gradual, step-by-step reform that avoids upheaval"
     ],
     blurb: "Fundamental change vs. gradual reform"
+  },
+  {
+    id: "animals",
+    poles: ["Animal welfare", "Human use"],
+    describe: [
+      "animals' own interests limiting how we farm, hunt, test and use them, even at economic cost",
+      "animals as resources managed for human benefit, with welfare rules kept practical for producers"
+    ],
+    blurb: "Animals' interests vs. animals as resources"
+  },
+  {
+    id: "drugs",
+    poles: ["Harm reduction", "Prohibition"],
+    describe: [
+      "treating drug use as a health matter, with regulated access, treatment, and medical use approved as the evidence arrives",
+      "keeping drugs illegal and enforcing the law to deter use"
+    ],
+    blurb: "Drugs as a health issue vs. drugs as a crime"
   }
 ];
 
@@ -165,7 +183,21 @@ var ITEMS = [
   { id: "chg2", dim: "change", key: 1,  text: "It is worth risking some disruption to fix a system that isn't working." },
   { id: "chg3", dim: "change", key: 1,  text: "The way things are done now mostly serves those who already benefit from it." },
   { id: "chg4", dim: "change", key: -1, text: "Gradual, step-by-step reform is safer than sweeping change." },
-  { id: "chg5", dim: "change", key: -1, text: "Big changes usually create more problems than they solve." }
+  { id: "chg5", dim: "change", key: -1, text: "Big changes usually create more problems than they solve." },
+
+  // 11 Animal welfare <-> Human use
+  { id: "ani1", dim: "animals", key: 1,  text: "Animals have interests of their own that should limit how we farm, hunt and use them." },
+  { id: "ani2", dim: "animals", key: 1,  text: "Practices that cause animals to suffer should be banned even if that makes food more expensive." },
+  { id: "ani3", dim: "animals", key: 1,  text: "Farmed animals deserve legal protection from cruelty as strong as the protection given to pets." },
+  { id: "ani4", dim: "animals", key: -1, text: "Animal welfare rules should be kept practical so they do not burden farmers and businesses." },
+  { id: "ani5", dim: "animals", key: -1, text: "People are entitled to use animals for food, sport and research, provided basic humane standards are met." },
+
+  // 12 Harm reduction <-> Prohibition
+  { id: "drg1", dim: "drugs", key: 1,  text: "Drug use should be treated as a health issue, not a crime." },
+  { id: "drg2", dim: "drugs", key: 1,  text: "Adults should be able to buy cannabis legally from regulated sellers." },
+  { id: "drg3", dim: "drugs", key: 1,  text: "Doctors should be able to prescribe drugs such as psilocybin or MDMA for treatment once trials show they help." },
+  { id: "drg4", dim: "drugs", key: -1, text: "Keeping drugs illegal is the best way to protect young people from them." },
+  { id: "drg5", dim: "drugs", key: -1, text: "Police should enforce drug laws firmly, including against possession for personal use." }
 ];
 
 var SCALE = [

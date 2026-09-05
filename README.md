@@ -1,6 +1,6 @@
 # Values Compass
 
-A self-assessment questionnaire, in the style of a psychological inventory, that maps a person's political values onto ten bipolar dimensions. The output is a profile (JSON plus an editable plain-language summary) intended as the input to a later step that matches political parties and candidates for voting.
+A self-assessment questionnaire, in the style of a psychological inventory, that maps a person's political values onto twelve bipolar dimensions. The output is a profile (JSON plus an editable plain-language summary) intended as the input to a later step that matches political parties and candidates for voting.
 
 This repository covers step one: establishing the values. The matching itself is not done here. Instead the results page generates a self-contained research prompt that the person hands to an AI agent of their choice. The prompt carries the dimension definitions, the person's profile, a sourcing and scoring rubric for parties and candidates, the matching formula, and a required report structure, so people get their own analysis without having to trust ours.
 
@@ -17,7 +17,7 @@ Everything stays in the browser. Progress and results are saved to `localStorage
 
 ## Party alignment (New Zealand)
 
-After the questionnaire, the results page ranks the New Zealand parties in Parliament, plus Opportunity (TOP), by how closely each sits to the person's profile on the same ten dimensions. Every party score shows its rationale, confidence and dated sources.
+After the questionnaire, the results page ranks the New Zealand parties in Parliament, plus Opportunity (TOP), by how closely each sits to the person's profile on the same twelve dimensions. Every party score shows its rationale, confidence and dated sources.
 
 - `docs/party-scoring-rubric.md` is the rule that turns evidence into a score. Read it before changing a number.
 - `data/nz/parties/<party>.json` holds one party's ten scores with rationale and sources.
@@ -38,7 +38,7 @@ Tests cover reverse keying, the score range, strength thresholds, the mixed-view
 
 ## How it works
 
-- **Model.** Ten dimensions, each with two poles (for example Solidarity vs. Self-reliance). Five statements per dimension, at least two of them reverse-keyed. See `js/data.js`.
+- **Model.** Twelve dimensions, each with two poles (for example Solidarity vs. Self-reliance). Five statements per dimension, at least two of them reverse-keyed. See `js/data.js`.
 - **Scale.** Five-point Likert from *strongly disagree* (1) to *strongly agree* (5).
 - **Scoring.** Reverse-keyed responses are flipped, the five keyed values are averaged, and the mean is mapped to −100 (fully the second pole) to +100 (fully the first pole). Strength labels: balanced (< 15), leans (15–44), clearly (45–74), strongly (≥ 75). A within-dimension standard deviation above 1.2 marks the dimension as *mixed*, meaning the person agreed with both poles. See `js/scoring.js`.
 - **Order.** Statements are shuffled per session with a seeded generator so no two consecutive statements belong to the same dimension.

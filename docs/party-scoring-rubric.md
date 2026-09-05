@@ -1,6 +1,6 @@
 # Party scoring rubric, version 1.0
 
-How a party's published positions and record are turned into a score on each of the ten value dimensions used by the questionnaire. Published so every score can be checked and disputed.
+How a party's published positions and record are turned into a score on each of the twelve value dimensions used by the questionnaire. Published so every score can be checked and disputed.
 
 ## What is being scored
 
@@ -42,6 +42,10 @@ Intermediate values are allowed. Use the anchors to keep parties comparable: two
 
 **Local (+) vs. Central (−).** +100: subsidiarity as a principle; devolves powers and revenue to regions and communities; accepts regional variation. +60: strengthens local government and local decision-making. 0: no net direction. −60: centralises services and standards for consistency and equal treatment; overrides councils when needed. −100: strong central government as a principle; local bodies as delivery agents.
 
+**Animal welfare (+) vs. Human use (−).** +100: animals' interests are a stated purpose; bans on factory farming practices, live export and blood sports, an independent voice for animals, welfare standards enforced against producers. +60: strengthens welfare codes and bans specific cruel practices, accepting costs to farming. 0: keeps current settings. −60: treats welfare rules as costs to be kept practical, restores or expands uses such as live export or hunting access, reforms welfare bodies to suit producers. −100: animals as resources with minimal constraint.
+
+**Harm reduction (+) vs. Prohibition (−).** +100: drug use is a health matter; legal regulated cannabis, decriminalised possession of all drugs, treatment funded in place of enforcement, therapeutic use approved as evidence arrives. +60: decriminalises possession and backs medical and therapeutic access, without full legalisation. 0: keeps current settings or defers to referendums. −60: opposes decriminalisation and legalisation, prioritises enforcement against supply, accepts tightly controlled medical use. −100: prohibition and enforcement as the primary tools, including against personal possession.
+
 **Bold change (+) vs. Caution (−).** +100: fundamental, system-level change is the party's purpose; accepts disruption. +60: large reforms pursued quickly. 0: no consistent pace. −60: incremental, cautious reform; emphasises stability and continuity. −100: preserving the current settlement is the purpose; resists structural change. This dimension is about pace and scale, not direction: a party can be radical in either direction.
 
 ## Evidence hierarchy
@@ -80,6 +84,8 @@ Candidates to verify during research; a party's position on these is the quickes
 | diplomacy | Defence Capability Plan 2025 and spending targets; AUKUS pillar 2; positions on Ukraine and Gaza |
 | local | Three Waters and Local Water Done Well; Māori wards referenda; regional deals; devolution proposals |
 | change | fast-track approvals; wealth tax; land value tax and universal income; 100-day plans; pace of RMA and health restructures |
+| animals | live export by sea ban (2022) and the abandoned repeal (March 2026); greyhound racing ban (April 2026, 112 to 11); NAWAC reform; hunting and game-animal policy; factory farming and farrowing crate positions |
+| drugs | 2020 cannabis referendum positions; decriminalisation stance; psilocybin (June 2025) and MDMA (September 2026) prescribing approvals; pseudoephedrine sales; drug checking; enforcement priorities |
 
 ## Writing a cell
 

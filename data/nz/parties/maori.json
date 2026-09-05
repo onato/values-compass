@@ -4,7 +4,7 @@
   "short": "Te Pāti Māori",
   "colour": "#B2001A",
   "website": "https://www.maoriparty.org.nz/",
-  "assessedAt": "2026-09-05",
+  "assessedAt": "2026-09-06",
   "rubricVersion": "1.0",
   "status": "draft",
   "inParliament": true,
@@ -276,6 +276,48 @@
           "date": "2026-09-01",
           "archived": "research/nz/maori/te_tiriti_entrenchment_policy.html",
           "quote": "a major constitutional reform package that will make Crown obligations arising from Te Tiriti legally enforceable"
+        }
+      ]
+    },
+    "animals": {
+      "score": 15,
+      "confidence": "low",
+      "rationale": "Te Pāti Māori voted for the greyhound racing ban and its kai sovereignty policy backs 'regenerative Māori agriculture' and rejects genetically engineered food, but it publishes nothing on animal welfare as such. A slight lean inferred from its stance on food systems and one vote.",
+      "sources": [
+        {
+          "title": "Hansard: Racing Industry (Closure of Greyhound Racing Industry) Amendment Bill, third reading, 2 April 2026",
+          "url": "https://www.scoop.co.nz/stories/PA2607/S00047/racing-industry-closure-of-greyhound-racing-industry-amendment-bill.htm",
+          "date": "2026-04-02",
+          "archived": "research/nz/shared/hansard-greyhound-racing-closure-third-reading-scoop.html",
+          "quote": "Ayes 112 ... Noes 11 ACT New Zealand 11."
+        },
+        {
+          "title": "Te Pāti Māori: Policy, Kai Sovereignty",
+          "url": "https://www.maoriparty.org.nz/policy",
+          "date": "2026",
+          "archived": "research/nz/maori/policy.html",
+          "quote": "Invest in community food systems and regenerative Māori agriculture."
+        }
+      ]
+    },
+    "drugs": {
+      "score": 70,
+      "confidence": "medium",
+      "rationale": "Te Pāti Māori supports 'the decriminalisation of drugs and would wipe the slate on all low-level drug convictions', arguing that 41 per cent of low-level drug convictions fall on Māori and that people should 'seek treatment for drug addiction without fear of the law'. Its 2026 justice policy would 'reform laws that criminalise poverty and survival' and move away from mass imprisonment. Decriminalisation and treatment over enforcement; it has not proposed legal regulated sale.",
+      "sources": [
+        {
+          "title": "Otago Daily Times: Where political parties stand on drugs (party statements, late 2022)",
+          "url": "https://www.odt.co.nz/lifestyle/magazine/where-political-parties-stand-drugs",
+          "date": "2022",
+          "archived": "research/nz/shared/odt-where-parties-stand-drugs.html",
+          "quote": "Te Pāti Māori support the decriminalisation of drugs and would wipe the slate on all low-level drug convictions."
+        },
+        {
+          "title": "Te Pāti Māori: Policy, Justice",
+          "url": "https://www.maoriparty.org.nz/policy",
+          "date": "2026",
+          "archived": "research/nz/maori/policy.html",
+          "quote": "Reform laws that criminalise poverty and survival."
         }
       ]
     }
