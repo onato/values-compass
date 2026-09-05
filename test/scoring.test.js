@@ -164,3 +164,19 @@ test("importance reorders priorities and reaches the summary and prompt; other c
   const json = txt.split("```json\n")[1].split("\n```")[0];
   assert.deepEqual(JSON.parse(json), p);
 });
+
+test("result code round-trips answers, importance, other concerns and an edited summary", () => {
+  const a = answerAll((it) => (it.key > 0 ? 4 : 2));
+  const code = S.encodeResult(ITEMS, DIMENSIONS, { answers: a, importance: { liberty: "high", change: "low" }, otherConcerns: "housing & te reo Māori", summary: "Kia ora, my edited summary." });
+  assert.match(code, /^v1\.\d{60}\.[lnh]{12}\./);
+  assert.ok(!/[^A-Za-z0-9._-]/.test(code), "code is URL-safe");
+  const d = S.decodeResult(ITEMS, DIMENSIONS, code);
+  assert.deepEqual(d.answers, a);
+  assert.equal(d.importance.liberty, "high");
+  assert.equal(d.importance.change, "low");
+  assert.equal(d.importance.solidarity, "normal");
+  assert.equal(d.otherConcerns, "housing & te reo Māori");
+  assert.equal(d.summary, "Kia ora, my edited summary.");
+  assert.equal(S.decodeResult(ITEMS, DIMENSIONS, "v1.123.nnn"), null);
+  assert.equal(S.decodeResult(ITEMS, DIMENSIONS, "garbage"), null);
+});

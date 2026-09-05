@@ -331,7 +331,47 @@ var Scoring = (function () {
     ]).join("\n");
   }
 
+  // ---- Compact, URL-safe encoding of everything needed to rebuild a result ----
+  // v1.<answers as one digit per item in ITEMS order>.<importance as l/n/h per dimension>.<other concerns>.<edited summary>
+  // Text fields are base64url of UTF-8 and may be empty.
+  function b64e(str) {
+    if (!str) return "";
+    var bytes = new TextEncoder().encode(str), bin = "";
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  }
+  function b64d(str) {
+    if (!str) return "";
+    var b = str.replace(/-/g, "+").replace(/_/g, "/");
+    while (b.length % 4) b += "=";
+    var bin = atob(b), bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  var IMP_CODE = { low: "l", normal: "n", high: "h" }, IMP_DECODE = { l: "low", n: "normal", h: "high" };
+
+  function encodeResult(items, dimensions, data) {
+    var digits = items.map(function (it) { var r = data.answers[it.id]; return r >= 1 && r <= 5 ? String(r) : "0"; }).join("");
+    var imp = dimensions.map(function (d) { return IMP_CODE[(data.importance || {})[d.id]] || "n"; }).join("");
+    return ["v1", digits, imp, b64e(data.otherConcerns || ""), b64e(data.summary || "")].join(".");
+  }
+  function decodeResult(items, dimensions, code) {
+    var parts = (code || "").split(".");
+    if (parts[0] !== "v1" || parts.length < 3) return null;
+    var digits = parts[1], imp = parts[2];
+    if (digits.length !== items.length) return null;
+    var answers = {}, importance = {};
+    for (var i = 0; i < items.length; i++) { var r = Number(digits[i]); if (r >= 1 && r <= 5) answers[items[i].id] = r; }
+    if (Object.keys(answers).length !== items.length) return null;
+    dimensions.forEach(function (d, i) { importance[d.id] = IMP_DECODE[imp[i]] || "normal"; });
+    var other = "", summary = "";
+    try { other = b64d(parts[3] || ""); summary = b64d(parts[4] || ""); } catch (e) { return null; }
+    return { answers: answers, importance: importance, otherConcerns: other, summary: summary };
+  }
+
   return {
+    encodeResult: encodeResult,
+    decodeResult: decodeResult,
     keyValue: keyValue,
     strengthLabel: strengthLabel,
     scoreDimension: scoreDimension,

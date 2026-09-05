@@ -25,6 +25,11 @@
         </div>
       </div>
 
+      <section id="saved-section" class="saved" hidden>
+        <h2>Saved results on this device</h2>
+        <ul id="saved-list" class="saved-list"></ul>
+      </section>
+
       <h2>How it works</h2>
       <ol class="steps">
         <li>
@@ -64,14 +69,14 @@
       <p>Most voting-advice tools ask about policies: should tax X go up, should law Y be repealed. Answers to those questions shift with the news cycle and depend on knowing the local debate. This questionnaire instead asks about <em>values</em>: the principles a person falls back on when policies conflict. Values are more stable, apply in any country, and are what a party programme ultimately expresses. The profile it produces is meant to be handed to a separate matching step, together with the local parties and candidates, rather than to name a party itself.</p>
 
       <h3>The value model</h3>
-      <p>The instrument measures twelve bipolar dimensions. Each has two poles and a score between them; neither pole is treated as better. The set draws on two established frameworks in psychology, Schwartz's theory of basic human values (for example openness to change versus conservation, and self-transcendence versus self-enhancement) and Moral Foundations Theory (care, fairness, loyalty, authority, sanctity, liberty), and on the axes political science uses to place parties: the economic left-right axis and the cultural axis often labelled GAL-TAN (green, alternative, libertarian versus traditional, authoritarian, nationalist).</p>
+      <p>The instrument measures twelve bipolar dimensions. Each has two poles and a score between them; neither pole is treated as better. The set draws on two established frameworks in psychology, <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" target="_blank" rel="noopener">Schwartz's theory of basic human values</a> (for example openness to change versus conservation, and self-transcendence versus self-enhancement) and <a href="https://en.wikipedia.org/wiki/Moral_foundations_theory" target="_blank" rel="noopener">Moral Foundations Theory</a> (care, fairness, loyalty, authority, sanctity, liberty), and on the axes political science uses to place parties: the <a href="https://en.wikipedia.org/wiki/Left%E2%80%93right_political_spectrum" target="_blank" rel="noopener">economic left-right axis</a> and the cultural axis often labelled <a href="https://en.wikipedia.org/wiki/GAL-TAN" target="_blank" rel="noopener">GAL-TAN</a> (green, alternative, libertarian versus traditional, authoritarian, nationalist).</p>
       <p>Dimensions were chosen for three properties: they separate parties in practice, they can be phrased as principles rather than policies, and together they capture more than a single left-right line. Combinations matter more than any one axis. Someone who favours markets <em>and</em> solidarity sits in a different place from someone who favours markets <em>and</em> self-reliance, and multi-party systems have parties for both.</p>
       <ol id="method-dims" class="dim-defs"></ol>
 
       <h3>Item design</h3>
       <ul>
         <li><strong>Five statements per dimension, fifty in total.</strong> Several statements per dimension mean one odd answer moves the score by at most 20 points, and the spread of answers can be used as a consistency check.</li>
-        <li><strong>Five-point agreement scale</strong> from <em>strongly disagree</em> to <em>strongly agree</em>, with a genuine neutral midpoint. This is the standard format for self-report inventories and is quick to answer on first reaction.</li>
+        <li><strong><a href="https://en.wikipedia.org/wiki/Likert_scale" target="_blank" rel="noopener">Five-point agreement scale</a></strong> from <em>strongly disagree</em> to <em>strongly agree</em>, with a genuine neutral midpoint. This is the standard format for self-report inventories and is quick to answer on first reaction.</li>
         <li><strong>Reverse-keyed statements.</strong> In every dimension at least two statements are phrased from the opposite pole. Someone who tends to agree with everything, or to disagree with everything, therefore lands near the middle rather than at one end, and the pattern is flagged as mixed.</li>
         <li><strong>Principles, not policies.</strong> Statements avoid naming countries, institutions, parties or current events, so the same instrument works anywhere and does not age with the news.</li>
         <li><strong>Shuffled order.</strong> Statements are presented in a random order fixed for the session, with no two consecutive statements from the same dimension, so the person cannot see which dimension is being probed and answer for consistency rather than honestly.</li>
@@ -111,13 +116,13 @@
       </ul>
 
       <h3>How parties are scored</h3>
-      <p>The results page compares your profile with the New Zealand parties in Parliament, plus TOP, scored on the same twelve dimensions. The scores are our assessment, made by reading each party's current policy pages and manifesto, the 2023 coalition agreements, recorded party votes and second-reading speeches on marker bills, the governing record, and statutory assessments such as the Climate Change Commission's monitoring reports and the Attorney-General's Bill of Rights reports. Expert datasets such as the Global Party Survey and the Manifesto Project are used only as cross-checks, because they predate the current term.</p>
+      <p>The results page compares your profile with the New Zealand parties in Parliament, plus TOP, scored on the same twelve dimensions. The scores are our assessment, made by reading each party's current policy pages and manifesto, the 2023 coalition agreements, recorded party votes and second-reading speeches on marker bills, the governing record, and statutory assessments such as the Climate Change Commission's monitoring reports and the Attorney-General's Bill of Rights reports. Expert datasets such as the <a href="https://www.globalpartysurvey.org/" target="_blank" rel="noopener">Global Party Survey</a> and the <a href="https://en.wikipedia.org/wiki/Manifesto_Project" target="_blank" rel="noopener">Manifesto Project</a> are used only as cross-checks, because they predate the current term.</p>
       <p>Each party's score on each dimension answers one question: if this party governed alone, which way would it pull, and how hard? Programme comes first and record second; where they diverge we score the programme and say so. Anchors keep parties comparable: ±100 means the pole is a defining purpose of the party, ±60 a clear and consistent direction, ±30 a lean, 0 balanced or silent. Each score carries a confidence: <em>high</em> when programme and record agree across at least two source types, <em>medium</em> when one strong source or several thinner ones point the same way, <em>low</em> when evidence is thin, vague or contradictory. A party with no discernible position gets no score rather than a forced one.</p>
       <p>Matching is a weighted distance. Each dimension is weighted by how strongly you lean on it, with a small floor so a balanced profile still produces a ranking, and halved where your answers were mixed. Alignment is 100 minus that distance as a share of the maximum possible, so 100 per cent means a party sits exactly where you do on every dimension you care about. Where a party or candidate has no score on some dimensions, those count as unknown: the headline figure is pulled toward 50 in proportion to the weight you put on them, and the figure over the scored dimensions alone is shown beside it.</p>
       <p>Every cell on the results page shows its rationale, confidence and dated sources, and the source documents are archived in the project repository so the scores can be re-checked when parties publish new material. If you disagree with a score, the research prompt gives you an independent route: hand it to an agent of your choice and compare. Coalition commitments demanded by one party are attributed to that party in the rationale; they count for the lead party only where it adopted them as government policy. Where a party's evidence pulls in both directions on a dimension, for example liberal on speech but hard on crime, the cell is marked as a split position: the score still stands as the net direction, but it counts as less certain in matching and the rationale explains both pulls.</p>
       <p id="method-parties" class="help"></p>
       <h3>How candidates are scored</h3>
-      <p>Where an electorate has been researched, its candidates appear below the party ranking. Individual positions are hard to establish in New Zealand: most parliamentary votes are party votes, and new candidates have no record at all. So a candidate's cell is scored from their own statements only where such statements exist, with a source for each. Every other cell inherits the party's score with its confidence lowered one step, and says so. Candidates whose party is not scored are scored only on what they have said themselves, and are otherwise left unscored, which also lowers their alignment's certainty rather than their alignment. The field is provisional until nominations close on 8 October 2026.</p>
+      <p>Where an electorate has been researched, its candidates appear below the party ranking. Individual positions are hard to establish in New Zealand: most <a href="https://en.wikipedia.org/wiki/Party_vote_(New_Zealand)" target="_blank" rel="noopener">parliamentary votes are party votes</a>, and new candidates have no record at all. So a candidate's cell is scored from their own statements only where such statements exist, with a source for each. Every other cell inherits the party's score with its confidence lowered one step, and says so. Candidates whose party is not scored are scored only on what they have said themselves, and are otherwise left unscored, which also lowers their alignment's certainty rather than their alignment. The field is provisional until nominations close on 8 October 2026.</p>
       <p id="method-electorates" class="help"></p>
 
       <h3>Privacy</h3>
@@ -193,13 +198,24 @@
 
       <section id="electorate-section" class="party-section" hidden>
         <h2>Your electorate</h2>
-        <p class="help">The electorate vote chooses your local MP. Candidates are scored only where they have said something themselves; every other cell inherits the party's score with lower confidence, and candidates from unscored parties are scored only on their own statements.</p>
+        <p class="help">Under <a href="https://en.wikipedia.org/wiki/Mixed-member_proportional_representation" target="_blank" rel="noopener">MMP</a> the electorate vote chooses your local MP. Candidates are scored only where they have said something themselves; every other cell inherits the party's score with lower confidence, and candidates from unscored parties are scored only on their own statements.</p>
         <label class="select-wrap">Electorate
           <select id="electorate-select"><option value="">Choose an electorate</option></select>
         </label>
         <div id="electorate-context" class="electorate-context" hidden></div>
         <div id="candidate-ranking" class="party-ranking"></div>
       </section>
+
+      <h2 id="save-heading">Keep this result</h2>
+      <p class="help">Results live only in this browser, so if someone else takes the questionnaire here yours is replaced. Two ways to keep it: copy the link above, which rebuilds this exact result anywhere, or save it under a name on this device so it appears on the start page.</p>
+      <div class="save-row">
+        <label>Name <input id="save-name" type="text" placeholder="e.g. Stephen" maxlength="40" autocomplete="off"></label>
+        <button id="btn-save-named" class="secondary">Save on this device</button>
+        <span id="save-status" class="help"></span>
+      </div>
+      <div id="link-banner" class="sample-banner" hidden>
+        <b>Opened from a link.</b> This result is not stored on this device yet; save it under a name above to keep it, or just read it.
+      </div>
 
       <h2>Get your own analysis</h2>
       <p class="help">The research prompt below asks an AI agent of your choice to research the parties and candidates on your ballot, score them on the same twelve dimensions, and rank them against your profile with sources. You run it yourself, so you do not have to trust our analysis. Check the country and election, and add your electorate if you know it.</p>
@@ -209,6 +225,7 @@
       </div>
       <div class="actions row wrap">
         <button id="btn-copy-prompt" class="primary">Copy research prompt</button>
+        <button id="btn-copy-link" class="secondary">Copy link to this result</button>
         <button id="btn-copy-json" class="secondary">Copy JSON</button>
         <button id="btn-download" class="secondary">Download JSON</button>
         <button id="btn-retake" class="link">Retake</button>

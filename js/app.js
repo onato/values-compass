@@ -1,6 +1,8 @@
 (function () {
   var STORAGE_KEY = "values-compass.v1";
   var RESULT_KEY = "values-compass.result.v1";
+  var PROFILES_KEY = "values-compass.profiles.v1";
+  var linkedMode = false; // result rebuilt from a link and not yet stored on this device
 
   var state = load() || freshState();
   var order = Scoring.shuffleItems(ITEMS, state.seed);
@@ -21,13 +23,45 @@
     } catch (e) { return null; }
   }
   function save() {
+    if (linkedMode) return;
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  function loadProfiles() {
+    try { var p = JSON.parse(localStorage.getItem(PROFILES_KEY) || "[]"); return Array.isArray(p) ? p : []; } catch (e) { return []; }
+  }
+  function storeProfiles(list) {
+    try { localStorage.setItem(PROFILES_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+  // Everything needed to rebuild the current result, as a URL-safe code.
+  function resultCode() {
+    return Scoring.encodeResult(ITEMS, DIMENSIONS, {
+      answers: state.answers, importance: state.importance, otherConcerns: state.otherConcerns,
+      summary: current && current.summaryEdited ? current.summary : ""
+    });
+  }
+  function resultLink() {
+    return location.origin + location.pathname + "#r=" + resultCode();
+  }
+  // Rebuild state and results from a code (from a link or a saved name). Nothing is stored until the person saves.
+  function openCode(code, source) {
+    var d = Scoring.decodeResult(ITEMS, DIMENSIONS, code);
+    if (!d) return false;
+    leaveSample();
+    linkedMode = source === "link";
+    state = { seed: (Math.random() * 0xffffffff) >>> 0, answers: d.answers, index: ITEMS.length, importance: d.importance, otherConcerns: d.otherConcerns, importanceAsked: true };
+    order = Scoring.shuffleItems(ITEMS, state.seed);
+    var profile = Scoring.buildProfile(DIMENSIONS, ITEMS, state.answers, null, { importance: state.importance, otherConcerns: state.otherConcerns });
+    if (d.summary) { profile.summaryGenerated = profile.summary; profile.summary = d.summary; profile.summaryEdited = true; }
+    if (source !== "link") { save(); saveResult(profile); }
+    renderResults(profile);
+    show("screen-results");
+    return true;
   }
   function loadResult() {
     try { var r = localStorage.getItem(RESULT_KEY); return r ? JSON.parse(r) : null; } catch (e) { return null; }
   }
   function saveResult(p) {
-    if (sampleMode) return;
+    if (sampleMode || linkedMode) return;
     try { localStorage.setItem(RESULT_KEY, JSON.stringify(p)); } catch (e) {}
   }
   function clearAll() {
@@ -50,6 +84,7 @@
   function show(id) {
     ["screen-intro", "screen-quiz", "screen-importance", "screen-results"].forEach(function (s) { $(s).hidden = s !== id; });
     lastAssessScreen = id;
+    if (id !== "screen-results" && location.hash) { try { history.replaceState(null, "", location.pathname); } catch (e) {} }
     window.scrollTo(0, 0);
   }
   function answeredCount() { return Object.keys(state.answers).length; }
@@ -103,6 +138,24 @@
     $("btn-resume").hidden = !inProgress;
     $("btn-start").textContent = inProgress ? "Start over" : "Start the questionnaire";
     $("btn-view-results").hidden = !loadResult();
+    renderSavedList();
+  }
+  function renderSavedList() {
+    var list = loadProfiles();
+    $("saved-section").hidden = list.length === 0;
+    var ul = $("saved-list"); ul.innerHTML = "";
+    list.forEach(function (p) {
+      var open = el("button", { class: "secondary", type: "button", text: "Open" });
+      open.addEventListener("click", function () { if (!openCode(p.code, "saved")) toast("That saved result could not be read."); });
+      var link = el("button", { class: "secondary", type: "button", text: "Copy link" });
+      link.addEventListener("click", function () { copy(location.origin + location.pathname + "#r=" + p.code, "Link"); });
+      var del = el("button", { class: "link", type: "button", text: "Delete" });
+      del.addEventListener("click", function () {
+        if (!confirm("Delete the saved result \"" + p.name + "\" from this device?")) return;
+        storeProfiles(loadProfiles().filter(function (q) { return q.name !== p.name; })); renderSavedList();
+      });
+      ul.appendChild(el("li", null, [el("span", { class: "saved-name", text: p.name }), el("span", { class: "saved-date", text: "saved " + p.savedAt.slice(0, 10) }), open, link, del]));
+    });
   }
 
   // ---------- methodology ----------
@@ -315,6 +368,13 @@
     });
 
     $("summary").value = profile.summary;
+    $("link-banner").hidden = !linkedMode;
+    if (!sampleMode) {
+      try { history.replaceState(null, "", location.pathname + "#r=" + resultCode()); } catch (e) {}
+      var mine = loadProfiles().filter(function (p) { return p.code === resultCode(); })[0];
+      $("save-status").textContent = mine ? "Saved as \"" + mine.name + "\"." : "";
+      if (mine) $("save-name").value = mine.name;
+    }
     var stale = $("summary-stale");
     stale.hidden = !(profile.summaryEdited && profile.summaryGenerated && profile.summaryGenerated !== profile.summary);
     renderParties(profile);
@@ -635,7 +695,7 @@
 
   // ---------- wiring ----------
   function startQuestionnaire() {
-    leaveSample();
+    leaveSample(); linkedMode = false;
     if (answeredCount() > 0 && !confirm("Start over and discard your current answers?")) return;
     state = freshState(); order = Scoring.shuffleItems(ITEMS, state.seed); save();
     show("screen-quiz"); renderQuestion();
@@ -644,6 +704,7 @@
   $("btn-sample-2").addEventListener("click", showSample);
   $("btn-sample-start").addEventListener("click", startQuestionnaire);
   $("btn-start").addEventListener("click", function () {
+    linkedMode = false;
     if (answeredCount() > 0 && !confirm("Start over and discard your current answers?")) return;
     state = freshState(); order = Scoring.shuffleItems(ITEMS, state.seed); save();
     show("screen-quiz"); renderQuestion();
@@ -660,6 +721,19 @@
     renderIntro(); show("screen-intro");
   });
   $("btn-copy-json").addEventListener("click", function () { copy(JSON.stringify(exportProfile(), null, 2), "JSON"); });
+  $("btn-copy-link").addEventListener("click", function () { copy(resultLink(), "Link"); });
+  $("btn-save-named").addEventListener("click", function () {
+    var name = $("save-name").value.trim();
+    if (!name) { $("save-name").focus(); toast("Give the result a name first."); return; }
+    var code = resultCode();
+    var list = loadProfiles().filter(function (p) { return p.name !== name; });
+    list.unshift({ name: name, savedAt: new Date().toISOString(), code: code });
+    storeProfiles(list);
+    if (linkedMode) { linkedMode = false; $("link-banner").hidden = true; save(); if (current) saveResult(current); }
+    $("save-status").textContent = "Saved as \"" + name + "\".";
+    toast("Saved on this device.");
+  });
+  $("save-name").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); $("btn-save-named").click(); } });
   $("btn-copy-prompt").addEventListener("click", function () { copy(Scoring.buildPrompt(exportProfile(), DIMENSIONS, promptOpts()), "Prompt"); });
   $("btn-download").addEventListener("click", download);
   $("btn-retake").addEventListener("click", function () {
@@ -703,5 +777,6 @@
 
   renderIntro();
   renderMethod();
-  show("screen-intro");
+  var linkCode = location.hash.indexOf("#r=") === 0 ? decodeURIComponent(location.hash.slice(3)) : null;
+  if (!(linkCode && openCode(linkCode, "link"))) show("screen-intro");
 })();
