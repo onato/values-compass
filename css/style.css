@@ -266,8 +266,8 @@ button.link.inline { padding: 0; font: inherit; font-size: inherit; color: var(-
 .importance-row .dim-more > summary:hover { color: var(--text-2); }
 .importance-row .dim-more > summary { cursor: pointer; list-style: none; }
 .importance-row .dim-more > summary::-webkit-details-marker { display: none; }
-.importance-row .dim-more > summary::after { content: " ▸"; }
-.importance-row .dim-more[open] > summary::after { content: " ▾"; }
+.importance-row .dim-more > summary { text-decoration: underline dotted; text-decoration-color: var(--text-3); text-underline-offset: 3px; }
+.importance-row .dim-more[open] > summary { color: var(--text-2); text-decoration-color: transparent; }
 .importance-row .dim-detail { color: var(--text-2); font-size: 0.85rem; margin-top: 6px; }
 .importance-row .dim-detail p { margin: 2px 0; }
 .importance-row .dim-detail b { color: var(--text); font-weight: 600; }
