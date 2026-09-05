@@ -1,0 +1,66 @@
+{
+  "entries": [
+    {
+      "filename": "coalition-agreement-national-act-2023.pdf",
+      "textFile": "coalition-agreement-national-act-2023.txt",
+      "title": "Coalition Agreement: New Zealand National Party & ACT New Zealand, 54th Parliament",
+      "sourceUrl": "https://assets.nationbuilder.com/actnz/mailings/6945/attachments/original/National_ACT_Agreement.pdf",
+      "date": "2023-11-24",
+      "fetchedAt": "2026-09-05",
+      "notes": "Signed 24 November 2023; endorsed by Cabinet 28 November 2023. Text extracted with pdftotext -layout."
+    },
+    {
+      "filename": "coalition-agreement-national-nzfirst-2023.pdf",
+      "textFile": "coalition-agreement-national-nzfirst-2023.txt",
+      "title": "Coalition Agreement: New Zealand National Party & New Zealand First, 54th Parliament",
+      "sourceUrl": "https://assets.nationbuilder.com/nzfirst/pages/4462/attachments/original/1700784896/National___NZF_Coalition_Agreement_signed_-_24_Nov_2023.pdf",
+      "date": "2023-11-24",
+      "fetchedAt": "2026-09-05",
+      "notes": "Signed 24 November 2023. Text extracted with pdftotext -layout."
+    },
+    {
+      "filename": "bora-s7-report-electoral-amendment-bill-2025.pdf",
+      "title": "Attorney-General: Report under section 7 of the New Zealand Bill of Rights Act 1990 on the Electoral Amendment Bill",
+      "sourceUrl": "https://www.justice.govt.nz/assets/Documents/Publications/25072025-Electoral-Amendment-Bill.pdf",
+      "date": "2025-07-25",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the Ministry of Justice section 7 reports index."
+    },
+    {
+      "filename": "moj-section7-reports-index.html",
+      "title": "Ministry of Justice: Section 7 reports (index)",
+      "sourceUrl": "https://www.justice.govt.nz/justice-sector-policy/constitutional-issues-and-human-rights/bill-of-rights-compliance-reports/section-7-reports/",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "moj-treaty-principles-bill.html",
+      "title": "Ministry of Justice: A Treaty Principles Bill",
+      "sourceUrl": "https://www.justice.govt.nz/justice-sector-policy/key-initiatives/a-treaty-principles-bill/",
+      "fetchedAt": "2026-09-05"
+    },
+    {
+      "filename": "hansard-treaty-principles-second-reading-scoop.html",
+      "title": "Hansard: Principles of the Treaty of Waitangi Bill, second reading, 10 April 2025 (Community Scoop republication)",
+      "sourceUrl": "https://community.scoop.co.nz/2025/04/principles-of-the-treaty-of-waitangi-bill-second-reading/",
+      "date": "2025-04-10",
+      "fetchedAt": "2026-09-05",
+      "notes": "Party vote: Ayes 11 (ACT); Noes 112 (National 49, Labour 34, Green 15, NZ First 8, Te Pāti Māori 6). Republished Hansard text; the parliament.nz original is a Blazor app."
+    },
+    {
+      "filename": "mod-defence-capability-plan-2025.html",
+      "title": "Ministry of Defence: Defence Capability Plan released",
+      "sourceUrl": "https://www.defence.govt.nz/news/defence-capability-plan-released/",
+      "date": "2025-04-07",
+      "fetchedAt": "2026-09-05",
+      "notes": "$12 billion over four years, $9 billion new; defence spending to exceed 2% of GDP within eight years."
+    },
+    {
+      "filename": "ccc-2026-monitoring-report-page.html",
+      "title": "Climate Change Commission: 2026 Monitoring report, Emissions reduction (summary page)",
+      "sourceUrl": "https://www.climatecommission.govt.nz/reports-and-evidence/publications/2026-monitoring-report-emissions-reduction/",
+      "date": "2026-07",
+      "fetchedAt": "2026-09-05",
+      "notes": "Second emissions budget at increasing risk; recent government actions to reduce emissions likely outweighed by actions that increase them; 2030 methane target not projected to be met."
+    }
+  ]
+}

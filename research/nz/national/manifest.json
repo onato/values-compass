@@ -1,0 +1,188 @@
+{
+  "party": "national",
+  "entries": [
+    {
+      "filename": "delivered.html",
+      "textFile": "delivered.txt",
+      "title": "National Party: delivered",
+      "sourceUrl": "https://www.national.org.nz/delivered",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "plan.html",
+      "textFile": "plan.txt",
+      "title": "National Party: plan",
+      "sourceUrl": "https://www.national.org.nz/plan",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies.html",
+      "textFile": "policies.txt",
+      "title": "National Party: policies",
+      "sourceUrl": "https://www.national.org.nz/policies",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_boost-for-graduates.html",
+      "textFile": "policies_boost-for-graduates.txt",
+      "title": "National Party: policies/boost-for-graduates",
+      "sourceUrl": "https://www.national.org.nz/policies/boost-for-graduates",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_build-the-future.html",
+      "textFile": "policies_build-the-future.txt",
+      "title": "National Party: policies/build-the-future",
+      "sourceUrl": "https://www.national.org.nz/policies/build-the-future",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_consent-laws.html",
+      "textFile": "policies_consent-laws.txt",
+      "title": "National Party: policies/consent-laws",
+      "sourceUrl": "https://www.national.org.nz/policies/consent-laws",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_hunters-and-anglers.html",
+      "textFile": "policies_hunters-and-anglers.txt",
+      "title": "National Party: policies/hunters-and-anglers",
+      "sourceUrl": "https://www.national.org.nz/policies/hunters-and-anglers",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_hunting-and-fishing.html",
+      "textFile": "policies_hunting-and-fishing.txt",
+      "title": "National Party: policies/hunting-and-fishing",
+      "sourceUrl": "https://www.national.org.nz/policies/hunting-and-fishing",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_kiwisaver.html",
+      "textFile": "policies_kiwisaver.txt",
+      "title": "National Party: policies/kiwisaver",
+      "sourceUrl": "https://www.national.org.nz/policies/kiwisaver",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_new-trade.html",
+      "textFile": "policies_new-trade.txt",
+      "title": "National Party: policies/new-trade",
+      "sourceUrl": "https://www.national.org.nz/policies/new-trade",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_no-new-taxes.html",
+      "textFile": "policies_no-new-taxes.txt",
+      "title": "National Party: policies/no-new-taxes",
+      "sourceUrl": "https://www.national.org.nz/policies/no-new-taxes",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_paid-parental-leave.html",
+      "textFile": "policies_paid-parental-leave.txt",
+      "title": "National Party: policies/paid-parental-leave",
+      "sourceUrl": "https://www.national.org.nz/policies/paid-parental-leave",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_responsibility-rules.html",
+      "textFile": "policies_responsibility-rules.txt",
+      "title": "National Party: policies/responsibility-rules",
+      "sourceUrl": "https://www.national.org.nz/policies/responsibility-rules",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_solar.html",
+      "textFile": "policies_solar.txt",
+      "title": "National Party: policies/solar",
+      "sourceUrl": "https://www.national.org.nz/policies/solar",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "policies_tougher-sentences.html",
+      "textFile": "policies_tougher-sentences.txt",
+      "title": "National Party: policies/tougher-sentences",
+      "sourceUrl": "https://www.national.org.nz/policies/tougher-sentences",
+      "fetchedAt": "2026-09-05",
+      "notes": "Saved HTML as retrieved; .txt is a tag-stripped copy for reading."
+    },
+    {
+      "filename": "Back-Pocket-Boost-for-Graduates.pdf",
+      "title": "National Party policy document: Back Pocket Boost for Graduates",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/Back%20Pocket%20Boost%20for%20Graduates.pdf?v=1788119937",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    },
+    {
+      "filename": "Building-the-Future---New-Zealand-s-Next-Billion-Customers.pdf",
+      "title": "National Party policy document: Building the Future   New Zealand s Next Billion Customers",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/Building%20the%20Future%20-%20New%20Zealand%E2%80%99s%20Next%20Billion%20Customers.pdf?v=1783393242",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    },
+    {
+      "filename": "Delivering-Hunting-and-Fishing.pdf",
+      "title": "National Party policy document: Delivering Hunting and Fishing",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/Delivering%20Hunting%20and%20Fishing.pdf?v=1785037430",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    },
+    {
+      "filename": "National-Electrify-NZ---Home-Energy-Fund-policy-document.pdf",
+      "title": "National Party policy document: National Electrify NZ   Home Energy Fund policy document",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/National%20Electrify%20NZ%20-%20Home%20Energy%20Fund%20policy%20document.pdf?v=1782343598",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    },
+    {
+      "filename": "National-KiwiSaver-policy-document.pdf",
+      "title": "National Party policy document: National KiwiSaver policy document",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/National%20KiwiSaver%20policy%20document.pdf?v=1782016131",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    },
+    {
+      "filename": "National-s-Budget-Responsibility-Rules-1.pdf",
+      "title": "National Party policy document: National s Budget Responsibility Rules 1",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/National's%20Budget%20Responsibility%20Rules-1.pdf?v=1788512439",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    },
+    {
+      "filename": "National-s-South-Island-Plan.pdf",
+      "title": "National Party policy document: National s South Island Plan",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/National's%20South%20Island%20Plan.pdf?v=1786659579",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    },
+    {
+      "filename": "Paid-Parental-Leave.pdf",
+      "title": "National Party policy document: Paid Parental Leave",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/Paid%20Parental%20Leave.pdf?v=1785023838",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    },
+    {
+      "filename": "Plan-for-Hunting-and-Fishing.pdf",
+      "title": "National Party policy document: Plan for Hunting and Fishing",
+      "sourceUrl": "https://assets.national.org.nz/web/prod/Plan%20for%20Hunting%20and%20Fishing.pdf?v=1785037436",
+      "fetchedAt": "2026-09-05",
+      "notes": "Linked from the policy page as 'View full document'."
+    }
+  ]
+}

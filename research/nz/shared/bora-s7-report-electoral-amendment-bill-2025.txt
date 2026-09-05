@@ -1,0 +1,862 @@
+                                                      J.4
+
+
+
+
+Report of the
+ATTORNEY-GENERAL
+under the New Zealand Bill of Rights Act 1990 on
+the Electoral Matters Legislation Amendment Bill
+[PCO 26217/7.2]
+
+
+Presented to the House of Representatives pursuant to
+Section 7 of the New Zealand Bill of Rights Act 1990 and
+Standing Order 269 of the Standing Orders of the House of
+Representatives
+                                                                                                1
+
+1.          I have considered this Bill for consistency with the New Zealand Bill of Rights
+            Act 1990 (NZBORA). I have concluded that the Bill appears to be inconsistent with
+            the right to vote (s 12); the right to freedom of expression (s 14); and the right, if
+            convicted of an offence in respect of which the penalty has been varied between
+            the commission of the offence and sentencing, to the benefit of the lesser penalty
+            (s 25(g)).
+
+2.          As required by s 7 of NZBORA and Standing Order 269, I draw this to the attention
+            of the House of Representatives.
+
+The Bill
+3.          The Bill is an omnibus Bill that principally amends the Electoral Act 1993, but also
+            the Constitution Act 1986, Juries Act 1981 and Electoral Regulations 1996. It
+            addresses aspects of the electoral system. The Explanatory Note says: “[The Bill]
+            makes a range of systems improvements to support the timeliness, efficiency,
+            integrity, and resilience of the electoral system”.
+
+4.          In summary, key changes proposed by the Bill include:
+
+            4.1      Registration deadline (Part 1 Subpart 1): A new deadline would be
+                     introduced for close of registration as an elector. Whereas eligible
+                     persons can currently register as electors and vote up to and on polling
+                     day, the Bill proposes that in order to be able to vote, eligible persons
+                     must register no later than 13 days before polling day. Similarly, electors
+                     who wish to register in a new electoral district, and vote in that electoral
+                     district, must register in their new district no later than 13 days before
+                     polling day. Various consequential amendments are proposed.
+
+            4.2      Prisoner voting (Part 1 Subpart 2): Those detained in prison serving a term
+                     of imprisonment would be disqualified from electoral registration. The
+                     Bill also addresses the position of those detained in hospital or a secure
+                     facility, and provides for transitional arrangements.
+
+            4.3      Electoral registration details (Part 1 Subpart 3): Various proposals to
+                     streamline collection of electors’ details.
+
+            4.4      Electoral Commission updating of electors’ addresses on Electoral Roll
+                     (Part 1 Subpart 4): Introduction of a capacity for the Electoral Commission
+                     to update an elector’s address when satisfied their address has changed,
+                     based on information received from other agencies.
+
+            4.5      Electronic delivery of registration processes: (Part 1 Subpart 5): Proposals
+                     to provide the Electoral Commission flexibility to deliver certain notices
+                     electronically, whereas the Commission is presently required to deliver
+                     notices personally or by post to electors.
+
+            4.6      Advance voting (Part 1 Subpart 6): Fixing an advance voting period of
+                     12 consecutive days before polling day.
+
+            4.7      Offences (Part 1 Subpart 7): Proposals to amend existing electoral
+                     offences, including bribery, treating and undue influence, and to
+
+
+8605671_6
+                                                                                                2
+
+                      introduce new offences relating to (i) improperly influencing a person’s
+                      electoral choices, and (ii) supply, free of charge, of food, drink (except
+                      water) or entertainment within 50 metres of polling places.
+
+            4.8       Adjustment of expenditure limits (Part 1 Subpart 8): Changes to the
+                      mechanism for updating maximum expenditure amounts for candidates,
+                      parties and promoters, including that amounts will be adjusted by the
+                      Electoral Commission (rather than by Order in Council, as is presently the
+                      case).
+
+            4.9       Miscellaneous further amendments to Electoral Act 1993
+                      (Part 1 Subpart 9): A range of miscellaneous amendments, including in
+                      relation to party registration and various publication requirements.
+
+            4.10      Amendments to Constitution Act 1986 (Part 2): Amendments to existing
+                      provisions which provide that Ministers of the Crown must be members
+                      of Parliament, and that Parliamentary Under-Secretaries must vacate
+                      office when they cease to be members of Parliament. The amendments
+                      update these provisions to align with electoral realities, by providing that
+                      Ministers and Parliamentary Under-Secretaries may continue to hold
+                      office until the close of the day on which the Electoral Commission
+                      declares the elected list candidates.
+
+Summary
+5.          I have concluded that the following aspects of the Bill appear inconsistent with
+            NZBORA:
+
+            5.1       The blanket disqualification from electoral registration for those detained
+                      in prison under a sentence of imprisonment appears inconsistent with s
+                      12 (right to vote).
+
+            5.2       The transitional provisions relating to prisoner voting appear inconsistent
+                      with s 25(g) (right to benefit of lesser penalty).
+
+            5.3       The registration deadline, according to which eligible persons would be
+                      required to register no later than 13 days before polling day, and which
+                      would therefore remove the ability of eligible persons to register for a
+                      period leading up to, and on polling day, appears inconsistent with s 12
+                      (right to vote).
+
+            5.4       The revised bribery offence, as drafted, appears inconsistent with ss 12
+                      (right to vote) and 14 (right to freedom of expression).
+
+Disqualification from registration
+Prisoner voting
+6.          The Bill would disqualify from registration as an elector any person detained in a
+            prison under a sentence of imprisonment.1 The Bill would change the present
+            legislative setting, according to which a person is disqualified from registration as
+
+
+1     See Subpart 2 of the Bill, and specifically cl 10.
+
+
+
+8605671_6
+                                                                                                                           3
+
+            an elector if detained in a prison under a sentence of imprisonment for life,
+            preventive detention, or imprisonment for a term of 3 years or more.2 Registration
+            as an elector is a prerequisite to voting.
+
+7.          The proposed disqualification is blanket in that every person detained in prison
+            pursuant to a sentence of imprisonment would be disqualified from being
+            registered to vote, notwithstanding how minor or serious their offending or
+            sentence may be. For completeness, I note the proposed disqualification of
+            prisoners applies only to those detained pursuant to a sentence of imprisonment
+            so that criminal defendants on bail, or prisoners on remand (including remand
+            post-conviction but prior to sentence), and offenders released on parole, for
+            example, shall not fall within the scope of the disqualification.
+
+8.          Section 12(a) of the NZBORA provides:
+
+                  Every New Zealand citizen who is of or over the age of 18 years—
+                  (a) has the right to vote in genuine periodic elections of members of the
+                      House of Representatives, which elections shall be by equal suffrage and
+                      by secret ballot …
+
+9.          The blanket disqualification of sentenced prisoners from registering to vote
+            engages s 12 as it would disenfranchise those who have a right to vote.
+
+10.         Section 12 is not an absolute right – it is subject to reasonable limitation pursuant
+            to s 5 of the NZBORA. However, it is plain on the basis of prior Attorney-General
+            reports to the House,3 New Zealand authority,4 comparative authority5 and
+            international authority6 that the blanket disenfranchisement of prisoners of the
+            sort proposed in the Bill cannot be justified.
+
+11.         The Attorney-General’s report to the House on the Electoral (Disqualification of
+            Convicted Prisoners) Amendment Bill 2010, which proposed a similar blanket
+            disqualification for prisoners (that was subsequently enacted and then repealed),
+            addressed the reasons why justification could not be established.7 These reasons
+            were subsequently endorsed by the High Court in Taylor v Attorney-General (and
+            this aspect of the judgment was not challenged on appeal).8 The principal reason
+            may be said to be that a blanket disqualification “disenfranchises in an irrational
+
+2     Electoral Act 1993 ss 80(1)(d), 86A-86E.
+3     Report of the Attorney-General under the New Zealand Bill of Rights Act 1990 on the Electoral (Disqualification
+      of        Convicted        Prisoners)      Amendment            Bill       (2010)        (available          at:
+      https://www.justice.govt.nz/assets/Documents/Publications/BORA-Electoral-Disqualification-of-Convicted-
+      Prisoners-Amendment-Bill-v2.pdf) (Attorney-General Report).
+4     Taylor v Attorney-General [2015] NZHC 1706; [2015] 3 NZLR 791; [2017] NZCA 215; [2017] 3 NZLR 24; [2018] NZSC
+      104; [2019] 1 NZLR 213.
+5     Sauvé v Canada (Attorney General) [1993] 2 SCR 438; R (on the application of Chester) v Secretary of State for
+      Justice [2013] UKSC 63, [2014] 1 AC 271.
+6     Hirst v United Kingdom (No 2) (2005) 42 EHRR 849; Scoppola v Italy (No 3) (2012) 56 EHRR 663; CCPR General
+      Comment No 25: Article 25 (Participation in Public Affairs and the Right to Vote), CCPR/C/21/Rev.1/Add.7 (12 July
+      1996) at [14] (“If conviction for an offence is a basis for suspending the right to vote, the period of such suspension
+      should be proportionate to the offence and the sentence”).
+7     Attorney-General Report above n 3.
+8     Taylor v Attorney-General [2015] NZHC 1706; [2015] 3 NZLR 791 (HC) at [27]-[29], [32]-[35].
+
+
+
+8605671_6
+                                                                                                                 4
+
+            and irregular manner”.9 In contrast Crown Law has previously advised, and
+            previous Attorneys-General have accepted, that more tailored schemes for
+            disqualification of prisoners may constitute justified limits on the right to vote.10
+
+12.         The Cabinet Paper for the present Bill says that the rationale for imposing the
+            disqualification is breach of civic responsibilities.11 But whether a person would be
+            disenfranchised under the proposed scheme would depend more on the
+            vicissitudes of timing than breach of civic responsibility, including type and degree
+            of breach. A person imprisoned for a one-month period, that happens to coincide
+            with polling day, shall be disenfranchised but a person who committed a
+            premeditated murder, but is released on parole in the weeks prior to election day,
+            shall be able to vote, as will a person that serves a two-year sentence in between
+            elections. A person convicted of serious sexual offending, but not yet sentenced,
+            shall be able to vote. Persons sentenced to imprisonment of two years or less are
+            eligible for home detention, but whether such person is detained in prison, and
+            therefore will be disqualified from voting, may depend less on the degree of
+            breach of civic responsibility and more on whether they have a suitable address at
+            which home detention can be served.12
+
+13.         The Attorney-General’s overall conclusion in respect of the 2010 Bill applies to the
+            present Bill:13
+
+                   The disenfranchising provisions of this Bill will depend entirely on the date of
+                   sentencing, which bears no relationship either to the objective of the Bill or
+                   to the conduct of the prisoners whose voting rights are taken away. The
+                   irrational effects of the Bill also cause it to be disproportionate to its
+                   objective.
+
+14.         Under the present Bill those detained in a hospital or secure facility shall not be
+            disqualified from registering to vote.14 As the previous Attorney-General observed
+            in regard to proposals in the 2010 Bill to allow certain persons detained in a
+            hospital or secure facility to register to vote, while imposing a blanket
+            disqualification on prisoners, this introduces “irrational inconsistencies”.15 The
+            disconnect between criteria for disqualification and the stated civic responsibility
+            rationale is further illustrated by provision in the present Bill for the same
+            convicted person’s qualification to vote changing as they transfer between
+            detention in a hospital/secure facility and prison.16 It follows that a sentenced
+            person’s eligibility to be registered and vote depends on where they are detained,
+
+
+9     Attorney-General Report above n 3 at [14].
+10    Crown Law Advice on Electoral (Registration of Sentenced Prisoners) Amendment Bill (14 February 2020)
+      (available at: https://www.justice.govt.nz/assets/Documents/Publications/Electoral-Registration-of-Sentenced-
+      Prisoners-Amendment-Bill.pdf).
+11    Electoral Matters Legislation Amendment Bill: Approval for Introduction and Further Policy Decisions at [4]
+      (Cabinet Paper).
+12    Taylor v Attorney-General [2015] NZHC 1706, [2015] 3 NZLR 791 at [34]-[35].
+13    Attorney-General Report above n 3 at [15].
+14    See cl 10 of the Bill, which amends s 80(1)(c) of the Electoral Act 1993, and see cl 12 of the Bill.
+15    Attorney-General Report above n 3 at [13].
+16    See cl 10, 12 of the Bill.
+
+
+
+8605671_6
+                                                                                               5
+
+            rather than on the degree of departure from accepted standards of civic
+            responsibility involved in their offending.
+
+15.         I advise that the proposed disqualification of prisoners from registration and
+            therefore voting appears inconsistent with the NZBORA.
+
+16.         For completeness, I note that the Court of Appeal held a previous blanket
+            disqualification of prisoners did not involve unjustified discrimination against
+            Māori.17 That was for several reasons, including that disqualification applied
+            equally and with equal effect to both Māori and non-Māori. That reasoning applies
+            with equal force to the Bill’s proposed blanket disqualification. As such, there does
+            not appear to be inconsistency with s 19(1) of the NZBORA (freedom from
+            discrimination).
+
+Prisoner voting – transitional arrangements
+17.         The Bill addresses transitional arrangements in regard to prisoner registration and
+            voting.18 It provides that persons detained in prison at the time the Electoral
+            Matters Legislation Amendment Act 2025 enters force and who are not
+            disqualified from registering to vote because they are serving a term of less than
+            3 years will remain of that status and continue to be qualified for registration. On
+            the other hand, persons detained and who are serving a term of imprisonment of
+            more than 3 years shall continue to be disqualified from registering to vote. In
+            other words, the position of prisoners subject to the present scheme is preserved.
+
+18.         It follows that those prisoners who would be subject to the disqualification
+            provided for in the Bill are those who enter detention in prison pursuant to a
+            sentence of imprisonment, after commencement of the Electoral Matters
+            Legislation Amendment Act 2025.
+
+19.         I consider that the transitional arrangements do not appear to engage s 25(2) of
+            the NZBORA, which proscribes double punishment. That is because those who are
+            already detained pursuant to a sentence of imprisonment at the commencement
+            of the Electoral Matters Legislation Amendment Act 2025 shall be insulated from
+            the provisions providing for disqualification, so the Act cannot result in a second
+            punishment for them. For those sentenced and detained after commencement of
+            the Act, any disqualification shall be a necessary incident of their punishment of a
+            sentence of imprisonment.
+
+20.         However, I consider that s 25(g) appears to be engaged by the transitional
+            arrangements. Section 25(g) provides:
+
+                  Everyone who is charged with an offence has, in relation to the
+                  determination of the charge, the following minimum rights:
+                  …
+
+
+
+
+17    Ngaronoa v Attorney-General [2017] NZCA 351, [2017] 3 NZLR 643.
+18    Schedule 1 of the Bill.
+
+
+
+8605671_6
+                                                                                                                      6
+
+                   (g) the right, if convicted of an offence in respect of which the penalty has
+                       been varied between the commission of the offence and sentencing, to
+                       the benefit of the lesser penalty:
+
+21.         Section 25(g) is engaged specifically in respect of those persons who:
+
+            21.1      Will be detained in prison pursuant to a sentence of imprisonment
+                      imposed after the 2025 Act enters force, and shall therefore be
+                      disqualified from registering to vote;
+
+            21.2      But who committed the relevant offending to which the sentence
+                      pertains before commencement of the Act;
+
+            21.3      And at a time when the law did not provide for disqualification from
+                      registration and voting for a person detained pursuant to a sentence of
+                      the type and/or length now imposed (i.e. imprisonment for a term of less
+                      than three years).
+
+22.         The Supreme Court has adopted a wide definition of “penalty” and “punishment”
+            under the NZBORA, so that deprivation of the right to vote as a consequence of
+            criminal sentencing appears to fall within it.19
+
+23.         For certain persons who will be disqualified from registering to vote pursuant to
+            the 2025 Act, the Act shall have the effect of varying the penalty between the
+            commission of the offence and sentencing, but deny those persons the benefit of
+            the lesser penalty.
+
+24.         As an illustrative hypothetical, consider a person who committed an offence in
+            2024, when the law provided that a prisoner detained pursuant to a sentence of
+            imprisonment of under 3 years would not be disqualified from voting, but who is
+            sentenced in 2026, after commencement of the 2025 Act, and will be detained in
+            prison pursuant to a sentence of two years’ imprisonment. In this case the
+            person’s penalty has been varied between the time of their offending, and the
+            time of their sentencing; at the time of offending the penalty, in their case, would
+            not have included deprivation of the right to vote, whereas at the time of
+            sentencing it does.
+
+25.         Given that blanket disqualification of prisoners from voting is itself inconsistent
+            with NZBORA, the variation of applicable penalties between offending and
+            imposition of sentence cannot, as an aspect of implementation of a rights-
+            inconsistent disqualification, be justified.
+
+26.         I conclude that the transitional provisions appear, to the extent explained,
+            inconsistent with the NZBORA.
+
+Persons detained in hospitals and secure facilities
+27.         Currently the Electoral Act 1993 provides that a person who is detained in a
+            hospital under the Mental Health (Compulsory Assessment and Treatment) Act
+
+19    See in particular D v Police [2021] NZSC 2, [2021] 1 NZLR 213; Attorney-General v Chisnall [2024] NZSC 178, [2024]
+      1 NZLR 768.
+
+
+
+8605671_6
+                                                                                                 7
+
+            1992 or in a secure facility under the Intellectual Disability (Compulsory Care and
+            Rehabilitation) Act 2003, and has been so detained for a period exceeding 3 years,
+            is disqualified from registration as an elector if that person20
+
+            27.1      has been found unfit to stand trial or has been acquitted on account of
+                      insanity; or
+
+            27.2      has been found to be mentally impaired; or
+
+            27.3      is subject to a compulsory treatment order or compulsory care order; or
+
+            27.4      is voluntarily receiving psychiatric care and treatment and is a person to
+                      whom s 80(1)(d) of the Electoral Act would otherwise apply (which
+                      addresses the disqualification for prisoners).
+
+28.         The Bill proposes that those detained in a hospital or secure facility will no longer
+            be subject to disqualification from registering as an elector (regardless of length
+            of detention in a hospital or secure facility).21
+
+29.         This proposal does not engage s 12 of the NZBORA, because it does not limit the
+            right to vote. It removes an existing limit. As such, that amendment does not
+            appear inconsistent with the right to vote.
+
+Registration deadline
+30.         At present electors can register at any time before or on polling day, and then vote
+            in the corresponding election. The Bill proposes to change this by providing for a
+            different registration deadline of 13 days prior to polling day.22 If a person has not
+            registered by this deadline they would be unable to vote (or unable to vote in the
+            electoral district in which they now reside) in the upcoming election. The rationale
+            for this change is to address delays in the post-election vote count, which have
+            become more pronounced in recent elections.
+
+31.         While acknowledging the public importance of promoting timeliness in the
+            counting of votes, I nonetheless consider that the specific proposal for a 13-day
+            registration deadline appears inconsistent with the right to vote in s 12 of the
+            NZBORA. As discussed below, there may be alternative measures for addressing
+            delays in the processing of votes, which are less restrictive of the right to vote, and
+            could therefore possibly be justified.
+
+Right to vote
+32.         The right to vote is engaged because the proposed registration deadline has a
+            potentially disenfranchising effect that is not immaterial. That is, people who have
+            an entitlement to vote under s 12 NZBORA may nonetheless be prevented from
+            voting because of the registration deadline. The precise nature of this
+            disenfranchising effect is discussed further below under “Justification”.
+
+
+
+20    Electoral Act 1993 s 80(1)(c).
+21    See cl 10 of the Bill, amending Electoral Act 1993 s 80(1)(c).
+22    Subpart 1 of Part 1 of the Bill.
+
+
+
+8605671_6
+                                                                                                                         8
+
+33.         As the High Court of Australia has held, whereas such a measure may have a
+            procedural or machinery character, and does not in terms carve out an exception
+            to the franchise, it nonetheless has a substantive effect upon entitlements to vote,
+            and so affects exercise of the franchise.23 Further, where a law removes a legally
+            sanctioned opportunity for registration (here, being able to register up to and on
+            polling day), it is the change effected that must be considered (here, a
+            requirement to register at least 13 days prior to polling day in order to exercise
+            the franchise).24 As such, it is not necessary first to determine some baseline for
+            rights-consistency.25 As acknowledged in the Cabinet Paper and policy materials,
+            a change such as introduction of a registration “freeze” in the days immediately
+            preceding polling day has the potential to or will cause a reduction to the
+            franchise.26 This in turn involves a detriment to the s 12 right.
+
+Justification
+34.         Before applying the justification analysis required by s 5 of the NZBORA, it is
+            necessary to recall that the New Zealand Supreme Court, and other common law
+            apex courts, have emphasised the fundamentality of the right to vote as lying at
+            the heart of the democratic system, and that any restrictions on that right will be
+            closely scrutinised, especially where they affect the franchise.27 On the other hand
+            Parliament’s democratic credentials in setting the parameters of the electoral
+            system must also be recognised and respected.28
+
+Sufficiently important goal and rational connection
+35.         Analysis of whether the registration deadline involves a demonstrably justified
+            limit on the right to vote requires consideration of whether the public goal served
+            by the change is sufficiently weighty to limit the right and whether there is a
+            rational connection between the proposed measure and the public goal.29
+
+36.         I consider these aspects of justification analysis are fulfilled. The principal reason
+            for introduction of a 13-day registration deadline is to speed up completion of the
+            vote count following polling day.
+
+            36.1      There is a significant public interest in the expeditious completion of the
+                      vote count and declaration of results. Delays in counting the vote can
+                      create uncertainty and affect party negotiations and formation of
+                      government, which may depend on knowing the results of the election.
+                      This can lead to extended periods of caretaker government, when by
+
+
+23    Rowe v Electoral Commissioner [2010] HCA 46, (2010) 243 CLR 1 at [24].
+24    At [25]
+25    At [25].
+26    Electoral Matters Bill – Policy Approvals (timeliness and efficiency), CAB-25-SUB-0112 (April 2025) at [24]; Ministry
+      of Justice, Regulatory Impact Statement: Improving the Timeliness of the Official Vote Count (27 March 2025) at
+      [52]-[57], [96] and 23 (RIS).
+27    Make It 16 Ltd v Attorney-General [2022] NZSC 134, [2022] 1 NZLR 683 at [51], citing Sauvé v Canada 2002 SCC
+      68, [2002] 3 SCR 519 at [13]; Rowe v Electoral Commissioner [2010] HCA 46, (2010) 243 CLR 1 at [78].
+28    Make It 16 Ltd v Attorney-General [2022] NZSC 134, [2022] 1 NZLR 683 at [66]; Rowe v Electoral Commissioner
+      [2010] HCA 46, (2010) 243 CLR 1 at [29].
+29    Hansen v R [2007] NZSC 7, [2007] 3 NZLR 1 at [104]; Attorney-General v Chisnall [2024] NZSC 178, [2024] 1 NZLR
+      768 at [195].
+
+
+
+8605671_6
+                                                                                                                       9
+
+                     convention significant policy decisions are deferred. There is also a public
+                     interest in the public knowing the results as soon as possible.
+
+            36.2     Recent elections have raised concerns in relation to the time taken to
+                     process votes after election day. One reason for such delay is that the
+                     Electoral Commission must process “late” enrolments post-polling day,
+                     and there has been a trend over time towards late enrolments: at the
+                     2023 General Election enrolment “transactions” during the voting period
+                     increased by 46 per cent compared to the 2020 General Election. Further,
+                     votes cast by electors who register or update their registration details (for
+                     example in relation to their electoral district) between writ day (when the
+                     supplementary rolls close) and polling day, are special votes, which take
+                     more time to process. There has been sustained growth over time of
+                     special votes in both volume and as a percentage of total votes.
+
+            36.3     The registration deadline also seeks to address the growing size of the
+                     electorate. An expanding electorate, among other contributing factors,
+                     means that special votes are liable to continue to grow, if no changes are
+                     made, leading to challenges for system sustainability.
+
+Less restrictive means and proportionality
+37.         However, while recognising the importance of addressing delays in processing
+            votes and completing the count, I have concluded that the 13-day registration
+            deadline does not appear to pass the other stages of justification analysis, bearing
+            in mind the fundamental nature of the right to vote. The registration deadline does
+            not appear to represent the least restrictive means for achieving the relevant
+            public goal, and the detriments imposed by the measure do not appear
+            proportionate to the benefits served by the measure.30 It does not follow that
+            rights-justified measures are not available to address the timeliness of the vote
+            count: alternative measures, some of which are discussed below, may be as or
+            more effective at addressing delays in processing the vote count and/or impose
+            less significant restrictions on the right to vote.
+
+38.         There are four key considerations to be weighed:
+
+            38.1     Benefits of the proposed change.
+
+            38.2     Detriments of the proposed change, especially for the right to vote.
+
+            38.3     Alternative measures.
+
+            38.4     Electoral settings in comparable jurisdictions.
+
+39.         First, as acknowledged in the Cabinet Paper and policy documents, it is uncertain
+            whether the proposed registration deadline will have a beneficial or significantly
+            beneficial impact in speeding up the vote count.31 The stated rationale for the
+
+
+30    Hansen v R [2007] NZSC 7, [2007] 3 NZLR 1 at [104]; Attorney-General v Chisnall [2024] NZSC 178, [2024] 1 NZLR
+      768 at [195].
+31    See RIS above n 26 at 1-5, 15-18, 23-25, 29; Electoral Matters Bill – Policy Approvals (timeliness and efficiency),
+      CAB-25-SUB-0112 (April 2025) at [22].
+
+
+
+8605671_6
+                                                                                                                      10
+
+            registration deadline is that it may allow processing of voter registration (or
+            updating of registration details) to be completed earlier, and allow processing of
+            special votes to begin sooner, in turn alleviating burdens – which would facilitate
+            a faster vote count. However, the precise impact of the proposed registration
+            deadline, and whether it will facilitate desired reductions in time taken to count
+            the vote, is uncertain. For example, the deadline may merely shift enrolment
+            demand earlier in the election period, rather than reduce it (and could increase
+            demand), and the impact on quantum of special votes, which are time-intensive
+            to process, is not clear, so that positive benefits for timeliness are uncertain. One
+            challenge in this regard is an acknowledged lack of data on the basis of which to
+            more precisely model anticipated impacts of the proposed registration deadline.32
+            Any substantial reduction in the time taken for the vote count may take several
+            electoral cycles to emerge, as this may depend on changes in registration
+            behaviour over time.
+
+40.         Second, benefits need to be weighed against detrimental impacts of the change
+            on the franchise. There are two types of exclusionary impact that need to be
+            considered: “direct” and “indirect”.
+
+41.         In regard to direct impact, it is estimated 22,700 people may have their eligibility
+            to vote (or to vote in the electoral district in which they actually reside) directly
+            affected by the proposed registration period.33 However, this number reduces to
+            3,400 when other features of the Bill are taken into account. Specifically, the Bill
+            provides for (i) registration as an elector of those who are 17 years old before the
+            registration deadline, but who will be 18 years old by or on polling day; and (ii)
+            registration as an elector in a particular electoral district where the elector has not
+            resided in that district for 1 month at the time of the end of the registration period,
+            but will have resided in that electoral district for at least 1 month by polling day.34
+            The estimated 3,400 people who would be potentially disenfranchised by the
+            registration period include people returning from overseas after being away for
+            an extended time, and people who, during the registration period, may become
+            New Zealand residents or be released from prison. Making provision for these
+            remaining groups would create added operational complexity, and there is a
+            difference between these groups and those provided for in the Bill (17/18 year
+            olds and people moving electoral district), in that it is harder to assess in advance
+            and with certainty what the person’s position will be on polling day, which in turn
+            may engage electoral integrity concerns.35
+
+42.         Indirect impact here refers to otherwise eligible electors being effectively excluded
+            from the franchise by the practicalities of the operation of a 13-day pre-election
+            registration deadline.36 The precise scale of indirect impact is more difficult to
+
+32    RIS above n 26 at 4.
+33    Ministry of Justice, Electoral Matters Bill: Exceptions to the Enrolment Deadline and Drafting Clarifications (6 May
+      2025) (Exceptions to the Enrolment Deadline); Cabinet Paper above n 11 at [15].
+34    Cl 8 of the Bill.
+35    Exceptions to the Enrolment Deadline above n 33; Cabinet Paper above n 11 at [16]. The Cabinet Paper records at
+      [17] that it is proposed that consideration will be given to whether an approach that enables participation by
+      these remaining groups would be feasible for subsequent elections.
+36    As recognised in: RIS above n 26 at [52], [96] and 23; Electoral Matters Bill – Policy Approvals (timeliness and
+
+
+8605671_6
+                                                                                                11
+
+            gauge than direct impact, because it depends on how voters respond to the new
+            deadline in behavioural terms. However, it is likely the registration period will have
+            a disenfranchising effect that is not insubstantial:
+
+            42.1      There has been an expectation, since 1993, that electors can register to
+                      vote either on the day before polling day, or on polling day. Expectations
+                      based on longstanding legislative settings are salient to judging potential
+                      prejudice and proportionality.37 It is also relevant in this respect that the
+                      trend over time has been towards greater flexibility as to when people
+                      may register to vote, whereas the imposition of the registration deadline
+                      would run against that trend. Publicity campaigns could be used to
+                      ameliorate potential impacts on participation, but the extent to which
+                      such campaigns may affect elector behaviour and how soon behavioural
+                      change may be effected is uncertain.
+
+            42.2      For the 2023 General Election special votes included over 97,000 people
+                      who registered for the first time during the voting period, and nearly
+                      134,000 people who changed electoral districts during the voting
+                      period.38 This gives some indication of the number of people who may be
+                      affected, and the farther out the registration deadline from polling day,
+                      the greater the disenfranchising impact is likely to be.39 In this regard, it
+                      is worth noting alternative possible timeframes which would impose less
+                      onerous limits on the right to vote, such as reverting to a deadline of the
+                      day before election day (the legislative setting from 1993 to 2020) or
+                      three, five or seven days before polling day, for example.
+
+            42.3      The Electoral Commission has data that indicates that special votes are
+                      more likely to come from areas with larger Māori, Asian and Pasifika
+                      communities, and that younger people are more likely to cast special
+                      votes.40 This may indicate that these communities will be more affected
+                      by the proposed registration deadline.41
+
+            42.4      It is acknowledged that a cohort of voters who miss the 13-day deadline
+                      will still be able to vote. Specifically, a person may forget to update their
+                      address by the registration deadline, with their old address located in a
+                      different electoral district to their new address; their party vote would be
+                      counted, but their electorate vote would be disallowed. There is also the
+                      possibility that a person may forget to update their address on the
+                      electoral roll but might still vote in their old electoral district. In these
+                      situations, operation of the registration deadline does not result in
+                      complete disenfranchisement, but the results are not satisfactory.
+
+
+
+      efficiency), CAB-25-SUB-0112 (April 2025) at [24].
+37    Rowe v Electoral Commissioner [2010] HCA 46, (2010) 243 CLR 1; RIS above n 26 at [96].
+38    RIS above n 26 at [53].
+39    At [53].
+40    At [55]-[56].
+41    At [55]-[56].
+
+
+
+8605671_6
+                                                                                                                       12
+
+43.         Also relevant, in terms of gauging detriments, is that freezing registration earlier
+            in the voting period has the potential to harm confidence and trust if people are
+            not able to vote because they missed the deadline and/or more votes are
+            disallowed.42 It is also relevant that the proposal to close enrolment significantly
+            in advance of election day has not been considered in detail through previous
+            reviews that involved public consultation.43 This could mean that some potential
+            risks and impacts have not been canvassed.44
+
+44.         Third, independently of the change to registration deadline, the Bill provides for
+            the Electoral Commission to be able to update an elector’s address on the roll on
+            the basis of information received from other agencies.45 This is likely to improve
+            the speed of the vote count over time, as it has the potential to significantly reduce
+            special votes which are administratively burdensome to process, while increasing
+            electoral participation – because an elector’s details on the roll are more likely to
+            be kept up to date.46 This is a less restrictive measure in human rights terms than
+            the proposal for a 13-day registration deadline. Further, the fact that automatic
+            updating of electoral details is predicted to be reasonably effective in cutting down
+            special votes and therefore improving the speed of the vote count, over time,47
+            means it may be less apparent there is a pressing need also for a registration
+            deadline, and specifically a deadline that is 13 days in advance of polling day.
+
+45.         As discussed above, registration deadlines which are less than 13 days out from
+            polling day, such as reversion to the pre-2020 position (a deadline of the day
+            before polling day) or a deadline of three or five days, would be less rights-
+            restrictive, as any disenfranchising impact would likely be more limited (other
+            things being equal). A shorter timeframe between the registration deadline and
+            polling day would represent a less significant departure from existing settings and
+            therefore prevailing voter expectations.
+
+46.         Fourth, there are precedents in other liberal democracies for a registration
+            deadline of the sort proposed in the Bill, however settings vary considerably. 48 To
+            the extent other systems adopt some sort of registration cut-off in advance of
+            polling day, this may weigh in favour of the 13-day registration deadline being
+            justified. However, case law tells us that local circumstances, and specifically long-
+            standing expectations formed on the basis of electoral settings, may be more
+            significant than comparative practice, especially as comparative practice is highly
+            varied.49 In New Zealand there has been a longstanding approach of permitting
+
+
+42    At [52].
+43    At [58].
+44    At [58].
+45    Cl 25 of the Bill (and see Electoral Act 1993 s 263B). The Electoral Commission must notify the elector of the action
+      it proposes to take and give the elector a 28-day period to provide such evidence as may be necessary to satisfy
+      the Electoral Commission that the proposed action should not be taken. If the proposed action is taken, the
+      Commission must notify the elector.
+46    RIS above n 26 at 2-4, 18-20, 23-25.
+47    Ibid.
+48    At [62].
+49    Rowe v Electoral Commissioner [2010] HCA 46, (2010) 243 CLR 1.
+
+
+
+8605671_6
+                                                                                                13
+
+            enrolment until late in the election period, so that the 13-day deadline is a
+            significant change.
+
+47.         Taking into account these factors, I conclude the proposal for a 13-day registration
+            deadline appears to constitute an unjustified limit on s 12 of the NZBORA. The
+            accepted starting-point is the fundamental importance of the right to vote within
+            a liberal democracy. A compelling justification is required to limit that right. As the
+            High Court of Australia has held in evaluating a legislative registration deadline,
+            which departed from previous settings, impact on the franchise is a “heavy
+            price”.50 However, the benefits of the proposed 13-day registration deadline are
+            not certain and there appear to be alternative, less restrictive measures that may
+            be capable of rights-justification.
+
+Electoral offences
+48.         The Bill proposes to amend existing electoral offences and introduce new offences
+            into the Electoral Act 1993.51 The rationale for these offences is to maintain
+            electoral integrity by proscribing practices that could undermine integrity, such as
+            acts designed to influence a person whether to vote or not.
+
+49.         A feature of the relevant clauses is that they update existing offences to address
+            influence in relation to a person’s choice whether or not to exercise the Māori
+            option. This does not raise an issue of direct or indirect discrimination under s
+            19(1) of NZBORA because the option of choosing between rolls is unique, so there
+            is no comparator, while the relevant offences in general apply equally to
+            influencing a person’s choice whether to vote or not, for example.
+
+Treating and undue influence
+50.         The proposed amendments to the offences of treating and undue influence
+            appear consistent with the NZBORA.52 Either the proposals are consistent with
+            protected rights such as s 12, by positively upholding the integrity of the electoral
+            system, or to the extent that they impose limits on protected rights, those limits
+            are justified given (i) the important goal of preserving electoral integrity; and (ii)
+            the offences are appropriately bounded. For example, the treating offence must
+            involve a “corrupt” motivation, which sets a reasonably high threshold, while the
+            undue influence offence proscribes practices that are plainly wrong such as
+            threatening force.
+
+Bribery
+51.         I consider the proposed amendments to the offence of bribery appear inconsistent
+            with the NZBORA as they would impose unjustified limits on the right to vote (s
+            12) and the right to freedom of expression (s 14).53
+
+52.         As a matter of principle prohibiting the provision of money or another benefit
+            designed to influence whether a person votes or not (or exercises other relevant
+
+50    At [78].
+51    Subpart 7 of Part 1 of the Bill.
+52    Cl 44-45 of the Bill.
+53    Cl 43 of the Bill.
+
+
+
+8605671_6
+                                                                                                 14
+
+            choices within the electoral system) is necessary to ensure the integrity of
+            electoral processes, and therefore may not engage the right to vote and/or
+            freedom of expression, or constitute a justified limit on given rights and freedoms.
+
+53.         However, the way that the bribery offence is drafted in the Bill means that it does
+            appear to engage ss 12 and 14. The offence is framed broadly. In turn it may
+            capture and therefore prohibit legitimate and/or innocuous electoral activities
+            and speech. And, even if the offence is construed narrowly by the courts, the
+            provisions on their face are broad, and create a real risk of chilling innocuous
+            and/or legitimate activity. The risk of a chilling effect is real because the potential
+            penalties for conviction for bribery are significant, including either two years’
+            imprisonment or a fine of up to $40,000.54 Further, bribery is a “corrupt practice”,
+            so that conviction results in suspension from being able to vote for three years.55
+
+54.         The following are examples of the potential rights-limiting effects of the offence
+            as drafted in cl 43:
+
+            54.1      Clause 43(2)(a) provides that it is bribery to give any money to, or procure
+                      any benefit for, a voter to induce the voter to, inter alia, vote or refrain
+                      from voting or exercise or not exercise the Māori option. This offence
+                      could encompass a neighbour giving someone a lift to or from the polling
+                      station to vote, or a parent giving their 18 year old teenager petrol money
+                      to fill up their car to drive to the polling station. It could include someone
+                      throwing a party for their friends who are going to vote or someone
+                      offering to buy another person a round of golf to skip voting and instead
+                      play golf.
+
+            54.2      Clause 43(2)(e) provides that it is bribery to give any money to or procure
+                      a benefit for any person to induce that person to procure, inter alia, the
+                      return of any candidate or candidates in an election. Clause 43(2)(f)
+                      provides it is bribery to receive any money or obtain any benefit to
+                      procure the return of any candidate or candidates at an election. On the
+                      face of these clauses, it could be bribery for a candidate to pay a strategist
+                      to develop a winning campaign strategy for them; for a person to make
+                      donations to a candidate’s campaign to help get them elected; or for an
+                      elected politician to follow through on campaign promises which benefit
+                      certain persons or groups.
+
+55.         It is understood that, apart from updating the bribery offence to provide for the
+            Māori option, the amendment in cl 43 is principally designed to replicate the
+            existing bribery offence in s 216(2) of the 1993 Act, but in a modern form of
+            drafting. However, because the clauses on their face actually prohibit, or create a
+            real risk of chilling, legitimate and/or innocuous electoral activity or speech, they
+            engage ss 12 and 14.
+
+56.         In terms of justification it is acknowledged that a certain degree of generality in
+            drafting offences is warranted so as to comprehend the array of different types of
+
+54    Electoral Act 1993 s 224.
+55    Electoral Act 1993 s 216(1) and see ss 80(e), 98(e), 100.
+
+
+
+8605671_6
+                                                                                                15
+
+            situations and behaviours that could pose risks to electoral integrity. However,
+            even accounting for this, the proposed bribery offence is over-broad to the point
+            that it outstrips its rationale of protecting electoral integrity. Unlike the treating
+            or undue influence offences it lacks sufficient thresholds to differentiate
+            legitimate from illegitimate activities; for example the treating offence uses the
+            touchstone of “corruptly” to draw this line.
+
+57.         As such, while a bribery offence is justifiable and indeed necessary to maintain
+            electoral integrity, the bribery offence, as drafted in cl 43 of the Bill, is overbroad
+            and to that extent outstrips the rationale of electoral integrity, so that that
+            rationale cannot provide a justification for the degree of limitation imposed on
+            protected rights by the offence as drafted.
+
+Providing food, drink or entertainment around polling places
+58.         The Bill proposes a new offence that during a voting period a person must not
+            provide, free of charge, any food, drink (excluding water) or entertainment within
+            50 metres of the entrance to a polling place.56 The offence is underpinned by a
+            similar rationale to that which underpins treating. The new offence recognises that
+            when people go to vote may be when they are most vulnerable to influence.
+
+59.         To the extent the new offence may engage protected rights, specifically ss 12 and
+            14, the offence appears to be a justified limit and not inconsistent with the
+            NZBORA. A brightline rule will invariably be both under- and over-inclusive.
+            However, such a rule appears warranted given the important public interest in
+            voters not being subject to influence when they attend a voting station. Further,
+            a rule defined by a spatial area is a logical response to the potential for activities
+            in proximity to polling stations that may undermine electoral integrity. A clear rule
+            provides certainty. It is also relevant that water is excluded (so may be provided
+            free of charge near polling stations); entities providing food, drink or
+            entertainment free of charge in their ordinary course of business are excluded
+            from the rule; there is provision for a defence of reasonable excuse; the rule is
+            temporary in operation, only applying during a voting period; and the offence is
+            not a “corrupt practice”.
+
+
+
+
+Hon Judith Collins KC
+Attorney-General
+    26 June 2025
+
+
+            After this report was prepared and prior to introduction in the House,
+            changes were made to the Bill, including to rename it the Electoral
+            Amendment Bill and progress amendments to the Constitution Act 1986 as
+            a standalone Bill. No substantive changes were made that affect this advice.
+
+56    Cl 46 of the Bill.
+
+
+
+8605671_6
+
