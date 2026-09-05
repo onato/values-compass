@@ -144,11 +144,12 @@ button[hidden] { display: none; }
 .row-dim { display: grid; grid-template-columns: 1fr; gap: 4px; }
 .row-dim .poles { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-2); }
 .row-dim .poles .active { color: var(--text); font-weight: 600; }
-.row-dim .poles .badge {
-  font-size: 0.72rem; color: var(--text-3); font-weight: 400;
-  border: 1px solid var(--line); border-radius: 999px; padding: 0 7px; margin-left: 6px;
-  vertical-align: middle;
+.badge {
+  display: inline-block; font-size: 0.72rem; line-height: 1.5; color: var(--text-3); font-weight: 400;
+  border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; white-space: nowrap;
 }
+.row-dim .poles .badge { margin-left: 6px; vertical-align: middle; }
+.cell .cell-meta .badge { align-self: center; }
 .track { position: relative; height: 22px; background: var(--mid); border-radius: 4px; }
 .track .axis { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--text-3); opacity: 0.6; }
 .track .bar { position: absolute; top: 2px; bottom: 2px; }
@@ -218,7 +219,7 @@ pre {
   position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%;
   transform: translate(-50%, -50%); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--text-3);
 }
-.cell .cell-meta { font-size: 0.85rem; color: var(--text-2); display: flex; gap: 14px; flex-wrap: wrap; }
+.cell .cell-meta { font-size: 0.85rem; color: var(--text-2); display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: center; }
 .cell .cell-meta .you::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; background: var(--pole-a); margin-right: 5px; vertical-align: -1px; }
 .cell .cell-meta .party::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--marker, var(--text-3)); margin-right: 5px; vertical-align: -1px; }
 .cell .rationale { font-size: 0.92rem; color: var(--text-2); margin: 6px 0; }
